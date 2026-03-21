@@ -114,6 +114,7 @@ PlayerSettings:
   xboxEnableGuest: 0
   xboxEnablePIXSampling: 0
   metalFramebufferOnly: 0
+  metalUseMetalDisplayLink: 0
   xboxOneResolution: 0
   xboxOneSResolution: 0
   xboxOneXResolution: 3
@@ -185,7 +186,7 @@ PlayerSettings:
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
-  ForceInternetPermission: 0
+  ForceInternetPermission: 1
   ForceSDCardPermission: 0
   CreateWallpaper: 0
   androidSplitApplicationBinary: 0
@@ -532,7 +533,10 @@ PlayerSettings:
       m_Height: 1024
       m_Kind: 0
       m_SubKind: 
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: Android
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -829,7 +833,19 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    iPhone: UNITY_XR_ARKIT_LOADER_ENABLED
+    Android: ENABLE_JSON_CATALOG
+    EmbeddedLinux: ENABLE_JSON_CATALOG
+    LinuxHeadlessSimulation: ENABLE_JSON_CATALOG
+    Nintendo Switch: ENABLE_JSON_CATALOG
+    PS4: ENABLE_JSON_CATALOG
+    QNX: ENABLE_JSON_CATALOG
+    Server: ENABLE_JSON_CATALOG
+    Standalone: ENABLE_JSON_CATALOG
+    WebGL: ENABLE_JSON_CATALOG
+    Windows Store Apps: ENABLE_JSON_CATALOG
+    XboxOne: ENABLE_JSON_CATALOG
+    iPhone: ENABLE_JSON_CATALOG;UNITY_XR_ARKIT_LOADER_ENABLED
+    tvOS: ENABLE_JSON_CATALOG
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -906,7 +922,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -928,11 +950,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 7fff2cf4-b784-4c94-9760-e5e18045a4b3
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: ARBook
+  organizationId: tesnimemechmech2
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
