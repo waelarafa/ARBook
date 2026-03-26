@@ -63,6 +63,7 @@ MonoBehaviour:
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: 2026.03.21.11.34.44
   m_GroupAssets:
+  - {fileID: 11400000, guid: e21583dd6cb60b3409b236b186ff86e3, type: 2}
   - {fileID: 11400000, guid: c54c400e791878d4c97a585d95adb8d2, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
@@ -78,7 +79,7 @@ MonoBehaviour:
       - m_Id: 8352a9dc7446eb04697dd29a399d451f
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 84ead0a1faa9ec94493bcb836fa25665
-        m_Value: 'https://tesnimemechmech.github.io/ar-livre-assets/[BuildTarget]'
+        m_Value: 'https://sirine-mechmech.github.io/unity-addressables-test/[BuildTarget]'
       - m_Id: 971a7fa8ffac55b4db92bf925bddfea2
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: a73e28c7caa56ce4a81bc450e60e4218
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - Book1
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 7637c847789b69043bfc3829284a2f67, type: 2}
