@@ -3,7 +3,7 @@
 namespace ARBook.Models
 {
     [System.Serializable]
-    public class ItemtData
+    public class ItemData
     {
         public string nom;
         public float x;
