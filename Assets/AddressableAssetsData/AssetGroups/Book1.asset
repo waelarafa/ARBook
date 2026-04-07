@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 8a9bbe5290e992742b6ba3b6a9b1addf
   m_SerializeEntries:
   - m_GUID: 7db287dc74f588547891f324360868a5
-    m_Address: Assets/Prefabs/AnimalPrefab.prefab
+    m_Address: fox
     m_ReadOnly: 0
     m_SerializedLabels:
     - Book1
