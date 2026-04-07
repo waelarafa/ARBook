@@ -207,7 +207,7 @@ public class DataManager : MonoBehaviour
         }
 
         var handle = UnityEngine.AddressableAssets.Addressables
-            .LoadAssetAsync<Texture2D>(assetName);
+            .LoadAssetAsync<Texture2D>(assetName + "_img");
 
         while (!handle.IsDone)
         {
