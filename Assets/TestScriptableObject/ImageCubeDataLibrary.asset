@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e8a2fb0c1407147964d9a62d0e35c1, type: 3}
+  m_Name: ImageCubeDataLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::ImageCubeDataLibrary
+  entries:
+  - imageName: fox
+    targetType: 0
+    doScale: 0
+    scaleMultiplier: 0
+    scaleDuration: 0
+    doSpawn: 1
+    prefabToSpawn: {fileID: 5811970893536397571, guid: 13241d599ff10413498d04c6d683ca10, type: 3}
+    spawnOffset: {x: 0.25, y: 0.25, z: 0.25}
+    lookAtCamera: 1
+    doPlaySound: 0
+    soundToPlay: {fileID: 0}
+    doDestroyOnTap: 0
+  - imageName: fox
+    targetType: 1
+    doScale: 1
+    scaleMultiplier: 1.5
+    scaleDuration: 1.5
+    doSpawn: 0
+    prefabToSpawn: {fileID: 5811970893536397571, guid: 13241d599ff10413498d04c6d683ca10, type: 3}
+    spawnOffset: {x: 0.25, y: 0.25, z: 0.25}
+    lookAtCamera: 1
+    doPlaySound: 1
+    soundToPlay: {fileID: 8300000, guid: ae6d06df741d2274b9b09180809909b9, type: 3}
+    doDestroyOnTap: 1
