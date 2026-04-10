@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bac9373cac6f2d4d987c1e2dee8b01f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioInteractable
-  soundConfig: {fileID: 11400000, guid: 18336686c242b3f4f987e62645ac7ddc, type: 2}
+  soundConfigs: []
 --- !u!65 &1944787393
 BoxCollider:
   m_ObjectHideFlags: 0
