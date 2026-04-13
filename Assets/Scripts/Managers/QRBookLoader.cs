@@ -23,6 +23,20 @@ public class QRBookLoader : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("[QRBookLoader] ✅ Script démarré !");
+
+        if (cameraManager == null)
+        {
+            Debug.LogError("[QRBookLoader] ❌ cameraManager NULL !");
+            return;
+        }
+
+        Debug.Log("[QRBookLoader] ✅ cameraManager OK : " + cameraManager.name);
+
+        // Abonnement ici dans Start, pas dans OnEnable
+        cameraManager.frameReceived += OnCameraFrameReceived;
+        Debug.Log("[QRBookLoader] ✅ Abonné aux frames caméra");
+
         _reader = new BarcodeReaderGeneric
         {
             Options = new DecodingOptions
@@ -33,36 +47,36 @@ public class QRBookLoader : MonoBehaviour
         };
     }
 
-    void OnEnable()
-    {
-        if (cameraManager != null)
-            cameraManager.frameReceived += OnCameraFrameReceived;
-    }
-
     void OnDisable()
     {
         if (cameraManager != null)
             cameraManager.frameReceived -= OnCameraFrameReceived;
     }
 
+    // Supprime OnEnable complètement
+
     void OnDestroy()
     {
         if (_cameraTexture != null)
             Destroy(_cameraTexture);
     }
+    private int _frameCount = 0;
 
     void OnCameraFrameReceived(ARCameraFrameEventArgs args)
     {
+        // Log seulement toutes les 60 frames
+        _frameCount++;
+        if (_frameCount % 60 == 0)
+            Debug.Log($"[QRBookLoader] 📷 Frames reçues : {_frameCount}");
+
         if (_isProcessing) return;
 
-        if (cameraManager == null)
+        if (!cameraManager.TryAcquireLatestCpuImage(out XRCpuImage image))
         {
-            Debug.LogError("[QRBookLoader] CameraManager non assigné !");
+            if (_frameCount % 60 == 0)
+                Debug.LogWarning("[QRBookLoader] ⚠️ TryAcquireLatestCpuImage échoué");
             return;
         }
-
-        if (!cameraManager.TryAcquireLatestCpuImage(out XRCpuImage image))
-            return;
 
         _isProcessing = true;
 
@@ -138,9 +152,10 @@ public class QRBookLoader : MonoBehaviour
 
     private IEnumerator LoadAndDisplay(string bookId)
     {
+        // Télécharger le JSON du livre
         yield return StartCoroutine(DataManager.Instance.LoadBookFromUrl(bookId));
 
-        var bookData = DataManager.Instance.GetBookData(bookId);
+        ARBook.Models.BookData bookData = DataManager.Instance.GetBookData(bookId);
 
         if (bookData == null)
         {
@@ -148,9 +163,15 @@ public class QRBookLoader : MonoBehaviour
             yield break;
         }
 
-        Debug.Log($"[QRBookLoader] Prêt à afficher : {bookData.title} ({bookData.pages.Count} page(s))");
+        Debug.Log($"[QRBookLoader] ✅ Livre prêt : {bookData.title} ({bookData.pages.Count} page(s))");
 
-        // 👉 PROCHAINE ETAPE: envoyer à ton ARManager
-        // ARManager.Instance.DisplayBook(bookData);
+        // Lancer le préchargement de la première page
+        // (et les voisines en background automatiquement)
+        if (bookData.pages.Count > 0)
+        {
+            string firstPageId = bookData.pages[0].id;
+            Debug.Log($"[QRBookLoader] 🚀 Préchargement page : {firstPageId}");
+            DataManager.Instance.OnPageDetected(bookId, firstPageId);
+        }
     }
 }

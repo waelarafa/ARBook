@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2048a9b63dd4b4e9c73177260ad8e4, type: 3}
+  m_Name: freesound_community-fox-scream-in-the-forest-26634_Config
+  m_EditorClassIdentifier: Assembly-CSharp::SoundConfig
+  clip: {fileID: 8300000, guid: ae6d06df741d2274b9b09180809909b9, type: 3}
+  allowOverlap: 0
+  cooldown: 2
+  volume: 0.38

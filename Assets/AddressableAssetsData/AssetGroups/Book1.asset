@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Book1
   m_GUID: 8a9bbe5290e992742b6ba3b6a9b1addf
   m_SerializeEntries:
+  - m_GUID: 68581505e1234064aa565366eb6c9d98
+    m_Address: fox_img
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Book1
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7db287dc74f588547891f324360868a5
     m_Address: fox
     m_ReadOnly: 0

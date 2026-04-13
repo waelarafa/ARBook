@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundConfig
   clip: {fileID: 8300000, guid: fbe4159db8416c04d8c1f40167065187, type: 3}
   allowOverlap: 0
-  cooldown: 1
-  volume: 1
+  cooldown: 2
+  volume: 0.38
