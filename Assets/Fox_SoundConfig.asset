@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Fox_SoundConfig
   m_EditorClassIdentifier: Assembly-CSharp::SoundConfig
   clip: {fileID: 8300000, guid: ae6d06df741d2274b9b09180809909b9, type: 3}
-  allowOverlap: 0
+  allowOverlap: 1
   cooldown: 1
   volume: 1

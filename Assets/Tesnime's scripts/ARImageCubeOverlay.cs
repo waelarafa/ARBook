@@ -1,4 +1,198 @@
+/*version07/04*/
 // ============================================================
+// ARImageCubeOverlay.cs
+// ============================================================
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+using System.Collections.Generic;
+
+public class ARImageCubeOverlay : MonoBehaviour
+{
+    [Header("Paramètres du cube")]
+    [Tooltip("Hauteur (épaisseur) du collider au-dessus de l'image (en mètres)")]
+    [SerializeField] private float cubeHeight = 0.005f;
+
+    [Header("Liaison Book1Detector")]
+    [SerializeField] private Book1Detector libraryTester;
+
+    [Header("Mapping Image → CubeActionData")]
+    [SerializeField] private ImageCubeDataLibrary cubeDataLibrary;
+
+    private Camera xrCamera;
+    private ARTrackedImageManager trackedImageManager;
+
+    private readonly Dictionary<TrackableId, GameObject> spawnedCubes
+        = new Dictionary<TrackableId, GameObject>();
+
+    // ─────────────────────────────────────────────────────────
+    void Start()
+    {
+        Debug.Log("✅ ARImageCubeOverlay DÉMARRÉ");
+
+        GameObject xrOrigin = GameObject.Find("XR Origin (Mobile AR)");
+        if (xrOrigin == null) { Debug.LogError("❌ XR Origin introuvable !"); return; }
+
+        Transform cameraOffset = xrOrigin.transform.Find("Camera Offset");
+        if (cameraOffset == null) { Debug.LogError("❌ Camera Offset introuvable !"); return; }
+
+        Transform mainCamTransform = cameraOffset.Find("Main Camera");
+        if (mainCamTransform == null) { Debug.LogError("❌ Main Camera introuvable !"); return; }
+
+        xrCamera = mainCamTransform.GetComponent<Camera>();
+        if (xrCamera == null) { Debug.LogError("❌ Composant Camera introuvable !"); return; }
+
+        Debug.Log("📷 Caméra trouvée : " + xrCamera.gameObject.name);
+
+        trackedImageManager = FindFirstObjectByType<ARTrackedImageManager>();
+        if (trackedImageManager == null) { Debug.LogError("❌ ARTrackedImageManager introuvable !"); return; }
+
+        Debug.Log("🖼️ ARTrackedImageManager trouvé !");
+    }
+
+    void OnEnable()
+    {
+        trackedImageManager = FindFirstObjectByType<ARTrackedImageManager>();
+        if (trackedImageManager != null)
+        {
+            trackedImageManager.trackablesChanged.AddListener(OnTrackedImagesChanged);
+            Debug.Log("✅ Listener ajouté !");
+        }
+    }
+
+    void OnDisable()
+    {
+        if (trackedImageManager != null)
+            trackedImageManager.trackablesChanged.RemoveListener(OnTrackedImagesChanged);
+    }
+
+    // ─────────────────────────────────────────────────────────
+    void OnTrackedImagesChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventArgs)
+    {
+        foreach (ARTrackedImage image in eventArgs.added)
+        {
+            Debug.Log("🖼️ Nouvelle image : " + image.referenceImage.name + " | ID : " + image.trackableId);
+            SpawnCubeOnImage(image);
+        }
+
+        foreach (ARTrackedImage image in eventArgs.updated)
+        {
+            TrackableId id = image.trackableId;
+
+            if (image.trackingState == TrackingState.Tracking)
+            {
+                UpdateCubeTransform(image);
+
+                if (spawnedCubes.ContainsKey(id))
+                {
+                    spawnedCubes[id].SetActive(true);
+
+                    TapDetector1 tap = spawnedCubes[id].GetComponent<TapDetector1>();
+                    if (tap != null && libraryTester != null)
+                    {
+                        string imageName = image.referenceImage.name;
+                        tap.isValidated = libraryTester.imagesValidees.Contains(imageName);
+                        Debug.Log("🔍 Validation " + imageName + " : " + tap.isValidated);
+                    }
+                }
+            }
+            else
+            {
+                Debug.Log("⚠️ Image hors champ, collider conservé : " + image.referenceImage.name);
+            }
+        }
+
+        foreach (var kvp in eventArgs.removed)
+            Debug.Log("📌 Image retirée, collider conservé : " + kvp.Value.referenceImage.name);
+    }
+
+    // ─────────────────────────────────────────────────────────
+    void SpawnCubeOnImage(ARTrackedImage image)
+    {
+        TrackableId id        = image.trackableId;
+        string      imageName = image.referenceImage.name;
+
+        if (imageName.StartsWith("F"))
+        {
+            Debug.Log("🚫 Image ignorée (commence par 'F') : " + imageName);
+            return;
+        }
+
+        if (spawnedCubes.ContainsKey(id))
+        {
+            spawnedCubes[id].SetActive(true);
+            UpdateCubeTransform(image);
+            Debug.Log("♻️ Collider réactivé pour : " + imageName);
+            return;
+        }
+
+        // ── Collider invisible sur l'image ────────────────────────────
+        GameObject cube = new GameObject("Cube_" + imageName + "_" + id);
+        BoxCollider col = cube.AddComponent<BoxCollider>();
+        col.size = Vector3.one;
+
+        // ── TapDetector posé sur l'image (pas un prefab spawné) ───────
+        TapDetector1 tap = cube.AddComponent<TapDetector1>();
+        tap.cam             = xrCamera;
+        tap.data            = cubeDataLibrary?.GetEntryForImage(imageName);
+        tap.isSpawnedPrefab = false;   // c'est le collider image
+        tap.isValidated     = false;   // bloqué jusqu'à validation
+
+        spawnedCubes[id] = cube;
+        UpdateCubeTransform(image);
+
+        Debug.Log("📦 Collider créé pour : " + imageName
+                + " | ID : " + id
+                + " | data : " + (tap.data != null ? tap.data.imageName : "NULL")
+                + " | Total : " + spawnedCubes.Count);
+    }
+
+    // ─────────────────────────────────────────────────────────
+    void UpdateCubeTransform(ARTrackedImage image)
+    {
+        TrackableId id = image.trackableId;
+        if (!spawnedCubes.ContainsKey(id)) return;
+
+        GameObject cube      = spawnedCubes[id];
+        Vector2    imageSize = image.size;
+
+        cube.transform.localScale = new Vector3(imageSize.x, cubeHeight, imageSize.y);
+
+        cube.transform.position = image.transform.position
+                                  + image.transform.up * (cubeHeight / 2f);
+
+        cube.transform.rotation = image.transform.rotation;
+    }
+
+    // ─────────────────────────────────────────────────────────
+    public void ClearAllCubes()
+    {
+        foreach (var kvp in spawnedCubes)
+            if (kvp.Value != null) Destroy(kvp.Value);
+
+        spawnedCubes.Clear();
+        Debug.Log("🗑️ Tous les colliders supprimés");
+    }
+
+    // ─────────────────────────────────────────────────────────
+    public void RespawnCubesForActiveTrackables()
+    {
+        if (trackedImageManager == null) return;
+
+        int count = 0;
+        foreach (ARTrackedImage image in trackedImageManager.trackables)
+        {
+            if (image.trackingState == TrackingState.Tracking ||
+                image.trackingState == TrackingState.Limited)
+            {
+                SpawnCubeOnImage(image);
+                count++;
+            }
+        }
+        Debug.Log("🔄 Respawn tenté pour " + count + " trackables actifs");
+    }
+}
+/*// ============================================================
 // ARImageCubeOverlay.cs
 // ============================================================
 using UnityEngine;
@@ -233,7 +427,7 @@ public class ARImageCubeOverlay : MonoBehaviour
         Debug.Log("🔄 Respawn tenté pour " + count + " trackables actifs");
     }
 }
-/*// ARImageCubeOverlay.cs
+// ARImageCubeOverlay.cs
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
