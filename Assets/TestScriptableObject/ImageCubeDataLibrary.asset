@@ -14,12 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ImageCubeDataLibrary
   entries:
   - imageName: fox
-    doScale: 1
-    scaleMultiplier: 1.5
-    scaleDuration: 1.5
     doSpawn: 1
-    prefabToSpawn: {fileID: 5811970893536397571, guid: 13241d599ff10413498d04c6d683ca10, type: 3}
-    lookAtCamera: 1
+    prefabToSpawn: {fileID: 7359655724910758988, guid: a838ec8ea7d24c544b5e48e5aba36cdc, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 18336686c242b3f4f987e62645ac7ddc, type: 2}
+    scaleMultiplier: 1.5
+    scaleDuration: 1.5
+    doDestroyOnTap: 1
+  - imageName: hedgehog
+    doSpawn: 1
+    prefabToSpawn: {fileID: 1369679905575684, guid: 8951f907d878f44288d2ea37b5a0f9e3, type: 3}
+    doPlaySound: 1
+    soundConfig: {fileID: 11400000, guid: 55573651dd43c7e40b48341e767e87c1, type: 2}
+    scaleMultiplier: 1.5
+    scaleDuration: 1.5
+    doDestroyOnTap: 1
+  - imageName: squirrel
+    doSpawn: 1
+    prefabToSpawn: {fileID: 6073855695995191056, guid: c18682d3e4c3fbf4cbf14216af86a1d9, type: 3}
+    doPlaySound: 1
+    soundConfig: {fileID: 11400000, guid: 5a6d805231f01344c8369854b45c40a4, type: 2}
+    scaleMultiplier: 1.5
+    scaleDuration: 1.5
     doDestroyOnTap: 1

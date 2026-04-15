@@ -1,4 +1,4 @@
-/*version 08/04*/
+/*version 14/04 - avec sensibilité rotation*/
 // ImageCubeDataLibrary.cs
 using UnityEngine;
 using System.Collections.Generic;
@@ -12,21 +12,23 @@ public class ImageCubeDataLibrary : ScriptableObject
         [Tooltip("Nom exact de l'image dans l'AR Reference Image Library")]
         public string imageName;
 
-        [Header("Actions communes")]
-        public bool doScale;
-        public float scaleMultiplier = 1.5f;
-        public float scaleDuration   = 0.2f;
-
-        [Header("Prefab (optionnel)")]
-        [Tooltip("Cocher pour activer le spawn d'un prefab au tap")]
+        [Header("Prefab à spawner au tap image")]
         public bool       doSpawn;
         public GameObject prefabToSpawn;
-        public bool       lookAtCamera;
 
-        [Header("Actions sur le prefab spawné")]
+        [Header("Son — tap court sur le prefab")]
         public bool        doPlaySound;
-        public SoundConfig soundConfig;      // ← remplace AudioClip
-        public bool        doDestroyOnTap;
+        public SoundConfig soundConfig;
+
+        [Header("Scale — appui long sur le prefab")]
+        [Tooltip("Facteur d'agrandissement au maintien")]
+        public float scaleMultiplier = 1.5f;
+        [Tooltip("Durée de l'animation scale (secondes)")]
+        public float scaleDuration   = 0.2f;
+
+        [Header("Rotation — drag sur le prefab")]
+        [Tooltip("Sensibilité de la rotation par glissement (degrés/pixel). 0 = non rotatif")]
+        public float rotationSensitivity = 0.3f;
     }
 
     public List<ImageDataEntry> entries = new List<ImageDataEntry>();

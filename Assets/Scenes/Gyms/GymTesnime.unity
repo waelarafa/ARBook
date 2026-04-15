@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 34717764}
   - component: {fileID: 34717766}
   - component: {fileID: 34717767}
+  - component: {fileID: 34717768}
   m_Layer: 0
   m_Name: XR Origin (Mobile AR)
   m_TagString: Untagged
@@ -296,6 +297,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c415584cee8b660438b3fd1123893bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+--- !u!114 &34717768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34717753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a655d0ad50bf1e8489bc44c564889f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AROverlayUI
 --- !u!1 &311573826
 GameObject:
   m_ObjectHideFlags: 0
