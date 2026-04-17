@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARImageCubeOverlay
   cubeHeight: 0.005
+  cubeMaterial: {fileID: 2100000, guid: 341f8275672b74860b0a0dc7c40de5f2, type: 2}
   libraryTester: {fileID: 34717765}
   cubeDataLibrary: {fileID: 11400000, guid: 3fa48484b59c28343901f2c51e4e9b5a, type: 2}
 --- !u!114 &34717765

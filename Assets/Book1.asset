@@ -23,7 +23,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 4640081058289161477
       m_GuidHigh: 10997065623398471338
-    m_Size: {x: 0.9, y: 0.59999996}
+    m_Size: {x: 0.105, y: 0.07}
     m_SpecifySize: 1
     m_Name: fox
     m_Texture: {fileID: 2800000, guid: 68581505e1234064aa565366eb6c9d98, type: 3}
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Size: {x: 0.105, y: 0.070011824}
     m_SpecifySize: 1
     m_Name: squirrel
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 136ffa59b1137e847800933a686f8558, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5312042762538215372
       m_GuidHigh: 12465793976358318729
@@ -46,37 +46,37 @@ MonoBehaviour:
     m_Size: {x: 0.105, y: 0.07267968}
     m_SpecifySize: 1
     m_Name: hedgehog
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: f857ead5136fcd241bd33610ccecc506, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5468884216192210811
       m_GuidHigh: 4017780229512528807
     m_SerializedTextureGuid:
       m_GuidLow: 465058642094206069
       m_GuidHigh: 11781192319831600442
-    m_Size: {x: 0.9, y: 0.64609134}
+    m_Size: {x: 0.105, y: 0.07537732}
     m_SpecifySize: 1
     m_Name: blackbear
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: f9c02c75385e06743a6d1fd6fe337fa3, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5684552162583544389
       m_GuidHigh: 1258055428305320337
     m_SerializedTextureGuid:
       m_GuidLow: 13219402742564235704
       m_GuidHigh: 4124372571404424201
-    m_Size: {x: 0.9, y: 0.59999996}
+    m_Size: {x: 0.105, y: 0.07}
     m_SpecifySize: 1
     m_Name: whitebear
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 455da9b8c0c1b77409d4ec7700b73c39, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5713079724835901923
       m_GuidHigh: 10386743550193408698
     m_SerializedTextureGuid:
       m_GuidLow: 14007600160827484121
       m_GuidHigh: 7979496950038383353
-    m_Size: {x: 0.9, y: 0.5961039}
+    m_Size: {x: 0.105, y: 0.069545455}
     m_SpecifySize: 1
     m_Name: panda
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 7dd3a7d9fe21c264f9ca59e932debc6e, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5388570603448147614
       m_GuidHigh: 5495497508242615727
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_Size: {x: 0.21, y: 0.2970297}
     m_SpecifySize: 1
     m_Name: F1
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 408eb016a515869459681da9df791450, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5314935779098975386
       m_GuidHigh: 848637679317413508
@@ -96,4 +96,4 @@ MonoBehaviour:
     m_Size: {x: 0.21, y: 0.2970297}
     m_SpecifySize: 1
     m_Name: F2
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 7657b1b2c970d554b9b7f169291d128f, type: 3}

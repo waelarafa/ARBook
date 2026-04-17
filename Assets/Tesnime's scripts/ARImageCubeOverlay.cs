@@ -1,4 +1,3 @@
-/*apres l'ajout de stars autours des cubes */
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -8,6 +7,7 @@ public class ARImageCubeOverlay : MonoBehaviour
 {
     [Header("Paramètres du cube")]
     [SerializeField] private float cubeHeight = 0.005f;
+    [SerializeField] private Material cubeMaterial; // Material assigné depuis l'inspecteur
 
     [Header("Liaison Book1Detector")]
     [SerializeField] private Book1Detector libraryTester;
@@ -21,21 +21,11 @@ public class ARImageCubeOverlay : MonoBehaviour
     private readonly Dictionary<TrackableId, GameObject> spawnedCubes
         = new Dictionary<TrackableId, GameObject>();
 
-    // Garde trace des cubes dont l'effet a déjà été joué
-    private readonly HashSet<TrackableId> highlightPlayed
-        = new HashSet<TrackableId>();
-
-    // FIX : initialisation dans Awake() uniquement
     void Awake()
     {
         trackedImageManager = FindFirstObjectByType<ARTrackedImageManager>();
         if (trackedImageManager == null)
             Debug.LogError("❌ ARTrackedImageManager introuvable dans Awake !");
-    }
-
-    void Start()
-    {
-        Debug.Log("✅ ARImageCubeOverlay DÉMARRÉ");
 
         GameObject xrOrigin = GameObject.Find("XR Origin (Mobile AR)");
         if (xrOrigin == null) { Debug.LogError("❌ XR Origin introuvable !"); return; }
@@ -48,6 +38,13 @@ public class ARImageCubeOverlay : MonoBehaviour
 
         xrCamera = mainCamTransform.GetComponent<Camera>();
         if (xrCamera == null) { Debug.LogError("❌ Composant Camera introuvable !"); return; }
+
+        Debug.Log("✅ ARImageCubeOverlay INITIALISÉ — caméra : " + xrCamera.name);
+    }
+
+    void Start()
+    {
+        Debug.Log("✅ ARImageCubeOverlay DÉMARRÉ");
     }
 
     void OnEnable()
@@ -69,7 +66,6 @@ public class ARImageCubeOverlay : MonoBehaviour
             trackedImageManager.trackablesChanged.RemoveListener(OnTrackedImagesChanged);
     }
 
-    // ─────────────────────────────────────────────────────────────
     void OnTrackedImagesChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventArgs)
     {
         foreach (ARTrackedImage image in eventArgs.added)
@@ -94,26 +90,23 @@ public class ARImageCubeOverlay : MonoBehaviour
                     if (tap != null)
                     {
                         string imageName = image.referenceImage.name;
-
-                        // Mise à jour de la référence trackedImage (elle peut bouger)
                         tap.trackedImage = image;
-
-                        bool wasValidated = tap.isValidated;
 
                         if (libraryTester != null)
                             tap.isValidated = libraryTester.imagesValidees.Contains(imageName);
                         else
                             tap.isValidated = true;
-
-                        // ── Déclenche l'animation si nouvelle validation ──────
-                        TryPlayHighlight(id, spawnedCubes[id], tap.isValidated);
                     }
                 }
+            }
+            else
+            {
+                if (spawnedCubes.ContainsKey(id) && spawnedCubes[id] != null)
+                    spawnedCubes[id].SetActive(false);
             }
         }
     }
 
-    // ─────────────────────────────────────────────────────────────
     void SpawnCubeOnImage(ARTrackedImage image)
     {
         TrackableId id        = image.trackableId;
@@ -132,21 +125,26 @@ public class ARImageCubeOverlay : MonoBehaviour
             return;
         }
 
-        GameObject cube = new GameObject("Cube_" + imageName + "_" + id);
-        BoxCollider col = cube.AddComponent<BoxCollider>();
+        // ── Création du cube avec MeshRenderer + Material ──────
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.name = "Cube_" + imageName + "_" + id;
+
+        // Applique le material assigné dans l'inspecteur
+        if (cubeMaterial != null)
+            cube.GetComponent<MeshRenderer>().material = cubeMaterial;
+        else
+            Debug.LogWarning("⚠️ Aucun material assigné dans l'inspecteur pour le cube !");
+
+        // Remplace le BoxCollider auto par un BoxCollider propre (taille = 1,1,1)
+        BoxCollider col = cube.GetComponent<BoxCollider>();
         col.size = Vector3.one;
 
-        // ── TapDetector ───────────────────────────────────────
         TapDetector1 tap    = cube.AddComponent<TapDetector1>();
         tap.cam             = xrCamera;
         tap.data            = cubeDataLibrary?.GetEntryForImage(imageName);
         tap.isSpawnedPrefab = false;
         tap.trackedImage    = image;
 
-        // ── ImageHighlight ─────────────────────────────────────
-        cube.AddComponent<ImageHighlight>();
-
-        // ── Validation initiale ───────────────────────────────
         if (libraryTester == null)
             tap.isValidated = true;
         else
@@ -155,40 +153,9 @@ public class ARImageCubeOverlay : MonoBehaviour
         spawnedCubes[id] = cube;
         UpdateCubeTransform(image);
 
-        // ── Joue l'animation si déjà validée au spawn ─────────
-        TryPlayHighlight(id, cube, tap.isValidated);
-
-        Debug.Log("📦 Cube créé pour : " + imageName);
+        Debug.Log("📦 Cube créé avec material pour : " + imageName);
     }
 
-    // ─────────────────────────────────────────────────────────────
-    /// <summary>
-    /// Déclenche PlayCorrectEffect() sur ImageHighlight une seule fois
-    /// par cube, dès que isValidated devient true.
-    /// </summary>
-    void TryPlayHighlight(TrackableId id, GameObject cube, bool isValidated)
-    {
-        if (!isValidated) return;
-        if (highlightPlayed.Contains(id)) return;
-
-        ImageHighlight hl = cube.GetComponent<ImageHighlight>();
-        if (hl != null)
-        {
-            foreach (ARTrackedImage img in trackedImageManager.trackables)
-            {
-                if (img.trackableId == id)
-                {
-                    hl.SetImageSize(img.size);
-                    break;
-                }
-            }
-            hl.PlayCorrectEffect();
-            highlightPlayed.Add(id);
-            Debug.Log("⭐ Highlight joué pour : " + cube.name);
-        }
-    }
-
-    // ─────────────────────────────────────────────────────────────
     void UpdateCubeTransform(ARTrackedImage image)
     {
         TrackableId id = image.trackableId;
@@ -203,7 +170,6 @@ public class ARImageCubeOverlay : MonoBehaviour
         cube.transform.rotation   = image.transform.rotation;
     }
 
-    // ─────────────────────────────────────────────────────────────
     public GameObject GetCubeForImage(string imageName)
     {
         foreach (var kvp in spawnedCubes)
@@ -215,18 +181,15 @@ public class ARImageCubeOverlay : MonoBehaviour
         return null;
     }
 
-    // ─────────────────────────────────────────────────────────────
     public void ClearAllCubes()
     {
         foreach (var kvp in spawnedCubes)
             if (kvp.Value != null) Destroy(kvp.Value);
 
         spawnedCubes.Clear();
-        highlightPlayed.Clear();
         Debug.Log("🗑️ Tous les cubes supprimés");
     }
 
-    // ─────────────────────────────────────────────────────────────
     public void RespawnCubesForActiveTrackables()
     {
         if (trackedImageManager == null) return;
