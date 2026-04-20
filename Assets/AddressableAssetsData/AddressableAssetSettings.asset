@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: a3d56d3c4a1cdc144bd99a642cd74048
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 983fc9e26b974433eb5713b1c4c34b3e
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
       - m_Id: 8352a9dc7446eb04697dd29a399d451f
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 84ead0a1faa9ec94493bcb836fa25665
-        m_Value: 'https://sirine-mechmech.github.io/unity-addressables-test/[BuildTarget]'
+        m_Value: 'https://sirine-mechmech.github.io/unity-addressables-test/ARbook/[BuildTarget]'
       - m_Id: 971a7fa8ffac55b4db92bf925bddfea2
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: a73e28c7caa56ce4a81bc450e60e4218
