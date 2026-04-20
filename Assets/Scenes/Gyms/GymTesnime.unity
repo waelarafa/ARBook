@@ -138,6 +138,8 @@ GameObject:
   - component: {fileID: 34717766}
   - component: {fileID: 34717767}
   - component: {fileID: 34717768}
+  - component: {fileID: 34717769}
+  - component: {fileID: 34717770}
   m_Layer: 0
   m_Name: XR Origin (Mobile AR)
   m_TagString: Untagged
@@ -256,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARImageCubeOverlay
   cubeHeight: 0.005
-  cubeMaterial: {fileID: 2100000, guid: 341f8275672b74860b0a0dc7c40de5f2, type: 2}
+  cubeSizeMultiplier: 0.9
   libraryTester: {fileID: 34717765}
   cubeDataLibrary: {fileID: 11400000, guid: 3fa48484b59c28343901f2c51e4e9b5a, type: 2}
 --- !u!114 &34717765
@@ -310,6 +312,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a655d0ad50bf1e8489bc44c564889f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AROverlayUI
+--- !u!114 &34717769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34717753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbfd28735d834142a4b4efb058bbf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TTSLanguagePlayer
+  SPEECHIFY_API_KEY: 60RgVHQsPcuYRYTfv8ELBsa3pyfhcZYB8ovilirSlno=
+  voixArabe: 0
+  voixFrancais: 0
+  voixAnglais: 0
+--- !u!114 &34717770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34717753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ed58a1cebc47445a12bd3f0f93c846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenshotManager
 --- !u!1 &311573826
 GameObject:
   m_ObjectHideFlags: 0

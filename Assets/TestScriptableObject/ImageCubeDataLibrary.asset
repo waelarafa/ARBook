@@ -18,22 +18,33 @@ MonoBehaviour:
     prefabToSpawn: {fileID: 7359655724910758988, guid: a838ec8ea7d24c544b5e48e5aba36cdc, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 18336686c242b3f4f987e62645ac7ddc, type: 2}
+    texteArabe: "\u0623\u0646\u0627 \u0627\u0644\u062B\u0639\u0644\u0628 \u0627\u0644\u0645\u0627\u0643\u0631
+      \u0627\u0644\u0645\u0643\u0627\u0631"
+    texteFrancais: je suis un mouton
+    texteAnglais: 'I''m the fox '
     scaleMultiplier: 1.5
     scaleDuration: 1.5
-    doDestroyOnTap: 1
+    rotationSensitivity: 0.3
   - imageName: hedgehog
     doSpawn: 1
     prefabToSpawn: {fileID: 1369679905575684, guid: 8951f907d878f44288d2ea37b5a0f9e3, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 55573651dd43c7e40b48341e767e87c1, type: 2}
+    texteArabe: "\u0639\u0633\u0644\u0627\u0645\u0629 \u0645\u0631\u062D\u0628\u0627
+      \u0628\u0643\u0645 \u0645\u0639\u0627\u0646\u0627 "
+    texteFrancais: bonjour
+    texteAnglais: hello
     scaleMultiplier: 1.5
     scaleDuration: 1.5
-    doDestroyOnTap: 1
+    rotationSensitivity: 0.3
   - imageName: squirrel
     doSpawn: 1
-    prefabToSpawn: {fileID: 6073855695995191056, guid: c18682d3e4c3fbf4cbf14216af86a1d9, type: 3}
+    prefabToSpawn: {fileID: 1509054931390068, guid: 3f5c613256bb8481cbafc1d34aa1184e, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 5a6d805231f01344c8369854b45c40a4, type: 2}
+    texteArabe: "\u0627\u0644\u0633\u0644\u0627\u0645 \u0639\u0644\u064A\u0643\u0645 "
+    texteFrancais: salut
+    texteAnglais: 'hello from the other side '
     scaleMultiplier: 1.5
     scaleDuration: 1.5
-    doDestroyOnTap: 1
+    rotationSensitivity: 0.3

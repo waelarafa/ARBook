@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestPrefabs.unity
     guid: 5a099d5c962f5ec41ac73b032807b8fb
+  - enabled: 0
+    path: Assets/Scenes/Test.unity
+    guid: 574b0981837e46549b62ba38e006da68
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 0465d33c6aee55f44b0237db8b0e0259, type: 2}

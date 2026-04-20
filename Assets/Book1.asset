@@ -18,16 +18,6 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5286392359163882507
-      m_GuidHigh: 14767894401708365477
-    m_SerializedTextureGuid:
-      m_GuidLow: 4640081058289161477
-      m_GuidHigh: 10997065623398471338
-    m_Size: {x: 0.105, y: 0.07}
-    m_SpecifySize: 1
-    m_Name: fox
-    m_Texture: {fileID: 2800000, guid: 68581505e1234064aa565366eb6c9d98, type: 3}
-  - m_SerializedGuid:
       m_GuidLow: 4717862731541196974
       m_GuidHigh: 5633004349035616167
     m_SerializedTextureGuid:
@@ -97,3 +87,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: F2
     m_Texture: {fileID: 2800000, guid: 7657b1b2c970d554b9b7f169291d128f, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5366974857836839392
+      m_GuidHigh: 10719707462850300043
+    m_SerializedTextureGuid:
+      m_GuidLow: 4640081058289161477
+      m_GuidHigh: 10997065623398471338
+    m_Size: {x: 0.105, y: 0.07}
+    m_SpecifySize: 1
+    m_Name: fox
+    m_Texture: {fileID: 2800000, guid: 68581505e1234064aa565366eb6c9d98, type: 3}
