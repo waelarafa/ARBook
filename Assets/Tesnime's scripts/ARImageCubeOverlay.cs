@@ -18,6 +18,9 @@ public class ARImageCubeOverlay : MonoBehaviour
 
     [Header("Mapping Image → CubeActionData")]
     [SerializeField] private ImageCubeDataLibrary cubeDataLibrary;
+    //particules 
+    [Header("Effets")]
+    [SerializeField] private GameObject particlePrefab;
 
     // ═══════════════════════════════════════════════════════════
     // VARIABLES PRIVÉES
@@ -249,6 +252,25 @@ public class ARImageCubeOverlay : MonoBehaviour
             cube.SetActive(false);
 
         spawnedCubes[id] = cube;
+        // ── Particules ─────────────────────────────────────────
+        if (particlePrefab != null)
+        {
+            GameObject particles = Instantiate(particlePrefab, cube.transform);
+            particles.transform.localPosition = Vector3.zero;
+            particles.transform.localRotation = Quaternion.identity;
+
+            // Récupère la taille réelle du cube dans la scène
+            Vector2 imageSize = image.size;
+            float width  = imageSize.x * cubeSizeMultiplier;
+            float height = imageSize.y * cubeSizeMultiplier;
+            float limit  = Mathf.Min(width, height); // prend le plus petit côté
+
+            // Applique le scale aux particules pour ne pas dépasser le cube
+            particles.transform.localScale = new Vector3(limit, limit, limit);
+
+            Debug.Log("✨ [SPAWN] Particules attachées au cube : " + imageName 
+                    + " | Scale : " + limit);
+        }
         UpdateCubeTransform(image);
 
         Debug.Log("📦 [SPAWN] Cube entièrement créé et positionné pour : " + imageName);

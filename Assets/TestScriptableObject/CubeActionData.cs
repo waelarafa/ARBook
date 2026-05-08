@@ -1,4 +1,4 @@
-/*ajouter api1 tts*/
+/*ajouter api1 tts
 // ImageCubeDataLibrary.cs
 using UnityEngine;
 using System.Collections.Generic;
@@ -16,6 +16,10 @@ public class ImageCubeDataLibrary : ScriptableObject
         public bool       doSpawn;
         public GameObject prefabToSpawn;
 
+        [Header("Environnement 3D — affiché uniquement en mode 3D (pas en AR)")]
+        [Tooltip("Skybox, décor ou fond 3D affiché derrière le modèle en mode 3D")]
+        public GameObject environmentPrefab;
+
         [Header("Son — tap court sur le prefab")]
         public bool        doPlaySound;
         public SoundConfig soundConfig;
@@ -25,6 +29,58 @@ public class ImageCubeDataLibrary : ScriptableObject
         [TextArea] public string texteFrancais;
         [TextArea] public string texteAnglais;
 
+        [Header("Scale — appui long sur le prefab")]
+        [Tooltip("Facteur d'agrandissement au maintien")]
+        public float scaleMultiplier = 1.5f;
+        [Tooltip("Durée de l'animation scale (secondes)")]
+        public float scaleDuration   = 0.2f;
+
+        [Header("Rotation — drag sur le prefab")]
+        [Tooltip("Sensibilité de la rotation par glissement (degrés/pixel). 0 = non rotatif")]
+        public float rotationSensitivity = 0.3f;
+    }
+
+    public List<ImageDataEntry> entries = new List<ImageDataEntry>();
+
+    public ImageDataEntry GetEntryForImage(string imageName)
+    {
+        foreach (var entry in entries)
+            if (entry.imageName == imageName)
+                return entry;
+
+        Debug.LogWarning("⚠️ Aucune entrée trouvée pour : " + imageName);
+        return null;
+    }
+}*/
+//ajouter api1 tts
+// ImageCubeDataLibrary.cs
+using UnityEngine;
+using System.Collections.Generic;
+
+[CreateAssetMenu(fileName = "ImageCubeDataLibrary", menuName = "AR/Image Cube Data Library")]
+public class ImageCubeDataLibrary : ScriptableObject
+{
+    [System.Serializable]
+    public class ImageDataEntry
+    {   
+        // Dans ImageCubeDataLibrary.ImageDataEntry
+        [Header("Environnement 3D")]
+        public GameObject environmentPrefab; // prefab de l'environnement
+        [Tooltip("Nom exact de l'image dans l'AR Reference Image Library")]
+        public string imageName;
+
+        [Header("Prefab à spawner au tap image")]
+        public bool       doSpawn;
+        public GameObject prefabToSpawn;
+
+        [Header("Son — tap court sur le prefab")]
+        public bool        doPlaySound;
+        public SoundConfig soundConfig;
+
+        [Header("Sons par langue")]
+        public SoundConfig soundConfigArabe;
+        public SoundConfig soundConfigFrancais;
+        public SoundConfig soundConfigAnglais;
         [Header("Scale — appui long sur le prefab")]
         [Tooltip("Facteur d'agrandissement au maintien")]
         public float scaleMultiplier = 1.5f;
