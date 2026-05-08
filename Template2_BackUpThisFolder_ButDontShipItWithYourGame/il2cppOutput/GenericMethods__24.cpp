@@ -24677,7 +24677,7 @@ IL_0056:
 		return;
 	}
 }
-// Method Definition Index: 113052
+// Method Definition Index: 113098
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AssetBundleRequest_tED9F5504E75ED1BCFF8DA9B51F5C7356617E6621* AssetBundle_LoadAllAssetsAsync_TisRuntimeObject_mEBF37F0441990D5DEF5CF2D1741D7354B901BAB5_gshared (AssetBundle_tB38418819A49060CD738CB21541649340F082943* __this, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);
@@ -24699,7 +24699,7 @@ IL_0014:
 		return L_3;
 	}
 }
-// Method Definition Index: 113052
+// Method Definition Index: 113098
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AssetBundleRequest_tED9F5504E75ED1BCFF8DA9B51F5C7356617E6621* AssetBundle_LoadAllAssetsAsync_TisIl2CppFullySharedGenericAny_mA6A81E1F200BA2CE3BB6815BFF4A464127AA9EBB_gshared (AssetBundle_tB38418819A49060CD738CB21541649340F082943* __this, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);
@@ -24721,7 +24721,7 @@ IL_0014:
 		return L_3;
 	}
 }
-// Method Definition Index: 113046
+// Method Definition Index: 113092
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AssetBundle_LoadAsset_TisRuntimeObject_m7F36E1C08FC32ADB47C34513522D958FA6E09C47_gshared (AssetBundle_tB38418819A49060CD738CB21541649340F082943* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);
@@ -34569,7 +34569,7 @@ IL2CPP_EXTERN_C  void AsyncVoidMethodBuilder_Start_TisU3COnSaveAsyncCompleteU3Ed
 	_thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D*>(__this + _offset);
 	AsyncVoidMethodBuilder_Start_TisU3COnSaveAsyncCompleteU3Ed__22_t2D2814E6B18036B672CF0D875DC07EC0E7B7DBBF_m02EB45F0A800FE6E5AD6716A90C47FBCCF3202BB(_thisAdjusted, ___0_stateMachine, method);
 }
-// Method Definition Index: 52984
+// Method Definition Index: 52987
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AttributeHelperEngine_GetCustomAttributeOfType_TisRuntimeObject_m987EEA2563745684A839754DE06174858C9DCCC1_gshared (Type_t* ___0_klass, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);

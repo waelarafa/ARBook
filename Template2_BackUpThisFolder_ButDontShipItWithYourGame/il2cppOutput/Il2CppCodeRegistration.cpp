@@ -201,7 +201,7 @@ const Il2CppCodeRegistration g_CodeRegistration =
 	143432,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	31439,
+	31441,
 	g_Il2CppInvokerPointers,
 	4450,
 	g_UnresolvedVirtualMethodPointers,
