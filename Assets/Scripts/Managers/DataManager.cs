@@ -118,6 +118,10 @@ public class DataManager : MonoBehaviour
 
     public void OnPageDetected(string bookId, string pageId)
     {
+        // ── Analytics ── 
+        if (AnalyticsManager.Instance != null)
+            AnalyticsManager.Instance.LogPageViewed(bookId, pageId);
+
         StartCoroutine(PrepareAndLaunch(bookId, pageId));
     }
 
@@ -360,6 +364,7 @@ public class DataManager : MonoBehaviour
     {
         return _prefabCache.ContainsKey(animalName) && _imageCache.ContainsKey(animalName);
     }
+   
 }
 
 
