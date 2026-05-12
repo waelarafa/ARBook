@@ -5,6 +5,396 @@ using System.Collections.Generic;
 
 public class ARImageCubeOverlay : MonoBehaviour
 {
+    // ═══════════════════════════════════════════════════════════
+    // CHAMPS INSPECTEUR
+    // ═══════════════════════════════════════════════════════════
+
+    [Header("Paramètres du cube")]
+    [SerializeField] private float cubeHeight = 0.002f;
+    [SerializeField] private float cubeSizeMultiplier = 0.8f;
+
+    [Header("Liaison Book1Detector")]
+    [SerializeField] private Book1Detector libraryTester;
+
+    [Header("Mapping Image → CubeActionData")]
+    [SerializeField] private ImageCubeDataLibrary cubeDataLibrary;
+    //particules 
+    [Header("Effets")]
+    [SerializeField] private GameObject particlePrefab;
+
+    // ═══════════════════════════════════════════════════════════
+    // VARIABLES PRIVÉES
+    // ═══════════════════════════════════════════════════════════
+
+    private Camera xrCamera;
+    private ARTrackedImageManager trackedImageManager;
+
+    private readonly Dictionary<TrackableId, GameObject> spawnedCubes
+        = new Dictionary<TrackableId, GameObject>();
+
+    // Flag — true quand un prefab est actif
+    // bloque toute réactivation automatique des cubes par le tracking AR
+    private bool cubesHidden = false;
+
+    // ═══════════════════════════════════════════════════════════
+    // CYCLE DE VIE UNITY
+    // ═══════════════════════════════════════════════════════════
+
+    void Awake()
+    {
+        Debug.Log("🔄 [AWAKE] Démarrage initialisation...");
+
+        trackedImageManager = FindFirstObjectByType<ARTrackedImageManager>();
+        if (trackedImageManager == null)
+            Debug.LogError("❌ [AWAKE] ARTrackedImageManager introuvable !");
+        else
+            Debug.Log("✅ [AWAKE] ARTrackedImageManager trouvé");
+
+        GameObject xrOrigin = GameObject.Find("XR Origin (Mobile AR)");
+        if (xrOrigin == null) { Debug.LogError("❌ [AWAKE] XR Origin introuvable !"); return; }
+        else Debug.Log("✅ [AWAKE] XR Origin trouvé");
+
+        Transform cameraOffset = xrOrigin.transform.Find("Camera Offset");
+        if (cameraOffset == null) { Debug.LogError("❌ [AWAKE] Camera Offset introuvable !"); return; }
+        else Debug.Log("✅ [AWAKE] Camera Offset trouvé");
+
+        Transform mainCamTransform = cameraOffset.Find("Main Camera");
+        if (mainCamTransform == null) { Debug.LogError("❌ [AWAKE] Main Camera introuvable !"); return; }
+        else Debug.Log("✅ [AWAKE] Main Camera trouvée");
+
+        xrCamera = mainCamTransform.GetComponent<Camera>();
+        if (xrCamera == null) { Debug.LogError("❌ [AWAKE] Composant Camera introuvable !"); return; }
+        else Debug.Log("✅ [AWAKE] Composant Camera trouvé : " + xrCamera.name);
+
+        Debug.Log("✅ [AWAKE] Initialisation complète");
+    }
+
+    void Start()
+    {
+        Debug.Log("✅ [START] ARImageCubeOverlay démarré");
+
+        if (libraryTester == null)
+            Debug.LogWarning("⚠️ [START] libraryTester non assigné !");
+        else
+            Debug.Log("✅ [START] libraryTester assigné : " + libraryTester.name);
+
+        if (cubeDataLibrary == null)
+            Debug.LogWarning("⚠️ [START] cubeDataLibrary non assigné !");
+        else
+            Debug.Log("✅ [START] cubeDataLibrary assigné : " + cubeDataLibrary.name);
+    }
+
+    void OnEnable()
+    {
+        Debug.Log("🔄 [ONENABLE] Tentative d'abonnement au listener...");
+
+        if (trackedImageManager != null)
+        {
+            trackedImageManager.trackablesChanged.AddListener(OnTrackedImagesChanged);
+            Debug.Log("✅ [ONENABLE] Listener ajouté avec succès");
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ [ONENABLE] trackedImageManager null — listener non ajouté !");
+        }
+    }
+
+    void OnDisable()
+    {
+        Debug.Log("🔄 [ONDISABLE] Désabonnement du listener...");
+
+        if (trackedImageManager != null)
+        {
+            trackedImageManager.trackablesChanged.RemoveListener(OnTrackedImagesChanged);
+            Debug.Log("✅ [ONDISABLE] Listener retiré");
+        }
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    // GESTION DES EVENTS AR
+    // ═══════════════════════════════════════════════════════════
+
+    void OnTrackedImagesChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventArgs)
+    {
+        foreach (ARTrackedImage image in eventArgs.added)
+        {
+            Debug.Log("🖼️ [ADDED] Nouvelle image détectée : " + image.referenceImage.name
+                + " | ID : " + image.trackableId);
+            SpawnCubeOnImage(image);
+        }
+
+        foreach (ARTrackedImage image in eventArgs.updated)
+        {
+            TrackableId id = image.trackableId;
+
+            if (image.trackingState == TrackingState.Tracking)
+            {
+                SpawnCubeOnImage(image);
+                UpdateCubeTransform(image);
+
+                // Ne réactive le cube que si aucun prefab n'est actif
+                // cubesHidden = true → on ne touche pas aux cubes
+                if (spawnedCubes.ContainsKey(id) && !cubesHidden)
+                    spawnedCubes[id].SetActive(true);
+            }
+            else
+            {
+                // Image perdue — on cache le cube
+                if (spawnedCubes.ContainsKey(id) && spawnedCubes[id] != null)
+                {
+                    spawnedCubes[id].SetActive(false);
+                    Debug.Log("👁️ [UPDATED] Image perdue — cube caché : "
+                        + image.referenceImage.name);
+                }
+            }
+        }
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    // CRÉATION DU CUBE
+    // ═══════════════════════════════════════════════════════════
+
+    void SpawnCubeOnImage(ARTrackedImage image)
+    {
+        TrackableId id        = image.trackableId;
+        string      imageName = image.referenceImage.name;
+
+        Debug.Log("🔄 [SPAWN] Tentative spawn pour : " + imageName);
+
+        // Filtre 1 : images commençant par 'F'
+        if (imageName.StartsWith("F"))
+        {
+            Debug.Log("🚫 [SPAWN] Image ignorée (commence par 'F') : " + imageName);
+            return;
+        }
+
+        // Filtre 2 : vérification validité Book1Detector
+        if (libraryTester != null && !libraryTester.imagesValidees.Contains(imageName))
+        {
+            Debug.Log("🚫 [SPAWN] Image non validée par Book1Detector : " + imageName);
+            return;
+        }
+
+        Debug.Log("✅ [SPAWN] Image validée — spawn autorisé pour : " + imageName);
+
+        // Cube déjà existant → réactivation uniquement si cubes non cachés
+        if (spawnedCubes.ContainsKey(id))
+        {
+            Debug.Log("♻️ [SPAWN] Cube déjà existant — réactivation pour : " + imageName);
+            if (!cubesHidden)
+                spawnedCubes[id].SetActive(true);
+            UpdateCubeTransform(image);
+            return;
+        }
+
+        // ── Création du cube primitif ──────────────────────────
+        Debug.Log("🔄 [SPAWN] Création du cube primitif...");
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.name = "Cube_" + imageName + "_" + id;
+        Debug.Log("✅ [SPAWN] Cube primitif créé : " + cube.name);
+
+        // ── Chargement texture + création material URP/Lit ─────
+        Debug.Log("🔄 [SPAWN] Chargement texture depuis Resources/ : " + imageName);
+        Texture2D texture = Resources.Load<Texture2D>(imageName);
+
+        if (texture != null)
+        {
+            Debug.Log("✅ [SPAWN] Texture trouvée : " + imageName
+                + " | Taille : " + texture.width + "x" + texture.height);
+
+            Shader shader = Shader.Find("Universal Render Pipeline/Lit");
+
+            if (shader == null)
+            {
+                Debug.LogError("❌ [SPAWN] Shader URP/Lit introuvable !");
+            }
+            else
+            {
+                Material mat = new Material(shader);
+                mat.SetTexture("_BaseMap", texture);
+                cube.GetComponent<MeshRenderer>().material = mat;
+                Debug.Log("✅ [SPAWN] Material URP/Lit + texture appliqués");
+            }
+        }
+        else
+        {
+            Debug.LogError("❌ [SPAWN] Texture introuvable dans Resources/ pour : " + imageName);
+        }
+
+        // ── BoxCollider ────────────────────────────────────────
+        BoxCollider col = cube.GetComponent<BoxCollider>();
+        if (col != null)
+        {
+            col.size = Vector3.one;
+            Debug.Log("✅ [SPAWN] BoxCollider configuré");
+        }
+        else
+        {
+            Debug.LogError("❌ [SPAWN] BoxCollider introuvable !");
+        }
+
+        // ── TapDetector ────────────────────────────────────────
+        Debug.Log("🔄 [SPAWN] Ajout TapDetector1...");
+        TapDetector1 tap    = cube.AddComponent<TapDetector1>();
+        tap.cam             = xrCamera;
+        tap.data            = cubeDataLibrary?.GetEntryForImage(imageName);
+        tap.isSpawnedPrefab = false;
+        tap.trackedImage    = image;
+        tap.isValidated     = true;
+
+        if (tap.cam == null)
+            Debug.LogError("❌ [SPAWN] TapDetector — caméra null !");
+        else
+            Debug.Log("✅ [SPAWN] TapDetector1 ajouté — caméra : " + tap.cam.name);
+
+        // Si cubes cachés, on cache immédiatement le nouveau cube aussi
+        if (cubesHidden)
+            cube.SetActive(false);
+
+        spawnedCubes[id] = cube;
+        // ── Particules ─────────────────────────────────────────
+        if (particlePrefab != null)
+        {
+            GameObject particles = Instantiate(particlePrefab, cube.transform);
+            particles.transform.localPosition = Vector3.zero;
+            particles.transform.localRotation = Quaternion.identity;
+
+            // Récupère la taille réelle du cube dans la scène
+            Vector2 imageSize = image.size;
+            float width  = imageSize.x * cubeSizeMultiplier;
+            float height = imageSize.y * cubeSizeMultiplier;
+            float limit  = Mathf.Min(width, height); // prend le plus petit côté
+
+            // Applique le scale aux particules pour ne pas dépasser le cube
+            particles.transform.localScale = new Vector3(limit, limit, limit);
+
+            Debug.Log("✨ [SPAWN] Particules attachées au cube : " + imageName 
+                    + " | Scale : " + limit);
+        }
+        UpdateCubeTransform(image);
+
+        Debug.Log("📦 [SPAWN] Cube entièrement créé et positionné pour : " + imageName);
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    // MISE À JOUR DES TRANSFORMS
+    // ═══════════════════════════════════════════════════════════
+
+    void UpdateCubeTransform(ARTrackedImage image)
+    {
+        TrackableId id = image.trackableId;
+        if (!spawnedCubes.ContainsKey(id))
+        {
+            Debug.LogWarning("⚠️ [UPDATE] Cube introuvable pour UpdateCubeTransform : "
+                + image.referenceImage.name);
+            return;
+        }
+
+        GameObject cube      = spawnedCubes[id];
+        Vector2    imageSize = image.size;
+
+        cube.transform.localScale = new Vector3(
+            imageSize.x * cubeSizeMultiplier,
+            cubeHeight,
+            imageSize.y * cubeSizeMultiplier);
+
+        cube.transform.position = image.transform.position
+                                + image.transform.up * (cubeHeight / 2f);
+        cube.transform.rotation = image.transform.rotation;
+
+        // Correction inversion image
+        cube.transform.Rotate(0f, 180f, 0f);
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    // MÉTHODES PUBLIQUES — HIDE / SHOW CUBES
+    // ═══════════════════════════════════════════════════════════
+
+    // Cache tous les cubes — appelé quand un prefab spawne
+    // Active le flag cubesHidden pour bloquer toute réactivation AR
+    public void HideAllCubes()
+    {
+        cubesHidden = true;
+        foreach (var kvp in spawnedCubes)
+            if (kvp.Value != null)
+                kvp.Value.SetActive(false);
+
+        Debug.Log("🙈 [HIDE] Tous les cubes cachés — flag cubesHidden = true");
+    }
+
+    // Réaffiche tous les cubes — appelé quand on ferme le prefab
+    // Désactive le flag cubesHidden pour permettre la réactivation AR
+    public void ShowAllCubes()
+    {
+        cubesHidden = false;
+        foreach (var kvp in spawnedCubes)
+            if (kvp.Value != null)
+                kvp.Value.SetActive(true);
+
+        Debug.Log("👁️ [SHOW] Tous les cubes réaffichés — flag cubesHidden = false");
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    // MÉTHODES PUBLIQUES UTILITAIRES
+    // ═══════════════════════════════════════════════════════════
+
+    public GameObject GetCubeForImage(string imageName)
+    {
+        Debug.Log("🔍 [GET] Recherche cube pour : " + imageName);
+        foreach (var kvp in spawnedCubes)
+        {
+            if (kvp.Value != null &&
+                kvp.Value.name.StartsWith("Cube_" + imageName + "_"))
+            {
+                Debug.Log("✅ [GET] Cube trouvé : " + kvp.Value.name);
+                return kvp.Value;
+            }
+        }
+        Debug.LogWarning("⚠️ [GET] Aucun cube trouvé pour : " + imageName);
+        return null;
+    }
+
+    public void ClearAllCubes()
+    {
+        Debug.Log("🔄 [CLEAR] Suppression de " + spawnedCubes.Count + " cubes...");
+        foreach (var kvp in spawnedCubes)
+            if (kvp.Value != null) Destroy(kvp.Value);
+
+        spawnedCubes.Clear();
+        Debug.Log("✅ [CLEAR] Tous les cubes supprimés");
+    }
+
+    public void RespawnCubesForActiveTrackables()
+    {
+        Debug.Log("🔄 [RESPAWN] Début respawn...");
+
+        if (trackedImageManager == null)
+        {
+            Debug.LogError("❌ [RESPAWN] trackedImageManager null !");
+            return;
+        }
+
+        int count = 0;
+        foreach (ARTrackedImage image in trackedImageManager.trackables)
+        {
+            if (image.trackingState == TrackingState.Tracking ||
+                image.trackingState == TrackingState.Limited)
+            {
+                SpawnCubeOnImage(image);
+                count++;
+            }
+        }
+        Debug.Log("✅ [RESPAWN] Respawn terminé pour " + count + " trackables");
+    }
+}
+/************version valide avec assignation de material au cube
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+using System.Collections.Generic;
+
+public class ARImageCubeOverlay : MonoBehaviour
+{
     [Header("Paramètres du cube")]
     [SerializeField] private float cubeHeight = 0.005f;
     [SerializeField] private Material cubeMaterial; // Material assigné depuis l'inspecteur

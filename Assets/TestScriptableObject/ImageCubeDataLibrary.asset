@@ -13,27 +13,39 @@ MonoBehaviour:
   m_Name: ImageCubeDataLibrary
   m_EditorClassIdentifier: Assembly-CSharp::ImageCubeDataLibrary
   entries:
-  - imageName: fox
+  - environmentPrefab: {fileID: 5519742237210265589, guid: 9805574b0c150bf4890990b905cc9517, type: 3}
+    imageName: fox
     doSpawn: 1
     prefabToSpawn: {fileID: 7359655724910758988, guid: a838ec8ea7d24c544b5e48e5aba36cdc, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 18336686c242b3f4f987e62645ac7ddc, type: 2}
+    soundConfigArabe: {fileID: 11400000, guid: 18336686c242b3f4f987e62645ac7ddc, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 3864161f9bed822499653535056c08f3, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 5a6d805231f01344c8369854b45c40a4, type: 2}
     scaleMultiplier: 1.5
     scaleDuration: 1.5
-    doDestroyOnTap: 1
-  - imageName: hedgehog
+    rotationSensitivity: 0.3
+  - environmentPrefab: {fileID: 439294617866885371, guid: 27693c2e52b497f46869cd1614ad234d, type: 3}
+    imageName: hedgehog
     doSpawn: 1
     prefabToSpawn: {fileID: 1369679905575684, guid: 8951f907d878f44288d2ea37b5a0f9e3, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 55573651dd43c7e40b48341e767e87c1, type: 2}
+    soundConfigArabe: {fileID: 0}
+    soundConfigFrancais: {fileID: 0}
+    soundConfigAnglais: {fileID: 0}
     scaleMultiplier: 1.5
     scaleDuration: 1.5
-    doDestroyOnTap: 1
-  - imageName: squirrel
+    rotationSensitivity: 0.3
+  - environmentPrefab: {fileID: 709256008606363682, guid: bb80e22579482794f8ac15e375eae8d5, type: 3}
+    imageName: squirrel
     doSpawn: 1
-    prefabToSpawn: {fileID: 6073855695995191056, guid: c18682d3e4c3fbf4cbf14216af86a1d9, type: 3}
+    prefabToSpawn: {fileID: 1509054931390068, guid: 3f5c613256bb8481cbafc1d34aa1184e, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 5a6d805231f01344c8369854b45c40a4, type: 2}
+    soundConfigArabe: {fileID: 0}
+    soundConfigFrancais: {fileID: 0}
+    soundConfigAnglais: {fileID: 0}
     scaleMultiplier: 1.5
     scaleDuration: 1.5
-    doDestroyOnTap: 1
+    rotationSensitivity: 0.3

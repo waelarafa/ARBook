@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77f01dacc3fb534f9931bfe0113d6a2, type: 3}
+  m_Name: quiz1
+  m_EditorClassIdentifier: Assembly-CSharp::QuizData
+  quizName: quiz1
+  questions:
+  - questionText: what's your favorite animal
+    choices:
+    - dog
+    - rubbit
+    - cat
+    correctIndex: 2
+  - questionText: what's the perfect food for dogs
+    choices:
+    - fruits
+    - eggs
+    correctIndex: 2
+  - questionText: where lives the blackbear
+    choices:
+    - desert
+    - forest
+    - garden
+    correctIndex: 2

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Plugins/Android/AndroidManifest.xml.meta
+guid: 204c983c9a11b0143a9e0c5e3604d9df
+TextScriptImporter:
+========
 guid: eec3e45e53a4f8541a15f6712891e2fa
 DefaultImporter:
+>>>>>>>> b795c0319cf06e9cf6dc05d4f106a667d975b986:Assets/Interface mobile AR enfant – Figma Make.mhtml.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

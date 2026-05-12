@@ -162,9 +162,9 @@ public class Book1Detector : MonoBehaviour
 
         if (cubeOverlay != null) cubeOverlay.ClearAllCubes();
 
-        // ── Initialise les étoiles pour cette page ← NOUVEAU
+        /* ── Initialise les étoiles pour cette page ← NOUVEAU
         if (StarUIManager.Instance != null)
-            StarUIManager.Instance.InitStars(page.imageNames.Count);
+            StarUIManager.Instance.InitStars(page.imageNames.Count);*/
 
         feuilleDetectee = feuille;
         yield return null;
@@ -256,7 +256,7 @@ public class Book1Detector : MonoBehaviour
                                 imagesValidees.Add(imgName);
                                 Debug.Log("✅ VALIDÉ : " + imgName);
 
-                                // ── Highlight sur le cube ← NOUVEAU
+                                /* ── Highlight sur le cube ← NOUVEAU
                                 if (cubeOverlay != null)
                                 {
                                     GameObject cube = cubeOverlay.GetCubeForImage(imgName);
@@ -267,9 +267,9 @@ public class Book1Detector : MonoBehaviour
                                     }
                                 }
 
-                                // ── Étoile suivante ← NOUVEAU
+                                ── Étoile suivante ← NOUVEAU
                                 if (StarUIManager.Instance != null)
-                                    StarUIManager.Instance.LightNextStar();
+                                    StarUIManager.Instance.LightNextStar();*/
                             }
                             break;
                         }
