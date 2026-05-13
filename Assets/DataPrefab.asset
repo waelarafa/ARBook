@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48e8a2fb0c1407147964d9a62d0e35c1, type: 3}
-  m_Name: ImageCubeDataLibrary
+  m_Name: DataPrefab
   m_EditorClassIdentifier: Assembly-CSharp::ImageCubeDataLibrary
   entries:
-  - environmentPrefab: {fileID: 5519742237210265589, guid: 9805574b0c150bf4890990b905cc9517, type: 3}
+  - environmentPrefab: {fileID: 4391587478659334713, guid: 3abb652a0714a714c992c50b3a9136f7, type: 3}
     imageName: fox
     doSpawn: 1
-    prefabToSpawn: {fileID: 7359655724910758988, guid: a838ec8ea7d24c544b5e48e5aba36cdc, type: 3}
+    prefabToSpawn: {fileID: 6030499686730131976, guid: 506e6391c8fd0424fa507dd1b1614119, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 18336686c242b3f4f987e62645ac7ddc, type: 2}
     soundConfigArabe: {fileID: 11400000, guid: 18336686c242b3f4f987e62645ac7ddc, type: 2}
@@ -25,10 +25,10 @@ MonoBehaviour:
     scaleMultiplier: 1.5
     scaleDuration: 1.5
     rotationSensitivity: 0.3
-  - environmentPrefab: {fileID: 439294617866885371, guid: 27693c2e52b497f46869cd1614ad234d, type: 3}
+  - environmentPrefab: {fileID: 4750086999414109597, guid: cc0957d48bd49ca49b836b8e5ac325cf, type: 3}
     imageName: hedgehog
     doSpawn: 1
-    prefabToSpawn: {fileID: 1369679905575684, guid: 8951f907d878f44288d2ea37b5a0f9e3, type: 3}
+    prefabToSpawn: {fileID: 4341162579754259275, guid: a55f5bf56a2fdb74e9c56bf211d45edb, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 55573651dd43c7e40b48341e767e87c1, type: 2}
     soundConfigArabe: {fileID: 0}
@@ -37,10 +37,10 @@ MonoBehaviour:
     scaleMultiplier: 1.5
     scaleDuration: 1.5
     rotationSensitivity: 0.3
-  - environmentPrefab: {fileID: 709256008606363682, guid: bb80e22579482794f8ac15e375eae8d5, type: 3}
+  - environmentPrefab: {fileID: 8456976543571198260, guid: 23b4aa33d2d105d4aaa7c6c0b5d80095, type: 3}
     imageName: squirrel
     doSpawn: 1
-    prefabToSpawn: {fileID: 1509054931390068, guid: 3f5c613256bb8481cbafc1d34aa1184e, type: 3}
+    prefabToSpawn: {fileID: 600298885858246675, guid: bb867e2b3ddf3224aae142d742779cd1, type: 3}
     doPlaySound: 1
     soundConfig: {fileID: 11400000, guid: 5a6d805231f01344c8369854b45c40a4, type: 2}
     soundConfigArabe: {fileID: 0}

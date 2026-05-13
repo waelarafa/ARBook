@@ -60,17 +60,12 @@ public class NodeTapDetector : BaseTapDetector
         tap.cam             = usedCam;
         tap.data            = entry;
 
-        // Assigne le prefab comme cible de la caméra gyroscope
-        /*GyroscopeOrbitCamera orbitCam = usedCam.GetComponent<GyroscopeOrbitCamera>();
-        if (orbitCam != null)
-            orbitCam.SetTarget(spawned.transform);
-        else
-            Debug.LogWarning("⚠️ GyroscopeOrbitCamera non trouvé sur la caméra — ajoute le script sur la Main Camera");*/
 
         _currentSpawned = spawned;
 
         // ── Environnement spawné sur la position brute ────────
         SpawnEnvironment(entry, spawned.transform, usedCam);
+        
 
         // ── Centrage APRÈS l'environnement ────────────────────
         Renderer[] renderers = spawned.GetComponentsInChildren<Renderer>();
@@ -123,6 +118,7 @@ public class NodeTapDetector : BaseTapDetector
         _currentEnvironment      = Object.Instantiate(
             entry.environmentPrefab, envPosition, envRotation);
         _currentEnvironment.name = "Env_" + entry.imageName;
+        
 
         // Respecte la scale de l'inspector
         _currentEnvironment.transform.localScale = envScale;

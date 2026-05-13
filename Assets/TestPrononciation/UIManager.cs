@@ -21,12 +21,12 @@ public class UIManager : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
+        DontDestroyOnLoad(gameObject); // ✅ UIManager survit entre les scènes
     }
 
     void Start()
     {
         BuildUI();
-        // ✅ plus de WaitAndDisplay ici, on attend que l'utilisateur ouvre le jeu
     }
 
     // ─────────────────────────────────────────────
@@ -35,13 +35,18 @@ public class UIManager : MonoBehaviour
 
     public void OpenGame()
     {
+        // ✅ si canvas détruit, le recréer
+        if (mainCanvas == null)
+            BuildUI();
+
         mainCanvas.gameObject.SetActive(true);
-        StartCoroutine(WaitAndDisplay()); // ✅ charge les données à chaque ouverture
+        StartCoroutine(WaitAndDisplay());
     }
 
     public void CloseGame()
     {
-        mainCanvas.gameObject.SetActive(false);
+        if (mainCanvas != null)
+            mainCanvas.gameObject.SetActive(false);
     }
 
     IEnumerator WaitAndDisplay()
@@ -65,6 +70,8 @@ public class UIManager : MonoBehaviour
     void BuildUI()
     {
         GameObject canvasObj = new GameObject("MainCanvas");
+        canvasObj.transform.SetParent(this.transform); // ✅ attaché au UIManager
+        
         mainCanvas = canvasObj.AddComponent<Canvas>();
         mainCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
         mainCanvas.sortingOrder = 10;
@@ -86,9 +93,9 @@ public class UIManager : MonoBehaviour
         BuildScrollView(canvasObj);
         BuildNavigation(canvasObj);
         BuildFeedbackPanel(canvasObj);
-        BuildCloseButton(canvasObj);
+        BuildCloseButton(canvasObj); // ✅ bouton fermer par code
 
-        mainCanvas.gameObject.SetActive(false); // ✅ caché au départ
+        mainCanvas.gameObject.SetActive(false);
     }
 
     void BuildHeader(GameObject parent)

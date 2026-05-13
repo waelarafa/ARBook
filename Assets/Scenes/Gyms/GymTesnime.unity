@@ -257,7 +257,7 @@ MonoBehaviour:
   cubeSizeMultiplier: 0.9
   libraryTester: {fileID: 34717765}
   cubeDataLibrary: {fileID: 11400000, guid: 3fa48484b59c28343901f2c51e4e9b5a, type: 2}
-  particlePrefab: {fileID: 1449242181322416601, guid: 052d5f6cf7d3ebc44bba49fbe653f9a8, type: 3}
+  particlePrefab: {fileID: 2303679301866824263, guid: f1a034ac0827a3f45b817f963f0004f6, type: 3}
 --- !u!114 &34717765
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -257,19 +257,8 @@ public class ARImageCubeOverlay : MonoBehaviour
         {
             GameObject particles = Instantiate(particlePrefab, cube.transform);
             particles.transform.localPosition = Vector3.zero;
-            particles.transform.localRotation = Quaternion.identity;
 
-            // Récupère la taille réelle du cube dans la scène
-            Vector2 imageSize = image.size;
-            float width  = imageSize.x * cubeSizeMultiplier;
-            float height = imageSize.y * cubeSizeMultiplier;
-            float limit  = Mathf.Min(width, height); // prend le plus petit côté
-
-            // Applique le scale aux particules pour ne pas dépasser le cube
-            particles.transform.localScale = new Vector3(limit, limit, limit);
-
-            Debug.Log("✨ [SPAWN] Particules attachées au cube : " + imageName 
-                    + " | Scale : " + limit);
+            Debug.Log("✨ [SPAWN] Particules attachées au cube : " + imageName);
         }
         UpdateCubeTransform(image);
 
