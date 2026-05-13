@@ -1,0 +1,9470 @@
+﻿#include "pch-cpp.hpp"
+
+
+
+
+
+struct InterfaceActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename R>
+struct InterfaceFuncInvoker0
+{
+	typedef R (*Func)(void*, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+
+struct Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A;
+struct Func_2_tACBF5A1656250800CE861707354491F0611F6624;
+struct HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885;
+struct HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178;
+struct IEnumerable_1_t050E0C934B6C40A1C55157480863DDD8400620DC;
+struct IEnumerable_1_t64DFF835324E6133734255DFFC4682D0D8339025;
+struct IEnumerable_1_tF95C9E01A913DD50575531C8305932628663D9E9;
+struct IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44;
+struct IEnumerator_1_t38FD9D28AB105208CDD69D6800417E2583EF2CAF;
+struct IEqualityComparer_1_tAE94C8F24AD5B94D4EE85CA9FC59E3409D41CAF7;
+struct List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235;
+struct List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200;
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
+struct SlotU5BU5D_t8B8EE191EEC1575F1F0CAC91A208DBFDF2821D01;
+struct AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068;
+struct AnimatorControllerParameterU5BU5D_tAB05125F5DC0D98F59351CD7D8C9880DFFA8EA21;
+struct AudioSourceU5BU5D_tBBF6E920E0DC80D53D4BB2A8D4C80D244EF170B2;
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
+struct Common_WanderScriptU5BU5D_tF49C6920E02312D987E458E42E4AA84899B19642;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF;
+struct IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2;
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
+struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
+struct MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct AIState_t8B7A024705B037A9640E1F185303E97B1D848619;
+struct AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77;
+struct Animator_t8A52E42AE54F76681838FE9E632683EF3952E883;
+struct AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02;
+struct ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F;
+struct AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20;
+struct AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299;
+struct Avatar_t7861E57EEE2CF8CC61BD63C09737BA22F7ABCA0F;
+struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA;
+struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
+struct CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A;
+struct Common_AnimSpeed_t71639B8CF6EAB28B935993E14729C478DFA2A075;
+struct Common_AnimationControl_t923B36B7506F4FC6EF405E0BE6DC9B53D1A58E94;
+struct Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B;
+struct Common_KillSwitch_tC2BDFF681F5D5B1B337301082D6A0A252B446E78;
+struct Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86;
+struct Common_RandomInt_t41A13F4DFF640E4C1D05C034B35550777173E160;
+struct Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06;
+struct Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F;
+struct Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07;
+struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B;
+struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
+struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
+struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
+struct IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95;
+struct InvokableCallList_t309E1C8C7CE885A0D2F98C84CEA77A8935688382;
+struct MethodInfo_t;
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
+struct MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256;
+struct NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F;
+struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A;
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
+struct PersistentCallGroup_tB826EDF15DC80F71BCBCD8E410FD959A04C33F25;
+struct RandomCharacterPlacer_t0B39C9AAC8AB574BBED2BC28E62D13E7B1E91B8C;
+struct RuntimeAnimatorController_t6F7C753402B42EC23C163099CF935C5E0D7A7254;
+struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A;
+struct SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37;
+struct StateMachineBehaviour_t59C5685227B06222F5AF7027E2DA530AB99AFDF7;
+struct String_t;
+struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
+struct UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977;
+struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t4A47108E2FAA80F4169F2F10FDB8449ADEC86A25;
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3;
+struct PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E;
+struct PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072;
+struct U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0;
+struct U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E;
+struct U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153;
+struct U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D;
+struct U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B;
+
+IL2CPP_EXTERN_C RuntimeClass* AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AIState_t8B7A024705B037A9640E1F185303E97B1D848619_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerable_1_t050E0C934B6C40A1C55157480863DDD8400620DC_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerator_1_t38FD9D28AB105208CDD69D6800417E2583EF2CAF_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t4DAC7CEC65537850885A8C53C336A44DD86C0CFC____1539819C5999A62E556F932B630D6AA1BA2CECF31A46DF4DE54D056C0E51542F_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t4DAC7CEC65537850885A8C53C336A44DD86C0CFC____7CA2C0AEA22392A76CB8A21DBB10F25C9630A6783B5F79B69FD608FB08D83E45_FieldInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral02EC3CF4A45E54D6FDE2F146C89B424739D77D57;
+IL2CPP_EXTERN_C String_t* _stringLiteral06CF41BA66D0BBD786673B743CD4840A4EE6CA18;
+IL2CPP_EXTERN_C String_t* _stringLiteral06DCC0EBD7F6A3B5EA76D27DFA3D2334D28BC647;
+IL2CPP_EXTERN_C String_t* _stringLiteral0B02B83F32F150EA294802F0D2408DDBD547B1A3;
+IL2CPP_EXTERN_C String_t* _stringLiteral0F255915E07DA7FC595B804942A8C02376116B7A;
+IL2CPP_EXTERN_C String_t* _stringLiteral15C25B91D8FA3C30C0CFD33996BFCF8282A6D0D5;
+IL2CPP_EXTERN_C String_t* _stringLiteral18C93447E301BFC2E96A79D84C958EC2A008E7CF;
+IL2CPP_EXTERN_C String_t* _stringLiteral1FAAC4C64BF7977C10655B4C43E003EAFFC5F598;
+IL2CPP_EXTERN_C String_t* _stringLiteral223C862160DDACB8182C7398227BC0CA49966629;
+IL2CPP_EXTERN_C String_t* _stringLiteral2CDF3BAA4495C2BFF101375871785E5A282AA604;
+IL2CPP_EXTERN_C String_t* _stringLiteral2DAA0C5481FBB7AB2D7BA54DE93347AC71F18977;
+IL2CPP_EXTERN_C String_t* _stringLiteral31EB83E9771E61D6C7714443018779D8EB00BDFA;
+IL2CPP_EXTERN_C String_t* _stringLiteral42AAE0670C9FE79A7D836781FE1B2993BAAA76E2;
+IL2CPP_EXTERN_C String_t* _stringLiteral4365DEC9D04106EFC4B42D0C3E299E5189F6C31E;
+IL2CPP_EXTERN_C String_t* _stringLiteral4404E0BBA89CA927E634FA21E24B0FE0CF2FC39F;
+IL2CPP_EXTERN_C String_t* _stringLiteral4C3159948294D69997B0A5E731AF1A37A734DB27;
+IL2CPP_EXTERN_C String_t* _stringLiteral4C5693542539B9E2C7B7B9ED673F26BC38EE5F68;
+IL2CPP_EXTERN_C String_t* _stringLiteral4E1BAB0B18C7A55EB65D6F964C2DADEB0863418B;
+IL2CPP_EXTERN_C String_t* _stringLiteral50A22ACEF61004968729A5C1115180DDE0BD9EB8;
+IL2CPP_EXTERN_C String_t* _stringLiteral54BCA388B1C4035019F447FBBE662C6BFC12F7E8;
+IL2CPP_EXTERN_C String_t* _stringLiteral616FA8FACA4BD63856D14D13CE36C30A22C4AE73;
+IL2CPP_EXTERN_C String_t* _stringLiteral6269DDD173F4D01EBB1968928A63215A0A132A4B;
+IL2CPP_EXTERN_C String_t* _stringLiteral67ED1E3428AA680E1C72E54C63E0E0FD76D89414;
+IL2CPP_EXTERN_C String_t* _stringLiteral6B8E820229CD8FD9A0BEDEE348E594B7F0163288;
+IL2CPP_EXTERN_C String_t* _stringLiteral6E5678BD951D03A55BA5FDB6DD94FD3478E561CD;
+IL2CPP_EXTERN_C String_t* _stringLiteral70D2FE2F9F5B527E943BF6FA5AC44078F32B0BAF;
+IL2CPP_EXTERN_C String_t* _stringLiteral7C1D678D149E4054A521A3A0F861BE008C97FA7F;
+IL2CPP_EXTERN_C String_t* _stringLiteral7DB229E4B4513366157C0D536C533A2B6C5F7AA5;
+IL2CPP_EXTERN_C String_t* _stringLiteral7F4682F559107108074468C96021CDFA3B5C0C04;
+IL2CPP_EXTERN_C String_t* _stringLiteral83F3694ED3D1D15A7CBF0DF0AE050883D616D08B;
+IL2CPP_EXTERN_C String_t* _stringLiteral8B8272E6E9EEB3716EC6CED4B400B13C80AB4B0E;
+IL2CPP_EXTERN_C String_t* _stringLiteralAE8900DC91B51B8520DDF29118082DF79022F298;
+IL2CPP_EXTERN_C String_t* _stringLiteralB1A583BD5B1ECFF39E960E10E0921227F68C43AA;
+IL2CPP_EXTERN_C String_t* _stringLiteralBDC91816E26D4544E45FCD2AC7931A57F8C505A7;
+IL2CPP_EXTERN_C String_t* _stringLiteralC3EB57F03E4B62DD084B82F5C573AAB222DCFF46;
+IL2CPP_EXTERN_C String_t* _stringLiteralC4364D9301C4791828B0C01CAE91CA5B264D02B2;
+IL2CPP_EXTERN_C String_t* _stringLiteralC96A56EE664757E0B38055ECE5190A6BBAE77972;
+IL2CPP_EXTERN_C String_t* _stringLiteralCC529E37F095C7635C5B7B0D99D3E3261DE603D8;
+IL2CPP_EXTERN_C String_t* _stringLiteralCCCDD19BAC8E228E10128C1D017E557BF3B69BEA;
+IL2CPP_EXTERN_C String_t* _stringLiteralD97B0577F464078484CF8808A78E5C0B47BDF09A;
+IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+IL2CPP_EXTERN_C String_t* _stringLiteralDF3BCF12E24680ADA1CFB0AFE50A7CF9C0FCAB70;
+IL2CPP_EXTERN_C String_t* _stringLiteralE5A22B80916586DE88322B31E1516201F5FE6993;
+IL2CPP_EXTERN_C String_t* _stringLiteralE96541A23C3381E5DF9400E366DBA56E7813CD2D;
+IL2CPP_EXTERN_C String_t* _stringLiteralF0241176DE201505BABEA80714B4D9AFACBDFFF1;
+IL2CPP_EXTERN_C String_t* _stringLiteralF222D7C67DEF174DCB9D2F00651025EDA199E7F1;
+IL2CPP_EXTERN_C String_t* _stringLiteralF93125B97D5E6C6153A4F18500DD2B1BBD8E6624;
+IL2CPP_EXTERN_C String_t* _stringLiteralFD11670C8C44413D9DBF45598487ED02C415B634;
+IL2CPP_EXTERN_C const RuntimeMethod* Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisNavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F_m45B783D78932EFB8409019F84FED6DF3A492F16F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Contains_TisString_t_m903B1A64070B00925A8E4E7979330AA7D7B0FB33_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Select_TisAnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02_TisString_t_mB655BB0D2A67AD59B31FEBC036611D4A5D5FBBAA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisCommon_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06_mF24F06C92F49F3C676456B71F3D804D1E2DAA4E4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_UnionWith_m1929B27C529E29BCCA4986C594085AF0D531A2D8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m3D2F6756336D176B6673406550A16B6C87E51A48_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m854AB1F4912F4A70C478FAE8E282C8F6CE880550_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Remove_m69A6735064918C25FEF615127046E859FFC297EA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m1572AF991CD3CD21B43B0D6F699FE6296DEDF9E7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m60E56DC377483321E37B0C0101FA4CB58EDE1D79_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m74D92C197B63FADB79CDFC5D2119504FAC55A88F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m7B789802BC75721DA5E775D38FEA0F4B1494F612_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mD136E37F696C00A3A1D4F65724ACAE903E385181_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CConstantTickingU3Ed__99_System_Collections_IEnumerator_Reset_m2936C726BBE64BCA3E4ADBDF2AAAA65E08C70813_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CRandomStartingDelayU3Ed__98_System_Collections_IEnumerator_Reset_m2D73A70226E085B9FBCB699AB11A3C6A91060BE1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CReturnToPoolU3Ed__8_System_Collections_IEnumerator_Reset_m21381E32E90144A5633E81097192DBB6CDEE9374_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CAwakeU3Eb__70_0_mD3CB110A68B302421DD5AF437C315049619007CF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3Cget_AllStatesU3Ed__72_System_Collections_IEnumerator_Reset_m7070B69179C0A083C9FF365AE85F431C8490F8C1_RuntimeMethod_var;
+struct Delegate_t_marshaled_com;
+struct Delegate_t_marshaled_pinvoke;
+struct Exception_t_marshaled_com;
+struct Exception_t_marshaled_pinvoke;
+
+struct AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068;
+struct AnimatorControllerParameterU5BU5D_tAB05125F5DC0D98F59351CD7D8C9880DFFA8EA21;
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF;
+struct IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2;
+struct MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+struct U3CModuleU3E_tAADD5D383687A740AD0C5D2BAD5E55A6BC48E943 
+{
+};
+struct HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	SlotU5BU5D_t8B8EE191EEC1575F1F0CAC91A208DBFDF2821D01* ____slots;
+	int32_t ____count;
+	int32_t ____lastIndex;
+	int32_t ____freeList;
+	RuntimeObject* ____comparer;
+	int32_t ____version;
+	SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ____siInfo;
+};
+struct List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235  : public RuntimeObject
+{
+	AudioSourceU5BU5D_tBBF6E920E0DC80D53D4BB2A8D4C80D244EF170B2* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200  : public RuntimeObject
+{
+	Common_WanderScriptU5BU5D_tF49C6920E02312D987E458E42E4AA84899B19642* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D  : public RuntimeObject
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct U3CPrivateImplementationDetailsU3E_t4DAC7CEC65537850885A8C53C336A44DD86C0CFC  : public RuntimeObject
+{
+};
+struct AIState_t8B7A024705B037A9640E1F185303E97B1D848619  : public RuntimeObject
+{
+	String_t* ___stateName;
+	String_t* ___animationBool;
+};
+struct String_t  : public RuntimeObject
+{
+	int32_t ____stringLength;
+	Il2CppChar ____firstChar;
+};
+struct UnityEventBase_t4968A4C72559F35C0923E4BD9C042C3A842E1DB8  : public RuntimeObject
+{
+	InvokableCallList_t309E1C8C7CE885A0D2F98C84CEA77A8935688382* ___m_Calls;
+	PersistentCallGroup_tB826EDF15DC80F71BCBCD8E410FD959A04C33F25* ___m_PersistentCalls;
+	bool ___m_CallsDirty;
+};
+struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t4A47108E2FAA80F4169F2F10FDB8449ADEC86A25  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D  : public RuntimeObject
+{
+};
+struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_pinvoke
+{
+};
+struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
+{
+};
+struct U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	float ___delay;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___obj;
+};
+struct U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E  : public RuntimeObject
+{
+};
+struct U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___U3CU3E4__this;
+	float ___delay;
+};
+struct U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___U3CU3E4__this;
+};
+struct U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	AIState_t8B7A024705B037A9640E1F185303E97B1D848619* ___U3CU3E2__current;
+	int32_t ___U3CU3El__initialThreadId;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___U3CU3E4__this;
+	IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* ___U3CU3E7__wrap1;
+	int32_t ___U3CU3E7__wrap2;
+	MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* ___U3CU3E7__wrap3;
+	AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* ___U3CU3E7__wrap4;
+};
+struct Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A 
+{
+	List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ____current;
+};
+struct Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A 
+{
+	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	RuntimeObject* ____current;
+};
+struct AnimatorStateInfo_t1F47379289C7CE7FD588FBC3BBD79A777243B6B2 
+{
+	int32_t ___m_Name;
+	int32_t ___m_Path;
+	int32_t ___m_FullPath;
+	float ___m_NormalizedTime;
+	float ___m_Length;
+	float ___m_Speed;
+	float ___m_SpeedMultiplier;
+	int32_t ___m_Tag;
+	int32_t ___m_Loop;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22 
+{
+	bool ___m_value;
+};
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3 
+{
+	uint8_t ___m_value;
+};
+struct Color_tD001788D726C3A7F1379BEED0260B9591F440C1F 
+{
+	float ___r;
+	float ___g;
+	float ___b;
+	float ___a;
+};
+struct Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F 
+{
+	double ___m_value;
+};
+struct EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 
+{
+	union
+	{
+		struct
+		{
+			int32_t ___m_Data;
+		};
+		uint8_t EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8__padding[4];
+	};
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
+{
+};
+struct IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95  : public AIState_t8B7A024705B037A9640E1F185303E97B1D848619
+{
+	float ___minStateTime;
+	float ___maxStateTime;
+	int32_t ___stateWeight;
+};
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
+{
+	int32_t ___m_value;
+};
+struct IntPtr_t 
+{
+	void* ___m_value;
+};
+struct Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682__padding[1];
+	};
+};
+struct MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256  : public AIState_t8B7A024705B037A9640E1F185303E97B1D848619
+{
+	float ___maxStateTime;
+	float ___moveSpeed;
+	float ___turnSpeed;
+};
+struct Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 
+{
+	float ___x;
+	float ___y;
+	float ___z;
+	float ___w;
+};
+struct Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C 
+{
+	float ___m_value;
+};
+struct UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977  : public UnityEventBase_t4968A4C72559F35C0923E4BD9C042C3A842E1DB8
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___m_InvokeArray;
+};
+struct Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 
+{
+	float ___x;
+	float ___y;
+};
+struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 
+{
+	float ___x;
+	float ___y;
+	float ___z;
+};
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
+	};
+};
+struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3  : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D
+{
+	float ___m_Seconds;
+};
+struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_marshaled_pinvoke : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_pinvoke
+{
+	float ___m_Seconds;
+};
+struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_marshaled_com : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
+{
+	float ___m_Seconds;
+};
+#pragma pack(push, tp, 1)
+struct __StaticArrayInitTypeSizeU3D561_tB028046418F53C5023357F28D6B71499F094686C 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D561_tB028046418F53C5023357F28D6B71499F094686C__padding[561];
+	};
+};
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
+struct __StaticArrayInitTypeSizeU3D869_t74B8435F510514FA951BC30490C3AE48BA582E7B 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D869_t74B8435F510514FA951BC30490C3AE48BA582E7B__padding[869];
+	};
+};
+#pragma pack(pop, tp)
+struct MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5 
+{
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___FilePathsData;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	bool ___IsEditorOnly;
+};
+struct MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshaled_pinvoke
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshaled_com
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct AnimatorControllerParameterType_t2AD68F1C718AFCCBF9CF62AEBEAD0439276E4E6E 
+{
+	int32_t ___value__;
+};
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B  : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D
+{
+	intptr_t ___m_Ptr;
+};
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B_marshaled_pinvoke : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_pinvoke
+{
+	intptr_t ___m_Ptr;
+};
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B_marshaled_com : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
+{
+	intptr_t ___m_Ptr;
+};
+struct Delegate_t  : public RuntimeObject
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	RuntimeObject* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	bool ___method_is_virtual;
+};
+struct Delegate_t_marshaled_pinvoke
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Delegate_t_marshaled_com
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Exception_t  : public RuntimeObject
+{
+	String_t* ____className;
+	String_t* ____message;
+	RuntimeObject* ____data;
+	Exception_t* ____innerException;
+	String_t* ____helpURL;
+	RuntimeObject* ____stackTrace;
+	String_t* ____stackTraceString;
+	String_t* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	RuntimeObject* ____dynamicMethods;
+	int32_t ____HResult;
+	String_t* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_pinvoke
+{
+	char* ____className;
+	char* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_pinvoke* ____innerException;
+	char* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	char* ____stackTraceString;
+	char* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	char* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_com
+{
+	Il2CppChar* ____className;
+	Il2CppChar* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_com* ____innerException;
+	Il2CppChar* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	Il2CppChar* ____stackTraceString;
+	Il2CppChar* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	Il2CppChar* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct KeyCode_t75B9ECCC26D858F55040DDFF9523681E996D17E9 
+{
+	int32_t ___value__;
+};
+struct NavMeshHit_t6323FC1F2D00E24FBFFC3E27C2F349A3BAD16F8B 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_Position;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_Normal;
+	float ___m_Distance;
+	int32_t ___m_Mask;
+	int32_t ___m_Hit;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C  : public RuntimeObject
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
+{
+	intptr_t ___m_CachedPtr;
+};
+struct RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_Point;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_Normal;
+	uint32_t ___m_FaceID;
+	float ___m_Distance;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_UV;
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___m_Collider;
+};
+struct RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 
+{
+	intptr_t ___value;
+};
+struct WanderState_tD9D2AFBAF9AE2465182C5A252E35E7D3833F98D8 
+{
+	int32_t ___value__;
+};
+struct AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02  : public RuntimeObject
+{
+	String_t* ___m_Name;
+	int32_t ___m_Type;
+	float ___m_DefaultFloat;
+	int32_t ___m_DefaultInt;
+	bool ___m_DefaultBool;
+};
+struct AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02_marshaled_pinvoke
+{
+	char* ___m_Name;
+	int32_t ___m_Type;
+	float ___m_DefaultFloat;
+	int32_t ___m_DefaultInt;
+	int32_t ___m_DefaultBool;
+};
+struct AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02_marshaled_com
+{
+	Il2CppChar* ___m_Name;
+	int32_t ___m_Type;
+	float ___m_DefaultFloat;
+	int32_t ___m_DefaultInt;
+	int32_t ___m_DefaultBool;
+};
+struct AudioResource_t35B84706031E4F08C928B1640B804839F4B6500A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct Avatar_t7861E57EEE2CF8CC61BD63C09737BA22F7ABCA0F  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct MulticastDelegate_t  : public Delegate_t
+{
+	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates;
+};
+struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
+{
+	Delegate_t_marshaled_pinvoke** ___delegates;
+};
+struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
+{
+	Delegate_t_marshaled_com** ___delegates;
+};
+struct RuntimeAnimatorController_t6F7C753402B42EC23C163099CF935C5E0D7A7254  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_pinvoke : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
+{
+};
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
+{
+};
+struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
+{
+};
+struct Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A  : public MulticastDelegate_t
+{
+};
+struct AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+	int32_t ___dominance;
+	float ___stamina;
+	float ___power;
+	float ___toughness;
+	float ___agression;
+	float ___attackSpeed;
+	bool ___territorial;
+	bool ___stealthy;
+};
+struct ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+	String_t* ____paramName;
+};
+struct AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20  : public AudioResource_t35B84706031E4F08C928B1640B804839F4B6500A
+{
+	PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E* ___m_PCMReaderCallback;
+	PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072* ___m_PCMSetPositionCallback;
+};
+struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+struct StateMachineBehaviour_t59C5685227B06222F5AF7027E2DA530AB99AFDF7  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+};
+struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct Animator_t8A52E42AE54F76681838FE9E632683EF3952E883  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+};
+struct ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F  : public ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263
+{
+	RuntimeObject* ____actualValue;
+};
+struct AudioBehaviour_t2DC0BEF7B020C952F3D2DA5AAAC88501C7EEB941  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+};
+struct CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A  : public Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76
+{
+};
+struct Common_RandomInt_t41A13F4DFF640E4C1D05C034B35550777173E160  : public StateMachineBehaviour_t59C5685227B06222F5AF7027E2DA530AB99AFDF7
+{
+	String_t* ___intparameterName;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___minMax;
+};
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+	CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B* ___m_CancellationTokenSource;
+};
+struct NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+};
+struct AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299  : public AudioBehaviour_t2DC0BEF7B020C952F3D2DA5AAAC88501C7EEB941
+{
+};
+struct Common_AnimSpeed_t71639B8CF6EAB28B935993E14729C478DFA2A075  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___anim;
+	float ___Speed;
+};
+struct Common_AnimationControl_t923B36B7506F4FC6EF405E0BE6DC9B53D1A58E94  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	String_t* ___currentAnimation;
+};
+struct Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	bool ___muteSound;
+	int32_t ___objectPoolLength;
+	float ___soundDistance;
+	bool ___logSounds;
+	List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* ___pool;
+};
+struct Common_KillSwitch_tC2BDFF681F5D5B1B337301082D6A0A252B446E78  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___anim;
+};
+struct Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___animalSound;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___walking;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___eating;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___running;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___attacking;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___death;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___sleeping;
+};
+struct Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	String_t* ___terrainLayer;
+	int32_t ___layer;
+	bool ___rotate;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___targetRotation;
+	float ___rotationSpeed;
+};
+struct Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	bool ___peaceTime;
+};
+struct Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* ___idleStates;
+	MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* ___movementStates;
+	AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* ___attackingStates;
+	AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* ___deathStates;
+	String_t* ___species;
+	AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* ___stats;
+	float ___wanderZone;
+	int32_t ___dominance;
+	int32_t ___originalDominance;
+	float ___awareness;
+	float ___scent;
+	float ___originalScent;
+	float ___stamina;
+	float ___power;
+	float ___toughness;
+	float ___aggression;
+	float ___originalAggression;
+	float ___attackSpeed;
+	bool ___territorial;
+	bool ___stealthy;
+	bool ___constainedToWanderZone;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___nonAgressiveTowards;
+	bool ___matchSurfaceRotation;
+	float ___surfaceRotationSpeed;
+	bool ___logChanges;
+	bool ___showGizmos;
+	bool ___drawWanderRange;
+	bool ___drawScentRange;
+	bool ___drawAwarenessRange;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___deathEvent;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___attackingEvent;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___idleEvent;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___movementEvent;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___distanceColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___awarnessColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___scentColor;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___animator;
+	CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* ___characterController;
+	NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* ___navMeshAgent;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___origin;
+	int32_t ___totalIdleStateWeight;
+	bool ___useNavMesh;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___targetLocation;
+	float ___turnSpeed;
+	float ___attackTimer;
+	int32_t ___CurrentState;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___primaryPrey;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___primaryPursuer;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___attackTarget;
+	float ___moveSpeed;
+	float ___attackReach;
+	bool ___forceUpdate;
+	float ___idleStateDuration;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPosition;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___wanderTarget;
+	IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* ___currentIdleState;
+	float ___idleUpdateTime;
+	bool ___started;
+	HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* ___animatorParameters;
+};
+struct RandomCharacterPlacer_t0B39C9AAC8AB574BBED2BC28E62D13E7B1E91B8C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	float ___spawnSize;
+	int32_t ___spawnAmmount;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___characters;
+};
+struct List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235_StaticFields
+{
+	AudioSourceU5BU5D_tBBF6E920E0DC80D53D4BB2A8D4C80D244EF170B2* ___s_emptyArray;
+};
+struct List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200_StaticFields
+{
+	Common_WanderScriptU5BU5D_tF49C6920E02312D987E458E42E4AA84899B19642* ___s_emptyArray;
+};
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_StaticFields
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___s_emptyArray;
+};
+struct U3CPrivateImplementationDetailsU3E_t4DAC7CEC65537850885A8C53C336A44DD86C0CFC_StaticFields
+{
+	__StaticArrayInitTypeSizeU3D561_tB028046418F53C5023357F28D6B71499F094686C ___1539819C5999A62E556F932B630D6AA1BA2CECF31A46DF4DE54D056C0E51542F;
+	__StaticArrayInitTypeSizeU3D869_t74B8435F510514FA951BC30490C3AE48BA582E7B ___7CA2C0AEA22392A76CB8A21DBB10F25C9630A6783B5F79B69FD608FB08D83E45;
+};
+struct String_t_StaticFields
+{
+	String_t* ___Empty;
+};
+struct U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_StaticFields
+{
+	U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E* ___U3CU3E9;
+	Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A* ___U3CU3E9__70_0;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
+{
+	String_t* ___TrueString;
+	String_t* ___FalseString;
+};
+struct IntPtr_t_StaticFields
+{
+	intptr_t ___Zero;
+};
+struct Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_StaticFields
+{
+	float ___Epsilon;
+};
+struct Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_StaticFields
+{
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___identityQuaternion;
+};
+struct Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_StaticFields
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___zeroVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___oneVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___upVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___downVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___leftVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___rightVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___positiveInfinityVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___negativeInfinityVector;
+};
+struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___zeroVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___oneVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___upVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___downVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___leftVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rightVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___forwardVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___backVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___positiveInfinityVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___negativeInfinityVector;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticFields
+{
+	int32_t ___OffsetOfInstanceIDInCPlusPlusObject;
+};
+struct Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields
+{
+	Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* ___instance;
+};
+struct Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_StaticFields
+{
+	Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* ___instance;
+};
+struct Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields
+{
+	List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* ___allAnimals;
+};
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
+{
+	ALIGN_FIELD (8) uint8_t m_Items[1];
+
+	inline uint8_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, uint8_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline uint8_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, uint8_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+struct GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF  : public RuntimeArray
+{
+	ALIGN_FIELD (8) GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* m_Items[1];
+
+	inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeArray
+{
+	ALIGN_FIELD (8) String_t* m_Items[1];
+
+	inline String_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, String_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline String_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2  : public RuntimeArray
+{
+	ALIGN_FIELD (8) IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* m_Items[1];
+
+	inline IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct AnimatorControllerParameterU5BU5D_tAB05125F5DC0D98F59351CD7D8C9880DFFA8EA21  : public RuntimeArray
+{
+	ALIGN_FIELD (8) AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02* m_Items[1];
+
+	inline AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD  : public RuntimeArray
+{
+	ALIGN_FIELD (8) MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* m_Items[1];
+
+	inline MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068  : public RuntimeArray
+{
+	ALIGN_FIELD (8) AIState_t8B7A024705B037A9640E1F185303E97B1D848619* m_Items[1];
+
+	inline AIState_t8B7A024705B037A9640E1F185303E97B1D848619* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline AIState_t8B7A024705B037A9640E1F185303E97B1D848619** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, AIState_t8B7A024705B037A9640E1F185303E97B1D848619* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline AIState_t8B7A024705B037A9640E1F185303E97B1D848619* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline AIState_t8B7A024705B037A9640E1F185303E97B1D848619** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, AIState_t8B7A024705B037A9640E1F185303E97B1D848619* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeArray
+{
+	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
+
+	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_Instantiate_TisRuntimeObject_m5F38AE6B74636F569647D545E365C5579E5F59CE_gshared (RuntimeObject* ___0_original, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___3_parent, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared (Func_2_tACBF5A1656250800CE861707354491F0611F6624* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared (RuntimeObject* ___0_source, Func_2_tACBF5A1656250800CE861707354491F0611F6624* ___1_selector, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSet_1_UnionWith_mCE1D0DC2EACB98D74562CA79EB0DB6B6A806510C_gshared (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, RuntimeObject* ___0_other, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HashSet_1_Contains_m9BACE52BFA0BD83C601529D3629118453E459BBB_gshared (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerable_Contains_TisRuntimeObject_mBCDB5870C52FC5BD2B6AE472A749FC03B9CF8958_gshared (RuntimeObject* ___0_source, RuntimeObject* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSet_1__ctor_m9132EE1422BAA45E44B7FFF495F378790D36D90E_gshared (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494 (float ___0_minInclusive, float ___1_maxInclusive, const RuntimeMethod* method) ;
+inline Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_set_speed_m933F4D6770122BC9D8A7FF82DE1CD33D514379FC (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6 (String_t* ___0_a, String_t* ___1_b, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, String_t* ___0_name, bool ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68 (int32_t ___0_minInclusive, int32_t ___1_maxExclusive, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetInteger_m7B4BB5FD5BD8DE3F713D8E9AD2870C1AAF8E19EF (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, String_t* ___0_name, int32_t ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2 (int32_t ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_exists, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AudioManager_PlaySound_mF8DBDF17D9E630C6B31E27A83E5DFCF99962AA42 (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_pos, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachineBehaviour__ctor_m9663A75D1016E16D7E3A48E2D4E6466A041A00AB (StateMachineBehaviour_t59C5685227B06222F5AF7027E2DA530AB99AFDF7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, String_t* ___0_name, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 RandomCharacterPlacer_RandomNavmeshLocation_mE679AFA30879904913B35EF6617BB95C81718F8E (RandomCharacterPlacer_t0B39C9AAC8AB574BBED2BC28E62D13E7B1E91B8C* __this, float ___0_radius, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mD136E37F696C00A3A1D4F65724ACAE903E385181 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_original, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___3_parent, const RuntimeMethod* method)
+{
+	return ((  GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m5F38AE6B74636F569647D545E365C5579E5F59CE_gshared)(___0_original, ___1_position, ___2_rotation, ___3_parent, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NavMesh_SamplePosition_mEDAE8240217EED82B4519D4435E670A1655B2109 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_sourcePosition, NavMeshHit_t6323FC1F2D00E24FBFFC3E27C2F349A3BAD16F8B* ___1_hit, float ___2_maxDistance, int32_t ___3_areaMask, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 NavMeshHit_get_position_m09E8FF6DEF5BFA3F30B3C4BCA4642442FF1BCBF1_inline (NavMeshHit_t6323FC1F2D00E24FBFFC3E27C2F349A3BAD16F8B* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Gizmos_DrawWireSphere_m12C01EC9334C32425074A214C5B876271B3DDBA1 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_center, float ___1_radius, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject__ctor_m7D0340DE160786E6EFA8DABD39EC3B694DA30AAD (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_set_name_mC79E6DC8FFD72479C90F0C4CC7F42A0FEAF5AE47 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+inline AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_spatialBlend_mCEE7A3E87A8C146E048B2CA3413FDC7BDB7BE001 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_minDistance_m6CBE3A60C03C0F179192FBDD62095B2E9D717690 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___0_value, const RuntimeMethod* method) ;
+inline void List_1_Add_m854AB1F4912F4A70C478FAE8E282C8F6CE880550_inline (List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* __this, AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235*, AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
+inline AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6 (List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* __this, int32_t ___0_index, const RuntimeMethod* method)
+{
+	return ((  AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* (*) (List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeInHierarchy_m49250F4F168DCC5388D5BE4F6A5681386907B109 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioClip_get_length_m6102CB29AF65988797452E4D6E43D4788303873D (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Common_AudioManager_ReturnToPool_mE7CCCE6FDD99EF48B3DE245CF9612576E731C300 (Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_obj, float ___1_delay, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___0_routine, const RuntimeMethod* method) ;
+inline int32_t List_1_get_Count_m7B789802BC75721DA5E775D38FEA0F4B1494F612_inline (List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReturnToPoolU3Ed__8__ctor_m109B319E3392793C02A09FD3C9772D19029A33D6 (U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+inline void List_1__ctor_m1572AF991CD3CD21B43B0D6F699FE6296DEDF9E7 (List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* __this, float ___0_seconds, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LayerMask_GetMask_m99295ECDD50C4874CA4ABC9448E3F238A023C6F2 (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_layerNames, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_down_mF62B2AE7C5AC31EAC9CB62797C7190C90A7A8599_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_direction, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_Raycast_m56120FFEF0D4F0A44CCA505B5C946E6FB8742F12 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_origin, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_direction, RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* ___2_hitInfo, float ___3_maxDistance, int32_t ___4_layerMask, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78 (RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 RaycastHit_get_normal_mD8741B70D2039C5CAFC4368D4CE59D89562040B5 (RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_FromToRotation_mCB3100F93637E72455388B901C36EF8A25DFDB9A_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_fromDirection, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_toDirection, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865 (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Lerp_m259606226726C2F46E079A5A688B9E24FF7E9A0D_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_b, float ___2_t, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderManager_SwitchPeaceTime_mDBF7C4744620808A905D140C148F56717C405396 (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, bool ___0_enabled, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8 (String_t* ___0_format, RuntimeObject* ___1_arg0, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* Common_WanderScript_get_AllAnimals_m72750AFDAA44F777A66C7DA06D84EE3A2DB171D7_inline (const RuntimeMethod* method) ;
+inline Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354 (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A (*) (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
+}
+inline void Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB (Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
+}
+inline Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_inline (Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A* __this, const RuntimeMethod* method)
+{
+	return ((  Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* (*) (Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_SetPeaceTime_m1316394DF58AAC7BE14342D4C048A76AEE603678 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, bool ___0_peace, const RuntimeMethod* method) ;
+inline bool Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E (Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_Die_mF23C438CBC17AEDF6159BACC5178E64E0204A807 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Gizmos_set_color_m53927A2741937484180B20B55F7F20F8F60C5797 (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Gizmos_DrawIcon_m676C6510EFA7C3A425A7B42BD2745B1731A261CE (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_center, String_t* ___1_name, bool ___2_allowScaling, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Application_get_isPlaying_m25B0ABDFEF54F5370CD3F263A813540843D00F34 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float NavMeshAgent_get_remainingDistance_m051C1B408E2740A95B5A5577C5EC7222311AA73A (NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 NavMeshAgent_get_destination_m1BE2C5EEF53F7EB6317449726C99E0D0955C677E (NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Gizmos_DrawSphere_mC7B2862BBDB3141A63B83F0F1E56E30101D4F472 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_center, float ___1_radius, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Gizmos_DrawLine_mB139054F55D615637A39A3127AADB16043387F8A (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_from, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_to, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A (Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeAnimatorController_t6F7C753402B42EC23C163099CF935C5E0D7A7254* Animator_get_runtimeAnimatorController_mE10F46F893A630D1AE846EF66DC2769E3ECE5AB8 (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnimatorControllerParameterU5BU5D_tAB05125F5DC0D98F59351CD7D8C9880DFFA8EA21* Animator_get_parameters_m3DE35688D8EBD3D1526346C7B71E468436A4463B (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, const RuntimeMethod* method) ;
+inline void Func_2__ctor_mC025F05E8630AE9583AD43809DBD1E13D188780D (Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m7F8A01C0B02BC1D4063F4EB1E817F7A48562A398_gshared)(__this, ___0_object, ___1_method, method);
+}
+inline RuntimeObject* Enumerable_Select_TisAnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02_TisString_t_mB655BB0D2A67AD59B31FEBC036611D4A5D5FBBAA (RuntimeObject* ___0_source, Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A* ___1_selector, const RuntimeMethod* method)
+{
+	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A*, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m67C538A5EBF57C4844107A8EF25DB2CAAFBAF8FB_gshared)(___0_source, ___1_selector, method);
+}
+inline void HashSet_1_UnionWith_m1929B27C529E29BCCA4986C594085AF0D531A2D8 (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* __this, RuntimeObject* ___0_other, const RuntimeMethod* method)
+{
+	((  void (*) (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178*, RuntimeObject*, const RuntimeMethod*))HashSet_1_UnionWith_mCE1D0DC2EACB98D74562CA79EB0DB6B6A806510C_gshared)(__this, ___0_other, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Avatar_t7861E57EEE2CF8CC61BD63C09737BA22F7ABCA0F* Animator_get_avatar_m01E445FC754BC6F4A39639EAF68D3954580EAA67 (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Animator_get_hasRootMotion_mA39728839F19F4E103CF2599281E6F796D2AB341 (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_set_applyRootMotion_mA0953B6AEE43D4AF0837365E7BFF60FCC74B0F98 (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___0_a, String_t* ___1_b, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___0_str0, String_t* ___1_str1, String_t* ___2_str2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Common_WanderScript_get_AllStates_m2719D9714984CFC69445C4C2D84B0CCDE55E0478 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+inline bool HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853 (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* __this, String_t* ___0_item, const RuntimeMethod* method)
+{
+	return ((  bool (*) (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178*, String_t*, const RuntimeMethod*))HashSet_1_Contains_m9BACE52BFA0BD83C601529D3629118453E459BBB_gshared)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987 (String_t* ___0_format, RuntimeObject* ___1_arg0, RuntimeObject* ___2_arg1, const RuntimeMethod* method) ;
+inline CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+inline NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* Component_GetComponent_TisNavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F_m45B783D78932EFB8409019F84FED6DF3A492F16F (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NavMeshAgent_set_stoppingDistance_m288A6280B55AAFF8578286747E19AF409C7C177F (NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, int32_t ___0_index, const RuntimeMethod* method) ;
+inline Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* GameObject_AddComponent_TisCommon_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06_mF24F06C92F49F3C676456B71F3D804D1E2DAA4E4 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_SurfaceRotation_SetRotationSpeed_m396AF519CBF8D8A1962403EB91F8938C0E71D6F4 (Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* __this, float ___0_speed, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3Cget_AllStatesU3Ed__72__ctor_m38F06EC3AEF5C924590695204171578AD86A13E1 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+inline void List_1_Add_m3D2F6756336D176B6673406550A16B6C87E51A48_inline (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* __this, Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200*, Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
+}
+inline bool List_1_Remove_m69A6735064918C25FEF615127046E859FFC297EA (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* __this, Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___0_item, const RuntimeMethod* method)
+{
+	return ((  bool (*) (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200*, Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*, const RuntimeMethod*))List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* Common_WanderManager_get_Instance_m8D8F43AB356C2342A60D47FFF0145E8584302D2E_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Common_WanderManager_get_PeaceTime_mE49071BDBC493163F947D3C80659B32E83AE8E46_inline (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Common_WanderScript_RandomStartingDelay_m8F90D0C7E4C9887698735D49D142A4508B455FD0 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_TakeDamage_mFFF8761FEBC2017A925FEF54C2155E4E5E52EF01 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, float ___0_damage, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_FaceDirection_m4A5BB00B610636D8020C5613A5CD00493C34512F (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_facePosition, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, int32_t ___0_state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_ValidatePosition_m79E8C3B1FA15E897C598B57CBD4DD4A49C75E891 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_targetPos, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Common_WanderScript_IsValidLocation_mF71EE7FDEBB62A9A4E93D448EE3119FC0BD67623 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_targetPosition, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_ProjectOnPlane_m68FB895F6E9FCC45676BB8B95857D091C0D78794_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_vector, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_planeNormal, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_MoveTowards_m69751B5EC50D8E7127D4BB2C8D908E38808AF45D_inline (float ___0_current, float ___1_target, float ___2_maxDelta, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_DrawLine_m873C7065638CFE611C48F429742690508044B75A (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_start, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_end, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___2_color, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NavMeshAgent_set_destination_m5F0A8E4C8ED93798D6B9CE496B10FCE5B7461B95 (NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NavMeshAgent_set_speed_m820E45289B3AE7DEE16F2F4BF163EAC361E64646 (NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NavMeshAgent_set_angularSpeed_mD2AE9EE187EF1C45F519576B5FC8581DC6B7D683 (NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m7F3B0FA9256CE368D7636558EFEFC4AB0E1A0F41_inline (float ___0_d, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_a, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CharacterController_SimpleMove_mE32A48D439878B3241E8456F8EBFAAE264BD705C (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_speed, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_RotateTowards_m884BB56D5A071EF6008F9354D5FF1C9A1913AF92_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_current, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_target, float ___2_maxRadiansDelta, float ___3_maxMagnitudeDelta, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_forward, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_upwards, const RuntimeMethod* method) ;
+inline int32_t List_1_get_Count_m74D92C197B63FADB79CDFC5D2119504FAC55A88F_inline (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) ;
+inline bool Enumerable_Contains_TisString_t_m903B1A64070B00925A8E4E7979330AA7D7B0FB33 (RuntimeObject* ___0_source, String_t* ___1_value, const RuntimeMethod* method)
+{
+	return ((  bool (*) (RuntimeObject*, String_t*, const RuntimeMethod*))Enumerable_Contains_TisRuntimeObject_mBCDB5870C52FC5BD2B6AE472A749FC03B9CF8958_gshared)(___0_source, ___1_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Common_WanderScript_get_MinimumStaminaForAggression_mCA0B59F476E95EA10B18341670BCC47DE62CC7D2 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Common_WanderScript_get_MinimumStaminaForFlee_mD6756DAA8EDB98ACF9DF69BB492B1DE254CFC915 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Common_WanderScript_CalcAttackRange_mAD11A7548AF488AC7F416993D830E6230672C792 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___0_other, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CharacterController_get_radius_mA7095C2FFBA77AE532CD9B219D506D871E86BFC5 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float NavMeshAgent_get_radius_m33C1D18A2605A958FE9E93F04981EB17FADE5957 (NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginIdle_m1ADB27D06CDC273B492056B159E3E86D1D3E1CCB (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginChase_m1C3612FEFE63CC77F4A120D798B25D918E782045 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginEvade_mF1EAF56A0DD22B75DD3FC3398C7C2636FE1DD01B (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginAttack_m94435BBF236AA2D12E86AB0B9D7F0957B2AC059E (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginDeath_mDB92604B5BE57FE5FB50EEEBE4795755952944C0 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginWander_m5BD16328FD322303DCEFFA3E533A444941744BD8 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentOutOfRangeException__ctor_mB596C51BFA864B65C2CED275458FAE90F7CD29C9 (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, String_t* ___0_parameterName, bool ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478 (String_t* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_ClearAnimatorBools_mEC5754C444D2E68C979407935693DD90384D23AA (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2 (UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NavMeshAgent_get_isOnNavMesh_m2463F49C3F37E9D3F68C04300FE5AF310C924405 (NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_SetMoveFast_mB6FB7189126FC17A9E80D01BBDDBB7BFA04E4B7B (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_SetMoveSlow_m0EB9D8277B8335DB4CB310A83F4EEDC7F6F8F609 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NavMesh_GetAreaFromName_m44C63F9ED1E0435B234699835C69A915BBC6580F (String_t* ___0_areaName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRandomStartingDelayU3Ed__98__ctor_m61F9A6A5A3D171CC686C34F36A78CC4685EB5171 (U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CConstantTickingU3Ed__99__ctor_m7B68EEE18AF87977EBE618C554E86AAE24B0C426 (U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovementState__ctor_m6351049AF55F4DC452CF3D1DD7E9F16D8EFC819A (MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IdleState__ctor_mD554F79B577C3E5AFAD0227B5A42A9D0965F957F (IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AIState__ctor_m5225CE0161A92FA5699013C886BE9B3CE8C1B121 (AIState_t8B7A024705B037A9640E1F185303E97B1D848619* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) ;
+inline void HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03 (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* __this, const RuntimeMethod* method)
+{
+	((  void (*) (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178*, const RuntimeMethod*))HashSet_1__ctor_m9132EE1422BAA45E44B7FFF495F378790D36D90E_gshared)(__this, method);
+}
+inline void List_1__ctor_m60E56DC377483321E37B0C0101FA4CB58EDE1D79 (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m9CB15B83FF4C6C641B57080C3E02F5F74F393B2D (U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AnimatorControllerParameter_get_name_mEB3938ADDF296A0FB37283C987AEE6EC0F4F629E (AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Common_WanderScript_ConstantTicking_mB397445D34EFECD3B24DC7A350DF67C4B0257884 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, float ___0_delay, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Environment_get_CurrentManagedThreadId_m66483AADCCC13272EBDCD94D31D2E52603C24BDF (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3Cget_AllStatesU3Ed__72_System_Collections_Generic_IEnumerableU3CPolyperfect_Common_AIStateU3E_GetEnumerator_mEE1B1B8B304C1EA4F8198FD8D9DA1D23519B9607 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Internal_FromToRotation_m4A801EE9080CD4CBCB9319FF12EB7934E885932F (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_fromDirection, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___1_toDirection, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Internal_Lerp_mB9D9E19C29CA86767758B70DCFF9DB7C65821B39 (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___1_b, float ___2_t, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_m1DE89849FE2019B6AA0031306896F3B800849399_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_m9B5EBE36643126708DB3F444C59C11FA30803DBB_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___1_rhs, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline (float ___0_f, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Internal_RotateTowards_mAEFE707F84BEAC3FD2B3A11A639F7E0E6A9F664D (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_current, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___1_target, float ___2_maxRadiansDelta, float ___3_maxMagnitudeDelta, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Internal_LookRotation_m489E6A5E916949FFE91C0B11A60C6016D996C1E0 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_forward, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___1_upwards, const RuntimeMethod* method) ;
+inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared)(__this, ___0_item, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120501
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mEB723F46D0D9B1A638EF89A634A1E049690D734F (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t4DAC7CEC65537850885A8C53C336A44DD86C0CFC____1539819C5999A62E556F932B630D6AA1BA2CECF31A46DF4DE54D056C0E51542F_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t4DAC7CEC65537850885A8C53C336A44DD86C0CFC____7CA2C0AEA22392A76CB8A21DBB10F25C9630A6783B5F79B69FD608FB08D83E45_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)869));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t4DAC7CEC65537850885A8C53C336A44DD86C0CFC____7CA2C0AEA22392A76CB8A21DBB10F25C9630A6783B5F79B69FD608FB08D83E45_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
+		(&V_0)->___FilePathsData = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)561));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = L_3;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t4DAC7CEC65537850885A8C53C336A44DD86C0CFC____1539819C5999A62E556F932B630D6AA1BA2CECF31A46DF4DE54D056C0E51542F_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_4, L_5, NULL);
+		(&V_0)->___TypesData = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___TypesData), (void*)L_4);
+		(&V_0)->___TotalFiles = ((int32_t)14);
+		(&V_0)->___TotalTypes = ((int32_t)14);
+		(&V_0)->___IsEditorOnly = (bool)0;
+		MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5 L_6 = V_0;
+		return L_6;
+	}
+}
+// Method Definition Index: 120502
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m56B0FA79453C41073F905A425E5D028A6CA64822 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t4A47108E2FAA80F4169F2F10FDB8449ADEC86A25* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshal_pinvoke(const MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5& unmarshaled, MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshaled_pinvoke& marshaled)
+{
+	marshaled.___FilePathsData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___FilePathsData);
+	marshaled.___TypesData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___TypesData);
+	marshaled.___TotalTypes = unmarshaled.___TotalTypes;
+	marshaled.___TotalFiles = unmarshaled.___TotalFiles;
+	marshaled.___IsEditorOnly = static_cast<int32_t>(unmarshaled.___IsEditorOnly);
+}
+IL2CPP_EXTERN_C void MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshal_pinvoke_back(const MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshaled_pinvoke& marshaled, MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5& unmarshaled)
+{
+	unmarshaled.___FilePathsData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___FilePathsData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData));
+	unmarshaled.___TypesData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___TypesData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData));
+	int32_t unmarshaledTotalTypes_temp_2 = 0;
+	unmarshaledTotalTypes_temp_2 = marshaled.___TotalTypes;
+	unmarshaled.___TotalTypes = unmarshaledTotalTypes_temp_2;
+	int32_t unmarshaledTotalFiles_temp_3 = 0;
+	unmarshaledTotalFiles_temp_3 = marshaled.___TotalFiles;
+	unmarshaled.___TotalFiles = unmarshaledTotalFiles_temp_3;
+	bool unmarshaledIsEditorOnly_temp_4 = false;
+	unmarshaledIsEditorOnly_temp_4 = static_cast<bool>(marshaled.___IsEditorOnly);
+	unmarshaled.___IsEditorOnly = unmarshaledIsEditorOnly_temp_4;
+}
+IL2CPP_EXTERN_C void MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshal_pinvoke_cleanup(MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshaled_pinvoke& marshaled)
+{
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___FilePathsData);
+	marshaled.___FilePathsData = NULL;
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___TypesData);
+	marshaled.___TypesData = NULL;
+}
+IL2CPP_EXTERN_C void MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshal_com(const MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5& unmarshaled, MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshaled_com& marshaled)
+{
+	marshaled.___FilePathsData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___FilePathsData);
+	marshaled.___TypesData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___TypesData);
+	marshaled.___TotalTypes = unmarshaled.___TotalTypes;
+	marshaled.___TotalFiles = unmarshaled.___TotalFiles;
+	marshaled.___IsEditorOnly = static_cast<int32_t>(unmarshaled.___IsEditorOnly);
+}
+IL2CPP_EXTERN_C void MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshal_com_back(const MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshaled_com& marshaled, MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5& unmarshaled)
+{
+	unmarshaled.___FilePathsData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___FilePathsData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData));
+	unmarshaled.___TypesData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___TypesData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData));
+	int32_t unmarshaledTotalTypes_temp_2 = 0;
+	unmarshaledTotalTypes_temp_2 = marshaled.___TotalTypes;
+	unmarshaled.___TotalTypes = unmarshaledTotalTypes_temp_2;
+	int32_t unmarshaledTotalFiles_temp_3 = 0;
+	unmarshaledTotalFiles_temp_3 = marshaled.___TotalFiles;
+	unmarshaled.___TotalFiles = unmarshaledTotalFiles_temp_3;
+	bool unmarshaledIsEditorOnly_temp_4 = false;
+	unmarshaledIsEditorOnly_temp_4 = static_cast<bool>(marshaled.___IsEditorOnly);
+	unmarshaled.___IsEditorOnly = unmarshaledIsEditorOnly_temp_4;
+}
+IL2CPP_EXTERN_C void MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshal_com_cleanup(MonoScriptData_t2831F9823B88287F7E40C66EE4FE8607FD1E48B5_marshaled_com& marshaled)
+{
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___FilePathsData);
+	marshaled.___FilePathsData = NULL;
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___TypesData);
+	marshaled.___TypesData = NULL;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120503
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AnimSpeed_Start_mAADA7C270BD2241901EE7D4C116EF597C6744079 (Common_AnimSpeed_t71639B8CF6EAB28B935993E14729C478DFA2A075* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimSpeed.cs:17>
+		float L_0;
+		L_0 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.850000024f), (1.25f), NULL);
+		__this->___Speed = L_0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimSpeed.cs:18>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_1;
+		L_1 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(__this, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		__this->___anim = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___anim), (void*)L_1);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimSpeed.cs:19>
+		return;
+	}
+}
+// Method Definition Index: 120504
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AnimSpeed_Update_mBB3BCDB0A7F85C58DE1D1556F27635357312393F (Common_AnimSpeed_t71639B8CF6EAB28B935993E14729C478DFA2A075* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimSpeed.cs:24>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = __this->___anim;
+		float L_1 = __this->___Speed;
+		NullCheck(L_0);
+		Animator_set_speed_m933F4D6770122BC9D8A7FF82DE1CD33D514379FC(L_0, L_1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimSpeed.cs:25>
+		return;
+	}
+}
+// Method Definition Index: 120505
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AnimSpeed__ctor_m64CCB5AB6AC39A1ECF05814EC788EEF05DD5CB71 (Common_AnimSpeed_t71639B8CF6EAB28B935993E14729C478DFA2A075* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120506
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AnimationControl_Start_m0A12348664BCF7C27755258F4DCFB6B2E0C3C01A (Common_AnimationControl_t923B36B7506F4FC6EF405E0BE6DC9B53D1A58E94* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:14>
+		return;
+	}
+}
+// Method Definition Index: 120507
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AnimationControl_Update_m03366AA1710123326948B19E49FBB876A74BA184 (Common_AnimationControl_t923B36B7506F4FC6EF405E0BE6DC9B53D1A58E94* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:21>
+		return;
+	}
+}
+// Method Definition Index: 120508
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AnimationControl_SetAnimation_m9B6CE10A2C7151EB8AFF99D01CD7D6729DED5428 (Common_AnimationControl_t923B36B7506F4FC6EF405E0BE6DC9B53D1A58E94* __this, String_t* ___0_animationName, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:25>
+		String_t* L_0 = __this->___currentAnimation;
+		bool L_1;
+		L_1 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_0, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
+		if (!L_1)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:27>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_2;
+		L_2 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(__this, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		String_t* L_3 = __this->___currentAnimation;
+		NullCheck(L_2);
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_2, L_3, (bool)0, NULL);
+	}
+
+IL_0024:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:29>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_4;
+		L_4 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(__this, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		String_t* L_5 = ___0_animationName;
+		NullCheck(L_4);
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_4, L_5, (bool)1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:30>
+		String_t* L_6 = ___0_animationName;
+		__this->___currentAnimation = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentAnimation), (void*)L_6);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:31>
+		return;
+	}
+}
+// Method Definition Index: 120509
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AnimationControl_SetAnimationIdle_mF4C60F213907233C2B3A220110487DBA645EF76A (Common_AnimationControl_t923B36B7506F4FC6EF405E0BE6DC9B53D1A58E94* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:36>
+		String_t* L_0 = __this->___currentAnimation;
+		bool L_1;
+		L_1 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_0, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
+		if (!L_1)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:38>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_2;
+		L_2 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(__this, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		String_t* L_3 = __this->___currentAnimation;
+		NullCheck(L_2);
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_2, L_3, (bool)0, NULL);
+	}
+
+IL_0024:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:42>
+		return;
+	}
+}
+// Method Definition Index: 120510
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AnimationControl_SetDeathAnimation_m864A749AA15CE3D7AE1A0E01808CFA87C8AC35E1 (Common_AnimationControl_t923B36B7506F4FC6EF405E0BE6DC9B53D1A58E94* __this, int32_t ___0_numOfClips, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral54BCA388B1C4035019F447FBBE662C6BFC12F7E8);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	String_t* V_1 = NULL;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:46>
+		int32_t L_0 = ___0_numOfClips;
+		int32_t L_1;
+		L_1 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, L_0, NULL);
+		V_0 = L_1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:47>
+		V_1 = _stringLiteral54BCA388B1C4035019F447FBBE662C6BFC12F7E8;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:48>
+		int32_t L_2 = V_0;
+		int32_t L_3 = L_2;
+		RuntimeObject* L_4 = Box(il2cpp_defaults.int32_class, &L_3);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_4, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:50>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_5;
+		L_5 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(__this, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		String_t* L_6 = V_1;
+		int32_t L_7 = V_0;
+		NullCheck(L_5);
+		Animator_SetInteger_m7B4BB5FD5BD8DE3F713D8E9AD2870C1AAF8E19EF(L_5, L_6, L_7, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:51>
+		return;
+	}
+}
+// Method Definition Index: 120511
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AnimationControl__ctor_mBB58F1397B7C1D0115D0933056CF3C84F1B16CAF (Common_AnimationControl_t923B36B7506F4FC6EF405E0BE6DC9B53D1A58E94* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_AnimationControl.cs:9>
+		__this->___currentAnimation = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentAnimation), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120512
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_KillSwitch_Start_mF51D09C078689E610601786701B6F4B9B153EE8D (Common_KillSwitch_tC2BDFF681F5D5B1B337301082D6A0A252B446E78* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_KillSwitch.cs:16>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0;
+		L_0 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(__this, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		__this->___anim = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___anim), (void*)L_0);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_KillSwitch.cs:18>
+		return;
+	}
+}
+// Method Definition Index: 120513
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_KillSwitch_Update_m81B659AA1C86ACD3CFD9AECE3400F66B9BBB0970 (Common_KillSwitch_tC2BDFF681F5D5B1B337301082D6A0A252B446E78* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAE8900DC91B51B8520DDF29118082DF79022F298);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_KillSwitch.cs:23>
+		bool L_0;
+		L_0 = Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2(((int32_t)49), NULL);
+		if (!L_0)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_KillSwitch.cs:24>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_1 = __this->___anim;
+		NullCheck(L_1);
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_1, _stringLiteralAE8900DC91B51B8520DDF29118082DF79022F298, (bool)1, NULL);
+	}
+
+IL_001a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_KillSwitch.cs:26>
+		return;
+	}
+}
+// Method Definition Index: 120514
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_KillSwitch__ctor_mA6271AFD4BCB18F745572DF292F9AAF6D5F78CD7 (Common_KillSwitch_tC2BDFF681F5D5B1B337301082D6A0A252B446E78* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120515
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_PlaySound_AnimalSound_mCAE389A5BEE317A1D14A41B6A7146464FC1D9B64 (Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:24>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___animalSound;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:26>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = __this->___animalSound;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
+		Common_AudioManager_PlaySound_mF8DBDF17D9E630C6B31E27A83E5DFCF99962AA42(L_2, L_4, NULL);
+	}
+
+IL_0023:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:28>
+		return;
+	}
+}
+// Method Definition Index: 120516
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_PlaySound_Walking_m29CE73CA7DC820B50511498F4C3082616B2BBC73 (Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:32>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___walking;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:34>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = __this->___walking;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
+		Common_AudioManager_PlaySound_mF8DBDF17D9E630C6B31E27A83E5DFCF99962AA42(L_2, L_4, NULL);
+	}
+
+IL_0023:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:36>
+		return;
+	}
+}
+// Method Definition Index: 120517
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_PlaySound_Eating_mB83A14F1D8B7114AB28D93079F031CF27A50C808 (Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:40>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___eating;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:42>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = __this->___eating;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
+		Common_AudioManager_PlaySound_mF8DBDF17D9E630C6B31E27A83E5DFCF99962AA42(L_2, L_4, NULL);
+	}
+
+IL_0023:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:44>
+		return;
+	}
+}
+// Method Definition Index: 120518
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_PlaySound_Running_mCB525BF3E0E1D8BC09BD4B4ABF1ED6100C80CE83 (Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:48>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___running;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:50>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = __this->___running;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
+		Common_AudioManager_PlaySound_mF8DBDF17D9E630C6B31E27A83E5DFCF99962AA42(L_2, L_4, NULL);
+	}
+
+IL_0023:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:52>
+		return;
+	}
+}
+// Method Definition Index: 120519
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_PlaySound_Attacking_m97507A1706B61A70F81F082BD9DD742FDAC15E91 (Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:56>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___attacking;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:58>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = __this->___attacking;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
+		Common_AudioManager_PlaySound_mF8DBDF17D9E630C6B31E27A83E5DFCF99962AA42(L_2, L_4, NULL);
+	}
+
+IL_0023:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:60>
+		return;
+	}
+}
+// Method Definition Index: 120520
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_PlaySound_Death_m9F805C3D9DF00144319340CE539F348F5C24C67F (Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:64>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___death;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:66>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = __this->___death;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
+		Common_AudioManager_PlaySound_mF8DBDF17D9E630C6B31E27A83E5DFCF99962AA42(L_2, L_4, NULL);
+	}
+
+IL_0023:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:68>
+		return;
+	}
+}
+// Method Definition Index: 120521
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_PlaySound_Sleeping_m3C127AB43A4C54768EB48C5E5E415975414DABFE (Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:72>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___sleeping;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:74>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = __this->___sleeping;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
+		Common_AudioManager_PlaySound_mF8DBDF17D9E630C6B31E27A83E5DFCF99962AA42(L_2, L_4, NULL);
+	}
+
+IL_0023:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_PlaySound.cs:76>
+		return;
+	}
+}
+// Method Definition Index: 120522
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_PlaySound__ctor_mEBB45E2BBD105332C9B35D32CCEEE8C4E2088BEA (Common_PlaySound_t08E07084CA1B0E462CF86B630D3171FD38AD6E86* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120523
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_RandomInt_OnStateEnter_mE94EB0182BDF8C657DAD6A43459B615FB6EDB5DC (Common_RandomInt_t41A13F4DFF640E4C1D05C034B35550777173E160* __this, Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___0_animator, AnimatorStateInfo_t1F47379289C7CE7FD588FBC3BBD79A777243B6B2 ___1_stateInfo, int32_t ___2_layerIndex, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_RandomInt.cs:17>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = ___0_animator;
+		String_t* L_1 = __this->___intparameterName;
+		NullCheck(L_0);
+		Animator_SetInteger_m7B4BB5FD5BD8DE3F713D8E9AD2870C1AAF8E19EF(L_0, L_1, 0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_RandomInt.cs:19>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_2 = ___0_animator;
+		String_t* L_3 = __this->___intparameterName;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_4 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___minMax);
+		float L_5 = L_4->___x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_6 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___minMax);
+		float L_7 = L_6->___y;
+		float L_8;
+		L_8 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494(L_5, L_7, NULL);
+		NullCheck(L_2);
+		Animator_SetInteger_m7B4BB5FD5BD8DE3F713D8E9AD2870C1AAF8E19EF(L_2, L_3, il2cpp_codegen_cast_double_to_int<int32_t>(L_8), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Common_RandomInt.cs:20>
+		return;
+	}
+}
+// Method Definition Index: 120524
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_RandomInt__ctor_mC072B8BD3D479EBFE41383E00500BA7B7AFDCF03 (Common_RandomInt_t41A13F4DFF640E4C1D05C034B35550777173E160* __this, const RuntimeMethod* method) 
+{
+	{
+		StateMachineBehaviour__ctor_m9663A75D1016E16D7E3A48E2D4E6466A041A00AB(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120525
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RandomCharacterPlacer_SpawnAnimals_m1D4E75F1BD607F1D1E004571E489DC821C756A3B (RandomCharacterPlacer_t0B39C9AAC8AB574BBED2BC28E62D13E7B1E91B8C* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mD136E37F696C00A3A1D4F65724ACAE903E385181_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4C3159948294D69997B0A5E731AF1A37A734DB27);
+		s_Il2CppMethodInitialized = true;
+	}
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:19>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88(L_0, _stringLiteral4C3159948294D69997B0A5E731AF1A37A734DB27, NULL);
+		V_0 = L_0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:21>
+		V_1 = 0;
+		goto IL_0047;
+	}
+
+IL_000f:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:23>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___characters;
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, ((int32_t)(((RuntimeArray*)L_1)->max_length)), NULL);
+		V_2 = L_2;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:25>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_3 = __this->___characters;
+		int32_t L_4 = V_2;
+		NullCheck(L_3);
+		int32_t L_5 = L_4;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
+		float L_7 = __this->___spawnSize;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = RandomCharacterPlacer_RandomNavmeshLocation_mE679AFA30879904913B35EF6617BB95C81718F8E(__this, L_7, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_9;
+		L_9 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = V_0;
+		NullCheck(L_10);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11;
+		L_11 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_10, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
+		L_12 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mD136E37F696C00A3A1D4F65724ACAE903E385181(L_6, L_8, L_9, L_11, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mD136E37F696C00A3A1D4F65724ACAE903E385181_RuntimeMethod_var);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:21>
+		int32_t L_13 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_13, 1));
+	}
+
+IL_0047:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:21>
+		int32_t L_14 = V_1;
+		int32_t L_15 = __this->___spawnAmmount;
+		if ((((int32_t)L_14) < ((int32_t)L_15)))
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:27>
+		return;
+	}
+}
+// Method Definition Index: 120526
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 RandomCharacterPlacer_RandomNavmeshLocation_mE679AFA30879904913B35EF6617BB95C81718F8E (RandomCharacterPlacer_t0B39C9AAC8AB574BBED2BC28E62D13E7B1E91B8C* __this, float ___0_radius, const RuntimeMethod* method) 
+{
+	NavMeshHit_t6323FC1F2D00E24FBFFC3E27C2F349A3BAD16F8B V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:31>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
+		L_0 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
+		float L_1 = ___0_radius;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_0, L_1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:32>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
+		L_5 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_2, L_4, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:34>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		V_1 = L_6;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:35>
+		float L_7 = ___0_radius;
+		bool L_8;
+		L_8 = NavMesh_SamplePosition_mEDAE8240217EED82B4519D4435E670A1655B2109(L_5, (&V_0), L_7, 1, NULL);
+		if (!L_8)
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:37>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		L_9 = NavMeshHit_get_position_m09E8FF6DEF5BFA3F30B3C4BCA4642442FF1BCBF1_inline((&V_0), NULL);
+		V_1 = L_9;
+	}
+
+IL_0034:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:39>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_1;
+		return L_10;
+	}
+}
+// Method Definition Index: 120527
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RandomCharacterPlacer_OnDrawGizmosSelected_mAF713AC5C0CF24486E67C7E6FC4983D1EB96E59C (RandomCharacterPlacer_t0B39C9AAC8AB574BBED2BC28E62D13E7B1E91B8C* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:44>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
+		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_0);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_0, NULL);
+		float L_2 = __this->___spawnSize;
+		Gizmos_DrawWireSphere_m12C01EC9334C32425074A214C5B876271B3DDBA1(L_1, L_2, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/RandomCharacterPlacer.cs:45>
+		return;
+	}
+}
+// Method Definition Index: 120528
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RandomCharacterPlacer__ctor_m58944BD22BCEA3B64CC1537874BA81609B30BEF1 (RandomCharacterPlacer_t0B39C9AAC8AB574BBED2BC28E62D13E7B1E91B8C* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120529
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AIState__ctor_m5225CE0161A92FA5699013C886BE9B3CE8C1B121 (AIState_t8B7A024705B037A9640E1F185303E97B1D848619* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFD11670C8C44413D9DBF45598487ED02C415B634);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/AIState.cs:9>
+		__this->___stateName = _stringLiteralFD11670C8C44413D9DBF45598487ED02C415B634;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___stateName), (void*)_stringLiteralFD11670C8C44413D9DBF45598487ED02C415B634);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/AIState.cs:10>
+		String_t* L_0 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
+		__this->___animationBool = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___animationBool), (void*)L_0);
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120530
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AIStats__ctor_m446AD968CBEB24B6483B3E96CC8D117B50287A2D (AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/AIStats.cs:11>
+		__this->___dominance = 1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/AIStats.cs:14>
+		__this->___stamina = (10.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/AIStats.cs:17>
+		__this->___power = (10.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/AIStats.cs:20>
+		__this->___toughness = (5.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/AIStats.cs:26>
+		__this->___attackSpeed = (0.5f);
+		ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120531
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AudioManager_Awake_m4F59453E90DEA38D168F31F512F55AC676157067 (Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m854AB1F4912F4A70C478FAE8E282C8F6CE880550_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF0241176DE201505BABEA80714B4D9AFACBDFFF1);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* V_1 = NULL;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:26>
+		((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance), (void*)__this);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:28>
+		V_0 = 0;
+		goto IL_006c;
+	}
+
+IL_000a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:30>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		GameObject__ctor_m7D0340DE160786E6EFA8DABD39EC3B694DA30AAD(L_0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:31>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = L_0;
+		NullCheck(L_1);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_1, NULL);
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_3 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_3);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_3, NULL);
+		NullCheck(L_2);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_2, L_4, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:32>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = L_1;
+		NullCheck(L_5);
+		Object_set_name_mC79E6DC8FFD72479C90F0C4CC7F42A0FEAF5AE47(L_5, _stringLiteralF0241176DE201505BABEA80714B4D9AFACBDFFF1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:33>
+		NullCheck(L_5);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_6;
+		L_6 = GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14(L_5, GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var);
+		V_1 = L_6;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:34>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_7 = V_1;
+		NullCheck(L_7);
+		AudioSource_set_spatialBlend_mCEE7A3E87A8C146E048B2CA3413FDC7BDB7BE001(L_7, (1.0f), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:35>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_8 = V_1;
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_9 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_9);
+		float L_10 = L_9->___soundDistance;
+		NullCheck(L_8);
+		AudioSource_set_minDistance_m6CBE3A60C03C0F179192FBDD62095B2E9D717690(L_8, L_10, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:36>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_11 = V_1;
+		NullCheck(L_11);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
+		L_12 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_11, NULL);
+		NullCheck(L_12);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:37>
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_13 = __this->___pool;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_14 = V_1;
+		NullCheck(L_13);
+		List_1_Add_m854AB1F4912F4A70C478FAE8E282C8F6CE880550_inline(L_13, L_14, List_1_Add_m854AB1F4912F4A70C478FAE8E282C8F6CE880550_RuntimeMethod_var);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:28>
+		int32_t L_15 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_15, 1));
+	}
+
+IL_006c:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:28>
+		int32_t L_16 = V_0;
+		int32_t L_17 = __this->___objectPoolLength;
+		if ((((int32_t)L_16) < ((int32_t)L_17)))
+		{
+			goto IL_000a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:39>
+		return;
+	}
+}
+// Method Definition Index: 120532
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AudioManager_PlaySound_mF8DBDF17D9E630C6B31E27A83E5DFCF99962AA42 (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_pos, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m854AB1F4912F4A70C478FAE8E282C8F6CE880550_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m7B789802BC75721DA5E775D38FEA0F4B1494F612_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral42AAE0670C9FE79A7D836781FE1B2993BAAA76E2);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8B8272E6E9EEB3716EC6CED4B400B13C80AB4B0E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB1A583BD5B1ECFF39E960E10E0921227F68C43AA);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF0241176DE201505BABEA80714B4D9AFACBDFFF1);
+		s_Il2CppMethodInitialized = true;
+	}
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* V_1 = NULL;
+	int32_t V_2 = 0;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:43>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_0 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (L_1)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:45>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral8B8272E6E9EEB3716EC6CED4B400B13C80AB4B0E, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:46>
+		return;
+	}
+
+IL_0017:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:49>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_2 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_2);
+		bool L_3 = L_2->___muteSound;
+		if (!L_3)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:51>
+		return;
+	}
+
+IL_0024:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:54>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_4 = ___0_clip;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_5;
+		L_5 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_4, NULL);
+		if (L_5)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:56>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral42AAE0670C9FE79A7D836781FE1B2993BAAA76E2, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:57>
+		return;
+	}
+
+IL_0037:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:60>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_6 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_6);
+		bool L_7 = L_6->___logSounds;
+		if (!L_7)
+		{
+			goto IL_0058;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:62>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_8 = ___0_clip;
+		NullCheck(L_8);
+		String_t* L_9;
+		L_9 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_8, NULL);
+		String_t* L_10;
+		L_10 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralB1A583BD5B1ECFF39E960E10E0921227F68C43AA, L_9, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_10, NULL);
+	}
+
+IL_0058:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:65>
+		V_2 = 0;
+		goto IL_0114;
+	}
+
+IL_005f:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:67>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_11 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_11);
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_12 = L_11->___pool;
+		int32_t L_13 = V_2;
+		NullCheck(L_12);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_14;
+		L_14 = List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6(L_12, L_13, List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6_RuntimeMethod_var);
+		NullCheck(L_14);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
+		L_15 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_14, NULL);
+		NullCheck(L_15);
+		bool L_16;
+		L_16 = GameObject_get_activeInHierarchy_m49250F4F168DCC5388D5BE4F6A5681386907B109(L_15, NULL);
+		if (L_16)
+		{
+			goto IL_0110;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:69>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_17 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_17);
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_18 = L_17->___pool;
+		int32_t L_19 = V_2;
+		NullCheck(L_18);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_20;
+		L_20 = List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6(L_18, L_19, List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6_RuntimeMethod_var);
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_21 = ___0_clip;
+		NullCheck(L_20);
+		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_20, L_21, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:70>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_22 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_22);
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_23 = L_22->___pool;
+		int32_t L_24 = V_2;
+		NullCheck(L_23);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_25;
+		L_25 = List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6(L_23, L_24, List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6_RuntimeMethod_var);
+		NullCheck(L_25);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26;
+		L_26 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_25, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27 = ___1_pos;
+		NullCheck(L_26);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_26, L_27, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:71>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_28 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_28);
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_29 = L_28->___pool;
+		int32_t L_30 = V_2;
+		NullCheck(L_29);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_31;
+		L_31 = List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6(L_29, L_30, List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6_RuntimeMethod_var);
+		NullCheck(L_31);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32;
+		L_32 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_31, NULL);
+		NullCheck(L_32);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_32, (bool)1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:72>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_33 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_33);
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_34 = L_33->___pool;
+		int32_t L_35 = V_2;
+		NullCheck(L_34);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_36;
+		L_36 = List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6(L_34, L_35, List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6_RuntimeMethod_var);
+		NullCheck(L_36);
+		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_36, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:73>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_37 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_38 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_39 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_39);
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_40 = L_39->___pool;
+		int32_t L_41 = V_2;
+		NullCheck(L_40);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_42;
+		L_42 = List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6(L_40, L_41, List_1_get_Item_m819B6C1A78476CF0262F3D90C612006783F22EB6_RuntimeMethod_var);
+		NullCheck(L_42);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_43;
+		L_43 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_42, NULL);
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_44 = ___0_clip;
+		NullCheck(L_44);
+		float L_45;
+		L_45 = AudioClip_get_length_m6102CB29AF65988797452E4D6E43D4788303873D(L_44, NULL);
+		NullCheck(L_38);
+		RuntimeObject* L_46;
+		L_46 = Common_AudioManager_ReturnToPool_mE7CCCE6FDD99EF48B3DE245CF9612576E731C300(L_38, L_43, L_45, NULL);
+		NullCheck(L_37);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_47;
+		L_47 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(L_37, L_46, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:74>
+		return;
+	}
+
+IL_0110:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:65>
+		int32_t L_48 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_48, 1));
+	}
+
+IL_0114:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:65>
+		int32_t L_49 = V_2;
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_50 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_50);
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_51 = L_50->___pool;
+		NullCheck(L_51);
+		int32_t L_52;
+		L_52 = List_1_get_Count_m7B789802BC75721DA5E775D38FEA0F4B1494F612_inline(L_51, List_1_get_Count_m7B789802BC75721DA5E775D38FEA0F4B1494F612_RuntimeMethod_var);
+		if ((((int32_t)L_49) < ((int32_t)L_52)))
+		{
+			goto IL_005f;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:78>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_53 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		GameObject__ctor_m7D0340DE160786E6EFA8DABD39EC3B694DA30AAD(L_53, NULL);
+		V_0 = L_53;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:79>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_54 = V_0;
+		NullCheck(L_54);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_55;
+		L_55 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_54, NULL);
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_56 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_56);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_57;
+		L_57 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_56, NULL);
+		NullCheck(L_55);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_55, L_57, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:80>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_58 = V_0;
+		NullCheck(L_58);
+		Object_set_name_mC79E6DC8FFD72479C90F0C4CC7F42A0FEAF5AE47(L_58, _stringLiteralF0241176DE201505BABEA80714B4D9AFACBDFFF1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:81>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_59 = V_0;
+		NullCheck(L_59);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_60;
+		L_60 = GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14(L_59, GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var);
+		V_1 = L_60;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:82>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_61 = V_1;
+		NullCheck(L_61);
+		AudioSource_set_spatialBlend_mCEE7A3E87A8C146E048B2CA3413FDC7BDB7BE001(L_61, (1.0f), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:83>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_62 = V_1;
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_63 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_63);
+		float L_64 = L_63->___soundDistance;
+		NullCheck(L_62);
+		AudioSource_set_minDistance_m6CBE3A60C03C0F179192FBDD62095B2E9D717690(L_62, L_64, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:84>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_65 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_65);
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_66 = L_65->___pool;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_67 = V_1;
+		NullCheck(L_66);
+		List_1_Add_m854AB1F4912F4A70C478FAE8E282C8F6CE880550_inline(L_66, L_67, List_1_Add_m854AB1F4912F4A70C478FAE8E282C8F6CE880550_RuntimeMethod_var);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:85>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_68 = V_1;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_69 = ___0_clip;
+		NullCheck(L_68);
+		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_68, L_69, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:86>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_70 = V_0;
+		NullCheck(L_70);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_71;
+		L_71 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_70, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_72 = ___1_pos;
+		NullCheck(L_71);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_71, L_72, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:87>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_73 = V_1;
+		NullCheck(L_73);
+		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_73, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:88>
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_74 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* L_75 = ((Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_StaticFields*)il2cpp_codegen_static_fields_for(Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B_il2cpp_TypeInfo_var))->___instance;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_76 = V_0;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_77 = ___0_clip;
+		NullCheck(L_77);
+		float L_78;
+		L_78 = AudioClip_get_length_m6102CB29AF65988797452E4D6E43D4788303873D(L_77, NULL);
+		NullCheck(L_75);
+		RuntimeObject* L_79;
+		L_79 = Common_AudioManager_ReturnToPool_mE7CCCE6FDD99EF48B3DE245CF9612576E731C300(L_75, L_76, L_78, NULL);
+		NullCheck(L_74);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_80;
+		L_80 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(L_74, L_79, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:89>
+		return;
+	}
+}
+// Method Definition Index: 120533
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Common_AudioManager_ReturnToPool_mE7CCCE6FDD99EF48B3DE245CF9612576E731C300 (Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_obj, float ___1_delay, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* L_0 = (U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0*)il2cpp_codegen_object_new(U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0_il2cpp_TypeInfo_var);
+		U3CReturnToPoolU3Ed__8__ctor_m109B319E3392793C02A09FD3C9772D19029A33D6(L_0, 0, NULL);
+		U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* L_1 = L_0;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = ___0_obj;
+		NullCheck(L_1);
+		L_1->___obj = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___obj), (void*)L_2);
+		U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* L_3 = L_1;
+		float L_4 = ___1_delay;
+		NullCheck(L_3);
+		L_3->___delay = L_4;
+		return L_3;
+	}
+}
+// Method Definition Index: 120534
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_AudioManager__ctor_m6D724E11F1D8B4B3E9DD722617B82CE8EED0D563 (Common_AudioManager_tF8E4EB8298947092382A475577F1050B514C5B0B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m1572AF991CD3CD21B43B0D6F699FE6296DEDF9E7_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:14>
+		__this->___objectPoolLength = ((int32_t)20);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:17>
+		__this->___soundDistance = (7.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:22>
+		List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235* L_0 = (List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235*)il2cpp_codegen_object_new(List_1_t0EDD1795F87849390F5CA17CBABE75183BE4E235_il2cpp_TypeInfo_var);
+		List_1__ctor_m1572AF991CD3CD21B43B0D6F699FE6296DEDF9E7(L_0, List_1__ctor_m1572AF991CD3CD21B43B0D6F699FE6296DEDF9E7_RuntimeMethod_var);
+		__this->___pool = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pool), (void*)L_0);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120535
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReturnToPoolU3Ed__8__ctor_m109B319E3392793C02A09FD3C9772D19029A33D6 (U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+// Method Definition Index: 120536
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReturnToPoolU3Ed__8_System_IDisposable_Dispose_mB1989AAEFFE7D04004EA22756BF8E8E9136E9692 (U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 120537
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CReturnToPoolU3Ed__8_MoveNext_m2A5CB2EAC02140570AD35DA054B9464339857426 (U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) == ((int32_t)1)))
+		{
+			goto IL_0031;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_0010:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:93>
+		float L_3 = __this->___delay;
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, L_3, NULL);
+		__this->___U3CU3E2__current = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_4);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_0031:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:94>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___obj;
+		NullCheck(L_5);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs:95>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 120538
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReturnToPoolU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2684151B1F4575C85B54364D93CE65977592EA0B (U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 120539
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReturnToPoolU3Ed__8_System_Collections_IEnumerator_Reset_m21381E32E90144A5633E81097192DBB6CDEE9374 (U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CReturnToPoolU3Ed__8_System_Collections_IEnumerator_Reset_m21381E32E90144A5633E81097192DBB6CDEE9374_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 120540
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReturnToPoolU3Ed__8_System_Collections_IEnumerator_get_Current_m20AE7A0B68FF03393BF97CD884DF3F47714EE493 (U3CReturnToPoolU3Ed__8_t3E097F705F5B10CC35AAC59F92ECC9EEAD33A7B0* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120541
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_SurfaceRotation_Awake_m9972C5E53F3FC9DC3B14613B8D14437C349EDD3B (Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:15>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)1);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = L_0;
+		String_t* L_2 = __this->___terrainLayer;
+		NullCheck(L_1);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_2);
+		int32_t L_3;
+		L_3 = LayerMask_GetMask_m99295ECDD50C4874CA4ABC9448E3F238A023C6F2(L_1, NULL);
+		__this->___layer = L_3;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:16>
+		return;
+	}
+}
+// Method Definition Index: 120542
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_SurfaceRotation_Start_m99E0C5F795507B2EC03153F1654FDEBF6185F088 (Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:21>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
+		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_0);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
+		L_1 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_0, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Vector3_get_down_mF62B2AE7C5AC31EAC9CB62797C7190C90A7A8599_inline(NULL);
+		NullCheck(L_1);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
+		L_3 = Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757(L_1, L_2, NULL);
+		V_1 = L_3;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:23>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_4);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
+		L_5 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_4, NULL);
+		NullCheck(L_5);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_5, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = V_1;
+		int32_t L_8 = __this->___layer;
+		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = Physics_Raycast_m56120FFEF0D4F0A44CCA505B5C946E6FB8742F12(L_6, L_7, (&V_0), (50.0f), L_8, NULL);
+		if (!L_9)
+		{
+			goto IL_0076;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:25>
+		float L_10;
+		L_10 = RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78((&V_0), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:26>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
+		L_11 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
+		L_12 = RaycastHit_get_normal_mD8741B70D2039C5CAFC4368D4CE59D89562040B5((&V_0), NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_13;
+		L_13 = Quaternion_FromToRotation_mCB3100F93637E72455388B901C36EF8A25DFDB9A_inline(L_11, L_12, NULL);
+		V_2 = L_13;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:27>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14;
+		L_14 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_15 = V_2;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
+		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_16);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
+		L_17 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_16, NULL);
+		NullCheck(L_17);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_18;
+		L_18 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_17, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_19;
+		L_19 = Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline(L_15, L_18, NULL);
+		NullCheck(L_14);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_14, L_19, NULL);
+	}
+
+IL_0076:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:29>
+		return;
+	}
+}
+// Method Definition Index: 120543
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_SurfaceRotation_Update_m6F152425A6D973A710A1353D106A0AA323351446 (Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:33>
+		bool L_0 = __this->___rotate;
+		if (L_0)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:34>
+		return;
+	}
+
+IL_0009:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:37>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
+		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_1);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_1, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
+		L_3 = Vector3_get_down_mF62B2AE7C5AC31EAC9CB62797C7190C90A7A8599_inline(NULL);
+		NullCheck(L_2);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757(L_2, L_3, NULL);
+		V_1 = L_4;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:39>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
+		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_5);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_5, NULL);
+		NullCheck(L_6);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_6, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_1;
+		int32_t L_9 = __this->___layer;
+		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
+		bool L_10;
+		L_10 = Physics_Raycast_m56120FFEF0D4F0A44CCA505B5C946E6FB8742F12(L_7, L_8, (&V_0), (50.0f), L_9, NULL);
+		if (!L_10)
+		{
+			goto IL_007a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:41>
+		float L_11;
+		L_11 = RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78((&V_0), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:42>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
+		L_12 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
+		L_13 = RaycastHit_get_normal_mD8741B70D2039C5CAFC4368D4CE59D89562040B5((&V_0), NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14;
+		L_14 = Quaternion_FromToRotation_mCB3100F93637E72455388B901C36EF8A25DFDB9A_inline(L_12, L_13, NULL);
+		V_2 = L_14;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:43>
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_15 = V_2;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
+		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_16);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
+		L_17 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_16, NULL);
+		NullCheck(L_17);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_18;
+		L_18 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_17, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_19;
+		L_19 = Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline(L_15, L_18, NULL);
+		__this->___targetRotation = L_19;
+	}
+
+IL_007a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:46>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
+		L_20 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
+		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_21);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_22;
+		L_22 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_21, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_23 = __this->___targetRotation;
+		float L_24;
+		L_24 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		float L_25 = __this->___rotationSpeed;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_26;
+		L_26 = Quaternion_Lerp_m259606226726C2F46E079A5A688B9E24FF7E9A0D_inline(L_22, L_23, ((float)il2cpp_codegen_multiply(L_24, L_25)), NULL);
+		NullCheck(L_20);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_20, L_26, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:47>
+		return;
+	}
+}
+// Method Definition Index: 120544
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_SurfaceRotation_SetRotationSpeed_m396AF519CBF8D8A1962403EB91F8938C0E71D6F4 (Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* __this, float ___0_speed, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:51>
+		float L_0 = ___0_speed;
+		if ((!(((float)L_0) > ((float)(0.0f)))))
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:52>
+		float L_1 = ___0_speed;
+		__this->___rotationSpeed = L_1;
+	}
+
+IL_000f:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:53>
+		return;
+	}
+}
+// Method Definition Index: 120545
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_SurfaceRotation_OnBecameVisible_mD70BA1FC30245E03E8136212D862169CEDAF9C00 (Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:57>
+		__this->___rotate = (bool)1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:58>
+		return;
+	}
+}
+// Method Definition Index: 120546
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_SurfaceRotation_OnBecameInvisible_m41D9EE23D8D64B23EF3EB2739B1051A62842E415 (Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:62>
+		__this->___rotate = (bool)0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:63>
+		return;
+	}
+}
+// Method Definition Index: 120547
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_SurfaceRotation__ctor_mF93E54285918D15B8161CA01D3BA21A987445AED (Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE5A22B80916586DE88322B31E1516201F5FE6993);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:7>
+		__this->___terrainLayer = _stringLiteralE5A22B80916586DE88322B31E1516201F5FE6993;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___terrainLayer), (void*)_stringLiteralE5A22B80916586DE88322B31E1516201F5FE6993);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:9>
+		__this->___rotate = (bool)1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs:11>
+		__this->___rotationSpeed = (2.0f);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120548
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Common_WanderManager_get_PeaceTime_mE49071BDBC493163F947D3C80659B32E83AE8E46 (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:15>
+		bool L_0 = __this->___peaceTime;
+		return L_0;
+	}
+}
+// Method Definition Index: 120549
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderManager_set_PeaceTime_mEB23C24AC716A6404D71A1850EF292FA1F08AB3C (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:19>
+		bool L_0 = ___0_value;
+		Common_WanderManager_SwitchPeaceTime_mDBF7C4744620808A905D140C148F56717C405396(__this, L_0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:20>
+		return;
+	}
+}
+// Method Definition Index: 120550
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* Common_WanderManager_get_Instance_m8D8F43AB356C2342A60D47FFF0145E8584302D2E (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:28>
+		Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* L_0 = ((Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var))->___instance;
+		return L_0;
+	}
+}
+// Method Definition Index: 120551
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderManager_Awake_mFEE9A747CD3D79B2CBECDE49E8E0F79FA7BFA0CC (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:34>
+		Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* L_0 = ((Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var))->___instance;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* L_2 = ((Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var))->___instance;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_2, __this, NULL);
+		if (!L_3)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:36>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
+		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_4, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:37>
+		return;
+	}
+
+IL_0026:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:40>
+		((Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var))->___instance = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&((Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var))->___instance), (void*)__this);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:41>
+		return;
+	}
+}
+// Method Definition Index: 120552
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderManager_Start_m071BF290F13FA56408BB95DDBA8E977A18A18CD6 (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2DAA0C5481FBB7AB2D7BA54DE93347AC71F18977);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:45>
+		bool L_0 = __this->___peaceTime;
+		if (!L_0)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:47>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral2DAA0C5481FBB7AB2D7BA54DE93347AC71F18977, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:48>
+		Common_WanderManager_SwitchPeaceTime_mDBF7C4744620808A905D140C148F56717C405396(__this, (bool)1, NULL);
+	}
+
+IL_0019:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:50>
+		return;
+	}
+}
+// Method Definition Index: 120553
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderManager_SwitchPeaceTime_mDBF7C4744620808A905D140C148F56717C405396 (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, bool ___0_enabled, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4C5693542539B9E2C7B7B9ED673F26BC38EE5F68);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral616FA8FACA4BD63856D14D13CE36C30A22C4AE73);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7DB229E4B4513366157C0D536C533A2B6C5F7AA5);
+		s_Il2CppMethodInitialized = true;
+	}
+	Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	String_t* G_B4_0 = NULL;
+	String_t* G_B3_0 = NULL;
+	String_t* G_B5_0 = NULL;
+	String_t* G_B5_1 = NULL;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:54>
+		bool L_0 = ___0_enabled;
+		bool L_1 = __this->___peaceTime;
+		if ((!(((uint32_t)L_0) == ((uint32_t)L_1))))
+		{
+			goto IL_000a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:56>
+		return;
+	}
+
+IL_000a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:59>
+		bool L_2 = ___0_enabled;
+		__this->___peaceTime = L_2;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:61>
+		bool L_3 = ___0_enabled;
+		if (L_3)
+		{
+			G_B4_0 = _stringLiteral4C5693542539B9E2C7B7B9ED673F26BC38EE5F68;
+			goto IL_0020;
+		}
+		G_B3_0 = _stringLiteral4C5693542539B9E2C7B7B9ED673F26BC38EE5F68;
+	}
+	{
+		G_B5_0 = _stringLiteral7DB229E4B4513366157C0D536C533A2B6C5F7AA5;
+		G_B5_1 = G_B3_0;
+		goto IL_0025;
+	}
+
+IL_0020:
+	{
+		G_B5_0 = _stringLiteral616FA8FACA4BD63856D14D13CE36C30A22C4AE73;
+		G_B5_1 = G_B4_0;
+	}
+
+IL_0025:
+	{
+		String_t* L_4;
+		L_4 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(G_B5_1, G_B5_0, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_4, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:62>
+		il2cpp_codegen_runtime_class_init_inline(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_5;
+		L_5 = Common_WanderScript_get_AllAnimals_m72750AFDAA44F777A66C7DA06D84EE3A2DB171D7_inline(NULL);
+		NullCheck(L_5);
+		Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A L_6;
+		L_6 = List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354(L_5, List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354_RuntimeMethod_var);
+		V_0 = L_6;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0054:
+			{
+				Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB((&V_0), Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_0049_1;
+			}
+
+IL_003c_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:62>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_7;
+				L_7 = Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_inline((&V_0), Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_RuntimeMethod_var);
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:64>
+				bool L_8 = ___0_enabled;
+				NullCheck(L_7);
+				Common_WanderScript_SetPeaceTime_m1316394DF58AAC7BE14342D4C048A76AEE603678(L_7, L_8, NULL);
+			}
+
+IL_0049_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:62>
+				bool L_9;
+				L_9 = Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E((&V_0), Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E_RuntimeMethod_var);
+				if (L_9)
+				{
+					goto IL_003c_1;
+				}
+			}
+			{
+				goto IL_0062;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0062:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:66>
+		return;
+	}
+}
+// Method Definition Index: 120554
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderManager_Nuke_mBEE749C5C63F344749E214FD037418F504C560B8 (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:70>
+		il2cpp_codegen_runtime_class_init_inline(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_0;
+		L_0 = Common_WanderScript_get_AllAnimals_m72750AFDAA44F777A66C7DA06D84EE3A2DB171D7_inline(NULL);
+		NullCheck(L_0);
+		Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A L_1;
+		L_1 = List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354(L_0, List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354_RuntimeMethod_var);
+		V_0 = L_1;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0024:
+			{
+				Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB((&V_0), Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_0019_1;
+			}
+
+IL_000d_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:70>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_2;
+				L_2 = Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_inline((&V_0), Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_RuntimeMethod_var);
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:72>
+				NullCheck(L_2);
+				Common_WanderScript_Die_mF23C438CBC17AEDF6159BACC5178E64E0204A807(L_2, NULL);
+			}
+
+IL_0019_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:70>
+				bool L_3;
+				L_3 = Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E((&V_0), Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E_RuntimeMethod_var);
+				if (L_3)
+				{
+					goto IL_000d_1;
+				}
+			}
+			{
+				goto IL_0032;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0032:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:74>
+		return;
+	}
+}
+// Method Definition Index: 120555
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderManager__ctor_m25902E6AC117D2CEBB4A0614D0F2FD7D9C537AB0 (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120556
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Common_WanderScript_get_MaxDistance_mFA2A578B6BF426A4236CCCC25288E622F43D83AB (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:37>
+		float L_0 = __this->___wanderZone;
+		return L_0;
+	}
+}
+// Method Definition Index: 120557
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_set_MaxDistance_m00B7DC46938B1DDB38349C1E9C998ECB7AA4ABC7 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:43>
+		float L_0 = ___0_value;
+		__this->___wanderZone = L_0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:44>
+		return;
+	}
+}
+// Method Definition Index: 120558
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* Common_WanderScript_get_AllAnimals_m72750AFDAA44F777A66C7DA06D84EE3A2DB171D7 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:91>
+		il2cpp_codegen_runtime_class_init_inline(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_0 = ((Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var))->___allAnimals;
+		return L_0;
+	}
+}
+// Method Definition Index: 120559
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Common_WanderScript_get_MinimumStaminaForAggression_mCA0B59F476E95EA10B18341670BCC47DE62CC7D2 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:146>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_0 = __this->___stats;
+		NullCheck(L_0);
+		float L_1 = L_0->___stamina;
+		return ((float)il2cpp_codegen_multiply(L_1, (0.899999976f)));
+	}
+}
+// Method Definition Index: 120560
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Common_WanderScript_get_MinimumStaminaForFlee_mD6756DAA8EDB98ACF9DF69BB492B1DE254CFC915 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:151>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_0 = __this->___stats;
+		NullCheck(L_0);
+		float L_1 = L_0->___stamina;
+		return ((float)il2cpp_codegen_multiply(L_1, (0.100000001f)));
+	}
+}
+// Method Definition Index: 120561
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_OnDrawGizmosSelected_m168E978899D0761F28A9F87969B2B7C7CC2E21F5 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral223C862160DDACB8182C7398227BC0CA49966629);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral31EB83E9771E61D6C7714443018779D8EB00BDFA);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral83F3694ED3D1D15A7CBF0DF0AE050883D616D08B);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B6_0;
+	memset((&G_B6_0), 0, sizeof(G_B6_0));
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:170>
+		bool L_0 = __this->___showGizmos;
+		if (L_0)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:171>
+		return;
+	}
+
+IL_0009:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:173>
+		bool L_1 = __this->___drawWanderRange;
+		if (!L_1)
+		{
+			goto IL_0096;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:176>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = __this->___distanceColor;
+		Gizmos_set_color_m53927A2741937484180B20B55F7F20F8F60C5797(L_2, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:177>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = __this->___origin;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		bool L_5;
+		L_5 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_3, L_4, NULL);
+		if (L_5)
+		{
+			goto IL_0039;
+		}
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = __this->___origin;
+		G_B6_0 = L_6;
+		goto IL_0044;
+	}
+
+IL_0039:
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
+		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_7);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_7, NULL);
+		G_B6_0 = L_8;
+	}
+
+IL_0044:
+	{
+		float L_9 = __this->___wanderZone;
+		Gizmos_DrawWireSphere_m12C01EC9334C32425074A214C5B876271B3DDBA1(G_B6_0, L_9, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:179>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
+		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_10);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
+		L_11 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_10, NULL);
+		float L_12 = L_11.___x;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_13);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_13, NULL);
+		float L_15 = L_14.___y;
+		float L_16 = __this->___wanderZone;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
+		L_17 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_17);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
+		L_18 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_17, NULL);
+		float L_19 = L_18.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
+		memset((&L_20), 0, sizeof(L_20));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_20), L_12, ((float)il2cpp_codegen_add(L_15, L_16)), L_19, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:180>
+		Gizmos_DrawIcon_m676C6510EFA7C3A425A7B42BD2745B1731A261CE(L_20, _stringLiteral223C862160DDACB8182C7398227BC0CA49966629, (bool)1, NULL);
+	}
+
+IL_0096:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:183>
+		bool L_21 = __this->___drawAwarenessRange;
+		if (!L_21)
+		{
+			goto IL_0106;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:186>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_22 = __this->___awarnessColor;
+		Gizmos_set_color_m53927A2741937484180B20B55F7F20F8F60C5797(L_22, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:187>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
+		L_23 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_23);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
+		L_24 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_23, NULL);
+		float L_25 = __this->___awareness;
+		Gizmos_DrawWireSphere_m12C01EC9334C32425074A214C5B876271B3DDBA1(L_24, L_25, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:190>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26;
+		L_26 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_26);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
+		L_27 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_26, NULL);
+		float L_28 = L_27.___x;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_29;
+		L_29 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_29);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30;
+		L_30 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_29, NULL);
+		float L_31 = L_30.___y;
+		float L_32 = __this->___awareness;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33;
+		L_33 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_33);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
+		L_34 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_33, NULL);
+		float L_35 = L_34.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36;
+		memset((&L_36), 0, sizeof(L_36));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_36), L_28, ((float)il2cpp_codegen_add(L_31, L_32)), L_35, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:191>
+		Gizmos_DrawIcon_m676C6510EFA7C3A425A7B42BD2745B1731A261CE(L_36, _stringLiteral31EB83E9771E61D6C7714443018779D8EB00BDFA, (bool)1, NULL);
+	}
+
+IL_0106:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:194>
+		bool L_37 = __this->___drawScentRange;
+		if (!L_37)
+		{
+			goto IL_0176;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:197>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_38 = __this->___scentColor;
+		Gizmos_set_color_m53927A2741937484180B20B55F7F20F8F60C5797(L_38, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:198>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_39;
+		L_39 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_39);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40;
+		L_40 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_39, NULL);
+		float L_41 = __this->___scent;
+		Gizmos_DrawWireSphere_m12C01EC9334C32425074A214C5B876271B3DDBA1(L_40, L_41, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:200>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_42;
+		L_42 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_42);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_43;
+		L_43 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_42, NULL);
+		float L_44 = L_43.___x;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_45;
+		L_45 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_45);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_46;
+		L_46 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_45, NULL);
+		float L_47 = L_46.___y;
+		float L_48 = __this->___scent;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_49;
+		L_49 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_49);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_50;
+		L_50 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_49, NULL);
+		float L_51 = L_50.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_52;
+		memset((&L_52), 0, sizeof(L_52));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_52), L_44, ((float)il2cpp_codegen_add(L_47, L_48)), L_51, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:201>
+		Gizmos_DrawIcon_m676C6510EFA7C3A425A7B42BD2745B1731A261CE(L_52, _stringLiteral83F3694ED3D1D15A7CBF0DF0AE050883D616D08B, (bool)1, NULL);
+	}
+
+IL_0176:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:204>
+		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
+		bool L_53;
+		L_53 = Application_get_isPlaying_m25B0ABDFEF54F5370CD3F263A813540843D00F34(NULL);
+		if (L_53)
+		{
+			goto IL_017e;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:205>
+		return;
+	}
+
+IL_017e:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:208>
+		bool L_54 = __this->___useNavMesh;
+		if (!L_54)
+		{
+			goto IL_01e5;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:210>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_55 = __this->___navMeshAgent;
+		NullCheck(L_55);
+		float L_56;
+		L_56 = NavMeshAgent_get_remainingDistance_m051C1B408E2740A95B5A5577C5EC7222311AA73A(L_55, NULL);
+		if ((!(((float)L_56) > ((float)(1.0f)))))
+		{
+			goto IL_0236;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:212>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_57 = __this->___navMeshAgent;
+		NullCheck(L_57);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_58;
+		L_58 = NavMeshAgent_get_destination_m1BE2C5EEF53F7EB6317449726C99E0D0955C677E(L_57, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_59;
+		memset((&L_59), 0, sizeof(L_59));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_59), (0.0f), (0.100000001f), (0.0f), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_60;
+		L_60 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_58, L_59, NULL);
+		Gizmos_DrawSphere_mC7B2862BBDB3141A63B83F0F1E56E30101D4F472(L_60, (0.200000003f), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:213>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_61;
+		L_61 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_61);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_62;
+		L_62 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_61, NULL);
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_63 = __this->___navMeshAgent;
+		NullCheck(L_63);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_64;
+		L_64 = NavMeshAgent_get_destination_m1BE2C5EEF53F7EB6317449726C99E0D0955C677E(L_63, NULL);
+		Gizmos_DrawLine_mB139054F55D615637A39A3127AADB16043387F8A(L_62, L_64, NULL);
+		return;
+	}
+
+IL_01e5:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:218>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_65 = __this->___targetLocation;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_66;
+		L_66 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		bool L_67;
+		L_67 = Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline(L_65, L_66, NULL);
+		if (!L_67)
+		{
+			goto IL_0236;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:220>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_68 = __this->___targetLocation;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_69;
+		memset((&L_69), 0, sizeof(L_69));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_69), (0.0f), (0.100000001f), (0.0f), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_70;
+		L_70 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_68, L_69, NULL);
+		Gizmos_DrawSphere_mC7B2862BBDB3141A63B83F0F1E56E30101D4F472(L_70, (0.200000003f), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:221>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_71;
+		L_71 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_71);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_72;
+		L_72 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_71, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_73 = __this->___targetLocation;
+		Gizmos_DrawLine_mB139054F55D615637A39A3127AADB16043387F8A(L_72, L_73, NULL);
+	}
+
+IL_0236:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:224>
+		return;
+	}
+}
+// Method Definition Index: 120562
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_Awake_m5929B55ACFCA4E10F2EDD7506E68A1170AEE5894 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisNavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F_m45B783D78932EFB8409019F84FED6DF3A492F16F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_Select_TisAnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02_TisString_t_mB655BB0D2A67AD59B31FEBC036611D4A5D5FBBAA_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisCommon_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06_mF24F06C92F49F3C676456B71F3D804D1E2DAA4E4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_UnionWith_m1929B27C529E29BCCA4986C594085AF0D531A2D8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerable_1_t050E0C934B6C40A1C55157480863DDD8400620DC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_1_t38FD9D28AB105208CDD69D6800417E2583EF2CAF_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CAwakeU3Eb__70_0_mD3CB110A68B302421DD5AF437C315049619007CF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral02EC3CF4A45E54D6FDE2F146C89B424739D77D57);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0B02B83F32F150EA294802F0D2408DDBD547B1A3);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4365DEC9D04106EFC4B42D0C3E299E5189F6C31E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral50A22ACEF61004968729A5C1115180DDE0BD9EB8);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral67ED1E3428AA680E1C72E54C63E0E0FD76D89414);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6E5678BD951D03A55BA5FDB6DD94FD3478E561CD);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7C1D678D149E4054A521A3A0F861BE008C97FA7F);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC3EB57F03E4B62DD084B82F5C573AAB222DCFF46);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC4364D9301C4791828B0C01CAE91CA5B264D02B2);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC96A56EE664757E0B38055ECE5190A6BBAE77972);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDF3BCF12E24680ADA1CFB0AFE50A7CF9C0FCAB70);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE96541A23C3381E5DF9400E366DBA56E7813CD2D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF222D7C67DEF174DCB9D2F00651025EDA199E7F1);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF93125B97D5E6C6153A4F18500DD2B1BBD8E6624);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeAnimatorController_t6F7C753402B42EC23C163099CF935C5E0D7A7254* V_0 = NULL;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	RuntimeObject* V_5 = NULL;
+	AIState_t8B7A024705B037A9640E1F185303E97B1D848619* V_6 = NULL;
+	IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* V_7 = NULL;
+	IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* V_8 = NULL;
+	Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A* G_B5_0 = NULL;
+	AnimatorControllerParameterU5BU5D_tAB05125F5DC0D98F59351CD7D8C9880DFFA8EA21* G_B5_1 = NULL;
+	HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* G_B5_2 = NULL;
+	Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A* G_B4_0 = NULL;
+	AnimatorControllerParameterU5BU5D_tAB05125F5DC0D98F59351CD7D8C9880DFFA8EA21* G_B4_1 = NULL;
+	HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* G_B4_2 = NULL;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:228>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_0 = __this->___stats;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (L_1)
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:230>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
+		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_2);
+		String_t* L_3;
+		L_3 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_2, NULL);
+		String_t* L_4;
+		L_4 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralDF3BCF12E24680ADA1CFB0AFE50A7CF9C0FCAB70, L_3, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_4, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:231>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:232>
+		return;
+	}
+
+IL_002f:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:235>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_5;
+		L_5 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(__this, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		__this->___animator = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___animator), (void*)L_5);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:237>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_6 = __this->___animator;
+		NullCheck(L_6);
+		RuntimeAnimatorController_t6F7C753402B42EC23C163099CF935C5E0D7A7254* L_7;
+		L_7 = Animator_get_runtimeAnimatorController_mE10F46F893A630D1AE846EF66DC2769E3ECE5AB8(L_6, NULL);
+		V_0 = L_7;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:238>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_8 = __this->___animator;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_8, NULL);
+		if (!L_9)
+		{
+			goto IL_008e;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:239>
+		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_10 = __this->___animatorParameters;
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_11 = __this->___animator;
+		NullCheck(L_11);
+		AnimatorControllerParameterU5BU5D_tAB05125F5DC0D98F59351CD7D8C9880DFFA8EA21* L_12;
+		L_12 = Animator_get_parameters_m3DE35688D8EBD3D1526346C7B71E468436A4463B(L_11, NULL);
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var);
+		Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A* L_13 = ((U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var))->___U3CU3E9__70_0;
+		Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A* L_14 = L_13;
+		if (L_14)
+		{
+			G_B5_0 = L_14;
+			G_B5_1 = L_12;
+			G_B5_2 = L_10;
+			goto IL_0084;
+		}
+		G_B4_0 = L_14;
+		G_B4_1 = L_12;
+		G_B4_2 = L_10;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var);
+		U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E* L_15 = ((U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var))->___U3CU3E9;
+		Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A* L_16 = (Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A*)il2cpp_codegen_object_new(Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A_il2cpp_TypeInfo_var);
+		Func_2__ctor_mC025F05E8630AE9583AD43809DBD1E13D188780D(L_16, L_15, (intptr_t)((void*)U3CU3Ec_U3CAwakeU3Eb__70_0_mD3CB110A68B302421DD5AF437C315049619007CF_RuntimeMethod_var), NULL);
+		Func_2_tAA0E303BB94CC66DF9D106D2986B636C90F0ED9A* L_17 = L_16;
+		((U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var))->___U3CU3E9__70_0 = L_17;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var))->___U3CU3E9__70_0), (void*)L_17);
+		G_B5_0 = L_17;
+		G_B5_1 = G_B4_1;
+		G_B5_2 = G_B4_2;
+	}
+
+IL_0084:
+	{
+		RuntimeObject* L_18;
+		L_18 = Enumerable_Select_TisAnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02_TisString_t_mB655BB0D2A67AD59B31FEBC036611D4A5D5FBBAA((RuntimeObject*)G_B5_1, G_B5_0, Enumerable_Select_TisAnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02_TisString_t_mB655BB0D2A67AD59B31FEBC036611D4A5D5FBBAA_RuntimeMethod_var);
+		NullCheck(G_B5_2);
+		HashSet_1_UnionWith_m1929B27C529E29BCCA4986C594085AF0D531A2D8(G_B5_2, L_18, HashSet_1_UnionWith_m1929B27C529E29BCCA4986C594085AF0D531A2D8_RuntimeMethod_var);
+	}
+
+IL_008e:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:241>
+		bool L_19 = __this->___logChanges;
+		if (!L_19)
+		{
+			goto IL_0417;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:243>
+		RuntimeAnimatorController_t6F7C753402B42EC23C163099CF935C5E0D7A7254* L_20 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_21;
+		L_21 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_20, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_21)
+		{
+			goto IL_00c4;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:245>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:246>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:247>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22;
+		L_22 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_22);
+		String_t* L_23;
+		L_23 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_22, NULL);
+		String_t* L_24;
+		L_24 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral50A22ACEF61004968729A5C1115180DDE0BD9EB8, L_23, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_24, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:248>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:249>
+		return;
+	}
+
+IL_00c4:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:252>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_25 = __this->___animator;
+		NullCheck(L_25);
+		Avatar_t7861E57EEE2CF8CC61BD63C09737BA22F7ABCA0F* L_26;
+		L_26 = Animator_get_avatar_m01E445FC754BC6F4A39639EAF68D3954580EAA67(L_25, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_27;
+		L_27 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_26, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_27)
+		{
+			goto IL_00f9;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:254>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:255>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28;
+		L_28 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_28);
+		String_t* L_29;
+		L_29 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_28, NULL);
+		String_t* L_30;
+		L_30 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralC3EB57F03E4B62DD084B82F5C573AAB222DCFF46, L_29, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_30, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:256>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:257>
+		return;
+	}
+
+IL_00f9:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:260>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_31 = __this->___animator;
+		NullCheck(L_31);
+		bool L_32;
+		L_32 = Animator_get_hasRootMotion_mA39728839F19F4E103CF2599281E6F796D2AB341(L_31, NULL);
+		if (!L_32)
+		{
+			goto IL_012c;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:262>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:263>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_33;
+		L_33 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_33);
+		String_t* L_34;
+		L_34 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_33, NULL);
+		String_t* L_35;
+		L_35 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral02EC3CF4A45E54D6FDE2F146C89B424739D77D57, L_34, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_35, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:264>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_36 = __this->___animator;
+		NullCheck(L_36);
+		Animator_set_applyRootMotion_mA0953B6AEE43D4AF0837365E7BFF60FCC74B0F98(L_36, (bool)0, NULL);
+	}
+
+IL_012c:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:267>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_37 = __this->___idleStates;
+		NullCheck(L_37);
+		if (!(((RuntimeArray*)L_37)->max_length))
+		{
+			goto IL_013e;
+		}
+	}
+	{
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_38 = __this->___movementStates;
+		NullCheck(L_38);
+		if ((((RuntimeArray*)L_38)->max_length))
+		{
+			goto IL_0160;
+		}
+	}
+
+IL_013e:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:269>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:270>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_39;
+		L_39 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_39);
+		String_t* L_40;
+		L_40 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_39, NULL);
+		String_t* L_41;
+		L_41 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral7C1D678D149E4054A521A3A0F861BE008C97FA7F, L_40, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_41, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:271>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:272>
+		return;
+	}
+
+IL_0160:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:275>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_42 = __this->___idleStates;
+		NullCheck(L_42);
+		if (!(((RuntimeArray*)L_42)->max_length))
+		{
+			goto IL_01d1;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:277>
+		V_1 = 0;
+		goto IL_01c6;
+	}
+
+IL_016d:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:279>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_43 = __this->___idleStates;
+		int32_t L_44 = V_1;
+		NullCheck(L_43);
+		int32_t L_45 = L_44;
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_46 = (L_43)->GetAt(static_cast<il2cpp_array_size_t>(L_45));
+		NullCheck(L_46);
+		String_t* L_47 = ((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_46)->___animationBool;
+		bool L_48;
+		L_48 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_47, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
+		if (!L_48)
+		{
+			goto IL_01c2;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:281>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:282>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:283>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_49 = __this->___idleStates;
+		NullCheck(L_49);
+		V_2 = ((int32_t)(((RuntimeArray*)L_49)->max_length));
+		String_t* L_50;
+		L_50 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_2), NULL);
+		String_t* L_51;
+		L_51 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6E5678BD951D03A55BA5FDB6DD94FD3478E561CD, L_50, _stringLiteral67ED1E3428AA680E1C72E54C63E0E0FD76D89414, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_52;
+		L_52 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_52);
+		String_t* L_53;
+		L_53 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_52, NULL);
+		String_t* L_54;
+		L_54 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(L_51, L_53, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_54, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:284>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:285>
+		return;
+	}
+
+IL_01c2:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:277>
+		int32_t L_55 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_55, 1));
+	}
+
+IL_01c6:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:277>
+		int32_t L_56 = V_1;
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_57 = __this->___idleStates;
+		NullCheck(L_57);
+		if ((((int32_t)L_56) < ((int32_t)((int32_t)(((RuntimeArray*)L_57)->max_length)))))
+		{
+			goto IL_016d;
+		}
+	}
+
+IL_01d1:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:290>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_58 = __this->___movementStates;
+		NullCheck(L_58);
+		if (!(((RuntimeArray*)L_58)->max_length))
+		{
+			goto IL_02b7;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:292>
+		V_3 = 0;
+		goto IL_02a9;
+	}
+
+IL_01e4:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:294>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_59 = __this->___movementStates;
+		int32_t L_60 = V_3;
+		NullCheck(L_59);
+		int32_t L_61 = L_60;
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_62 = (L_59)->GetAt(static_cast<il2cpp_array_size_t>(L_61));
+		NullCheck(L_62);
+		String_t* L_63 = ((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_62)->___animationBool;
+		bool L_64;
+		L_64 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_63, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
+		if (!L_64)
+		{
+			goto IL_0239;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:296>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:297>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:298>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:299>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_65 = __this->___movementStates;
+		NullCheck(L_65);
+		V_2 = ((int32_t)(((RuntimeArray*)L_65)->max_length));
+		String_t* L_66;
+		L_66 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_2), NULL);
+		String_t* L_67;
+		L_67 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6E5678BD951D03A55BA5FDB6DD94FD3478E561CD, L_66, _stringLiteralF222D7C67DEF174DCB9D2F00651025EDA199E7F1, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_68;
+		L_68 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_68);
+		String_t* L_69;
+		L_69 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_68, NULL);
+		String_t* L_70;
+		L_70 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(L_67, L_69, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_70, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:300>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:301>
+		return;
+	}
+
+IL_0239:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:304>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_71 = __this->___movementStates;
+		int32_t L_72 = V_3;
+		NullCheck(L_71);
+		int32_t L_73 = L_72;
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_74 = (L_71)->GetAt(static_cast<il2cpp_array_size_t>(L_73));
+		NullCheck(L_74);
+		float L_75 = L_74->___moveSpeed;
+		if ((!(((float)L_75) <= ((float)(0.0f)))))
+		{
+			goto IL_026f;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:306>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:307>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:308>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_76;
+		L_76 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_76);
+		String_t* L_77;
+		L_77 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_76, NULL);
+		String_t* L_78;
+		L_78 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralC96A56EE664757E0B38055ECE5190A6BBAE77972, L_77, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_78, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:309>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:310>
+		return;
+	}
+
+IL_026f:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:313>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_79 = __this->___movementStates;
+		int32_t L_80 = V_3;
+		NullCheck(L_79);
+		int32_t L_81 = L_80;
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_82 = (L_79)->GetAt(static_cast<il2cpp_array_size_t>(L_81));
+		NullCheck(L_82);
+		float L_83 = L_82->___turnSpeed;
+		if ((!(((float)L_83) <= ((float)(0.0f)))))
+		{
+			goto IL_02a5;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:315>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:316>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:317>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_84;
+		L_84 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_84);
+		String_t* L_85;
+		L_85 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_84, NULL);
+		String_t* L_86;
+		L_86 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral0B02B83F32F150EA294802F0D2408DDBD547B1A3, L_85, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_86, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:318>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:319>
+		return;
+	}
+
+IL_02a5:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:292>
+		int32_t L_87 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_87, 1));
+	}
+
+IL_02a9:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:292>
+		int32_t L_88 = V_3;
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_89 = __this->___movementStates;
+		NullCheck(L_89);
+		if ((((int32_t)L_88) < ((int32_t)((int32_t)(((RuntimeArray*)L_89)->max_length)))))
+		{
+			goto IL_01e4;
+		}
+	}
+
+IL_02b7:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:324>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_90 = __this->___attackingStates;
+		NullCheck(L_90);
+		if ((((RuntimeArray*)L_90)->max_length))
+		{
+			goto IL_02f4;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:326>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:327>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_91 = __this->___attackingStates;
+		NullCheck(L_91);
+		V_2 = ((int32_t)(((RuntimeArray*)L_91)->max_length));
+		String_t* L_92;
+		L_92 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_2), NULL);
+		String_t* L_93;
+		L_93 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6E5678BD951D03A55BA5FDB6DD94FD3478E561CD, L_92, _stringLiteralC4364D9301C4791828B0C01CAE91CA5B264D02B2, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_94;
+		L_94 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_94);
+		String_t* L_95;
+		L_95 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_94, NULL);
+		String_t* L_96;
+		L_96 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(L_93, L_95, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_96, NULL);
+	}
+
+IL_02f4:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:330>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_97 = __this->___attackingStates;
+		NullCheck(L_97);
+		if (!(((RuntimeArray*)L_97)->max_length))
+		{
+			goto IL_036a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:332>
+		V_4 = 0;
+		goto IL_035e;
+	}
+
+IL_0302:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:334>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_98 = __this->___attackingStates;
+		int32_t L_99 = V_4;
+		NullCheck(L_98);
+		int32_t L_100 = L_99;
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_101 = (L_98)->GetAt(static_cast<il2cpp_array_size_t>(L_100));
+		NullCheck(L_101);
+		String_t* L_102 = L_101->___animationBool;
+		bool L_103;
+		L_103 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_102, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
+		if (!L_103)
+		{
+			goto IL_0358;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:336>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:337>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:338>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:339>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_104 = __this->___attackingStates;
+		NullCheck(L_104);
+		V_2 = ((int32_t)(((RuntimeArray*)L_104)->max_length));
+		String_t* L_105;
+		L_105 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_2), NULL);
+		String_t* L_106;
+		L_106 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6E5678BD951D03A55BA5FDB6DD94FD3478E561CD, L_105, _stringLiteralE96541A23C3381E5DF9400E366DBA56E7813CD2D, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_107;
+		L_107 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_107);
+		String_t* L_108;
+		L_108 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_107, NULL);
+		String_t* L_109;
+		L_109 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(L_106, L_108, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_109, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:340>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:341>
+		return;
+	}
+
+IL_0358:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:332>
+		int32_t L_110 = V_4;
+		V_4 = ((int32_t)il2cpp_codegen_add(L_110, 1));
+	}
+
+IL_035e:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:332>
+		int32_t L_111 = V_4;
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_112 = __this->___attackingStates;
+		NullCheck(L_112);
+		if ((((int32_t)L_111) < ((int32_t)((int32_t)(((RuntimeArray*)L_112)->max_length)))))
+		{
+			goto IL_0302;
+		}
+	}
+
+IL_036a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:346>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_113 = __this->___stats;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_114;
+		L_114 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_113, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_114)
+		{
+			goto IL_039a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:348>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:349>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_115;
+		L_115 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_115);
+		String_t* L_116;
+		L_116 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_115, NULL);
+		String_t* L_117;
+		L_117 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralF93125B97D5E6C6153A4F18500DD2B1BBD8E6624, L_116, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_117, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:350>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:351>
+		return;
+	}
+
+IL_039a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:354>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_118 = __this->___animator;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_119;
+		L_119 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_118, NULL);
+		if (!L_119)
+		{
+			goto IL_0417;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:356>
+		RuntimeObject* L_120;
+		L_120 = Common_WanderScript_get_AllStates_m2719D9714984CFC69445C4C2D84B0CCDE55E0478(__this, NULL);
+		NullCheck(L_120);
+		RuntimeObject* L_121;
+		L_121 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0, IEnumerable_1_t050E0C934B6C40A1C55157480863DDD8400620DC_il2cpp_TypeInfo_var, L_120);
+		V_5 = L_121;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_040b:
+			{
+				{
+					RuntimeObject* L_122 = V_5;
+					if (!L_122)
+					{
+						goto IL_0416;
+					}
+				}
+				{
+					RuntimeObject* L_123 = V_5;
+					NullCheck(L_123);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_123);
+				}
+
+IL_0416:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			{
+				goto IL_0400_1;
+			}
+
+IL_03b6_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:356>
+				RuntimeObject* L_124 = V_5;
+				NullCheck(L_124);
+				AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_125;
+				L_125 = InterfaceFuncInvoker0< AIState_t8B7A024705B037A9640E1F185303E97B1D848619* >::Invoke(0, IEnumerator_1_t38FD9D28AB105208CDD69D6800417E2583EF2CAF_il2cpp_TypeInfo_var, L_124);
+				V_6 = L_125;
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:358>
+				HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_126 = __this->___animatorParameters;
+				AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_127 = V_6;
+				NullCheck(L_127);
+				String_t* L_128 = L_127->___animationBool;
+				NullCheck(L_126);
+				bool L_129;
+				L_129 = HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853(L_126, L_128, HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853_RuntimeMethod_var);
+				if (L_129)
+				{
+					goto IL_0400_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:360>
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:361>
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:362>
+				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_130;
+				L_130 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+				NullCheck(L_130);
+				String_t* L_131;
+				L_131 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_130, NULL);
+				AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_132 = V_6;
+				NullCheck(L_132);
+				String_t* L_133 = L_132->___animationBool;
+				String_t* L_134;
+				L_134 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral4365DEC9D04106EFC4B42D0C3E299E5189F6C31E, L_131, L_133, NULL);
+				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_134, NULL);
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:363>
+				Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:364>
+				goto IL_057f;
+			}
+
+IL_0400_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:356>
+				RuntimeObject* L_135 = V_5;
+				NullCheck(L_135);
+				bool L_136;
+				L_136 = InterfaceFuncInvoker0< bool >::Invoke(0, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_135);
+				if (L_136)
+				{
+					goto IL_03b6_1;
+				}
+			}
+			{
+				goto IL_0417;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0417:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:370>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_137 = __this->___idleStates;
+		V_7 = L_137;
+		V_2 = 0;
+		goto IL_0441;
+	}
+
+IL_0423:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:370>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_138 = V_7;
+		int32_t L_139 = V_2;
+		NullCheck(L_138);
+		int32_t L_140 = L_139;
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_141 = (L_138)->GetAt(static_cast<il2cpp_array_size_t>(L_140));
+		V_8 = L_141;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:372>
+		int32_t L_142 = __this->___totalIdleStateWeight;
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_143 = V_8;
+		NullCheck(L_143);
+		int32_t L_144 = L_143->___stateWeight;
+		__this->___totalIdleStateWeight = ((int32_t)il2cpp_codegen_add(L_142, L_144));
+		int32_t L_145 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_145, 1));
+	}
+
+IL_0441:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:370>
+		int32_t L_146 = V_2;
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_147 = V_7;
+		NullCheck(L_147);
+		if ((((int32_t)L_146) < ((int32_t)((int32_t)(((RuntimeArray*)L_147)->max_length)))))
+		{
+			goto IL_0423;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:375>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_148;
+		L_148 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_148);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_149;
+		L_149 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_148, NULL);
+		__this->___origin = L_149;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:376>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_150 = __this->___animator;
+		NullCheck(L_150);
+		Animator_set_applyRootMotion_mA0953B6AEE43D4AF0837365E7BFF60FCC74B0F98(L_150, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:377>
+		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_151;
+		L_151 = Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040(__this, Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040_RuntimeMethod_var);
+		__this->___characterController = L_151;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___characterController), (void*)L_151);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:378>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_152;
+		L_152 = Component_GetComponent_TisNavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F_m45B783D78932EFB8409019F84FED6DF3A492F16F(__this, Component_GetComponent_TisNavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F_m45B783D78932EFB8409019F84FED6DF3A492F16F_RuntimeMethod_var);
+		__this->___navMeshAgent = L_152;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___navMeshAgent), (void*)L_152);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:381>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_153 = __this->___stats;
+		NullCheck(L_153);
+		int32_t L_154 = L_153->___dominance;
+		__this->___originalDominance = L_154;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:382>
+		int32_t L_155 = __this->___originalDominance;
+		__this->___dominance = L_155;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:384>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_156 = __this->___stats;
+		NullCheck(L_156);
+		float L_157 = L_156->___toughness;
+		__this->___toughness = L_157;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:385>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_158 = __this->___stats;
+		NullCheck(L_158);
+		bool L_159 = L_158->___territorial;
+		__this->___territorial = L_159;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:387>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_160 = __this->___stats;
+		NullCheck(L_160);
+		float L_161 = L_160->___stamina;
+		__this->___stamina = L_161;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:389>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_162 = __this->___stats;
+		NullCheck(L_162);
+		float L_163 = L_162->___agression;
+		__this->___originalAggression = L_163;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:390>
+		float L_164 = __this->___originalAggression;
+		__this->___aggression = L_164;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:392>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_165 = __this->___stats;
+		NullCheck(L_165);
+		float L_166 = L_165->___attackSpeed;
+		__this->___attackSpeed = L_166;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:393>
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_167 = __this->___stats;
+		NullCheck(L_167);
+		bool L_168 = L_167->___stealthy;
+		__this->___stealthy = L_168;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:395>
+		float L_169 = __this->___scent;
+		__this->___originalScent = L_169;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:396>
+		float L_170 = __this->___originalScent;
+		__this->___scent = L_170;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:398>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_171 = __this->___navMeshAgent;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_172;
+		L_172 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_171, NULL);
+		if (!L_172)
+		{
+			goto IL_0548;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:400>
+		__this->___useNavMesh = (bool)1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:401>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_173 = __this->___navMeshAgent;
+		NullCheck(L_173);
+		NavMeshAgent_set_stoppingDistance_m288A6280B55AAFF8578286747E19AF409C7C177F(L_173, (1.0f), NULL);
+	}
+
+IL_0548:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:404>
+		bool L_174 = __this->___matchSurfaceRotation;
+		if (!L_174)
+		{
+			goto IL_057f;
+		}
+	}
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_175;
+		L_175 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_175);
+		int32_t L_176;
+		L_176 = Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0(L_175, NULL);
+		if ((((int32_t)L_176) <= ((int32_t)0)))
+		{
+			goto IL_057f;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:406>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_177;
+		L_177 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_177);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_178;
+		L_178 = Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF(L_177, 0, NULL);
+		NullCheck(L_178);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_179;
+		L_179 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_178, NULL);
+		NullCheck(L_179);
+		Common_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06* L_180;
+		L_180 = GameObject_AddComponent_TisCommon_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06_mF24F06C92F49F3C676456B71F3D804D1E2DAA4E4(L_179, GameObject_AddComponent_TisCommon_SurfaceRotation_t30425EAD9284AF872D0517FD587C65874B3B5C06_mF24F06C92F49F3C676456B71F3D804D1E2DAA4E4_RuntimeMethod_var);
+		float L_181 = __this->___surfaceRotationSpeed;
+		NullCheck(L_180);
+		Common_SurfaceRotation_SetRotationSpeed_m396AF519CBF8D8A1962403EB91F8938C0E71D6F4(L_180, L_181, NULL);
+	}
+
+IL_057f:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:408>
+		return;
+	}
+}
+// Method Definition Index: 120563
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Common_WanderScript_get_AllStates_m2719D9714984CFC69445C4C2D84B0CCDE55E0478 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* L_0 = (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B*)il2cpp_codegen_object_new(U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B_il2cpp_TypeInfo_var);
+		U3Cget_AllStatesU3Ed__72__ctor_m38F06EC3AEF5C924590695204171578AD86A13E1(L_0, ((int32_t)-2), NULL);
+		U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		return L_1;
+	}
+}
+// Method Definition Index: 120564
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_OnEnable_mD4E28E53F4A53B5914E8F78CE284C236EF0E8E22 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m3D2F6756336D176B6673406550A16B6C87E51A48_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:427>
+		il2cpp_codegen_runtime_class_init_inline(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_0 = ((Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var))->___allAnimals;
+		NullCheck(L_0);
+		List_1_Add_m3D2F6756336D176B6673406550A16B6C87E51A48_inline(L_0, __this, List_1_Add_m3D2F6756336D176B6673406550A16B6C87E51A48_RuntimeMethod_var);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:428>
+		return;
+	}
+}
+// Method Definition Index: 120565
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_OnDisable_m5A8AF5EBAED697951FBC546AC6C05FA21926BAC2 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Remove_m69A6735064918C25FEF615127046E859FFC297EA_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:432>
+		il2cpp_codegen_runtime_class_init_inline(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_0 = ((Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var))->___allAnimals;
+		NullCheck(L_0);
+		bool L_1;
+		L_1 = List_1_Remove_m69A6735064918C25FEF615127046E859FFC297EA(L_0, __this, List_1_Remove_m69A6735064918C25FEF615127046E859FFC297EA_RuntimeMethod_var);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:433>
+		MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:434>
+		return;
+	}
+}
+// Method Definition Index: 120566
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_Start_mD52605790F93E0D49B9D161BC88B172FD2D2790F (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:439>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
+		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_0);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_0, NULL);
+		__this->___startPosition = L_1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:440>
+		Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* L_2;
+		L_2 = Common_WanderManager_get_Instance_m8D8F43AB356C2342A60D47FFF0145E8584302D2E_inline(NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0031;
+		}
+	}
+	{
+		Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* L_4;
+		L_4 = Common_WanderManager_get_Instance_m8D8F43AB356C2342A60D47FFF0145E8584302D2E_inline(NULL);
+		NullCheck(L_4);
+		bool L_5;
+		L_5 = Common_WanderManager_get_PeaceTime_mE49071BDBC493163F947D3C80659B32E83AE8E46_inline(L_4, NULL);
+		if (!L_5)
+		{
+			goto IL_0031;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:442>
+		Common_WanderScript_SetPeaceTime_m1316394DF58AAC7BE14342D4C048A76AEE603678(__this, (bool)1, NULL);
+	}
+
+IL_0031:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:445>
+		RuntimeObject* L_6;
+		L_6 = Common_WanderScript_RandomStartingDelay_m8F90D0C7E4C9887698735D49D142A4508B455FD0(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_7;
+		L_7 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_6, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:446>
+		return;
+	}
+}
+// Method Definition Index: 120567
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_Update_m1E28EE4747362AA7D57760AB06BAD50DDA903C44 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBDC91816E26D4544E45FCD2AC7931A57F8C505A7);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* V_2 = NULL;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	int32_t V_4 = 0;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_5;
+	memset((&V_5), 0, sizeof(V_5));
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:453>
+		bool L_0 = __this->___started;
+		if (L_0)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:454>
+		return;
+	}
+
+IL_0009:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:455>
+		bool L_1 = __this->___forceUpdate;
+		if (!L_1)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:457>
+		Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:458>
+		__this->___forceUpdate = (bool)0;
+	}
+
+IL_001e:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:461>
+		int32_t L_2 = __this->___CurrentState;
+		if ((!(((uint32_t)L_2) == ((uint32_t)4))))
+		{
+			goto IL_0091;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:463>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_3 = __this->___attackTarget;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_3, NULL);
+		if (!L_4)
+		{
+			goto IL_0042;
+		}
+	}
+	{
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_5 = __this->___attackTarget;
+		NullCheck(L_5);
+		int32_t L_6 = L_5->___CurrentState;
+		if ((!(((uint32_t)L_6) == ((uint32_t)5))))
+		{
+			goto IL_007f;
+		}
+	}
+
+IL_0042:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:465>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_7 = __this->___attackTarget;
+		V_2 = L_7;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:466>
+		Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:467>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_8 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_8, NULL);
+		if (!L_9)
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_10 = V_2;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_11 = __this->___attackTarget;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_12;
+		L_12 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_10, L_11, NULL);
+		if (!L_12)
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:468>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_13 = V_2;
+		NullCheck(L_13);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14;
+		L_14 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_13, NULL);
+		NullCheck(L_14);
+		String_t* L_15;
+		L_15 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_14, NULL);
+		String_t* L_16;
+		L_16 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralBDC91816E26D4544E45FCD2AC7931A57F8C505A7, L_15, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_16, NULL);
+	}
+
+IL_007f:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:471>
+		float L_17 = __this->___attackTimer;
+		float L_18;
+		L_18 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___attackTimer = ((float)il2cpp_codegen_add(L_17, L_18));
+	}
+
+IL_0091:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:474>
+		float L_19 = __this->___attackTimer;
+		float L_20 = __this->___attackSpeed;
+		if ((!(((float)L_19) > ((float)L_20))))
+		{
+			goto IL_00e4;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:476>
+		float L_21 = __this->___attackTimer;
+		float L_22 = __this->___attackSpeed;
+		__this->___attackTimer = ((float)il2cpp_codegen_subtract(L_21, L_22));
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:477>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_23 = __this->___attackTarget;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_24;
+		L_24 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_23, NULL);
+		if (!L_24)
+		{
+			goto IL_00d0;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:478>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_25 = __this->___attackTarget;
+		float L_26 = __this->___power;
+		NullCheck(L_25);
+		Common_WanderScript_TakeDamage_mFFF8761FEBC2017A925FEF54C2155E4E5E52EF01(L_25, L_26, NULL);
+	}
+
+IL_00d0:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:479>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_27 = __this->___attackTarget;
+		NullCheck(L_27);
+		int32_t L_28 = L_27->___CurrentState;
+		if ((!(((uint32_t)L_28) == ((uint32_t)5))))
+		{
+			goto IL_00e4;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:480>
+		Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA(__this, NULL);
+	}
+
+IL_00e4:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:483>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_29;
+		L_29 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_29);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30;
+		L_30 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_29, NULL);
+		V_0 = L_30;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:484>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31 = V_0;
+		V_1 = L_31;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:485>
+		int32_t L_32 = __this->___CurrentState;
+		V_4 = L_32;
+		int32_t L_33 = V_4;
+		switch (L_33)
+		{
+			case 0:
+			{
+				goto IL_02f2;
+			}
+			case 1:
+			{
+				goto IL_026f;
+			}
+			case 2:
+			{
+				goto IL_0146;
+			}
+			case 3:
+			{
+				goto IL_01ed;
+			}
+			case 4:
+			{
+				goto IL_011a;
+			}
+		}
+	}
+	{
+		goto IL_032d;
+	}
+
+IL_011a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:488>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_34 = __this->___attackTarget;
+		NullCheck(L_34);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_35;
+		L_35 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_34, NULL);
+		NullCheck(L_35);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36;
+		L_36 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_35, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_38;
+		L_38 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_36, L_37, NULL);
+		V_5 = L_38;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39;
+		L_39 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_5), NULL);
+		Common_WanderScript_FaceDirection_m4A5BB00B610636D8020C5613A5CD00493C34512F(__this, L_39, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:489>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40 = V_0;
+		V_1 = L_40;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:490>
+		goto IL_032d;
+	}
+
+IL_0146:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:492>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_41 = __this->___primaryPrey;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_42;
+		L_42 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_41, NULL);
+		if (!L_42)
+		{
+			goto IL_0161;
+		}
+	}
+	{
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_43 = __this->___primaryPrey;
+		NullCheck(L_43);
+		int32_t L_44 = L_43->___CurrentState;
+		if ((!(((uint32_t)L_44) == ((uint32_t)5))))
+		{
+			goto IL_0174;
+		}
+	}
+
+IL_0161:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:494>
+		__this->___primaryPrey = (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPrey), (void*)(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:495>
+		Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6(__this, 0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:496>
+		goto IL_02f2;
+	}
+
+IL_0174:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:498>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_45 = __this->___primaryPrey;
+		NullCheck(L_45);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_46;
+		L_46 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_45, NULL);
+		NullCheck(L_46);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_47;
+		L_47 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_46, NULL);
+		V_1 = L_47;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:499>
+		Common_WanderScript_ValidatePosition_m79E8C3B1FA15E897C598B57CBD4DD4A49C75E891(__this, (&V_1), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:500>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48 = V_1;
+		bool L_49;
+		L_49 = Common_WanderScript_IsValidLocation_mF71EE7FDEBB62A9A4E93D448EE3119FC0BD67623(__this, L_48, NULL);
+		if (L_49)
+		{
+			goto IL_01aa;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:502>
+		Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6(__this, 0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:503>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_50 = V_0;
+		V_1 = L_50;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:504>
+		Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:505>
+		goto IL_032d;
+	}
+
+IL_01aa:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:508>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_51 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_52 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_53;
+		L_53 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_51, L_52, NULL);
+		V_5 = L_53;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_54;
+		L_54 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_5), NULL);
+		Common_WanderScript_FaceDirection_m4A5BB00B610636D8020C5613A5CD00493C34512F(__this, L_54, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:509>
+		float L_55 = __this->___stamina;
+		float L_56;
+		L_56 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___stamina = ((float)il2cpp_codegen_subtract(L_55, L_56));
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:510>
+		float L_57 = __this->___stamina;
+		if ((!(((float)L_57) <= ((float)(0.0f)))))
+		{
+			goto IL_032d;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:511>
+		Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:512>
+		goto IL_032d;
+	}
+
+IL_01ed:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:514>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_58 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_59 = V_0;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_60 = __this->___primaryPursuer;
+		NullCheck(L_60);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_61;
+		L_61 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_60, NULL);
+		NullCheck(L_61);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_62;
+		L_62 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_61, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_63;
+		L_63 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_59, L_62, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_64;
+		L_64 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_65;
+		L_65 = Vector3_ProjectOnPlane_m68FB895F6E9FCC45676BB8B95857D091C0D78794_inline(L_63, L_64, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_66;
+		L_66 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_58, L_65, NULL);
+		V_1 = L_66;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:515>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_67 = V_1;
+		bool L_68;
+		L_68 = Common_WanderScript_IsValidLocation_mF71EE7FDEBB62A9A4E93D448EE3119FC0BD67623(__this, L_67, NULL);
+		if (L_68)
+		{
+			goto IL_0224;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:516>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_69 = __this->___startPosition;
+		V_1 = L_69;
+	}
+
+IL_0224:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:517>
+		Common_WanderScript_ValidatePosition_m79E8C3B1FA15E897C598B57CBD4DD4A49C75E891(__this, (&V_1), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:518>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_70 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_71 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_72;
+		L_72 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_70, L_71, NULL);
+		V_5 = L_72;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_73;
+		L_73 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_5), NULL);
+		Common_WanderScript_FaceDirection_m4A5BB00B610636D8020C5613A5CD00493C34512F(__this, L_73, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:519>
+		float L_74 = __this->___stamina;
+		float L_75;
+		L_75 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___stamina = ((float)il2cpp_codegen_subtract(L_74, L_75));
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:520>
+		float L_76 = __this->___stamina;
+		if ((!(((float)L_76) <= ((float)(0.0f)))))
+		{
+			goto IL_032d;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:521>
+		Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:522>
+		goto IL_032d;
+	}
+
+IL_026f:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:524>
+		float L_77 = __this->___stamina;
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_78 = __this->___stats;
+		NullCheck(L_78);
+		float L_79 = L_78->___stamina;
+		float L_80;
+		L_80 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		float L_81;
+		L_81 = Mathf_MoveTowards_m69751B5EC50D8E7127D4BB2C8D908E38808AF45D_inline(L_77, L_79, L_80, NULL);
+		__this->___stamina = L_81;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:525>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_82 = __this->___wanderTarget;
+		V_1 = L_82;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:526>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_83 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_84 = V_1;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_85;
+		L_85 = Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline(NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_DrawLine_m873C7065638CFE611C48F429742690508044B75A(L_83, L_84, L_85, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:527>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_86 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_87 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_88;
+		L_88 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_86, L_87, NULL);
+		V_5 = L_88;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_89;
+		L_89 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_5), NULL);
+		Common_WanderScript_FaceDirection_m4A5BB00B610636D8020C5613A5CD00493C34512F(__this, L_89, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:528>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_90 = V_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_91;
+		L_91 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_91);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_92;
+		L_92 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_91, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_93;
+		L_93 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_90, L_92, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_94;
+		L_94 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_95;
+		L_95 = Vector3_ProjectOnPlane_m68FB895F6E9FCC45676BB8B95857D091C0D78794_inline(L_93, L_94, NULL);
+		V_3 = L_95;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:529>
+		float L_96;
+		L_96 = Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline((&V_3), NULL);
+		if ((!(((float)L_96) < ((float)(1.0f)))))
+		{
+			goto IL_032d;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:531>
+		Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6(__this, 0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:532>
+		Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:535>
+		goto IL_032d;
+	}
+
+IL_02f2:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:537>
+		float L_97 = __this->___stamina;
+		AIStats_t9915B8673765A194FE09A5E4ACD931613D5B4F77* L_98 = __this->___stats;
+		NullCheck(L_98);
+		float L_99 = L_98->___stamina;
+		float L_100;
+		L_100 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		float L_101;
+		L_101 = Mathf_MoveTowards_m69751B5EC50D8E7127D4BB2C8D908E38808AF45D_inline(L_97, L_99, L_100, NULL);
+		__this->___stamina = L_101;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:538>
+		float L_102;
+		L_102 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_103 = __this->___idleUpdateTime;
+		if ((!(((float)L_102) >= ((float)L_103))))
+		{
+			goto IL_032d;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:540>
+		Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6(__this, 1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:541>
+		Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA(__this, NULL);
+	}
+
+IL_032d:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:546>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_104 = __this->___navMeshAgent;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_105;
+		L_105 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_104, NULL);
+		if (!L_105)
+		{
+			goto IL_0369;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:548>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_106 = __this->___navMeshAgent;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_107 = V_1;
+		NullCheck(L_106);
+		NavMeshAgent_set_destination_m5F0A8E4C8ED93798D6B9CE496B10FCE5B7461B95(L_106, L_107, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:549>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_108 = __this->___navMeshAgent;
+		float L_109 = __this->___moveSpeed;
+		NullCheck(L_108);
+		NavMeshAgent_set_speed_m820E45289B3AE7DEE16F2F4BF163EAC361E64646(L_108, L_109, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:550>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_110 = __this->___navMeshAgent;
+		float L_111 = __this->___turnSpeed;
+		NullCheck(L_110);
+		NavMeshAgent_set_angularSpeed_mD2AE9EE187EF1C45F519576B5FC8581DC6B7D683(L_110, L_111, NULL);
+		return;
+	}
+
+IL_0369:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:553>
+		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_112 = __this->___characterController;
+		float L_113 = __this->___moveSpeed;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_114 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_115 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_116;
+		L_116 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_114, L_115, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_117;
+		L_117 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_118;
+		L_118 = Vector3_ProjectOnPlane_m68FB895F6E9FCC45676BB8B95857D091C0D78794_inline(L_116, L_117, NULL);
+		V_5 = L_118;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_119;
+		L_119 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_5), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_120;
+		L_120 = Vector3_op_Multiply_m7F3B0FA9256CE368D7636558EFEFC4AB0E1A0F41_inline(L_113, L_119, NULL);
+		NullCheck(L_112);
+		bool L_121;
+		L_121 = CharacterController_SimpleMove_mE32A48D439878B3241E8456F8EBFAAE264BD705C(L_112, L_120, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:556>
+		return;
+	}
+}
+// Method Definition Index: 120568
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_FaceDirection_m4A5BB00B610636D8020C5613A5CD00493C34512F (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_facePosition, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:560>
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:561>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
+		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
+		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_1);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_1, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___0_facePosition;
+		float L_4 = __this->___turnSpeed;
+		float L_5;
+		L_5 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = Vector3_RotateTowards_m884BB56D5A071EF6008F9354D5FF1C9A1913AF92_inline(L_2, L_3, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_4, L_5)), (0.0174532924f))), (0.0f), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = Vector3_ProjectOnPlane_m68FB895F6E9FCC45676BB8B95857D091C0D78794_inline(L_6, L_7, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		L_9 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10;
+		L_10 = Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307_inline(L_8, L_9, NULL);
+		NullCheck(L_0);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_0, L_10, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:562>
+		return;
+	}
+}
+// Method Definition Index: 120569
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_TakeDamage_mFFF8761FEBC2017A925FEF54C2155E4E5E52EF01 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, float ___0_damage, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:566>
+		float L_0 = __this->___toughness;
+		float L_1 = ___0_damage;
+		__this->___toughness = ((float)il2cpp_codegen_subtract(L_0, L_1));
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:567>
+		float L_2 = __this->___toughness;
+		if ((!(((float)L_2) <= ((float)(0.0f)))))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:568>
+		Common_WanderScript_Die_mF23C438CBC17AEDF6159BACC5178E64E0204A807(__this, NULL);
+	}
+
+IL_0021:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:569>
+		return;
+	}
+}
+// Method Definition Index: 120570
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_Die_mF23C438CBC17AEDF6159BACC5178E64E0204A807 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:572>
+		Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6(__this, 5, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:573>
+		return;
+	}
+}
+// Method Definition Index: 120571
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_SetPeaceTime_m1316394DF58AAC7BE14342D4C048A76AEE603678 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, bool ___0_peace, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:577>
+		bool L_0 = ___0_peace;
+		if (!L_0)
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:579>
+		__this->___dominance = 0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:580>
+		__this->___scent = (0.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:581>
+		__this->___aggression = (0.0f);
+		return;
+	}
+
+IL_0021:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:585>
+		int32_t L_1 = __this->___originalDominance;
+		__this->___dominance = L_1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:586>
+		float L_2 = __this->___originalScent;
+		__this->___scent = L_2;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:587>
+		float L_3 = __this->___originalAggression;
+		__this->___aggression = L_3;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:589>
+		return;
+	}
+}
+// Method Definition Index: 120572
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_Contains_TisString_t_m903B1A64070B00925A8E4E7979330AA7D7B0FB33_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m74D92C197B63FADB79CDFC5D2119504FAC55A88F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral18C93447E301BFC2E96A79D84C958EC2A008E7CF);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2CDF3BAA4495C2BFF101375871785E5A282AA604);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6B8E820229CD8FD9A0BEDEE348E594B7F0163288);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	float V_7 = 0.0f;
+	Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A V_8;
+	memset((&V_8), 0, sizeof(V_8));
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* V_9 = NULL;
+	float V_10 = 0.0f;
+	float V_11 = 0.0f;
+	float V_12 = 0.0f;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* V_13 = NULL;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_14;
+	memset((&V_14), 0, sizeof(V_14));
+	float V_15 = 0.0f;
+	int32_t G_B58_0 = 0;
+	int32_t G_B61_0 = 0;
+	int32_t G_B70_0 = 0;
+	int32_t G_B72_0 = 0;
+	int32_t G_B71_0 = 0;
+	int32_t G_B79_0 = 0;
+	int32_t G_B74_0 = 0;
+	int32_t G_B73_0 = 0;
+	int32_t G_B76_0 = 0;
+	int32_t G_B75_0 = 0;
+	int32_t G_B77_0 = 0;
+	int32_t G_B78_0 = 0;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:593>
+		int32_t L_0 = __this->___CurrentState;
+		if ((!(((uint32_t)L_0) == ((uint32_t)5))))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:595>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral2CDF3BAA4495C2BFF101375871785E5A282AA604, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:596>
+		return;
+	}
+
+IL_0014:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:599>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
+		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_1);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_1, NULL);
+		V_0 = L_2;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:600>
+		__this->___primaryPursuer = (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPursuer), (void*)(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:601>
+		float L_3 = __this->___awareness;
+		if ((!(((float)L_3) > ((float)(0.0f)))))
+		{
+			goto IL_00f7;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:603>
+		float L_4 = __this->___awareness;
+		V_7 = L_4;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:604>
+		il2cpp_codegen_runtime_class_init_inline(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_5 = ((Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var))->___allAnimals;
+		NullCheck(L_5);
+		int32_t L_6;
+		L_6 = List_1_get_Count_m74D92C197B63FADB79CDFC5D2119504FAC55A88F_inline(L_5, List_1_get_Count_m74D92C197B63FADB79CDFC5D2119504FAC55A88F_RuntimeMethod_var);
+		if ((((int32_t)L_6) <= ((int32_t)0)))
+		{
+			goto IL_00f7;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:606>
+		il2cpp_codegen_runtime_class_init_inline(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_7 = ((Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var))->___allAnimals;
+		NullCheck(L_7);
+		Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A L_8;
+		L_8 = List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354(L_7, List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354_RuntimeMethod_var);
+		V_8 = L_8;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_00e9:
+			{
+				Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB((&V_8), Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_00db_1;
+			}
+
+IL_005d_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:606>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_9;
+				L_9 = Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_inline((&V_8), Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_RuntimeMethod_var);
+				V_9 = L_9;
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:608>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_10 = V_9;
+				NullCheck(L_10);
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_11 = L_10->___primaryPrey;
+				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+				bool L_12;
+				L_12 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_11, __this, NULL);
+				if (!L_12)
+				{
+					goto IL_0084_1;
+				}
+			}
+			{
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_13 = V_9;
+				NullCheck(L_13);
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_14 = L_13->___attackTarget;
+				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+				bool L_15;
+				L_15 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_14, __this, NULL);
+				if (L_15)
+				{
+					goto IL_00db_1;
+				}
+			}
+
+IL_0084_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:611>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_16 = V_9;
+				NullCheck(L_16);
+				int32_t L_17 = L_16->___CurrentState;
+				if ((((int32_t)L_17) == ((int32_t)5)))
+				{
+					goto IL_00db_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:613>
+				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = V_0;
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_19 = V_9;
+				NullCheck(L_19);
+				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
+				L_20 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_19, NULL);
+				NullCheck(L_20);
+				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
+				L_21 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_20, NULL);
+				float L_22;
+				L_22 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_18, L_21, NULL);
+				V_10 = L_22;
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:614>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_23 = V_9;
+				NullCheck(L_23);
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_24 = L_23->___attackTarget;
+				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+				bool L_25;
+				L_25 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_24, __this, NULL);
+				if (!L_25)
+				{
+					goto IL_00ba_1;
+				}
+			}
+			{
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_26 = V_9;
+				NullCheck(L_26);
+				bool L_27 = L_26->___stealthy;
+				if (L_27)
+				{
+					goto IL_00db_1;
+				}
+			}
+
+IL_00ba_1:
+			{
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_28 = V_9;
+				NullCheck(L_28);
+				int32_t L_29 = L_28->___dominance;
+				int32_t L_30 = __this->___dominance;
+				if ((((int32_t)L_29) <= ((int32_t)L_30)))
+				{
+					goto IL_00db_1;
+				}
+			}
+			{
+				float L_31 = V_10;
+				float L_32 = V_7;
+				if ((((float)L_31) > ((float)L_32)))
+				{
+					goto IL_00db_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:617>
+				float L_33 = V_10;
+				V_7 = L_33;
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:618>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_34 = V_9;
+				__this->___primaryPursuer = L_34;
+				Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPursuer), (void*)L_34);
+			}
+
+IL_00db_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:606>
+				bool L_35;
+				L_35 = Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E((&V_8), Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E_RuntimeMethod_var);
+				if (L_35)
+				{
+					goto IL_005d_1;
+				}
+			}
+			{
+				goto IL_00f7;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_00f7:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:623>
+		V_1 = (bool)0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:624>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_36 = __this->___primaryPrey;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_37;
+		L_37 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_36, NULL);
+		if (!L_37)
+		{
+			goto IL_0146;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:626>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_38 = __this->___primaryPrey;
+		NullCheck(L_38);
+		int32_t L_39 = L_38->___CurrentState;
+		if ((!(((uint32_t)L_39) == ((uint32_t)5))))
+		{
+			goto IL_011d;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:627>
+		__this->___primaryPrey = (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPrey), (void*)(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL);
+		goto IL_0146;
+	}
+
+IL_011d:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:630>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40 = V_0;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_41 = __this->___primaryPrey;
+		NullCheck(L_41);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_42;
+		L_42 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_41, NULL);
+		NullCheck(L_42);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_43;
+		L_43 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_42, NULL);
+		float L_44;
+		L_44 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_40, L_43, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:631>
+		float L_45 = __this->___scent;
+		if ((!(((float)L_44) > ((float)L_45))))
+		{
+			goto IL_0144;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:632>
+		__this->___primaryPrey = (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPrey), (void*)(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL);
+		goto IL_0146;
+	}
+
+IL_0144:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:634>
+		V_1 = (bool)1;
+	}
+
+IL_0146:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:637>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_46 = __this->___primaryPrey;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_47;
+		L_47 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_46, NULL);
+		if (L_47)
+		{
+			goto IL_02c0;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:639>
+		__this->___primaryPrey = (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPrey), (void*)(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:640>
+		int32_t L_48 = __this->___dominance;
+		if ((((int32_t)L_48) <= ((int32_t)0)))
+		{
+			goto IL_02c0;
+		}
+	}
+	{
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_49 = __this->___attackingStates;
+		NullCheck(L_49);
+		if (!(((RuntimeArray*)L_49)->max_length))
+		{
+			goto IL_02c0;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:642>
+		float L_50 = __this->___aggression;
+		V_11 = ((float)il2cpp_codegen_multiply(L_50, (0.00999999978f)));
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:643>
+		float L_51 = V_11;
+		float L_52 = V_11;
+		V_11 = ((float)il2cpp_codegen_multiply(L_51, L_52));
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:644>
+		float L_53 = __this->___scent;
+		V_12 = L_53;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:645>
+		il2cpp_codegen_runtime_class_init_inline(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_54 = ((Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var))->___allAnimals;
+		NullCheck(L_54);
+		Enumerator_t8167750A745B6FAB89D64ACB9AA868F74201746A L_55;
+		L_55 = List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354(L_54, List_1_GetEnumerator_m66DA66D78717950DE0D3C12F5F5791B73155B354_RuntimeMethod_var);
+		V_8 = L_55;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_02b2:
+			{
+				Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB((&V_8), Enumerator_Dispose_mD7D2D9B8EBD18421FF261B90EDE6DA7FC7553FAB_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_02a4_1;
+			}
+
+IL_01a3_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:645>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_56;
+				L_56 = Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_inline((&V_8), Enumerator_get_Current_mA5B1ED602146EE801B7207D826547F9B1314360B_RuntimeMethod_var);
+				V_13 = L_56;
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:647>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_57 = V_13;
+				NullCheck(L_57);
+				int32_t L_58 = L_57->___CurrentState;
+				if ((!(((uint32_t)L_58) == ((uint32_t)5))))
+				{
+					goto IL_01d1_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:648>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_59 = V_13;
+				NullCheck(L_59);
+				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_60;
+				L_60 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_59, NULL);
+				NullCheck(L_60);
+				String_t* L_61;
+				L_61 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_60, NULL);
+				String_t* L_62;
+				L_62 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral6B8E820229CD8FD9A0BEDEE348E594B7F0163288, L_61, NULL);
+				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_62, NULL);
+			}
+
+IL_01d1_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:649>
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:650>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_63 = V_13;
+				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+				bool L_64;
+				L_64 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_63, __this, NULL);
+				if (L_64)
+				{
+					goto IL_02a4_1;
+				}
+			}
+			{
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_65 = V_13;
+				NullCheck(L_65);
+				String_t* L_66 = L_65->___species;
+				String_t* L_67 = __this->___species;
+				bool L_68;
+				L_68 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_66, L_67, NULL);
+				if (!L_68)
+				{
+					goto IL_01fd_1;
+				}
+			}
+			{
+				bool L_69 = __this->___territorial;
+				if (!L_69)
+				{
+					goto IL_02a4_1;
+				}
+			}
+
+IL_01fd_1:
+			{
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_70 = V_13;
+				NullCheck(L_70);
+				int32_t L_71 = L_70->___dominance;
+				int32_t L_72 = __this->___dominance;
+				if ((((int32_t)L_71) > ((int32_t)L_72)))
+				{
+					goto IL_02a4_1;
+				}
+			}
+			{
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_73 = V_13;
+				NullCheck(L_73);
+				bool L_74 = L_73->___stealthy;
+				if (L_74)
+				{
+					goto IL_02a4_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:652>
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_75 = __this->___nonAgressiveTowards;
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_76 = V_13;
+				NullCheck(L_76);
+				String_t* L_77 = L_76->___species;
+				bool L_78;
+				L_78 = Enumerable_Contains_TisString_t_m903B1A64070B00925A8E4E7979330AA7D7B0FB33((RuntimeObject*)L_75, L_77, Enumerable_Contains_TisString_t_m903B1A64070B00925A8E4E7979330AA7D7B0FB33_RuntimeMethod_var);
+				if (L_78)
+				{
+					goto IL_02a4_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:654>
+				float L_79;
+				L_79 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.0f), (0.999989986f), NULL);
+				float L_80 = V_11;
+				if ((((float)L_79) >= ((float)L_80)))
+				{
+					goto IL_02a4_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:657>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_81 = V_13;
+				NullCheck(L_81);
+				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_82;
+				L_82 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_81, NULL);
+				NullCheck(L_82);
+				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_83;
+				L_83 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_82, NULL);
+				V_14 = L_83;
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:658>
+				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_84 = V_14;
+				bool L_85;
+				L_85 = Common_WanderScript_IsValidLocation_mF71EE7FDEBB62A9A4E93D448EE3119FC0BD67623(__this, L_84, NULL);
+				if (!L_85)
+				{
+					goto IL_02a4_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:661>
+				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_86 = V_0;
+				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_87 = V_14;
+				float L_88;
+				L_88 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_86, L_87, NULL);
+				V_15 = L_88;
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:662>
+				float L_89 = V_15;
+				float L_90 = V_12;
+				if ((((float)L_89) > ((float)L_90)))
+				{
+					goto IL_02a4_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:664>
+				bool L_91 = __this->___logChanges;
+				if (!L_91)
+				{
+					goto IL_0298_1;
+				}
+			}
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:665>
+				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_92;
+				L_92 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+				NullCheck(L_92);
+				String_t* L_93;
+				L_93 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_92, NULL);
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_94 = V_13;
+				NullCheck(L_94);
+				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_95;
+				L_95 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_94, NULL);
+				NullCheck(L_95);
+				String_t* L_96;
+				L_96 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_95, NULL);
+				String_t* L_97;
+				L_97 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral18C93447E301BFC2E96A79D84C958EC2A008E7CF, L_93, L_96, NULL);
+				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_97, NULL);
+			}
+
+IL_0298_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:667>
+				float L_98 = V_15;
+				V_12 = L_98;
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:668>
+				Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_99 = V_13;
+				__this->___primaryPrey = L_99;
+				Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPrey), (void*)L_99);
+			}
+
+IL_02a4_1:
+			{
+				//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:645>
+				bool L_100;
+				L_100 = Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E((&V_8), Enumerator_MoveNext_mBEE0EB63323955C0BA21D4183A7009DE91AA457E_RuntimeMethod_var);
+				if (L_100)
+				{
+					goto IL_01a3_1;
+				}
+			}
+			{
+				goto IL_02c0;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_02c0:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:673>
+		V_2 = (bool)0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:674>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_101 = __this->___primaryPrey;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_102;
+		L_102 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_101, NULL);
+		if (!L_102)
+		{
+			goto IL_02f8;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:676>
+		bool L_103 = V_1;
+		if (!L_103)
+		{
+			goto IL_02df;
+		}
+	}
+	{
+		float L_104 = __this->___stamina;
+		if ((((float)L_104) > ((float)(0.0f))))
+		{
+			goto IL_02ed;
+		}
+	}
+
+IL_02df:
+	{
+		float L_105 = __this->___stamina;
+		float L_106;
+		L_106 = Common_WanderScript_get_MinimumStaminaForAggression_mCA0B59F476E95EA10B18341670BCC47DE62CC7D2(__this, NULL);
+		if ((!(((float)L_105) > ((float)L_106))))
+		{
+			goto IL_02f1;
+		}
+	}
+
+IL_02ed:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:677>
+		V_2 = (bool)1;
+		goto IL_02f8;
+	}
+
+IL_02f1:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:679>
+		__this->___primaryPrey = (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPrey), (void*)(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL);
+	}
+
+IL_02f8:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:682>
+		V_3 = (bool)0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:683>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_107 = __this->___primaryPursuer;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_108;
+		L_108 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_107, NULL);
+		if (!L_108)
+		{
+			goto IL_031a;
+		}
+	}
+	{
+		bool L_109 = V_2;
+		if (L_109)
+		{
+			goto IL_031a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:685>
+		float L_110 = __this->___stamina;
+		float L_111;
+		L_111 = Common_WanderScript_get_MinimumStaminaForFlee_mD6756DAA8EDB98ACF9DF69BB492B1DE254CFC915(__this, NULL);
+		if ((!(((float)L_110) > ((float)L_111))))
+		{
+			goto IL_031a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:686>
+		V_3 = (bool)1;
+	}
+
+IL_031a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:689>
+		V_4 = (bool)0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:690>
+		bool L_112 = V_2;
+		if (!L_112)
+		{
+			goto IL_0346;
+		}
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_113 = V_0;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_114 = __this->___primaryPrey;
+		NullCheck(L_114);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_115;
+		L_115 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_114, NULL);
+		NullCheck(L_115);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_116;
+		L_116 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_115, NULL);
+		float L_117;
+		L_117 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_113, L_116, NULL);
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_118 = __this->___primaryPrey;
+		float L_119;
+		L_119 = Common_WanderScript_CalcAttackRange_mAD11A7548AF488AC7F416993D830E6230672C792(__this, L_118, NULL);
+		G_B58_0 = ((((float)L_117) < ((float)L_119))? 1 : 0);
+		goto IL_0347;
+	}
+
+IL_0346:
+	{
+		G_B58_0 = 0;
+	}
+
+IL_0347:
+	{
+		V_5 = (bool)G_B58_0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:691>
+		bool L_120 = V_3;
+		if (!L_120)
+		{
+			goto IL_0372;
+		}
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_121 = V_0;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_122 = __this->___primaryPursuer;
+		NullCheck(L_122);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_123;
+		L_123 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_122, NULL);
+		NullCheck(L_123);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_124;
+		L_124 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_123, NULL);
+		float L_125;
+		L_125 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_121, L_124, NULL);
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_126 = __this->___primaryPursuer;
+		float L_127;
+		L_127 = Common_WanderScript_CalcAttackRange_mAD11A7548AF488AC7F416993D830E6230672C792(__this, L_126, NULL);
+		G_B61_0 = ((((float)L_125) < ((float)L_127))? 1 : 0);
+		goto IL_0373;
+	}
+
+IL_0372:
+	{
+		G_B61_0 = 0;
+	}
+
+IL_0373:
+	{
+		V_6 = (bool)G_B61_0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:692>
+		bool L_128 = V_6;
+		if (!L_128)
+		{
+			goto IL_0387;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:694>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_129 = __this->___primaryPursuer;
+		__this->___attackTarget = L_129;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___attackTarget), (void*)L_129);
+		goto IL_03be;
+	}
+
+IL_0387:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:696>
+		bool L_130 = V_5;
+		if (!L_130)
+		{
+			goto IL_03b7;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:698>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_131 = __this->___primaryPrey;
+		__this->___attackTarget = L_131;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___attackTarget), (void*)L_131);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:699>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_132 = __this->___attackTarget;
+		NullCheck(L_132);
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_133 = L_132->___attackTarget;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_134;
+		L_134 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_133, NULL);
+		bool L_135;
+		L_135 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(__this, NULL);
+		if ((!(((uint32_t)((((int32_t)L_134) == ((int32_t)0))? 1 : 0)) == ((uint32_t)L_135))))
+		{
+			goto IL_03be;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:700>
+		V_4 = (bool)1;
+		goto IL_03be;
+	}
+
+IL_03b7:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:703>
+		__this->___attackTarget = (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___attackTarget), (void*)(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL);
+	}
+
+IL_03be:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:704>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_136 = __this->___attackingStates;
+		NullCheck(L_136);
+		if (!(((RuntimeArray*)L_136)->max_length))
+		{
+			goto IL_03ce;
+		}
+	}
+	{
+		bool L_137 = V_5;
+		bool L_138 = V_6;
+		G_B70_0 = ((int32_t)((int32_t)L_137|(int32_t)L_138));
+		goto IL_03cf;
+	}
+
+IL_03ce:
+	{
+		G_B70_0 = 0;
+	}
+
+IL_03cf:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:706>
+		int32_t L_139 = G_B70_0;
+		if (!L_139)
+		{
+			G_B72_0 = L_139;
+			goto IL_03db;
+		}
+		G_B71_0 = L_139;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:707>
+		Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6(__this, 4, NULL);
+		G_B79_0 = G_B71_0;
+		goto IL_040b;
+	}
+
+IL_03db:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:708>
+		bool L_140 = V_2;
+		if (!L_140)
+		{
+			G_B74_0 = G_B72_0;
+			goto IL_03e7;
+		}
+		G_B73_0 = G_B72_0;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:709>
+		Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6(__this, 2, NULL);
+		G_B79_0 = G_B73_0;
+		goto IL_040b;
+	}
+
+IL_03e7:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:710>
+		bool L_141 = V_3;
+		if (!L_141)
+		{
+			G_B76_0 = G_B74_0;
+			goto IL_03f3;
+		}
+		G_B75_0 = G_B74_0;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:711>
+		Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6(__this, 3, NULL);
+		G_B79_0 = G_B75_0;
+		goto IL_040b;
+	}
+
+IL_03f3:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:712>
+		int32_t L_142 = __this->___CurrentState;
+		if (!L_142)
+		{
+			G_B79_0 = G_B76_0;
+			goto IL_040b;
+		}
+		G_B77_0 = G_B76_0;
+	}
+	{
+		int32_t L_143 = __this->___CurrentState;
+		if ((((int32_t)L_143) == ((int32_t)1)))
+		{
+			G_B79_0 = G_B77_0;
+			goto IL_040b;
+		}
+		G_B78_0 = G_B77_0;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:713>
+		Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6(__this, 0, NULL);
+		G_B79_0 = G_B78_0;
+	}
+
+IL_040b:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:714>
+		bool L_144 = V_4;
+		if (!((int32_t)(G_B79_0&(int32_t)L_144)))
+		{
+			goto IL_041c;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:715>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_145 = __this->___attackTarget;
+		NullCheck(L_145);
+		L_145->___forceUpdate = (bool)1;
+	}
+
+IL_041c:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:716>
+		return;
+	}
+}
+// Method Definition Index: 120573
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Common_WanderScript_IsValidLocation_mF71EE7FDEBB62A9A4E93D448EE3119FC0BD67623 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_targetPosition, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:720>
+		bool L_0 = __this->___constainedToWanderZone;
+		if (L_0)
+		{
+			goto IL_000a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:721>
+		return (bool)1;
+	}
+
+IL_000a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:722>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = __this->___startPosition;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___0_targetPosition;
+		float L_3;
+		L_3 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_1, L_2, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:723>
+		float L_4 = __this->___wanderZone;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:724>
+		return (bool)((((float)L_3) < ((float)L_4))? 1 : 0);
+	}
+}
+// Method Definition Index: 120574
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Common_WanderScript_CalcAttackRange_mAD11A7548AF488AC7F416993D830E6230672C792 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* ___0_other, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float G_B3_0 = 0.0f;
+	float G_B6_0 = 0.0f;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:729>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_0 = __this->___navMeshAgent;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (L_1)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_2 = __this->___characterController;
+		NullCheck(L_2);
+		float L_3;
+		L_3 = CharacterController_get_radius_mA7095C2FFBA77AE532CD9B219D506D871E86BFC5(L_2, NULL);
+		G_B3_0 = L_3;
+		goto IL_0025;
+	}
+
+IL_001a:
+	{
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_4 = __this->___navMeshAgent;
+		NullCheck(L_4);
+		float L_5;
+		L_5 = NavMeshAgent_get_radius_m33C1D18A2605A958FE9E93F04981EB17FADE5957(L_4, NULL);
+		G_B3_0 = L_5;
+	}
+
+IL_0025:
+	{
+		V_0 = G_B3_0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:730>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_6 = ___0_other;
+		NullCheck(L_6);
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_7 = L_6->___navMeshAgent;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_8;
+		L_8 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_7, NULL);
+		if (L_8)
+		{
+			goto IL_0040;
+		}
+	}
+	{
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_9 = ___0_other;
+		NullCheck(L_9);
+		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_10 = L_9->___characterController;
+		NullCheck(L_10);
+		float L_11;
+		L_11 = CharacterController_get_radius_mA7095C2FFBA77AE532CD9B219D506D871E86BFC5(L_10, NULL);
+		G_B6_0 = L_11;
+		goto IL_004b;
+	}
+
+IL_0040:
+	{
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_12 = ___0_other;
+		NullCheck(L_12);
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_13 = L_12->___navMeshAgent;
+		NullCheck(L_13);
+		float L_14;
+		L_14 = NavMeshAgent_get_radius_m33C1D18A2605A958FE9E93F04981EB17FADE5957(L_13, NULL);
+		G_B6_0 = L_14;
+	}
+
+IL_004b:
+	{
+		V_1 = G_B6_0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:731>
+		float L_15 = __this->___attackReach;
+		float L_16 = V_0;
+		float L_17 = V_1;
+		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_15, L_16)), L_17));
+	}
+}
+// Method Definition Index: 120575
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, int32_t ___0_state, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCC529E37F095C7635C5B7B0D99D3E3261DE603D8);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:736>
+		int32_t L_0 = __this->___CurrentState;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:737>
+		if ((!(((uint32_t)L_0) == ((uint32_t)5))))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:739>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralCC529E37F095C7635C5B7B0D99D3E3261DE603D8, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:740>
+		return;
+	}
+
+IL_0014:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:744>
+		int32_t L_1 = ___0_state;
+		__this->___CurrentState = L_1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:745>
+		int32_t L_2 = __this->___CurrentState;
+		V_0 = L_2;
+		int32_t L_3 = V_0;
+		switch (L_3)
+		{
+			case 0:
+			{
+				goto IL_0042;
+			}
+			case 1:
+			{
+				goto IL_0065;
+			}
+			case 2:
+			{
+				goto IL_0049;
+			}
+			case 3:
+			{
+				goto IL_0050;
+			}
+			case 4:
+			{
+				goto IL_0057;
+			}
+			case 5:
+			{
+				goto IL_005e;
+			}
+		}
+	}
+	{
+		goto IL_006c;
+	}
+
+IL_0042:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:748>
+		Common_WanderScript_HandleBeginIdle_m1ADB27D06CDC273B492056B159E3E86D1D3E1CCB(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:749>
+		return;
+	}
+
+IL_0049:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:751>
+		Common_WanderScript_HandleBeginChase_m1C3612FEFE63CC77F4A120D798B25D918E782045(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:752>
+		return;
+	}
+
+IL_0050:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:754>
+		Common_WanderScript_HandleBeginEvade_mF1EAF56A0DD22B75DD3FC3398C7C2636FE1DD01B(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:755>
+		return;
+	}
+
+IL_0057:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:757>
+		Common_WanderScript_HandleBeginAttack_m94435BBF236AA2D12E86AB0B9D7F0957B2AC059E(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:758>
+		return;
+	}
+
+IL_005e:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:760>
+		Common_WanderScript_HandleBeginDeath_mDB92604B5BE57FE5FB50EEEBE4795755952944C0(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:761>
+		return;
+	}
+
+IL_0065:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:763>
+		Common_WanderScript_HandleBeginWander_m5BD16328FD322303DCEFFA3E533A444941744BD8(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:764>
+		return;
+	}
+
+IL_006c:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:766>
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_4 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		ArgumentOutOfRangeException__ctor_mB596C51BFA864B65C2CED275458FAE90F7CD29C9(L_4, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Common_WanderScript_SetState_mDD50B681EEFDBC04069E63F0D16535AD39782DD6_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 120576
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_ClearAnimatorBools_mEC5754C444D2E68C979407935693DD90384D23AA (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* V_0 = NULL;
+	int32_t V_1 = 0;
+	IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* V_2 = NULL;
+	MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* V_3 = NULL;
+	MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* V_4 = NULL;
+	AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* V_5 = NULL;
+	AIState_t8B7A024705B037A9640E1F185303E97B1D848619* V_6 = NULL;
+	AIState_t8B7A024705B037A9640E1F185303E97B1D848619* V_7 = NULL;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:774>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_0 = __this->___idleStates;
+		V_0 = L_0;
+		V_1 = 0;
+		goto IL_0020;
+	}
+
+IL_000b:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:774>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_1 = V_0;
+		int32_t L_2 = V_1;
+		NullCheck(L_1);
+		int32_t L_3 = L_2;
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
+		V_2 = L_4;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:775>
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_5 = V_2;
+		NullCheck(L_5);
+		String_t* L_6 = ((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_5)->___animationBool;
+		Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA(__this, L_6, (bool)0, NULL);
+		int32_t L_7 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_7, 1));
+	}
+
+IL_0020:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:774>
+		int32_t L_8 = V_1;
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_9 = V_0;
+		NullCheck(L_9);
+		if ((((int32_t)L_8) < ((int32_t)((int32_t)(((RuntimeArray*)L_9)->max_length)))))
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:776>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_10 = __this->___movementStates;
+		V_3 = L_10;
+		V_1 = 0;
+		goto IL_0048;
+	}
+
+IL_0031:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:776>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_11 = V_3;
+		int32_t L_12 = V_1;
+		NullCheck(L_11);
+		int32_t L_13 = L_12;
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_14 = (L_11)->GetAt(static_cast<il2cpp_array_size_t>(L_13));
+		V_4 = L_14;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:777>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_15 = V_4;
+		NullCheck(L_15);
+		String_t* L_16 = ((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_15)->___animationBool;
+		Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA(__this, L_16, (bool)0, NULL);
+		int32_t L_17 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_17, 1));
+	}
+
+IL_0048:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:776>
+		int32_t L_18 = V_1;
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_19 = V_3;
+		NullCheck(L_19);
+		if ((((int32_t)L_18) < ((int32_t)((int32_t)(((RuntimeArray*)L_19)->max_length)))))
+		{
+			goto IL_0031;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:778>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_20 = __this->___attackingStates;
+		V_5 = L_20;
+		V_1 = 0;
+		goto IL_0072;
+	}
+
+IL_005a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:778>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_21 = V_5;
+		int32_t L_22 = V_1;
+		NullCheck(L_21);
+		int32_t L_23 = L_22;
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_24 = (L_21)->GetAt(static_cast<il2cpp_array_size_t>(L_23));
+		V_6 = L_24;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:779>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_25 = V_6;
+		NullCheck(L_25);
+		String_t* L_26 = L_25->___animationBool;
+		Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA(__this, L_26, (bool)0, NULL);
+		int32_t L_27 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_27, 1));
+	}
+
+IL_0072:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:778>
+		int32_t L_28 = V_1;
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_29 = V_5;
+		NullCheck(L_29);
+		if ((((int32_t)L_28) < ((int32_t)((int32_t)(((RuntimeArray*)L_29)->max_length)))))
+		{
+			goto IL_005a;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:780>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_30 = __this->___deathStates;
+		V_5 = L_30;
+		V_1 = 0;
+		goto IL_009d;
+	}
+
+IL_0085:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:780>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_31 = V_5;
+		int32_t L_32 = V_1;
+		NullCheck(L_31);
+		int32_t L_33 = L_32;
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_34 = (L_31)->GetAt(static_cast<il2cpp_array_size_t>(L_33));
+		V_7 = L_34;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:781>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_35 = V_7;
+		NullCheck(L_35);
+		String_t* L_36 = L_35->___animationBool;
+		Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA(__this, L_36, (bool)0, NULL);
+		int32_t L_37 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_37, 1));
+	}
+
+IL_009d:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:780>
+		int32_t L_38 = V_1;
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_39 = V_5;
+		NullCheck(L_39);
+		if ((((int32_t)L_38) < ((int32_t)((int32_t)(((RuntimeArray*)L_39)->max_length)))))
+		{
+			goto IL_0085;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:782>
+		return;
+	}
+}
+// Method Definition Index: 120577
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, String_t* ___0_parameterName, bool ___1_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:785>
+		String_t* L_0 = ___0_parameterName;
+		bool L_1;
+		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
+		if (L_1)
+		{
+			goto IL_002b;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:787>
+		bool L_2 = __this->___logChanges;
+		if (L_2)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_3 = __this->___animatorParameters;
+		String_t* L_4 = ___0_parameterName;
+		NullCheck(L_3);
+		bool L_5;
+		L_5 = HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853(L_3, L_4, HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853_RuntimeMethod_var);
+		if (!L_5)
+		{
+			goto IL_002b;
+		}
+	}
+
+IL_001e:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:788>
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_6 = __this->___animator;
+		String_t* L_7 = ___0_parameterName;
+		bool L_8 = ___1_value;
+		NullCheck(L_6);
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_6, L_7, L_8, NULL);
+	}
+
+IL_002b:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:790>
+		return;
+	}
+}
+// Method Definition Index: 120578
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginDeath_mDB92604B5BE57FE5FB50EEEBE4795755952944C0 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:794>
+		Common_WanderScript_ClearAnimatorBools_mEC5754C444D2E68C979407935693DD90384D23AA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:795>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_0 = __this->___deathStates;
+		NullCheck(L_0);
+		if (!(((RuntimeArray*)L_0)->max_length))
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:796>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_1 = __this->___deathStates;
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_2 = __this->___deathStates;
+		NullCheck(L_2);
+		int32_t L_3;
+		L_3 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, ((int32_t)(((RuntimeArray*)L_2)->max_length)), NULL);
+		NullCheck(L_1);
+		int32_t L_4 = L_3;
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_5 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
+		NullCheck(L_5);
+		String_t* L_6 = L_5->___animationBool;
+		Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA(__this, L_6, (bool)1, NULL);
+	}
+
+IL_0030:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:798>
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_7 = __this->___deathEvent;
+		NullCheck(L_7);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_7, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:799>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_8 = __this->___navMeshAgent;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_8, NULL);
+		if (!L_9)
+		{
+			goto IL_006b;
+		}
+	}
+	{
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_10 = __this->___navMeshAgent;
+		NullCheck(L_10);
+		bool L_11;
+		L_11 = NavMeshAgent_get_isOnNavMesh_m2463F49C3F37E9D3F68C04300FE5AF310C924405(L_10, NULL);
+		if (!L_11)
+		{
+			goto IL_006b;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:800>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_12 = __this->___navMeshAgent;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_13);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_13, NULL);
+		NullCheck(L_12);
+		NavMeshAgent_set_destination_m5F0A8E4C8ED93798D6B9CE496B10FCE5B7461B95(L_12, L_14, NULL);
+	}
+
+IL_006b:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:801>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:802>
+		return;
+	}
+}
+// Method Definition Index: 120579
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginAttack_m94435BBF236AA2D12E86AB0B9D7F0957B2AC059E (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:806>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_0 = __this->___attackingStates;
+		NullCheck(L_0);
+		int32_t L_1;
+		L_1 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, ((int32_t)(((RuntimeArray*)L_0)->max_length)), NULL);
+		V_0 = L_1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:807>
+		__this->___turnSpeed = (120.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:808>
+		Common_WanderScript_ClearAnimatorBools_mEC5754C444D2E68C979407935693DD90384D23AA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:809>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_2 = __this->___attackingStates;
+		int32_t L_3 = V_0;
+		NullCheck(L_2);
+		int32_t L_4 = L_3;
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
+		NullCheck(L_5);
+		String_t* L_6 = L_5->___animationBool;
+		Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA(__this, L_6, (bool)1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:810>
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_7 = __this->___attackingEvent;
+		NullCheck(L_7);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_7, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:811>
+		return;
+	}
+}
+// Method Definition Index: 120580
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginEvade_mF1EAF56A0DD22B75DD3FC3398C7C2636FE1DD01B (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:815>
+		Common_WanderScript_SetMoveFast_mB6FB7189126FC17A9E80D01BBDDBB7BFA04E4B7B(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:816>
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = __this->___movementEvent;
+		NullCheck(L_0);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:817>
+		return;
+	}
+}
+// Method Definition Index: 120581
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginChase_m1C3612FEFE63CC77F4A120D798B25D918E782045 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:821>
+		Common_WanderScript_SetMoveFast_mB6FB7189126FC17A9E80D01BBDDBB7BFA04E4B7B(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:822>
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = __this->___movementEvent;
+		NullCheck(L_0);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:823>
+		return;
+	}
+}
+// Method Definition Index: 120582
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_SetMoveFast_mB6FB7189126FC17A9E80D01BBDDBB7BFA04E4B7B (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* V_0 = NULL;
+	float V_1 = 0.0f;
+	MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* V_2 = NULL;
+	int32_t V_3 = 0;
+	MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* V_4 = NULL;
+	float V_5 = 0.0f;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:827>
+		V_0 = (MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256*)NULL;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:828>
+		V_1 = (0.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:829>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_0 = __this->___movementStates;
+		V_2 = L_0;
+		V_3 = 0;
+		goto IL_0030;
+	}
+
+IL_0013:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:829>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_1 = V_2;
+		int32_t L_2 = V_3;
+		NullCheck(L_1);
+		int32_t L_3 = L_2;
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
+		V_4 = L_4;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:831>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_5 = V_4;
+		NullCheck(L_5);
+		float L_6 = L_5->___moveSpeed;
+		V_5 = L_6;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:832>
+		float L_7 = V_5;
+		float L_8 = V_1;
+		if ((!(((float)L_7) > ((float)L_8))))
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:834>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_9 = V_4;
+		V_0 = L_9;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:835>
+		float L_10 = V_5;
+		V_1 = L_10;
+	}
+
+IL_002c:
+	{
+		int32_t L_11 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_11, 1));
+	}
+
+IL_0030:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:829>
+		int32_t L_12 = V_3;
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_13 = V_2;
+		NullCheck(L_13);
+		if ((((int32_t)L_12) < ((int32_t)((int32_t)(((RuntimeArray*)L_13)->max_length)))))
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:840>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_14 = V_0;
+		NullCheck(L_14);
+		float L_15 = L_14->___turnSpeed;
+		__this->___turnSpeed = L_15;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:841>
+		float L_16 = V_1;
+		__this->___moveSpeed = L_16;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:842>
+		Common_WanderScript_ClearAnimatorBools_mEC5754C444D2E68C979407935693DD90384D23AA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:843>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_17 = V_0;
+		NullCheck(L_17);
+		String_t* L_18 = ((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_17)->___animationBool;
+		Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA(__this, L_18, (bool)1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:844>
+		return;
+	}
+}
+// Method Definition Index: 120583
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_SetMoveSlow_m0EB9D8277B8335DB4CB310A83F4EEDC7F6F8F609 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* V_0 = NULL;
+	float V_1 = 0.0f;
+	MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* V_2 = NULL;
+	int32_t V_3 = 0;
+	MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* V_4 = NULL;
+	float V_5 = 0.0f;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:848>
+		V_0 = (MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256*)NULL;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:849>
+		V_1 = ((std::numeric_limits<float>::max)());
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:850>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_0 = __this->___movementStates;
+		V_2 = L_0;
+		V_3 = 0;
+		goto IL_0030;
+	}
+
+IL_0013:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:850>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_1 = V_2;
+		int32_t L_2 = V_3;
+		NullCheck(L_1);
+		int32_t L_3 = L_2;
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
+		V_4 = L_4;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:852>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_5 = V_4;
+		NullCheck(L_5);
+		float L_6 = L_5->___moveSpeed;
+		V_5 = L_6;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:853>
+		float L_7 = V_5;
+		float L_8 = V_1;
+		if ((!(((float)L_7) < ((float)L_8))))
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:855>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_9 = V_4;
+		V_0 = L_9;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:856>
+		float L_10 = V_5;
+		V_1 = L_10;
+	}
+
+IL_002c:
+	{
+		int32_t L_11 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_11, 1));
+	}
+
+IL_0030:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:850>
+		int32_t L_12 = V_3;
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_13 = V_2;
+		NullCheck(L_13);
+		if ((((int32_t)L_12) < ((int32_t)((int32_t)(((RuntimeArray*)L_13)->max_length)))))
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:861>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_14 = V_0;
+		NullCheck(L_14);
+		float L_15 = L_14->___turnSpeed;
+		__this->___turnSpeed = L_15;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:862>
+		float L_16 = V_1;
+		__this->___moveSpeed = L_16;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:863>
+		Common_WanderScript_ClearAnimatorBools_mEC5754C444D2E68C979407935693DD90384D23AA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:864>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_17 = V_0;
+		NullCheck(L_17);
+		String_t* L_18 = ((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_17)->___animationBool;
+		Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA(__this, L_18, (bool)1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:865>
+		return;
+	}
+}
+// Method Definition Index: 120584
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginIdle_m1ADB27D06CDC273B492056B159E3E86D1D3E1CCB (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* V_2 = NULL;
+	int32_t V_3 = 0;
+	IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* V_4 = NULL;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:868>
+		__this->___primaryPrey = (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPrey), (void*)(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:869>
+		int32_t L_0 = __this->___totalIdleStateWeight;
+		int32_t L_1;
+		L_1 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, L_0, NULL);
+		V_0 = L_1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:870>
+		V_1 = 0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:871>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_2 = __this->___idleStates;
+		V_2 = L_2;
+		V_3 = 0;
+		goto IL_0078;
+	}
+
+IL_0021:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:871>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_3 = V_2;
+		int32_t L_4 = V_3;
+		NullCheck(L_3);
+		int32_t L_5 = L_4;
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
+		V_4 = L_6;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:873>
+		int32_t L_7 = V_1;
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_8 = V_4;
+		NullCheck(L_8);
+		int32_t L_9 = L_8->___stateWeight;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_7, L_9));
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:874>
+		int32_t L_10 = V_0;
+		int32_t L_11 = V_1;
+		if ((((int32_t)L_10) > ((int32_t)L_11)))
+		{
+			goto IL_0074;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:876>
+		float L_12;
+		L_12 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_13 = V_4;
+		NullCheck(L_13);
+		float L_14 = L_13->___minStateTime;
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_15 = V_4;
+		NullCheck(L_15);
+		float L_16 = L_15->___maxStateTime;
+		float L_17;
+		L_17 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494(L_14, L_16, NULL);
+		__this->___idleUpdateTime = ((float)il2cpp_codegen_add(L_12, L_17));
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:877>
+		Common_WanderScript_ClearAnimatorBools_mEC5754C444D2E68C979407935693DD90384D23AA(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:878>
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_18 = V_4;
+		NullCheck(L_18);
+		String_t* L_19 = ((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_18)->___animationBool;
+		Common_WanderScript_TrySetBool_m97BA6C7FB98653990CECF665C57F795F53A191CA(__this, L_19, (bool)1, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:879>
+		__this->___moveSpeed = (0.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:880>
+		goto IL_007e;
+	}
+
+IL_0074:
+	{
+		int32_t L_20 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_20, 1));
+	}
+
+IL_0078:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:871>
+		int32_t L_21 = V_3;
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_22 = V_2;
+		NullCheck(L_22);
+		if ((((int32_t)L_21) < ((int32_t)((int32_t)(((RuntimeArray*)L_22)->max_length)))))
+		{
+			goto IL_0021;
+		}
+	}
+
+IL_007e:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:882>
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_23 = __this->___idleEvent;
+		NullCheck(L_23);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_23, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:883>
+		return;
+	}
+}
+// Method Definition Index: 120585
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_HandleBeginWander_m5BD16328FD322303DCEFFA3E533A444941744BD8 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:886>
+		__this->___primaryPrey = (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___primaryPrey), (void*)(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07*)NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:887>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
+		L_0 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
+		float L_1 = __this->___wanderZone;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_0, L_1, NULL);
+		V_0 = L_2;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:888>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = __this->___startPosition;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
+		L_5 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_3, L_4, NULL);
+		V_1 = L_5;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:889>
+		Common_WanderScript_ValidatePosition_m79E8C3B1FA15E897C598B57CBD4DD4A49C75E891(__this, (&V_1), NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:891>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_1;
+		__this->___wanderTarget = L_6;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:892>
+		Common_WanderScript_SetMoveSlow_m0EB9D8277B8335DB4CB310A83F4EEDC7F6F8F609(__this, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:893>
+		return;
+	}
+}
+// Method Definition Index: 120586
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_ValidatePosition_m79E8C3B1FA15E897C598B57CBD4DD4A49C75E891 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_targetPos, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4404E0BBA89CA927E634FA21E24B0FE0CF2FC39F);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral70D2FE2F9F5B527E943BF6FA5AC44078F32B0BAF);
+		s_Il2CppMethodInitialized = true;
+	}
+	NavMeshHit_t6323FC1F2D00E24FBFFC3E27C2F349A3BAD16F8B V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:897>
+		NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* L_0 = __this->___navMeshAgent;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_004f;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:900>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_2 = ___0_targetPos;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = (*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)L_2);
+		int32_t L_4;
+		L_4 = NavMesh_GetAreaFromName_m44C63F9ED1E0435B234699835C69A915BBC6580F(_stringLiteral4404E0BBA89CA927E634FA21E24B0FE0CF2FC39F, NULL);
+		bool L_5;
+		L_5 = NavMesh_SamplePosition_mEDAE8240217EED82B4519D4435E670A1655B2109(L_3, (&V_0), (std::numeric_limits<float>::infinity()), ((int32_t)(1<<((int32_t)(L_4&((int32_t)31))))), NULL);
+		if (L_5)
+		{
+			goto IL_0042;
+		}
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:902>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral70D2FE2F9F5B527E943BF6FA5AC44078F32B0BAF, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:903>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:904>
+		return;
+	}
+
+IL_0042:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:907>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_6 = ___0_targetPos;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = NavMeshHit_get_position_m09E8FF6DEF5BFA3F30B3C4BCA4642442FF1BCBF1_inline((&V_0), NULL);
+		*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)L_6 = L_7;
+	}
+
+IL_004f:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:909>
+		return;
+	}
+}
+// Method Definition Index: 120587
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Common_WanderScript_RandomStartingDelay_m8F90D0C7E4C9887698735D49D142A4508B455FD0 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D* L_0 = (U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D*)il2cpp_codegen_object_new(U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D_il2cpp_TypeInfo_var);
+		U3CRandomStartingDelayU3Ed__98__ctor_m61F9A6A5A3D171CC686C34F36A78CC4685EB5171(L_0, 0, NULL);
+		U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		return L_1;
+	}
+}
+// Method Definition Index: 120588
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Common_WanderScript_ConstantTicking_mB397445D34EFECD3B24DC7A350DF67C4B0257884 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, float ___0_delay, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* L_0 = (U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153*)il2cpp_codegen_object_new(U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153_il2cpp_TypeInfo_var);
+		U3CConstantTickingU3Ed__99__ctor_m7B68EEE18AF87977EBE618C554E86AAE24B0C426(L_0, 0, NULL);
+		U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* L_2 = L_1;
+		float L_3 = ___0_delay;
+		NullCheck(L_2);
+		L_2->___delay = L_3;
+		return L_2;
+	}
+}
+// Method Definition Index: 120589
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript_BasicWanderSetUp_m1E3BA14DD2524EF80151A6DE28062EADF4459102 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AIState_t8B7A024705B037A9640E1F185303E97B1D848619_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral06CF41BA66D0BBD786673B743CD4840A4EE6CA18);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral06DCC0EBD7F6A3B5EA76D27DFA3D2334D28BC647);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0F255915E07DA7FC595B804942A8C02376116B7A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral15C25B91D8FA3C30C0CFD33996BFCF8282A6D0D5);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4E1BAB0B18C7A55EB65D6F964C2DADEB0863418B);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6269DDD173F4D01EBB1968928A63215A0A132A4B);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7F4682F559107108074468C96021CDFA3B5C0C04);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAE8900DC91B51B8520DDF29118082DF79022F298);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCCCDD19BAC8E228E10128C1D017E557BF3B69BEA);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD97B0577F464078484CF8808A78E5C0B47BDF09A);
+		s_Il2CppMethodInitialized = true;
+	}
+	MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* V_0 = NULL;
+	MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* V_1 = NULL;
+	IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* V_2 = NULL;
+	AIState_t8B7A024705B037A9640E1F185303E97B1D848619* V_3 = NULL;
+	AIState_t8B7A024705B037A9640E1F185303E97B1D848619* V_4 = NULL;
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:932>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_0 = (MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256*)il2cpp_codegen_object_new(MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256_il2cpp_TypeInfo_var);
+		MovementState__ctor_m6351049AF55F4DC452CF3D1DD7E9F16D8EFC819A(L_0, NULL);
+		V_0 = L_0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:932>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_1 = (MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256*)il2cpp_codegen_object_new(MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256_il2cpp_TypeInfo_var);
+		MovementState__ctor_m6351049AF55F4DC452CF3D1DD7E9F16D8EFC819A(L_1, NULL);
+		V_1 = L_1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:933>
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_2 = (IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95*)il2cpp_codegen_object_new(IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95_il2cpp_TypeInfo_var);
+		IdleState__ctor_mD554F79B577C3E5AFAD0227B5A42A9D0965F957F(L_2, NULL);
+		V_2 = L_2;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:934>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_3 = (AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)il2cpp_codegen_object_new(AIState_t8B7A024705B037A9640E1F185303E97B1D848619_il2cpp_TypeInfo_var);
+		AIState__ctor_m5225CE0161A92FA5699013C886BE9B3CE8C1B121(L_3, NULL);
+		V_3 = L_3;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:934>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_4 = (AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)il2cpp_codegen_object_new(AIState_t8B7A024705B037A9640E1F185303E97B1D848619_il2cpp_TypeInfo_var);
+		AIState__ctor_m5225CE0161A92FA5699013C886BE9B3CE8C1B121(L_4, NULL);
+		V_4 = L_4;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:936>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_5 = V_0;
+		NullCheck(L_5);
+		((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_5)->___stateName = _stringLiteral7F4682F559107108074468C96021CDFA3B5C0C04;
+		Il2CppCodeGenWriteBarrier((void**)(&((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_5)->___stateName), (void*)_stringLiteral7F4682F559107108074468C96021CDFA3B5C0C04);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:937>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_6 = V_0;
+		NullCheck(L_6);
+		((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_6)->___animationBool = _stringLiteral0F255915E07DA7FC595B804942A8C02376116B7A;
+		Il2CppCodeGenWriteBarrier((void**)(&((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_6)->___animationBool), (void*)_stringLiteral0F255915E07DA7FC595B804942A8C02376116B7A);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:938>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_7 = V_1;
+		NullCheck(L_7);
+		((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_7)->___stateName = _stringLiteral4E1BAB0B18C7A55EB65D6F964C2DADEB0863418B;
+		Il2CppCodeGenWriteBarrier((void**)(&((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_7)->___stateName), (void*)_stringLiteral4E1BAB0B18C7A55EB65D6F964C2DADEB0863418B);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:939>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_8 = V_1;
+		NullCheck(L_8);
+		((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_8)->___animationBool = _stringLiteral15C25B91D8FA3C30C0CFD33996BFCF8282A6D0D5;
+		Il2CppCodeGenWriteBarrier((void**)(&((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_8)->___animationBool), (void*)_stringLiteral15C25B91D8FA3C30C0CFD33996BFCF8282A6D0D5);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:940>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_9 = (MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD*)(MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD*)SZArrayNew(MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD_il2cpp_TypeInfo_var, (uint32_t)2);
+		__this->___movementStates = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___movementStates), (void*)L_9);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:941>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_10 = __this->___movementStates;
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_11 = V_0;
+		NullCheck(L_10);
+		ArrayElementTypeCheck (L_10, L_11);
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(0), (MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256*)L_11);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:942>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_12 = __this->___movementStates;
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_13 = V_1;
+		NullCheck(L_12);
+		ArrayElementTypeCheck (L_12, L_13);
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(1), (MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256*)L_13);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:945>
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_14 = V_2;
+		NullCheck(L_14);
+		((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_14)->___stateName = _stringLiteralCCCDD19BAC8E228E10128C1D017E557BF3B69BEA;
+		Il2CppCodeGenWriteBarrier((void**)(&((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_14)->___stateName), (void*)_stringLiteralCCCDD19BAC8E228E10128C1D017E557BF3B69BEA);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:946>
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_15 = V_2;
+		NullCheck(L_15);
+		((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_15)->___animationBool = _stringLiteral06DCC0EBD7F6A3B5EA76D27DFA3D2334D28BC647;
+		Il2CppCodeGenWriteBarrier((void**)(&((AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_15)->___animationBool), (void*)_stringLiteral06DCC0EBD7F6A3B5EA76D27DFA3D2334D28BC647);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:947>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_16 = (IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2*)(IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2*)SZArrayNew(IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2_il2cpp_TypeInfo_var, (uint32_t)1);
+		__this->___idleStates = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___idleStates), (void*)L_16);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:948>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_17 = __this->___idleStates;
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_18 = V_2;
+		NullCheck(L_17);
+		ArrayElementTypeCheck (L_17, L_18);
+		(L_17)->SetAt(static_cast<il2cpp_array_size_t>(0), (IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95*)L_18);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:950>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_19 = V_3;
+		NullCheck(L_19);
+		L_19->___stateName = _stringLiteral6269DDD173F4D01EBB1968928A63215A0A132A4B;
+		Il2CppCodeGenWriteBarrier((void**)(&L_19->___stateName), (void*)_stringLiteral6269DDD173F4D01EBB1968928A63215A0A132A4B);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:951>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_20 = V_3;
+		NullCheck(L_20);
+		L_20->___animationBool = _stringLiteralD97B0577F464078484CF8808A78E5C0B47BDF09A;
+		Il2CppCodeGenWriteBarrier((void**)(&L_20->___animationBool), (void*)_stringLiteralD97B0577F464078484CF8808A78E5C0B47BDF09A);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:952>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_21 = (AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068*)(AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068*)SZArrayNew(AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068_il2cpp_TypeInfo_var, (uint32_t)1);
+		__this->___attackingStates = L_21;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___attackingStates), (void*)L_21);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:953>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_22 = __this->___attackingStates;
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_23 = V_3;
+		NullCheck(L_22);
+		ArrayElementTypeCheck (L_22, L_23);
+		(L_22)->SetAt(static_cast<il2cpp_array_size_t>(0), (AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_23);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:955>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_24 = V_4;
+		NullCheck(L_24);
+		L_24->___stateName = _stringLiteral06CF41BA66D0BBD786673B743CD4840A4EE6CA18;
+		Il2CppCodeGenWriteBarrier((void**)(&L_24->___stateName), (void*)_stringLiteral06CF41BA66D0BBD786673B743CD4840A4EE6CA18);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:956>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_25 = V_4;
+		NullCheck(L_25);
+		L_25->___animationBool = _stringLiteralAE8900DC91B51B8520DDF29118082DF79022F298;
+		Il2CppCodeGenWriteBarrier((void**)(&L_25->___animationBool), (void*)_stringLiteralAE8900DC91B51B8520DDF29118082DF79022F298);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:957>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_26 = (AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068*)(AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068*)SZArrayNew(AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068_il2cpp_TypeInfo_var, (uint32_t)1);
+		__this->___deathStates = L_26;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___deathStates), (void*)L_26);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:958>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_27 = __this->___deathStates;
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_28 = V_4;
+		NullCheck(L_27);
+		ArrayElementTypeCheck (L_27, L_28);
+		(L_27)->SetAt(static_cast<il2cpp_array_size_t>(0), (AIState_t8B7A024705B037A9640E1F185303E97B1D848619*)L_28);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:959>
+		return;
+	}
+}
+// Method Definition Index: 120590
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript__ctor_m14176DFE77CB895FC2ECEA4B21E1F29AC305EFE0 (Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1FAAC4C64BF7977C10655B4C43E003EAFFC5F598);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:27>
+		__this->___species = _stringLiteral1FAAC4C64BF7977C10655B4C43E003EAFFC5F598;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___species), (void*)_stringLiteral1FAAC4C64BF7977C10655B4C43E003EAFFC5F598);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:33>
+		__this->___wanderZone = (10.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:48>
+		__this->___dominance = 1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:52>
+		__this->___awareness = (30.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:55>
+		__this->___scent = (30.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:60>
+		__this->___stamina = (10.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:63>
+		__this->___power = (10.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:66>
+		__this->___toughness = (5.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:73>
+		__this->___attackSpeed = (0.5f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:99>
+		__this->___surfaceRotationSpeed = (2.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:108>
+		__this->___drawWanderRange = (bool)1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:109>
+		__this->___drawScentRange = (bool)1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:110>
+		__this->___drawAwarenessRange = (bool)1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:118>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		memset((&L_0), 0, sizeof(L_0));
+		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_0), (0.0f), (0.0f), (205.0f), NULL);
+		__this->___distanceColor = L_0;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:119>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
+		memset((&L_1), 0, sizeof(L_1));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_1), (1.0f), (0.0f), (1.0f), (1.0f), NULL);
+		__this->___awarnessColor = L_1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:120>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
+		memset((&L_2), 0, sizeof(L_2));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_2), (1.0f), (0.0f), (0.0f), (1.0f), NULL);
+		__this->___scentColor = L_2;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:129>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
+		L_3 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		__this->___targetLocation = L_3;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:159>
+		__this->___attackReach = (2.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:449>
+		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_4 = (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178*)il2cpp_codegen_object_new(HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178_il2cpp_TypeInfo_var);
+		HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03(L_4, HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03_RuntimeMethod_var);
+		__this->___animatorParameters = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___animatorParameters), (void*)L_4);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 120591
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Common_WanderScript__cctor_mE2C2D66B34FE6E0F621A58C790141A4461E87D36 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m60E56DC377483321E37B0C0101FA4CB58EDE1D79_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:87>
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_0 = (List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200*)il2cpp_codegen_object_new(List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200_il2cpp_TypeInfo_var);
+		List_1__ctor_m60E56DC377483321E37B0C0101FA4CB58EDE1D79(L_0, List_1__ctor_m60E56DC377483321E37B0C0101FA4CB58EDE1D79_RuntimeMethod_var);
+		((Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var))->___allAnimals = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var))->___allAnimals), (void*)L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120592
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m1EA0AE95D4C7FBC0528ABB3DFA274BB1AFC3E785 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E* L_0 = (U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E*)il2cpp_codegen_object_new(U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var);
+		U3CU3Ec__ctor_m9CB15B83FF4C6C641B57080C3E02F5F74F393B2D(L_0, NULL);
+		((U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var))->___U3CU3E9 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E_il2cpp_TypeInfo_var))->___U3CU3E9), (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 120593
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m9CB15B83FF4C6C641B57080C3E02F5F74F393B2D (U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 120594
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CAwakeU3Eb__70_0_mD3CB110A68B302421DD5AF437C315049619007CF (U3CU3Ec_tD1F3C426E89AEBC017991A718D6D4D9E3D378B6E* __this, AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02* ___0_p, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:239>
+		AnimatorControllerParameter_t1FA67485445446540D4F2857762C960AE6980E02* L_0 = ___0_p;
+		NullCheck(L_0);
+		String_t* L_1;
+		L_1 = AnimatorControllerParameter_get_name_mEB3938ADDF296A0FB37283C987AEE6EC0F4F629E(L_0, NULL);
+		return L_1;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120595
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CConstantTickingU3Ed__99__ctor_m7B68EEE18AF87977EBE618C554E86AAE24B0C426 (U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+// Method Definition Index: 120596
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CConstantTickingU3Ed__99_System_IDisposable_Dispose_m8CE2272F99EE46F40BA6DCFC0EDC9F62B63F63F4 (U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 120597
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CConstantTickingU3Ed__99_MoveNext_m69EC0A5816248D70C9065B9186CEA29D8AF13439 (U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* V_1 = NULL;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_1 = __this->___U3CU3E4__this;
+		V_1 = L_1;
+		int32_t L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		int32_t L_3 = V_0;
+		if ((((int32_t)L_3) == ((int32_t)1)))
+		{
+			goto IL_003e;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_0017:
+	{
+		__this->___U3CU3E1__state = (-1);
+	}
+
+IL_001e:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:923>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_4 = V_1;
+		NullCheck(L_4);
+		Common_WanderScript_UpdateAI_m7E8E30DE59CB574371B9AF85E55421C69B1036BA(L_4, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:924>
+		float L_5 = __this->___delay;
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_6 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_6, L_5, NULL);
+		__this->___U3CU3E2__current = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_6);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_003e:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:921>
+		goto IL_001e;
+	}
+}
+// Method Definition Index: 120598
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CConstantTickingU3Ed__99_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE775EC1699804DA75DFDDD766EF7EE29F0B72092 (U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 120599
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CConstantTickingU3Ed__99_System_Collections_IEnumerator_Reset_m2936C726BBE64BCA3E4ADBDF2AAAA65E08C70813 (U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CConstantTickingU3Ed__99_System_Collections_IEnumerator_Reset_m2936C726BBE64BCA3E4ADBDF2AAAA65E08C70813_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 120600
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CConstantTickingU3Ed__99_System_Collections_IEnumerator_get_Current_mEA6E829A8D377D3BA9920ECEFDBACC74BD655F09 (U3CConstantTickingU3Ed__99_t906ECD0B568E9F499000A13B8707AF78215D1153* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120601
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRandomStartingDelayU3Ed__98__ctor_m61F9A6A5A3D171CC686C34F36A78CC4685EB5171 (U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+// Method Definition Index: 120602
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRandomStartingDelayU3Ed__98_System_IDisposable_Dispose_m6C6D0E3DD333CCEDDFB1536D668CC35AE5F06748 (U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 120603
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRandomStartingDelayU3Ed__98_MoveNext_mAD2576C6D8C3BEDAA0532DE0D1229B7D7357CBB4 (U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* V_1 = NULL;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_1 = __this->___U3CU3E4__this;
+		V_1 = L_1;
+		int32_t L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		int32_t L_3 = V_0;
+		if ((((int32_t)L_3) == ((int32_t)1)))
+		{
+			goto IL_0041;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_0017:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:914>
+		float L_4;
+		L_4 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.0f), (2.0f), NULL);
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_5 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_5, L_4, NULL);
+		__this->___U3CU3E2__current = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_5);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_0041:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:915>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_6 = V_1;
+		NullCheck(L_6);
+		L_6->___started = (bool)1;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:916>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_7 = V_1;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_8 = V_1;
+		float L_9;
+		L_9 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.699999988f), (1.0f), NULL);
+		NullCheck(L_8);
+		RuntimeObject* L_10;
+		L_10 = Common_WanderScript_ConstantTicking_mB397445D34EFECD3B24DC7A350DF67C4B0257884(L_8, L_9, NULL);
+		NullCheck(L_7);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_11;
+		L_11 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(L_7, L_10, NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:917>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 120604
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRandomStartingDelayU3Ed__98_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1D5B1F3FEE143634DFAB65C546496F231C54B0FB (U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 120605
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRandomStartingDelayU3Ed__98_System_Collections_IEnumerator_Reset_m2D73A70226E085B9FBCB699AB11A3C6A91060BE1 (U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRandomStartingDelayU3Ed__98_System_Collections_IEnumerator_Reset_m2D73A70226E085B9FBCB699AB11A3C6A91060BE1_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 120606
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRandomStartingDelayU3Ed__98_System_Collections_IEnumerator_get_Current_mA1DF4C03B91AE24282B260CF14AB16F5EAE36E44 (U3CRandomStartingDelayU3Ed__98_t2C176C9E9BA17E8A819F6391A498227BA70F8B8D* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120607
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3Cget_AllStatesU3Ed__72__ctor_m38F06EC3AEF5C924590695204171578AD86A13E1 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		int32_t L_1;
+		L_1 = Environment_get_CurrentManagedThreadId_m66483AADCCC13272EBDCD94D31D2E52603C24BDF(NULL);
+		__this->___U3CU3El__initialThreadId = L_1;
+		return;
+	}
+}
+// Method Definition Index: 120608
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3Cget_AllStatesU3Ed__72_System_IDisposable_Dispose_mF776A93F0187E09E0C4B9D47DFF2ADF56F325326 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 120609
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3Cget_AllStatesU3Ed__72_MoveNext_m59901E46711C4A2D86E6ABC09FFD39D9FC3D45C0 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* V_1 = NULL;
+	IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* V_2 = NULL;
+	MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* V_3 = NULL;
+	AIState_t8B7A024705B037A9640E1F185303E97B1D848619* V_4 = NULL;
+	AIState_t8B7A024705B037A9640E1F185303E97B1D848619* V_5 = NULL;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_1 = __this->___U3CU3E4__this;
+		V_1 = L_1;
+		int32_t L_2 = V_0;
+		switch (L_2)
+		{
+			case 0:
+			{
+				goto IL_002a;
+			}
+			case 1:
+			{
+				goto IL_0064;
+			}
+			case 2:
+			{
+				goto IL_00c3;
+			}
+			case 3:
+			{
+				goto IL_0124;
+			}
+			case 4:
+			{
+				goto IL_0185;
+			}
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_002a:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:414>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_3 = V_1;
+		NullCheck(L_3);
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_4 = L_3->___idleStates;
+		__this->___U3CU3E7__wrap1 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E7__wrap1), (void*)L_4);
+		__this->___U3CU3E7__wrap2 = 0;
+		goto IL_0079;
+	}
+
+IL_0046:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:414>
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_5 = __this->___U3CU3E7__wrap1;
+		int32_t L_6 = __this->___U3CU3E7__wrap2;
+		NullCheck(L_5);
+		int32_t L_7 = L_6;
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_8 = (L_5)->GetAt(static_cast<il2cpp_array_size_t>(L_7));
+		V_2 = L_8;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:415>
+		IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* L_9 = V_2;
+		__this->___U3CU3E2__current = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_9);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_0064:
+	{
+		__this->___U3CU3E1__state = (-1);
+		int32_t L_10 = __this->___U3CU3E7__wrap2;
+		__this->___U3CU3E7__wrap2 = ((int32_t)il2cpp_codegen_add(L_10, 1));
+	}
+
+IL_0079:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:414>
+		int32_t L_11 = __this->___U3CU3E7__wrap2;
+		IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2* L_12 = __this->___U3CU3E7__wrap1;
+		NullCheck(L_12);
+		if ((((int32_t)L_11) < ((int32_t)((int32_t)(((RuntimeArray*)L_12)->max_length)))))
+		{
+			goto IL_0046;
+		}
+	}
+	{
+		__this->___U3CU3E7__wrap1 = (IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E7__wrap1), (void*)(IdleStateU5BU5D_tADE6EDDFB2B64744A33A4789B1DFAB06D589A4F2*)NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:416>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_13 = V_1;
+		NullCheck(L_13);
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_14 = L_13->___movementStates;
+		__this->___U3CU3E7__wrap3 = L_14;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E7__wrap3), (void*)L_14);
+		__this->___U3CU3E7__wrap2 = 0;
+		goto IL_00d8;
+	}
+
+IL_00a5:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:416>
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_15 = __this->___U3CU3E7__wrap3;
+		int32_t L_16 = __this->___U3CU3E7__wrap2;
+		NullCheck(L_15);
+		int32_t L_17 = L_16;
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_18 = (L_15)->GetAt(static_cast<il2cpp_array_size_t>(L_17));
+		V_3 = L_18;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:417>
+		MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* L_19 = V_3;
+		__this->___U3CU3E2__current = L_19;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_19);
+		__this->___U3CU3E1__state = 2;
+		return (bool)1;
+	}
+
+IL_00c3:
+	{
+		__this->___U3CU3E1__state = (-1);
+		int32_t L_20 = __this->___U3CU3E7__wrap2;
+		__this->___U3CU3E7__wrap2 = ((int32_t)il2cpp_codegen_add(L_20, 1));
+	}
+
+IL_00d8:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:416>
+		int32_t L_21 = __this->___U3CU3E7__wrap2;
+		MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD* L_22 = __this->___U3CU3E7__wrap3;
+		NullCheck(L_22);
+		if ((((int32_t)L_21) < ((int32_t)((int32_t)(((RuntimeArray*)L_22)->max_length)))))
+		{
+			goto IL_00a5;
+		}
+	}
+	{
+		__this->___U3CU3E7__wrap3 = (MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E7__wrap3), (void*)(MovementStateU5BU5D_t074DA150E6FAEDA81903504D88251250336D53AD*)NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:418>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_23 = V_1;
+		NullCheck(L_23);
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_24 = L_23->___attackingStates;
+		__this->___U3CU3E7__wrap4 = L_24;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E7__wrap4), (void*)L_24);
+		__this->___U3CU3E7__wrap2 = 0;
+		goto IL_0139;
+	}
+
+IL_0104:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:418>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_25 = __this->___U3CU3E7__wrap4;
+		int32_t L_26 = __this->___U3CU3E7__wrap2;
+		NullCheck(L_25);
+		int32_t L_27 = L_26;
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_28 = (L_25)->GetAt(static_cast<il2cpp_array_size_t>(L_27));
+		V_4 = L_28;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:419>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_29 = V_4;
+		__this->___U3CU3E2__current = L_29;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_29);
+		__this->___U3CU3E1__state = 3;
+		return (bool)1;
+	}
+
+IL_0124:
+	{
+		__this->___U3CU3E1__state = (-1);
+		int32_t L_30 = __this->___U3CU3E7__wrap2;
+		__this->___U3CU3E7__wrap2 = ((int32_t)il2cpp_codegen_add(L_30, 1));
+	}
+
+IL_0139:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:418>
+		int32_t L_31 = __this->___U3CU3E7__wrap2;
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_32 = __this->___U3CU3E7__wrap4;
+		NullCheck(L_32);
+		if ((((int32_t)L_31) < ((int32_t)((int32_t)(((RuntimeArray*)L_32)->max_length)))))
+		{
+			goto IL_0104;
+		}
+	}
+	{
+		__this->___U3CU3E7__wrap4 = (AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E7__wrap4), (void*)(AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068*)NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:420>
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_33 = V_1;
+		NullCheck(L_33);
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_34 = L_33->___deathStates;
+		__this->___U3CU3E7__wrap4 = L_34;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E7__wrap4), (void*)L_34);
+		__this->___U3CU3E7__wrap2 = 0;
+		goto IL_019a;
+	}
+
+IL_0165:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:420>
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_35 = __this->___U3CU3E7__wrap4;
+		int32_t L_36 = __this->___U3CU3E7__wrap2;
+		NullCheck(L_35);
+		int32_t L_37 = L_36;
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_38 = (L_35)->GetAt(static_cast<il2cpp_array_size_t>(L_37));
+		V_5 = L_38;
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:421>
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_39 = V_5;
+		__this->___U3CU3E2__current = L_39;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_39);
+		__this->___U3CU3E1__state = 4;
+		return (bool)1;
+	}
+
+IL_0185:
+	{
+		__this->___U3CU3E1__state = (-1);
+		int32_t L_40 = __this->___U3CU3E7__wrap2;
+		__this->___U3CU3E7__wrap2 = ((int32_t)il2cpp_codegen_add(L_40, 1));
+	}
+
+IL_019a:
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:420>
+		int32_t L_41 = __this->___U3CU3E7__wrap2;
+		AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068* L_42 = __this->___U3CU3E7__wrap4;
+		NullCheck(L_42);
+		if ((((int32_t)L_41) < ((int32_t)((int32_t)(((RuntimeArray*)L_42)->max_length)))))
+		{
+			goto IL_0165;
+		}
+	}
+	{
+		__this->___U3CU3E7__wrap4 = (AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E7__wrap4), (void*)(AIStateU5BU5D_tEFC65F7D21A31220306E52502CB2E7477C717068*)NULL);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:422>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 120610
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AIState_t8B7A024705B037A9640E1F185303E97B1D848619* U3Cget_AllStatesU3Ed__72_System_Collections_Generic_IEnumeratorU3CPolyperfect_Common_AIStateU3E_get_Current_mA1BEF0C10DACA792D64EB73C409F215E83DAC486 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, const RuntimeMethod* method) 
+{
+	{
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 120611
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3Cget_AllStatesU3Ed__72_System_Collections_IEnumerator_Reset_m7070B69179C0A083C9FF365AE85F431C8490F8C1 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3Cget_AllStatesU3Ed__72_System_Collections_IEnumerator_Reset_m7070B69179C0A083C9FF365AE85F431C8490F8C1_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 120612
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3Cget_AllStatesU3Ed__72_System_Collections_IEnumerator_get_Current_m5D3B64D668D495FE5A33E1BF3A03CC3A9A313E30 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, const RuntimeMethod* method) 
+{
+	{
+		AIState_t8B7A024705B037A9640E1F185303E97B1D848619* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 120613
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3Cget_AllStatesU3Ed__72_System_Collections_Generic_IEnumerableU3CPolyperfect_Common_AIStateU3E_GetEnumerator_mEE1B1B8B304C1EA4F8198FD8D9DA1D23519B9607 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* V_0 = NULL;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		if ((!(((uint32_t)L_0) == ((uint32_t)((int32_t)-2)))))
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		int32_t L_1 = __this->___U3CU3El__initialThreadId;
+		int32_t L_2;
+		L_2 = Environment_get_CurrentManagedThreadId_m66483AADCCC13272EBDCD94D31D2E52603C24BDF(NULL);
+		if ((!(((uint32_t)L_1) == ((uint32_t)L_2))))
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		__this->___U3CU3E1__state = 0;
+		V_0 = __this;
+		goto IL_0035;
+	}
+
+IL_0022:
+	{
+		U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* L_3 = (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B*)il2cpp_codegen_object_new(U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B_il2cpp_TypeInfo_var);
+		U3Cget_AllStatesU3Ed__72__ctor_m38F06EC3AEF5C924590695204171578AD86A13E1(L_3, 0, NULL);
+		V_0 = L_3;
+		U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* L_4 = V_0;
+		Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07* L_5 = __this->___U3CU3E4__this;
+		NullCheck(L_4);
+		L_4->___U3CU3E4__this = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&L_4->___U3CU3E4__this), (void*)L_5);
+	}
+
+IL_0035:
+	{
+		U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* L_6 = V_0;
+		return L_6;
+	}
+}
+// Method Definition Index: 120614
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3Cget_AllStatesU3Ed__72_System_Collections_IEnumerable_GetEnumerator_m93B41B22219421264B4DAEC4BECC72A47D11DE44 (U3Cget_AllStatesU3Ed__72_t2129EFA5F78E77894D2D1C7A1A4F24FFA535362B* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0;
+		L_0 = U3Cget_AllStatesU3Ed__72_System_Collections_Generic_IEnumerableU3CPolyperfect_Common_AIStateU3E_GetEnumerator_mEE1B1B8B304C1EA4F8198FD8D9DA1D23519B9607(__this, NULL);
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120615
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IdleState__ctor_mD554F79B577C3E5AFAD0227B5A42A9D0965F957F (IdleState_t138BD70265405C4219EEA29C9A1A9BBF5AFC4A95* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/IdleState.cs:9>
+		__this->___minStateTime = (20.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/IdleState.cs:10>
+		__this->___maxStateTime = (40.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/IdleState.cs:12>
+		__this->___stateWeight = ((int32_t)20);
+		AIState__ctor_m5225CE0161A92FA5699013C886BE9B3CE8C1B121(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 120616
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovementState__ctor_m6351049AF55F4DC452CF3D1DD7E9F16D8EFC819A (MovementState_t00FA940E16EED23D904C1A0D8C6DD20D1EF51256* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/MovementState.cs:8>
+		__this->___maxStateTime = (40.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/MovementState.cs:9>
+		__this->___moveSpeed = (3.0f);
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/MovementState.cs:10>
+		__this->___turnSpeed = (120.0f);
+		AIState__ctor_m5225CE0161A92FA5699013C886BE9B3CE8C1B121(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Method Definition Index: 53131
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = ((Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_StaticFields*)il2cpp_codegen_static_fields_for(Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_il2cpp_TypeInfo_var))->___identityQuaternion;
+		return L_0;
+	}
+}
+// Method Definition Index: 53101
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_a;
+		float L_1 = L_0.___x;
+		float L_2 = ___1_d;
+		(&V_0)->___x = ((float)il2cpp_codegen_multiply(L_1, L_2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___0_a;
+		float L_4 = L_3.___y;
+		float L_5 = ___1_d;
+		(&V_0)->___y = ((float)il2cpp_codegen_multiply(L_4, L_5));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___0_a;
+		float L_7 = L_6.___z;
+		float L_8 = ___1_d;
+		(&V_0)->___z = ((float)il2cpp_codegen_multiply(L_7, L_8));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = V_0;
+		return L_9;
+	}
+}
+// Method Definition Index: 53098
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_a;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_b;
+		float L_3 = L_2.___x;
+		(&V_0)->___x = ((float)il2cpp_codegen_add(L_1, L_3));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_a;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_b;
+		float L_7 = L_6.___y;
+		(&V_0)->___y = ((float)il2cpp_codegen_add(L_5, L_7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_a;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_b;
+		float L_11 = L_10.___z;
+		(&V_0)->___z = ((float)il2cpp_codegen_add(L_9, L_11));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_0;
+		return L_12;
+	}
+}
+// Method Definition Index: 53090
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___zeroVector;
+		return L_0;
+	}
+}
+// Method Definition Index: 122214
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 NavMeshHit_get_position_m09E8FF6DEF5BFA3F30B3C4BCA4642442FF1BCBF1_inline (NavMeshHit_t6323FC1F2D00E24FBFFC3E27C2F349A3BAD16F8B* __this, const RuntimeMethod* method) 
+{
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___m_Position;
+		return L_0;
+	}
+}
+// Method Definition Index: 53095
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_down_mF62B2AE7C5AC31EAC9CB62797C7190C90A7A8599_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___downVector;
+		return L_0;
+	}
+}
+// Method Definition Index: 53094
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___upVector;
+		return L_0;
+	}
+}
+// Method Definition Index: 53113
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_FromToRotation_mCB3100F93637E72455388B901C36EF8A25DFDB9A_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_fromDirection, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_toDirection, const RuntimeMethod* method) 
+{
+	{
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0;
+		L_0 = Quaternion_Internal_FromToRotation_m4A801EE9080CD4CBCB9319FF12EB7934E885932F((&___0_fromDirection), (&___1_toDirection), NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 53132
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) 
+{
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974));
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = ___0_lhs;
+		float L_1 = L_0.___w;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_2 = ___1_rhs;
+		float L_3 = L_2.___x;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_4 = ___0_lhs;
+		float L_5 = L_4.___x;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_6 = ___1_rhs;
+		float L_7 = L_6.___w;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_8 = ___0_lhs;
+		float L_9 = L_8.___y;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10 = ___1_rhs;
+		float L_11 = L_10.___z;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_12 = ___0_lhs;
+		float L_13 = L_12.___z;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14 = ___1_rhs;
+		float L_15 = L_14.___y;
+		(&V_0)->___x = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11)))), ((float)il2cpp_codegen_multiply(L_13, L_15))));
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_16 = ___0_lhs;
+		float L_17 = L_16.___w;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_18 = ___1_rhs;
+		float L_19 = L_18.___y;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_20 = ___0_lhs;
+		float L_21 = L_20.___y;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_22 = ___1_rhs;
+		float L_23 = L_22.___w;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_24 = ___0_lhs;
+		float L_25 = L_24.___z;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_26 = ___1_rhs;
+		float L_27 = L_26.___x;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_28 = ___0_lhs;
+		float L_29 = L_28.___x;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_30 = ___1_rhs;
+		float L_31 = L_30.___z;
+		(&V_0)->___y = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_17, L_19)), ((float)il2cpp_codegen_multiply(L_21, L_23)))), ((float)il2cpp_codegen_multiply(L_25, L_27)))), ((float)il2cpp_codegen_multiply(L_29, L_31))));
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_32 = ___0_lhs;
+		float L_33 = L_32.___w;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_34 = ___1_rhs;
+		float L_35 = L_34.___z;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_36 = ___0_lhs;
+		float L_37 = L_36.___z;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_38 = ___1_rhs;
+		float L_39 = L_38.___w;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_40 = ___0_lhs;
+		float L_41 = L_40.___x;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_42 = ___1_rhs;
+		float L_43 = L_42.___y;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_44 = ___0_lhs;
+		float L_45 = L_44.___y;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_46 = ___1_rhs;
+		float L_47 = L_46.___x;
+		(&V_0)->___z = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_33, L_35)), ((float)il2cpp_codegen_multiply(L_37, L_39)))), ((float)il2cpp_codegen_multiply(L_41, L_43)))), ((float)il2cpp_codegen_multiply(L_45, L_47))));
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_48 = ___0_lhs;
+		float L_49 = L_48.___w;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_50 = ___1_rhs;
+		float L_51 = L_50.___w;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_52 = ___0_lhs;
+		float L_53 = L_52.___x;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_54 = ___1_rhs;
+		float L_55 = L_54.___x;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_56 = ___0_lhs;
+		float L_57 = L_56.___y;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_58 = ___1_rhs;
+		float L_59 = L_58.___y;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_60 = ___0_lhs;
+		float L_61 = L_60.___z;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_62 = ___1_rhs;
+		float L_63 = L_62.___z;
+		(&V_0)->___w = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_multiply(L_49, L_51)), ((float)il2cpp_codegen_multiply(L_53, L_55)))), ((float)il2cpp_codegen_multiply(L_57, L_59)))), ((float)il2cpp_codegen_multiply(L_61, L_63))));
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_64 = V_0;
+		return L_64;
+	}
+}
+// Method Definition Index: 53120
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Lerp_m259606226726C2F46E079A5A688B9E24FF7E9A0D_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_b, float ___2_t, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___2_t;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_1;
+		L_1 = Quaternion_Internal_Lerp_mB9D9E19C29CA86767758B70DCFF9DB7C65821B39((&___0_a), (&___1_b), L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 120558
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* Common_WanderScript_get_AllAnimals_m72750AFDAA44F777A66C7DA06D84EE3A2DB171D7_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs:91>
+		il2cpp_codegen_runtime_class_init_inline(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var);
+		List_1_t8598D2A6FA513867FE1FDE2440738A64A7BDB200* L_0 = ((Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderScript_t30CF0215DA66F183706FA4B78AC0D30D4E7AED07_il2cpp_TypeInfo_var))->___allAnimals;
+		return L_0;
+	}
+}
+// Method Definition Index: 53104
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	bool V_4 = false;
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_lhs;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_rhs;
+		float L_3 = L_2.___x;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_lhs;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_rhs;
+		float L_7 = L_6.___y;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_lhs;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_rhs;
+		float L_11 = L_10.___z;
+		V_2 = ((float)il2cpp_codegen_subtract(L_9, L_11));
+		float L_12 = V_0;
+		float L_13 = V_0;
+		float L_14 = V_1;
+		float L_15 = V_1;
+		float L_16 = V_2;
+		float L_17 = V_2;
+		V_3 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_12, L_13)), ((float)il2cpp_codegen_multiply(L_14, L_15)))), ((float)il2cpp_codegen_multiply(L_16, L_17))));
+		float L_18 = V_3;
+		V_4 = (bool)((((float)L_18) < ((float)(9.99999944E-11f)))? 1 : 0);
+		goto IL_0043;
+	}
+
+IL_0043:
+	{
+		bool L_19 = V_4;
+		return L_19;
+	}
+}
+// Method Definition Index: 53059
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_x;
+		__this->___x = L_0;
+		float L_1 = ___1_y;
+		__this->___y = L_1;
+		float L_2 = ___2_z;
+		__this->___z = L_2;
+		return;
+	}
+}
+// Method Definition Index: 53105
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
+{
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_lhs;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___1_rhs;
+		bool L_2;
+		L_2 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_0, L_1, NULL);
+		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+	}
+}
+// Method Definition Index: 120550
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* Common_WanderManager_get_Instance_m8D8F43AB356C2342A60D47FFF0145E8584302D2E_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:28>
+		Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* L_0 = ((Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_StaticFields*)il2cpp_codegen_static_fields_for(Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F_il2cpp_TypeInfo_var))->___instance;
+		return L_0;
+	}
+}
+// Method Definition Index: 120548
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Common_WanderManager_get_PeaceTime_mE49071BDBC493163F947D3C80659B32E83AE8E46_inline (Common_WanderManager_t4CC69E2CDDEC8EDC0B80663BD11B95364DBE436F* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Pfe-Project from Github/ARBook/Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs:15>
+		bool L_0 = __this->___peaceTime;
+		return L_0;
+	}
+}
+// Method Definition Index: 53099
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_a;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_b;
+		float L_3 = L_2.___x;
+		(&V_0)->___x = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_a;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_b;
+		float L_7 = L_6.___y;
+		(&V_0)->___y = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_a;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_b;
+		float L_11 = L_10.___z;
+		(&V_0)->___z = ((float)il2cpp_codegen_subtract(L_9, L_11));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_0;
+		return L_12;
+	}
+}
+// Method Definition Index: 53073
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
+{
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
+		L_0 = Vector3_Normalize_m1DE89849FE2019B6AA0031306896F3B800849399_inline(__this, NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 53077
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_ProjectOnPlane_m68FB895F6E9FCC45676BB8B95857D091C0D78794_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_vector, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_planeNormal, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	bool V_1 = false;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	float V_3 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	{
+		float L_0;
+		L_0 = Vector3_Dot_m9B5EBE36643126708DB3F444C59C11FA30803DBB_inline((&___1_planeNormal), (&___1_planeNormal), NULL);
+		V_0 = L_0;
+		float L_1 = V_0;
+		float L_2 = ((Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_StaticFields*)il2cpp_codegen_static_fields_for(Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_il2cpp_TypeInfo_var))->___Epsilon;
+		V_1 = (bool)((((float)L_1) < ((float)L_2))? 1 : 0);
+		bool L_3 = V_1;
+		if (!L_3)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_vector;
+		V_2 = L_4;
+		goto IL_006f;
+	}
+
+IL_001b:
+	{
+		float L_5;
+		L_5 = Vector3_Dot_m9B5EBE36643126708DB3F444C59C11FA30803DBB_inline((&___0_vector), (&___1_planeNormal), NULL);
+		float L_6 = V_0;
+		V_3 = ((float)(L_5/L_6));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = ___0_vector;
+		float L_8 = L_7.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = ___1_planeNormal;
+		float L_10 = L_9.___x;
+		float L_11 = V_3;
+		(&V_4)->___x = ((float)il2cpp_codegen_subtract(L_8, ((float)il2cpp_codegen_multiply(L_10, L_11))));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = ___0_vector;
+		float L_13 = L_12.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = ___1_planeNormal;
+		float L_15 = L_14.___y;
+		float L_16 = V_3;
+		(&V_4)->___y = ((float)il2cpp_codegen_subtract(L_13, ((float)il2cpp_codegen_multiply(L_15, L_16))));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = ___0_vector;
+		float L_18 = L_17.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = ___1_planeNormal;
+		float L_20 = L_19.___z;
+		float L_21 = V_3;
+		(&V_4)->___z = ((float)il2cpp_codegen_subtract(L_18, ((float)il2cpp_codegen_multiply(L_20, L_21))));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22 = V_4;
+		V_2 = L_22;
+		goto IL_006f;
+	}
+
+IL_006f:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_2;
+		return L_23;
+	}
+}
+// Method Definition Index: 53202
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_MoveTowards_m69751B5EC50D8E7127D4BB2C8D908E38808AF45D_inline (float ___0_current, float ___1_target, float ___2_maxDelta, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	float V_1 = 0.0f;
+	{
+		float L_0 = ___1_target;
+		float L_1 = ___0_current;
+		float L_2;
+		L_2 = fabsf(((float)il2cpp_codegen_subtract(L_0, L_1)));
+		float L_3 = ___2_maxDelta;
+		V_0 = (bool)((((int32_t)((!(((float)L_2) <= ((float)L_3)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_4 = V_0;
+		if (!L_4)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		float L_5 = ___1_target;
+		V_1 = L_5;
+		goto IL_0026;
+	}
+
+IL_0017:
+	{
+		float L_6 = ___0_current;
+		float L_7 = ___1_target;
+		float L_8 = ___0_current;
+		float L_9;
+		L_9 = Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline(((float)il2cpp_codegen_subtract(L_7, L_8)), NULL);
+		float L_10 = ___2_maxDelta;
+		V_1 = ((float)il2cpp_codegen_add(L_6, ((float)il2cpp_codegen_multiply(L_9, L_10))));
+		goto IL_0026;
+	}
+
+IL_0026:
+	{
+		float L_11 = V_1;
+		return L_11;
+	}
+}
+// Method Definition Index: 52936
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline (const RuntimeMethod* method) 
+{
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		memset((&L_0), 0, sizeof(L_0));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (1.0f), (0.921568632f), (0.0156862754f), (1.0f), NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 53083
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		float L_0 = __this->___x;
+		float L_1 = __this->___x;
+		float L_2 = __this->___y;
+		float L_3 = __this->___y;
+		float L_4 = __this->___z;
+		float L_5 = __this->___z;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_6;
+		L_6 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_0, L_1)), ((float)il2cpp_codegen_multiply(L_2, L_3)))), ((float)il2cpp_codegen_multiply(L_4, L_5))))));
+		return ((float)L_6);
+	}
+}
+// Method Definition Index: 53102
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m7F3B0FA9256CE368D7636558EFEFC4AB0E1A0F41_inline (float ___0_d, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_a, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___1_a;
+		float L_1 = L_0.___x;
+		float L_2 = ___0_d;
+		(&V_0)->___x = ((float)il2cpp_codegen_multiply(L_1, L_2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___1_a;
+		float L_4 = L_3.___y;
+		float L_5 = ___0_d;
+		(&V_0)->___y = ((float)il2cpp_codegen_multiply(L_4, L_5));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_a;
+		float L_7 = L_6.___z;
+		float L_8 = ___0_d;
+		(&V_0)->___z = ((float)il2cpp_codegen_multiply(L_7, L_8));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = V_0;
+		return L_9;
+	}
+}
+// Method Definition Index: 53051
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_RotateTowards_m884BB56D5A071EF6008F9354D5FF1C9A1913AF92_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_current, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_target, float ___2_maxRadiansDelta, float ___3_maxMagnitudeDelta, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___2_maxRadiansDelta;
+		float L_1 = ___3_maxMagnitudeDelta;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Vector3_Internal_RotateTowards_mAEFE707F84BEAC3FD2B3A11A639F7E0E6A9F664D((&___0_current), (&___1_target), L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 53128
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_forward, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_upwards, const RuntimeMethod* method) 
+{
+	{
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0;
+		L_0 = Quaternion_Internal_LookRotation_m489E6A5E916949FFE91C0B11A60C6016D996C1E0((&___0_forward), (&___1_upwards), NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 53081
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_a;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_b;
+		float L_3 = L_2.___x;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_a;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_b;
+		float L_7 = L_6.___y;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_a;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_b;
+		float L_11 = L_10.___z;
+		V_2 = ((float)il2cpp_codegen_subtract(L_9, L_11));
+		float L_12 = V_0;
+		float L_13 = V_0;
+		float L_14 = V_1;
+		float L_15 = V_1;
+		float L_16 = V_2;
+		float L_17 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_18;
+		L_18 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_12, L_13)), ((float)il2cpp_codegen_multiply(L_14, L_15)))), ((float)il2cpp_codegen_multiply(L_16, L_17))))));
+		V_3 = ((float)L_18);
+		goto IL_0040;
+	}
+
+IL_0040:
+	{
+		float L_19 = V_3;
+		return L_19;
+	}
+}
+// Method Definition Index: 52902
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_r;
+		__this->___r = L_0;
+		float L_1 = ___1_g;
+		__this->___g = L_1;
+		float L_2 = ___2_b;
+		__this->___b = L_2;
+		__this->___a = (1.0f);
+		return;
+	}
+}
+// Method Definition Index: 52901
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_r;
+		__this->___r = L_0;
+		float L_1 = ___1_g;
+		__this->___g = L_1;
+		float L_2 = ___2_b;
+		__this->___b = L_2;
+		float L_3 = ___3_a;
+		__this->___a = L_3;
+		return;
+	}
+}
+// Method Definition Index: 11427
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		int32_t L_0 = __this->____version;
+		__this->____version = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = __this->____items;
+		V_0 = L_1;
+		int32_t L_2 = __this->____size;
+		V_1 = L_2;
+		int32_t L_3 = V_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = V_0;
+		NullCheck(L_4);
+		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		int32_t L_5 = V_1;
+		__this->____size = ((int32_t)il2cpp_codegen_add(L_5, 1));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = V_0;
+		int32_t L_7 = V_1;
+		RuntimeObject* L_8 = ___0_item;
+		NullCheck(L_6);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (RuntimeObject*)L_8);
+		return;
+	}
+
+IL_0034:
+	{
+		RuntimeObject* L_9 = ___0_item;
+		List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 14));
+		return;
+	}
+}
+// Method Definition Index: 11416
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____size;
+		return L_0;
+	}
+}
+// Method Definition Index: 11477
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->____current;
+		return L_0;
+	}
+}
+// Method Definition Index: 53071
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_m1DE89849FE2019B6AA0031306896F3B800849399_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B3_0;
+	memset((&G_B3_0), 0, sizeof(G_B3_0));
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_0 = ___0_value;
+		float L_1;
+		L_1 = Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline(L_0, NULL);
+		V_0 = L_1;
+		float L_2 = V_0;
+		if ((((float)L_2) > ((float)(9.99999975E-06f))))
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___zeroVector;
+		G_B3_0 = L_3;
+		goto IL_004d;
+	}
+
+IL_0017:
+	{
+		il2cpp_codegen_initobj((&V_1), sizeof(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_4 = ___0_value;
+		float L_5 = L_4->___x;
+		float L_6 = V_0;
+		(&V_1)->___x = ((float)(L_5/L_6));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_7 = ___0_value;
+		float L_8 = L_7->___y;
+		float L_9 = V_0;
+		(&V_1)->___y = ((float)(L_8/L_9));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_10 = ___0_value;
+		float L_11 = L_10->___z;
+		float L_12 = V_0;
+		(&V_1)->___z = ((float)(L_11/L_12));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_1;
+		G_B3_0 = L_13;
+	}
+
+IL_004d:
+	{
+		V_2 = G_B3_0;
+		goto IL_0050;
+	}
+
+IL_0050:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_2;
+		return L_14;
+	}
+}
+// Method Definition Index: 53075
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_m9B5EBE36643126708DB3F444C59C11FA30803DBB_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___1_rhs, const RuntimeMethod* method) 
+{
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_0 = ___0_lhs;
+		float L_1 = L_0->___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_2 = ___1_rhs;
+		float L_3 = L_2->___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_4 = ___0_lhs;
+		float L_5 = L_4->___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_6 = ___1_rhs;
+		float L_7 = L_6->___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_8 = ___0_lhs;
+		float L_9 = L_8->___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_10 = ___1_rhs;
+		float L_11 = L_10->___z;
+		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11))));
+	}
+}
+// Method Definition Index: 53196
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline (float ___0_f, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float G_B3_0 = 0.0f;
+	{
+		float L_0 = ___0_f;
+		if ((((float)L_0) >= ((float)(0.0f))))
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		G_B3_0 = (-1.0f);
+		goto IL_0015;
+	}
+
+IL_0010:
+	{
+		G_B3_0 = (1.0f);
+	}
+
+IL_0015:
+	{
+		V_0 = G_B3_0;
+		goto IL_0018;
+	}
+
+IL_0018:
+	{
+		float L_1 = V_0;
+		return L_1;
+	}
+}

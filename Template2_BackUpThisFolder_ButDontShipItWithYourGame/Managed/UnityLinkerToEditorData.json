@@ -2,6 +2,34 @@
   "report": {
     "modules": [
       {
+        "name": "AI",
+        "dependencies": [
+          {
+            "name": "NavMeshAgent",
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "NavMeshProjectSettings",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "NavMeshSettings",
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
+            ],
+            "dependencyType": 1,
+            "icon": null
+          }
+        ]
+      },
+      {
         "name": "AndroidJNI",
         "dependencies": []
       },
@@ -9,14 +37,26 @@
         "name": "Animation",
         "dependencies": [
           {
+            "name": "AnimationClip",
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Animator",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AnimatorController",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
             "dependencyType": 1,
             "icon": null
           },
@@ -24,6 +64,20 @@
             "name": "AnimatorOverrideController",
             "scenes": [],
             "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Avatar",
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Motion",
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -57,21 +111,25 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AudioClip",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -84,8 +142,10 @@
           },
           {
             "name": "AudioResource",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -99,6 +159,12 @@
             "scenes": [],
             "dependencyType": 1,
             "icon": null
+          },
+          {
+            "name": "Required by UnityWebRequestAudio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestaudio"
           }
         ]
       },
@@ -120,7 +186,8 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -140,7 +207,8 @@
           {
             "name": "Cubemap",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -160,9 +228,16 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "Flare",
+            "scenes": [],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -174,7 +249,8 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -206,7 +282,8 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -214,7 +291,8 @@
           {
             "name": "Light",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -240,7 +318,8 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -260,33 +339,41 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Mesh",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshFilter",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -300,7 +387,8 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -308,7 +396,8 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -346,7 +435,7 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -360,7 +449,8 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -392,7 +482,8 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/GymTesnime.unity",
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -405,7 +496,9 @@
           },
           {
             "name": "SkinnedMeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -424,7 +517,7 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -490,6 +583,12 @@
             "icon": null
           },
           {
+            "name": "Required by AI Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.ai"
+          },
+          {
             "name": "Required by AndroidJNI Module",
             "scenes": [],
             "dependencyType": 2,
@@ -548,6 +647,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.identifiers"
+          },
+          {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
           },
           {
             "name": "Required by Input Module",
@@ -700,6 +805,12 @@
             "icon": "package/com.unity.modules.unitywebrequestassetbundle"
           },
           {
+            "name": "Required by UnityWebRequestAudio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestaudio"
+          },
+          {
             "name": "Required by VFX Module",
             "scenes": [],
             "dependencyType": 2,
@@ -796,6 +907,10 @@
             "icon": "package/com.unity.modules.insights"
           }
         ]
+      },
+      {
+        "name": "ImageConversion",
+        "dependencies": []
       },
       {
         "name": "Input",
@@ -964,19 +1079,23 @@
           },
           {
             "name": "CharacterController",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Collider",
             "scenes": [],
-            "dependencyType": 0,
+            "dependencyType": 1,
             "icon": null
           },
           {
             "name": "MeshCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Gyms/GymTesnime.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -984,6 +1103,12 @@
             "name": "PhysicsManager",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "PhysicsMaterial",
+            "scenes": [],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -1028,9 +1153,39 @@
         "name": "Physics2D",
         "dependencies": [
           {
+            "name": "BoxCollider2D",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Collider2D",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
             "name": "Physics2DSettings",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "PhysicsMaterial2D",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "PolygonCollider2D",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Rigidbody2D",
+            "scenes": [],
+            "dependencyType": 0,
             "icon": null
           }
         ]
@@ -1071,6 +1226,12 @@
       {
         "name": "SharedInternals",
         "dependencies": [
+          {
+            "name": "Required by AI Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.ai"
+          },
           {
             "name": "Required by AndroidJNI Module",
             "scenes": [],
@@ -1136,6 +1297,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.identifiers"
+          },
+          {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
           },
           {
             "name": "Required by Input Module",
@@ -1288,6 +1455,12 @@
             "icon": "package/com.unity.modules.unitywebrequestassetbundle"
           },
           {
+            "name": "Required by UnityWebRequestAudio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestaudio"
+          },
+          {
             "name": "Required by VFX Module",
             "scenes": [],
             "dependencyType": 2,
@@ -1404,8 +1577,14 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "TextMesh",
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -1447,7 +1626,7 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1461,7 +1640,7 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Scenes/Position Book.unity"
+              "Assets/Scenes/Gyms/LoginV2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1597,11 +1776,21 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.unitywebrequestassetbundle"
+          },
+          {
+            "name": "Required by UnityWebRequestAudio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestaudio"
           }
         ]
       },
       {
         "name": "UnityWebRequestAssetBundle",
+        "dependencies": []
+      },
+      {
+        "name": "UnityWebRequestAudio",
         "dependencies": []
       },
       {

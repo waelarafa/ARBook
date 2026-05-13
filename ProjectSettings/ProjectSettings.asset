@@ -167,7 +167,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.unity.template.ar_mobile
+    Android: com.sirine.arbook
     Standalone: com.unity.template.ar-mobile
     iPhone: com.unity.template.armobile
   buildNumber:
@@ -179,7 +179,7 @@ PlayerSettings:
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 25
-  AndroidTargetSdkVersion: 33
+  AndroidTargetSdkVersion: 34
   AndroidPreferredInstallLocation: 1
   AndroidPreferredDataLocation: 1
   aotOptions: 
@@ -833,19 +833,22 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: ENABLE_JSON_CATALOG
-    EmbeddedLinux: ENABLE_JSON_CATALOG
-    LinuxHeadlessSimulation: ENABLE_JSON_CATALOG
-    Nintendo Switch: ENABLE_JSON_CATALOG
-    PS4: ENABLE_JSON_CATALOG
-    QNX: ENABLE_JSON_CATALOG
-    Server: ENABLE_JSON_CATALOG
-    Standalone: ENABLE_JSON_CATALOG
-    WebGL: ENABLE_JSON_CATALOG
-    Windows Store Apps: ENABLE_JSON_CATALOG
-    XboxOne: ENABLE_JSON_CATALOG
-    iPhone: ENABLE_JSON_CATALOG;UNITY_XR_ARKIT_LOADER_ENABLED
-    tvOS: ENABLE_JSON_CATALOG
+    Android: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    EmbeddedLinux: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    LinuxHeadlessSimulation: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    Nintendo Switch: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    Nintendo Switch 2: ES3_TMPRO;ES3_UGUI
+    PS4: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    PS5: ES3_TMPRO;ES3_UGUI
+    QNX: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    Server: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    Standalone: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    VisionOS: ES3_TMPRO;ES3_UGUI
+    WebGL: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    Windows Store Apps: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    XboxOne: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
+    iPhone: ENABLE_JSON_CATALOG;UNITY_XR_ARKIT_LOADER_ENABLED;ES3_TMPRO;ES3_UGUI
+    tvOS: ENABLE_JSON_CATALOG;ES3_TMPRO;ES3_UGUI
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -950,11 +953,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 7fff2cf4-b784-4c94-9760-e5e18045a4b3
+  cloudProjectId: 21c4b630-7216-4190-9b35-2e51e7c8d080
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: ARBook
-  organizationId: tesnimemechmech2
+  organizationId: sirinemechmech34
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

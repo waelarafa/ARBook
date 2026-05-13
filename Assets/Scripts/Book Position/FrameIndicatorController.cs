@@ -3,7 +3,6 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using System.Collections;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class FrameIndicatorController : MonoBehaviour
 {
@@ -27,22 +26,26 @@ public class FrameIndicatorController : MonoBehaviour
     private bool foundMessageShown = false;
     private Coroutine messageCoroutine;
     private float currentAngle = 90f;
-    private bool angleInitialized = false; // ← clé de la solution
+    private bool angleInitialized = false;
 
     private void Awake()
     {
         if (placeholderIcon != null) placeholderIcon.gameObject.SetActive(false);
         if (foundMessage != null) foundMessage.SetActive(false);
+
+        foundMessageShown = false;
     }
 
     private void OnEnable()
     {
-        trackedImageManager.trackablesChanged.AddListener(OnTrackedImagesChanged);
+        if (trackedImageManager != null)
+            trackedImageManager.trackablesChanged.AddListener(OnTrackedImagesChanged);
     }
 
     private void OnDisable()
     {
-        trackedImageManager.trackablesChanged.RemoveListener(OnTrackedImagesChanged);
+        if (trackedImageManager != null)
+            trackedImageManager.trackablesChanged.RemoveListener(OnTrackedImagesChanged);
     }
 
     private void OnTrackedImagesChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventArgs)
@@ -65,16 +68,20 @@ public class FrameIndicatorController : MonoBehaviour
     {
         if (placeholderIcon == null || frameRect == null) return;
 
-        // ─── Livre jamais détecté → cacher tout
+        // ─── Livre jamais détecté
         if (!BookPositionMemory.BookDetected)
         {
             placeholderIcon.gameObject.SetActive(false);
-            if (foundMessage != null) foundMessage.SetActive(false);
-            angleInitialized = false; // reset pour la prochaine fois
+
+            if (foundMessage != null)
+                foundMessage.SetActive(false);
+
+            angleInitialized = false;
+            foundMessageShown = false;
             return;
         }
 
-        // ─── Livre visible → cacher icône, montrer message
+        // ─── Livre visible
         if (bookCurrentlyVisible)
         {
             placeholderIcon.gameObject.SetActive(false);
@@ -83,16 +90,16 @@ public class FrameIndicatorController : MonoBehaviour
             {
                 foundMessageShown = true;
                 ShowFoundMessage();
-                StartCoroutine(TransitionToARScene());
             }
         }
         else
         {
-            // ─── Livre hors champ → bouger l'icône sur le bord
+            // ─── Livre hors champ → icône directionnelle
             if (foundMessage != null && foundMessage.activeSelf)
             {
                 foundMessage.SetActive(false);
                 foundMessageShown = false;
+
                 if (messageCoroutine != null)
                 {
                     StopCoroutine(messageCoroutine);
@@ -101,66 +108,22 @@ public class FrameIndicatorController : MonoBehaviour
             }
 
             if (directionCalculator == null)
-            {
-                Debug.LogError("DirectionCalculator NOT assigned !");
                 return;
-            }
 
             placeholderIcon.gameObject.SetActive(true);
             MoveIconToEdge(directionCalculator.ScreenDirection);
         }
     }
-    private IEnumerator TransitionToARScene()
-    {
-        // Attendre que l'enfant voie le message "Livre Trouvé"
-        yield return new WaitForSeconds(2f);
 
-        Debug.Log("[BookFinder] 🚀 Transition vers ARDetection...");
-        SceneManager.LoadScene("GymTesnime"); 
-    }
-
-    private void MoveIconToEdge(Vector2 direction)
-    {
-        if (direction.magnitude < 0.001f) return;
-
-        float halfW = frameRect.rect.width * 0.5f;
-        float halfH = frameRect.rect.height * 0.5f;
-
-        // ✅ Angle cible — toujours calculé depuis la vraie direction (comme Code 2)
-        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // ✅ Initialisation : première fois → on se téléporte directement à la bonne position
-        // sans animation, pour éviter un départ bizarre depuis 90°
-        if (!angleInitialized)
-        {
-            currentAngle = targetAngle;
-            angleInitialized = true;
-        }
-
-        // ✅ Rotation progressive (longe le bord, jamais de traversée)
-        currentAngle = Mathf.MoveTowardsAngle(
-            currentAngle,
-            targetAngle,
-            iconRotationDegreesPerSecond * Time.deltaTime
-        );
-
-        // ✅ Direction depuis l'angle courant
-        float rad = currentAngle * Mathf.Deg2Rad;
-        Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
-
-        // ✅ Projection sur le bord (même logique que Code 2 → position toujours correcte)
-        float scaleX = (dir.x != 0) ? halfW / Mathf.Abs(dir.x) : float.MaxValue;
-        float scaleY = (dir.y != 0) ? halfH / Mathf.Abs(dir.y) : float.MaxValue;
-        float scale = Mathf.Min(scaleX, scaleY);
-
-        placeholderIcon.anchoredPosition = dir * scale;
-    }
-
+    // ─────────────────────────────────────────────
+    // UI: message livre trouvé
+    // ─────────────────────────────────────────────
     private void ShowFoundMessage()
     {
         if (foundMessage == null) return;
 
         foundMessage.SetActive(true);
+
         RectTransform msgRect = foundMessage.GetComponent<RectTransform>();
         msgRect.anchoredPosition = new Vector2(0, -120);
         msgRect.localScale = Vector3.one;
@@ -168,7 +131,9 @@ public class FrameIndicatorController : MonoBehaviour
         if (foundMessageText != null)
             foundMessageText.text = "📖 Livre Trouvé !";
 
-        if (messageCoroutine != null) StopCoroutine(messageCoroutine);
+        if (messageCoroutine != null)
+            StopCoroutine(messageCoroutine);
+
         messageCoroutine = StartCoroutine(AnimateFoundMessage());
     }
 
@@ -178,6 +143,7 @@ public class FrameIndicatorController : MonoBehaviour
         msgRect.localScale = Vector3.zero;
 
         float elapsed = 0f;
+
         while (elapsed < 0.4f)
         {
             elapsed += Time.deltaTime;
@@ -187,6 +153,7 @@ public class FrameIndicatorController : MonoBehaviour
         }
 
         elapsed = 0f;
+
         while (elapsed < 0.25f)
         {
             elapsed += Time.deltaTime;
@@ -195,6 +162,7 @@ public class FrameIndicatorController : MonoBehaviour
         }
 
         elapsed = 0f;
+
         while (elapsed < 0.2f)
         {
             elapsed += Time.deltaTime;
@@ -209,6 +177,7 @@ public class FrameIndicatorController : MonoBehaviour
     private IEnumerator FloatEffect(RectTransform rect)
     {
         Vector2 startPos = rect.anchoredPosition;
+
         while (foundMessage != null && foundMessage.activeSelf)
         {
             float yOffset = Mathf.Sin(Time.time * 2f) * 10f;
@@ -216,8 +185,41 @@ public class FrameIndicatorController : MonoBehaviour
             yield return null;
         }
     }
-}
 
+    // ─────────────────────────────────────────────
+    // ICÔNE directionnelle
+    // ─────────────────────────────────────────────
+    private void MoveIconToEdge(Vector2 direction)
+    {
+        if (direction.magnitude < 0.001f) return;
+
+        float halfW = frameRect.rect.width * 0.5f;
+        float halfH = frameRect.rect.height * 0.5f;
+
+        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        if (!angleInitialized)
+        {
+            currentAngle = targetAngle;
+            angleInitialized = true;
+        }
+
+        currentAngle = Mathf.MoveTowardsAngle(
+            currentAngle,
+            targetAngle,
+            iconRotationDegreesPerSecond * Time.deltaTime
+        );
+
+        float rad = currentAngle * Mathf.Deg2Rad;
+        Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+
+        float scaleX = (dir.x != 0) ? halfW / Mathf.Abs(dir.x) : float.MaxValue;
+        float scaleY = (dir.y != 0) ? halfH / Mathf.Abs(dir.y) : float.MaxValue;
+        float scale = Mathf.Min(scaleX, scaleY);
+
+        placeholderIcon.anchoredPosition = dir * scale;
+    }
+}
 
 //2 
 /*
