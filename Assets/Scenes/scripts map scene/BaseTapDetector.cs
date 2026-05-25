@@ -14,8 +14,8 @@ public abstract class BaseTapDetector : MonoBehaviour
     protected const float TiltTowardCamera  = 15f;
 
     // Limites de scale pour le pinch zoom
-    private const float MinScale        = 0.1f;
-    private const float MaxScale        = 5.0f;
+    private const float MinScale         = 0.1f;
+    private const float MaxScale         = 5.0f;
     private const float PinchSensitivity = 0.002f;
 
     protected bool        isAnimating  = false;
@@ -71,9 +71,9 @@ public abstract class BaseTapDetector : MonoBehaviour
         if (Touchscreen.current == null) return;
 
         // ── 2 doigts → pinch zoom ──────────────────────────────
-        var touches    = Touchscreen.current.touches;
-        bool finger0   = touches[0].press.isPressed;
-        bool finger1   = touches[1].press.isPressed;
+        var touches  = Touchscreen.current.touches;
+        bool finger0 = touches[0].press.isPressed;
+        bool finger1 = touches[1].press.isPressed;
 
         if (finger0 && finger1)
         {
@@ -102,11 +102,11 @@ public abstract class BaseTapDetector : MonoBehaviour
         }
 
         // ── 1 doigt → tap/drag normal ──────────────────────────
-        var touch = Touchscreen.current.primaryTouch;
+        var touch    = Touchscreen.current.primaryTouch;
         Vector2 touchPos = touch.position.ReadValue();
-        if      (touch.press.wasPressedThisFrame)                      OnPressDown(touchPos);
-        else if (touch.press.wasReleasedThisFrame)                     OnPressUp(touchPos);
-        else if (touch.press.isPressed && isPressing)                  OnPressMoved(touchPos);
+        if      (touch.press.wasPressedThisFrame)             OnPressDown(touchPos);
+        else if (touch.press.wasReleasedThisFrame)            OnPressUp(touchPos);
+        else if (touch.press.isPressed && isPressing)         OnPressMoved(touchPos);
 #endif
     }
 
@@ -114,8 +114,8 @@ public abstract class BaseTapDetector : MonoBehaviour
     // Applique le zoom pinch sur le transform cible
     private void ApplyPinchZoom(Transform target, float delta)
     {
-        float   current  = target.localScale.x;
-        float   newScale = Mathf.Clamp(current + delta * PinchSensitivity, MinScale, MaxScale);
+        float current   = target.localScale.x;
+        float newScale  = Mathf.Clamp(current + delta * PinchSensitivity, MinScale, MaxScale);
         target.localScale = new Vector3(newScale, newScale, newScale);
     }
 
@@ -148,6 +148,13 @@ public abstract class BaseTapDetector : MonoBehaviour
         if (AROverlayUI.Instance.IsTapOnCloseButton(pos))
         {
             Debug.Log("🔴 Tap Fermer");
+
+            // Arrête le son en cours (AudioManager ou fallback local)
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.Stop();
+            else if (audioSource != null && audioSource.isPlaying)
+                audioSource.Stop();
+
             AROverlayUI.Instance.OnFermerPressed();
             return true;
         }
@@ -247,8 +254,6 @@ public abstract class BaseTapDetector : MonoBehaviour
         // Rotation par glissement du doigt pendant l'appui long
         if (_isRotating && _currentSpawned != null)
         {
-            // Sensibilité depuis l'inspector (data.rotationSensitivity)
-            // Si data est null ou sensibilité à 0 → pas de rotation
             float sensitivity = (data != null && data.rotationSensitivity > 0f)
                 ? data.rotationSensitivity
                 : 0f;
@@ -256,7 +261,6 @@ public abstract class BaseTapDetector : MonoBehaviour
             if (sensitivity > 0f)
             {
                 Vector2 delta = screenPosition - _lastRotPos;
-                // Détecte AR ou 3D pour corriger le sens de rotation
                 bool isAR = cam != null &&
                             cam.GetComponent<UnityEngine.XR.ARFoundation.ARCameraBackground>() != null;
                 float sign = isAR ? -1f : 1f;
@@ -317,7 +321,7 @@ public abstract class BaseTapDetector : MonoBehaviour
     }
 
     // ─────────────────────────────────────────
-    protected IEnumerator ScaleEffect()
+    /*protected IEnumerator ScaleEffect()
     {
         if (data == null) { isAnimating = false; yield break; }
 
@@ -347,7 +351,7 @@ public abstract class BaseTapDetector : MonoBehaviour
 
         transform.localScale = original;
         isAnimating          = false;
-    }
+    }*/
 
     // ─────────────────────────────────────────
     // SpawnPrefab — rotation depuis l'inspector du prefab

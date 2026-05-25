@@ -1,4 +1,340 @@
-/*version finale verifiee - fix GraphicRaycaster*/
+
+/*claude solution*/
+/*version finale verifiee - fix GraphicRaycaster + bookId dynamique depuis DataManager*/
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
+
+/// <summary>
+/// Book1Detector — Scène AR.
+///
+/// CE SCRIPT NE TÉLÉCHARGE RIEN.
+/// Il lit DataManager.LastLoadedBookId pour savoir quel livre afficher.
+/// Ce champ est rempli par QRScanner après le scan — il survit entre scènes
+/// car DataManager est DontDestroyOnLoad.
+///
+/// Si LastLoadedBookId est vide ou le livre absent du cache → erreur console.
+/// L'utilisateur ne peut pas arriver ici sans avoir scanné.
+/// </summary>
+[RequireComponent(typeof(ARTrackedImageManager))]
+public class Book1Detector : MonoBehaviour
+{
+    [System.Serializable]
+    public struct Page
+    {
+        public string feuilleName;
+        public string pageId;
+        public List<string> imageNames;
+        public List<Vector3> positionsCorrectes;
+    }
+
+    [Header("AR")]
+    public ARTrackedImageManager trackedImageManager;
+
+    [Header("Validation")]
+    public float distanceMax = 0.05f;
+
+    [Header("Liaison ARImageCubeOverlay")]
+    public ARImageCubeOverlay cubeOverlay;
+
+    // ── bookId résolu dynamiquement depuis DataManager.LastLoadedBookId ──
+    private string _bookId = "";
+
+    private List<Page> pages      = new List<Page>();
+    private bool pagesLoaded      = false;
+    private string currentPageId  = "";
+    private bool switching        = false;
+
+    private Dictionary<string, TrackingState>  detectedImages    = new Dictionary<string, TrackingState>();
+    public  Dictionary<string, Vector3>        positionsGlobales = new Dictionary<string, Vector3>();
+    public  Dictionary<string, ARTrackedImage> trackedImages     = new Dictionary<string, ARTrackedImage>();
+    private ARTrackedImage feuilleDetectee = null;
+    public  HashSet<string> imagesValidees = new HashSet<string>();
+
+    private Text uiText;
+
+    // ─────────────────────────────────────────────
+    void Awake()
+    {
+        if (trackedImageManager == null)
+            trackedImageManager = GetComponent<ARTrackedImageManager>();
+        CreerUI();
+    }
+
+    void Start()
+    {
+        StartCoroutine(WaitForCacheAndBuild());
+    }
+
+    void OnEnable()  => trackedImageManager.trackedImagesChanged += OnImagesChanged;
+    void OnDisable() => trackedImageManager.trackedImagesChanged -= OnImagesChanged;
+    void Update()    => MettreAJourUI();
+
+    // ─────────────────────────────────────────────
+    IEnumerator WaitForCacheAndBuild()
+    {
+        // Attendre que DataManager soit prêt (DontDestroyOnLoad)
+        yield return new WaitUntil(() => DataManager.Instance != null);
+
+        // Récupérer l'id du livre scanné — transmis par QRScanner via DataManager
+        _bookId = DataManager.Instance.LastLoadedBookId;
+
+        if (string.IsNullOrEmpty(_bookId))
+        {
+            Debug.LogError("[Book1Detector] ❌ Aucun livre scanné (LastLoadedBookId vide). " +
+                           "L'utilisateur doit scanner un livre avant d'ouvrir cette scène.");
+            yield break;
+        }
+
+        if (!DataManager.Instance.IsBookLoaded(_bookId))
+        {
+            Debug.LogError($"[Book1Detector] ❌ Livre '{_bookId}' absent du cache. " +
+                           "QRScanner doit terminer le chargement avant le changement de scène.");
+            yield break;
+        }
+
+        Debug.Log($"[Book1Detector] 📖 Livre reçu depuis le cache : {_bookId}");
+        BuildPagesFromData();
+    }
+
+    // ─────────────────────────────────────────────
+    void BuildPagesFromData()
+    {
+        ARBook.Models.BookData bookData = DataManager.Instance.GetBookData(_bookId);
+        if (bookData == null)
+        {
+            Debug.LogError($"[Book1Detector] ❌ BookData introuvable pour '{_bookId}'.");
+            return;
+        }
+
+        pages.Clear();
+        foreach (ARBook.Models.PageData pageData in bookData.pages)
+        {
+            Page page = new Page
+            {
+                feuilleName        = pageData.feuille,
+                pageId             = pageData.id,
+                imageNames         = new List<string>(),
+                positionsCorrectes = new List<Vector3>()
+            };
+            foreach (ARBook.Models.ItemData item in pageData.items)
+            {
+                page.imageNames.Add(item.nom);
+                page.positionsCorrectes.Add(new Vector3(item.x, item.y, item.z));
+            }
+            pages.Add(page);
+            Debug.Log($"[Book1Detector] Page : {page.pageId} | {page.imageNames.Count} image(s)");
+        }
+
+        pagesLoaded = true;
+        Debug.Log($"[Book1Detector] ✅ {pages.Count} page(s) prêtes pour '{_bookId}'.");
+    }
+
+    // ─────────────────────────────────────────────
+    void OnImagesChanged(ARTrackedImagesChangedEventArgs args)
+    {
+        if (!pagesLoaded) return;
+
+        foreach (var img in args.added)
+        {
+            detectedImages[img.referenceImage.name] = img.trackingState;
+            trackedImages[img.referenceImage.name]  = img;
+            TraiterFeuille(img);
+        }
+        foreach (var img in args.updated)
+        {
+            detectedImages[img.referenceImage.name] = img.trackingState;
+            trackedImages[img.referenceImage.name]  = img;
+            if (img.trackingState == TrackingState.Tracking)
+                TraiterFeuille(img);
+        }
+        foreach (var img in args.removed)
+        {
+            detectedImages.Remove(img.referenceImage.name);
+            trackedImages.Remove(img.referenceImage.name);
+        }
+
+        MettreAJourUI();
+    }
+
+    // ─────────────────────────────────────────────
+    void TraiterFeuille(ARTrackedImage img)
+    {
+        if (switching) return;
+        foreach (var page in pages)
+        {
+            if (img.referenceImage.name == page.feuilleName)
+            {
+                if (currentPageId != page.pageId)
+                {
+                    DataManager.Instance.OnPageDetected(_bookId, page.pageId);
+                    StartCoroutine(SwitchPage(page, img));
+                }
+                else
+                {
+                    feuilleDetectee = img;
+                    CalculerPositions(page);
+                }
+                return;
+            }
+        }
+    }
+
+    IEnumerator SwitchPage(Page page, ARTrackedImage feuille)
+    {
+        switching     = true;
+        currentPageId = page.pageId;
+
+        detectedImages.Clear();
+        positionsGlobales.Clear();
+        trackedImages.Clear();
+        imagesValidees.Clear();
+
+        if (cubeOverlay != null) cubeOverlay.ClearAllCubes();
+
+        feuilleDetectee = feuille;
+        yield return null;
+        yield return null;
+        yield return null;
+
+        CalculerPositions(page);
+        StartCoroutine(RespawnAvecRetry(5, 0.1f));
+
+        Debug.Log($"📘 Page active : {page.pageId}");
+        switching = false;
+        MettreAJourUI();
+    }
+
+    IEnumerator RespawnAvecRetry(int tentatives, float intervalle)
+    {
+        for (int i = 0; i < tentatives; i++)
+        {
+            if (cubeOverlay != null) cubeOverlay.RespawnCubesForActiveTrackables();
+            yield return new WaitForSeconds(intervalle);
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    void CalculerPositions(Page page)
+    {
+        if (feuilleDetectee == null) return;
+        positionsGlobales.Clear();
+        for (int i = 0; i < page.imageNames.Count; i++)
+        {
+            if (i >= page.positionsCorrectes.Count) continue;
+            Vector3 globalPos = feuilleDetectee.transform.position
+                              + feuilleDetectee.transform.TransformVector(page.positionsCorrectes[i]);
+            positionsGlobales[page.imageNames[i]] = globalPos;
+            Debug.Log($"📍 {page.imageNames[i]} => {globalPos}");
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    public GameObject  GetPrefabForItem(string itemName) => DataManager.Instance.GetPrefab(itemName);
+    public Texture2D   GetImageForItem(string itemName)  => DataManager.Instance.GetImage(itemName);
+    public bool        IsItemReady(string itemName)      => DataManager.Instance.IsAssetReady(itemName);
+    public ARBook.Models.ItemData GetItemData(string itemName) => DataManager.Instance.GetItemData(_bookId, itemName);
+
+    // ─────────────────────────────────────────────
+    void MettreAJourUI()
+    {
+        if (uiText == null) return;
+
+        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+        sb.AppendLine("═══ AR LIBRARY TESTER ═══");
+        sb.AppendLine($"📖 Livre : {(string.IsNullOrEmpty(_bookId) ? "—" : _bookId)}");
+        sb.AppendLine(string.IsNullOrEmpty(currentPageId)
+            ? "📚 Page active : aucune"
+            : $"📚 Page active : {currentPageId}");
+        sb.AppendLine($"🔍 Images trackées : {detectedImages.Count}");
+
+        if (!pagesLoaded) { sb.AppendLine("⏳ En attente du cache..."); uiText.text = sb.ToString(); return; }
+
+        sb.AppendLine("----------------------------");
+        foreach (var page in pages)
+        {
+            bool isActive  = page.pageId == currentPageId;
+            string prefix  = isActive ? "▶ " : "  ";
+            sb.AppendLine($"{prefix}[{page.pageId}] feuille: {page.feuilleName}");
+
+            foreach (string imgName in page.imageNames)
+            {
+                bool detected          = detectedImages.ContainsKey(imgName);
+                TrackingState state    = detected ? detectedImages[imgName] : TrackingState.None;
+                string icon            = !detected ? "○" : state == TrackingState.Tracking ? "✓" : "~";
+                bool assetReady        = DataManager.Instance.IsAssetReady(imgName);
+                string cacheIcon       = assetReady ? "💾" : "⏳";
+                bool inCorrectPosition = false;
+
+                if (imagesValidees.Contains(imgName))
+                {
+                    inCorrectPosition = true;
+                }
+                else if (detected && positionsGlobales.ContainsKey(imgName))
+                {
+                    foreach (var tracked in trackedImageManager.trackables)
+                    {
+                        if (tracked.referenceImage.name == imgName)
+                        {
+                            float dist = Vector3.Distance(tracked.transform.position, positionsGlobales[imgName]);
+                            if (dist <= distanceMax)
+                            {
+                                inCorrectPosition = true;
+                                imagesValidees.Add(imgName);
+                                Debug.Log("✅ VALIDÉ : " + imgName);
+                            }
+                            break;
+                        }
+                    }
+                }
+
+                string color = inCorrectPosition ? "green"
+                             : !detected ? "white"
+                             : state == TrackingState.Tracking ? "white" : "red";
+
+                sb.AppendLine($"    <color={color}>{icon} {imgName} [{state}] {cacheIcon}</color>");
+            }
+            sb.AppendLine();
+        }
+
+        sb.AppendLine("----------------------------");
+        sb.AppendLine("○=non détecté ✓=tracké ~=perdu VERT=validé");
+        uiText.text = sb.ToString();
+    }
+
+    // ─────────────────────────────────────────────
+    void CreerUI()
+    {
+        GameObject canvasObj   = new GameObject("CanvasTest");
+        Canvas canvas          = canvasObj.AddComponent<Canvas>();
+        canvas.renderMode      = RenderMode.ScreenSpaceOverlay;
+        canvas.sortingOrder    = 0;
+
+        canvasObj.AddComponent<CanvasScaler>();
+        // ⚠️ GraphicRaycaster supprimé intentionnellement
+
+        GameObject textObj = new GameObject("UIText");
+        textObj.transform.SetParent(canvasObj.transform, false);
+
+        uiText                 = textObj.AddComponent<Text>();
+        uiText.font            = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        uiText.fontSize        = 28;
+        uiText.color           = Color.white;
+        uiText.alignment       = TextAnchor.UpperLeft;
+        uiText.supportRichText = true;
+        uiText.raycastTarget   = false;
+
+        RectTransform rt = textObj.GetComponent<RectTransform>();
+        rt.anchorMin     = new Vector2(0, 0);
+        rt.anchorMax     = new Vector2(1, 1);
+        rt.offsetMin     = new Vector2(20, 20);
+        rt.offsetMax     = new Vector2(-20, -20);
+    }
+}
+/*version finale verifiee - fix GraphicRaycaster
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -162,9 +498,7 @@ public class Book1Detector : MonoBehaviour
 
         if (cubeOverlay != null) cubeOverlay.ClearAllCubes();
 
-        /* ── Initialise les étoiles pour cette page ← NOUVEAU
-        if (StarUIManager.Instance != null)
-            StarUIManager.Instance.InitStars(page.imageNames.Count);*/
+        
 
         feuilleDetectee = feuille;
         yield return null;
@@ -256,20 +590,6 @@ public class Book1Detector : MonoBehaviour
                                 imagesValidees.Add(imgName);
                                 Debug.Log("✅ VALIDÉ : " + imgName);
 
-                                /* ── Highlight sur le cube ← NOUVEAU
-                                if (cubeOverlay != null)
-                                {
-                                    GameObject cube = cubeOverlay.GetCubeForImage(imgName);
-                                    if (cube != null)
-                                    {
-                                        ImageHighlight hl = cube.GetComponent<ImageHighlight>();
-                                        if (hl != null) hl.PlayCorrectEffect();
-                                    }
-                                }
-
-                                ── Étoile suivante ← NOUVEAU
-                                if (StarUIManager.Instance != null)
-                                    StarUIManager.Instance.LightNextStar();*/
                             }
                             break;
                         }

@@ -60,12 +60,10 @@ public class NodeTapDetector : BaseTapDetector
         tap.cam             = usedCam;
         tap.data            = entry;
 
-
         _currentSpawned = spawned;
 
-        // ── Environnement spawné sur la position brute ────────
+        // ── Environnement spawné depuis l'inspector ───────────
         SpawnEnvironment(entry, spawned.transform, usedCam);
-        
 
         // ── Centrage APRÈS l'environnement ────────────────────
         Renderer[] renderers = spawned.GetComponentsInChildren<Renderer>();
@@ -104,21 +102,14 @@ public class NodeTapDetector : BaseTapDetector
             return;
         }
 
-        Vector3 dirCamToPrefab = (prefabTransform.position
-                                 - usedCam.transform.position).normalized;
-
-        float   offsetBehind = 0.8f;
-        Vector3 envPosition  = prefabTransform.position
-                             + dirCamToPrefab * offsetBehind;
-
-        // Rotation et scale depuis l'inspector du prefab
+        // ── Position, rotation et scale lus depuis l'inspector du prefab ──
+        Vector3    envPosition = entry.environmentPrefab.transform.position;
         Quaternion envRotation = entry.environmentPrefab.transform.rotation;
         Vector3    envScale    = entry.environmentPrefab.transform.localScale;
 
         _currentEnvironment      = Object.Instantiate(
             entry.environmentPrefab, envPosition, envRotation);
         _currentEnvironment.name = "Env_" + entry.imageName;
-        
 
         // Respecte la scale de l'inspector
         _currentEnvironment.transform.localScale = envScale;
@@ -149,7 +140,9 @@ public class NodeTapDetector : BaseTapDetector
         }
 
         Debug.Log("🌍 Environnement spawné : " + _currentEnvironment.name
-                + " | scale=" + _currentEnvironment.transform.localScale);
+                + " | pos=" + envPosition
+                + " | rot=" + envRotation.eulerAngles
+                + " | scale=" + envScale);
     }
 
     // ─────────────────────────────────────────
@@ -172,11 +165,6 @@ public class NodeTapDetector : BaseTapDetector
     {
         Debug.Log("🗑️ Destroy map : "
                 + (_currentSpawned != null ? _currentSpawned.name : "NULL"));
-
-        // Efface la cible de la caméra gyroscope
-        /*GyroscopeOrbitCamera orbitCam = Camera.main?.GetComponent<GyroscopeOrbitCamera>();
-        if (orbitCam != null)
-            orbitCam.ClearTarget();*/
 
         if (_currentSpawned != null)
             Object.Destroy(_currentSpawned, delay);

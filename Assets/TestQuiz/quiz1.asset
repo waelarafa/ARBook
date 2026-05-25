@@ -19,12 +19,12 @@ MonoBehaviour:
     - dog
     - rubbit
     - cat
-    correctIndex: 2
+    correctIndex: 0
   - questionText: what's the perfect food for dogs
     choices:
     - fruits
     - eggs
-    correctIndex: 2
+    correctIndex: 1
   - questionText: where lives the blackbear
     choices:
     - desert

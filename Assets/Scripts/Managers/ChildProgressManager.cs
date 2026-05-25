@@ -1,4 +1,233 @@
-﻿using System;
+﻿/*using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ChildProgressManager : MonoBehaviour
+{
+    public static ChildProgressManager Instance { get; private set; }
+
+    private const string ES3_KEY = "child_progress";
+    private ChildProgress _progress;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        Load();
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // PERSISTANCE ES3
+    // ══════════════════════════════════════════════════════════
+
+    void Load()
+    {
+        if (ES3.KeyExists(ES3_KEY))
+        {
+            _progress = ES3.Load<ChildProgress>(ES3_KEY);
+            Debug.Log($"[Progress] 📂 {_progress.exploredNodes.Count} nœud(s) " +
+                      $"| {_progress.completedActivities.Count} activité(s) chargé(s)");
+        }
+        else
+        {
+            _progress = new ChildProgress();
+            Save();
+            Debug.Log("[Progress] 🆕 Nouvelle progression créée");
+        }
+    }
+
+    void Save()
+    {
+        _progress.lastUpdated = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        ES3.Save(ES3_KEY, _progress);
+        Debug.Log("[Progress] 💾 Sauvegardé localement");
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // HELPER — userId
+    // ══════════════════════════════════════════════════════════
+
+    private string GetUserId()
+    {
+        var user = Firebase.Auth.FirebaseAuth.DefaultInstance.CurrentUser;
+        if (user != null && !user.IsAnonymous)
+            return user.UserId;
+        return "anonymous";
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // SYNC — comme analytics
+    // ══════════════════════════════════════════════════════════
+
+    // Appelé après chaque modification
+    private void SaveAndSync()
+    {
+        Save(); // toujours sauvegarder localement
+
+        string userId = GetUserId();
+        if (userId != "anonymous")
+        {
+            // Connecté → envoyer directement à Firestore
+            FirestoreManager.Instance?.SaveChildProgress(userId, _progress);
+            Debug.Log("[Progress] ☁️ Sync Firestore directe");
+        }
+        else
+        {
+            // Anonyme → rester local, sera sync au login
+            Debug.Log("[Progress] 📱 Sauvegardé local — sync au prochain login");
+        }
+    }
+
+    // Appelé au login — charge Firestore et merge avec local
+    public void SyncFromFirestore(string userId)
+    {
+        FirestoreManager.Instance?.LoadChildProgress(userId, progress =>
+        {
+            if (progress == null)
+            {
+                Debug.Log("[Progress] Aucune progression Firestore — on garde le local");
+                // Envoyer le local vers Firestore
+                FirestoreManager.Instance?.SaveChildProgress(userId, _progress);
+                return;
+            }
+
+            // Merge — union des deux
+            foreach (string node in progress.exploredNodes)
+                if (!_progress.exploredNodes.Contains(node))
+                    _progress.exploredNodes.Add(node);
+
+            foreach (string activity in progress.completedActivities)
+                if (!_progress.completedActivities.Contains(activity))
+                    _progress.completedActivities.Add(activity);
+
+            Save();
+            Debug.Log($"[Progress] ✅ Sync Firestore terminée — " +
+                      $"{_progress.exploredNodes.Count} nœuds | " +
+                      $"{_progress.completedActivities.Count} activités");
+        });
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // MAP 3D — NŒUDS
+    // ══════════════════════════════════════════════════════════
+
+    public void MarkNodeExplored(string nodeId)
+    {
+        if (_progress.exploredNodes.Contains(nodeId)) return;
+        _progress.exploredNodes.Add(nodeId);
+        SaveAndSync();
+        Debug.Log($"[Progress] 🗺️ Nœud exploré : {nodeId}");
+    }
+
+    public bool IsNodeExplored(string nodeId)
+        => _progress.exploredNodes.Contains(nodeId);
+
+    // ══════════════════════════════════════════════════════════
+    // ACTIVITÉS
+    // ══════════════════════════════════════════════════════════
+
+    public void CompleteActivity(string activityId)
+    {
+        if (_progress.completedActivities.Contains(activityId)) return;
+        _progress.completedActivities.Add(activityId);
+        SaveAndSync();
+        Debug.Log($"[Progress] ✅ Activité complétée : {activityId}");
+    }
+
+    public bool IsActivityCompleted(string activityId)
+        => _progress.completedActivities.Contains(activityId);
+
+    // ══════════════════════════════════════════════════════════
+    // RESET
+    // ══════════════════════════════════════════════════════════
+
+    public void ResetProgress()
+    {
+        _progress = new ChildProgress();
+        Save();
+        Debug.Log("[Progress] 🔄 Progression réinitialisée");
+    }
+
+    public ChildProgress GetSnapshot() => _progress;
+}
+/*using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ChildProgressManager : MonoBehaviour
+{
+    public static ChildProgressManager Instance { get; private set; }
+
+    private const string ES3_KEY = "child_progress";
+    private ChildProgress _progress;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        Load();
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // PERSISTANCE ES3
+    // ══════════════════════════════════════════════════════════
+
+    void Load()
+    {
+        if (ES3.KeyExists(ES3_KEY))
+        {
+            _progress = ES3.Load<ChildProgress>(ES3_KEY);
+            Debug.Log($"[Progress] 📂 {_progress.exploredNodes.Count} nœud(s) " +
+                      $"| {_progress.completedActivities.Count} activité(s) chargé(s)");
+        }
+        else
+        {
+            _progress = new ChildProgress();
+            Save();
+            Debug.Log("[Progress] 🆕 Nouvelle progression créée");
+        }
+    }
+
+    void Save()
+    {
+        _progress.lastUpdated = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        ES3.Save(ES3_KEY, _progress);
+        Debug.Log("[Progress] 💾 Sauvegardé");
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // MAP 3D — NŒUDS
+    // ══════════════════════════════════════════════════════════
+
+    public void MarkNodeExplored(string nodeId)
+    {
+        if (_progress.exploredNodes.Contains(nodeId)) return;
+        _progress.exploredNodes.Add(nodeId);
+        Save();
+        Debug.Log($"[Progress] 🗺️ Nœud exploré : {nodeId}");
+    }
+
+    public bool IsNodeExplored(string nodeId)
+        => _progress.exploredNodes.Contains(nodeId);
+
+    // ══════════════════════════════════════════════════════════
+    // ACTIVITÉS
+    // ══════════════════════════════════════════════════════════
+
+    public void CompleteActivity(string activityId)
+    {
+        if (_progress.completedActivities.Contains(activityId)) return;
+        _progress.completedActivities.Add(activityId);
+        Save();
+        Debug.Log($"[Progress] ✅ Activité complétée : {activityId}");
+    }
+
+    public bool IsActivityCompleted(string activityId)
+        => _progress.completedActivities.Contains(activityId);
+}
+/*using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -180,4 +409,4 @@ public class ChildProgressManager : MonoBehaviour
 
     public ChildProgress GetSnapshot()
         => _progress;
-}
+}*/

@@ -25,6 +25,7 @@ public class ColoringManager : MonoBehaviour
 
     public void CloseGame()
     {
+        AnalyticsManager.Instance?.LogActivityExited();
         coloringCanvas.SetActive(false);
     }
 

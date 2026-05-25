@@ -321,7 +321,7 @@ public class UIManager : MonoBehaviour
         trt.offsetMin = Vector2.zero;
         trt.offsetMax = Vector2.zero;
 
-        btn.onClick.AddListener(() => CloseGame());
+        btn.onClick.AddListener(() => PronunciationManager.Instance.CloseGame());
     }
 
     // ─────────────────────────────────────────────

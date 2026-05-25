@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -49,7 +50,6 @@ public class GameManager : MonoBehaviour
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
 
-        // Créer un AudioSource interne
         _audioSource = gameObject.AddComponent<AudioSource>();
     }
 
@@ -58,7 +58,6 @@ public class GameManager : MonoBehaviour
         CountPairs();
         PlayAmbiance();
 
-        // Cacher le message de victoire au départ
         if (victoryText != null)
             victoryText.gameObject.SetActive(false);
     }
@@ -69,9 +68,9 @@ public class GameManager : MonoBehaviour
     {
         if (ambianceClip == null) return;
 
-        _audioSource.clip = ambianceClip;
+        _audioSource.clip   = ambianceClip;
         _audioSource.volume = ambianceVolume;
-        _audioSource.loop = true;
+        _audioSource.loop   = true;
         _audioSource.Play();
     }
 
@@ -80,7 +79,7 @@ public class GameManager : MonoBehaviour
     private void CountPairs()
     {
         var allObjects = FindObjectsByType<PairableObject>(FindObjectsSortMode.None);
-        var pairIDs = new HashSet<string>();
+        var pairIDs    = new HashSet<string>();
         foreach (var obj in allObjects)
             pairIDs.Add(obj.pairID);
 
@@ -92,7 +91,6 @@ public class GameManager : MonoBehaviour
 
     public void OnObjectTapped(PairableObject tapped)
     {
-        // Rien sélectionné → sélectionner le premier
         if (_firstSelected == null)
         {
             _firstSelected = tapped;
@@ -100,7 +98,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // Re-tap du même objet → désélectionner
         if (_firstSelected == tapped)
         {
             _firstSelected.Deselect();
@@ -108,7 +105,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // Vérifier le couple
         if (_firstSelected.pairID == tapped.pairID)
         {
             // ✅ BON MATCH
@@ -124,7 +120,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // ❌ MAUVAIS MATCH → juste reset silencieux
+            // ❌ MAUVAIS MATCH → reset silencieux
             _firstSelected.Deselect();
             tapped.Deselect();
             _firstSelected = null;
@@ -146,22 +142,25 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log($"[GameManager] 🎉 {victoryMessage}");
 
-        // Arrêter l'ambiance
         _audioSource.Stop();
 
-        // Jouer le son de victoire
         if (victoryClip != null)
             _audioSource.PlayOneShot(victoryClip, victoryVolume);
 
-        // Spawner le prefab de victoire
         if (victoryPrefab != null)
             Instantiate(victoryPrefab);
 
-        // Afficher le message
         if (victoryText != null)
         {
             victoryText.gameObject.SetActive(true);
             victoryText.text = victoryMessage;
+            StartCoroutine(HideVictoryText());
         }
+    }
+
+    private IEnumerator HideVictoryText()
+    {
+        yield return new WaitForSeconds(1f);
+        victoryText.gameObject.SetActive(false);
     }
 }

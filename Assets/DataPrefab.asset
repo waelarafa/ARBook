@@ -13,39 +13,47 @@ MonoBehaviour:
   m_Name: DataPrefab
   m_EditorClassIdentifier: Assembly-CSharp::ImageCubeDataLibrary
   entries:
-  - environmentPrefab: {fileID: 4391587478659334713, guid: 3abb652a0714a714c992c50b3a9136f7, type: 3}
+  - environmentPrefab: {fileID: 6847471209779651646, guid: deaa7ad79eff6f84ab0644520d3af018, type: 3}
+    themeId: Les Animaux
+    pageName: "Les Animaux de la For\xEAt"
     imageName: fox
     doSpawn: 1
-    prefabToSpawn: {fileID: 6030499686730131976, guid: 506e6391c8fd0424fa507dd1b1614119, type: 3}
-    doPlaySound: 1
-    soundConfig: {fileID: 11400000, guid: 18336686c242b3f4f987e62645ac7ddc, type: 2}
-    soundConfigArabe: {fileID: 11400000, guid: 18336686c242b3f4f987e62645ac7ddc, type: 2}
-    soundConfigFrancais: {fileID: 11400000, guid: 3864161f9bed822499653535056c08f3, type: 2}
-    soundConfigAnglais: {fileID: 11400000, guid: 5a6d805231f01344c8369854b45c40a4, type: 2}
-    scaleMultiplier: 1.5
-    scaleDuration: 1.5
+    prefabToSpawn: {fileID: 7359655724910758988, guid: a838ec8ea7d24c544b5e48e5aba36cdc, type: 3}
+    soundConfig: {fileID: 11400000, guid: 62509f16b6b60754e8eea66114b3d8b5, type: 2}
+    soundConfigArabe: {fileID: 11400000, guid: fc4f71730077a1a4baf3329c999abe2e, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: b47090741d477f34d876143a49858269, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 96858e2b83a10154888f8272c1ca44a8, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4750086999414109597, guid: cc0957d48bd49ca49b836b8e5ac325cf, type: 3}
+    themeId: Les Animaux
+    pageName: "Les Animaux de la For\xEAt"
     imageName: hedgehog
     doSpawn: 1
     prefabToSpawn: {fileID: 4341162579754259275, guid: a55f5bf56a2fdb74e9c56bf211d45edb, type: 3}
-    doPlaySound: 1
-    soundConfig: {fileID: 11400000, guid: 55573651dd43c7e40b48341e767e87c1, type: 2}
+    soundConfig: {fileID: 0}
     soundConfigArabe: {fileID: 0}
     soundConfigFrancais: {fileID: 0}
     soundConfigAnglais: {fileID: 0}
-    scaleMultiplier: 1.5
-    scaleDuration: 1.5
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 8456976543571198260, guid: 23b4aa33d2d105d4aaa7c6c0b5d80095, type: 3}
+    themeId: Les Animaux
+    pageName: "Les Animaux de la For\xEAt"
     imageName: squirrel
     doSpawn: 1
     prefabToSpawn: {fileID: 600298885858246675, guid: bb867e2b3ddf3224aae142d742779cd1, type: 3}
-    doPlaySound: 1
-    soundConfig: {fileID: 11400000, guid: 5a6d805231f01344c8369854b45c40a4, type: 2}
+    soundConfig: {fileID: 0}
     soundConfigArabe: {fileID: 0}
     soundConfigFrancais: {fileID: 0}
     soundConfigAnglais: {fileID: 0}
-    scaleMultiplier: 1.5
-    scaleDuration: 1.5
+    rotationSensitivity: 0.3
+  - environmentPrefab: {fileID: 6847471209779651646, guid: deaa7ad79eff6f84ab0644520d3af018, type: 3}
+    themeId: Les Animaux
+    pageName: 
+    imageName: panda
+    doSpawn: 1
+    prefabToSpawn: {fileID: 6030499686730131976, guid: 506e6391c8fd0424fa507dd1b1614119, type: 3}
+    soundConfig: {fileID: 0}
+    soundConfigArabe: {fileID: 0}
+    soundConfigFrancais: {fileID: 0}
+    soundConfigAnglais: {fileID: 0}
     rotationSensitivity: 0.3

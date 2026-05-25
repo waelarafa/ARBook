@@ -256,7 +256,7 @@ public class ARImageCubeOverlay : MonoBehaviour
         if (particlePrefab != null)
         {
             GameObject particles = Instantiate(particlePrefab, cube.transform);
-            particles.transform.localPosition = Vector3.zero;
+            particles.transform.localPosition = new Vector3(0f,2f, 0f);
 
             Debug.Log("✨ [SPAWN] Particules attachées au cube : " + imageName);
         }

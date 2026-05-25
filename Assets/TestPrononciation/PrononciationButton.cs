@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class PronunciationButton : MonoBehaviour
 {
-    [Header("Pages à afficher")]
-    public string[] pageNames; // ex: ["Animaux", "Fruits"]
+    [Header("Paramètres")]
+    public string bookId  = "";
+    public string themeId = "";   // ex: "Les Animaux"
 
     public void OnClick()
     {
-        PronunciationManager.Instance.OpenWithPages(pageNames);
+        AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "prononciation");
+        PronunciationManager.Instance.OpenWithTheme(bookId, themeId);
     }
 }

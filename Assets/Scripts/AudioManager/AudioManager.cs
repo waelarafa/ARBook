@@ -47,4 +47,10 @@ public class AudioManager : MonoBehaviour
         _source.PlayOneShot(config.clip, config.volume);
         _lastPlayedTime[config] = now;
     }
+
+    public void Stop()
+    {
+        if (_source != null && _source.isPlaying)
+            _source.Stop();
+    }
 }

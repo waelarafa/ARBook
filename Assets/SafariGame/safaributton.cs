@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
-public class tapsafari : MonoBehaviour
+public class SafariButton : MonoBehaviour
 {
-    public void Retour()
+    public string bookId  = "";
+    public string themeId = "";
+
+    public void OnClick()
     {
+        AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "safari");
         SceneManager.LoadScene("testingscene", LoadSceneMode.Single);
     }
 }

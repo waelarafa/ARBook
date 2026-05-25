@@ -1,5 +1,390 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
+
+public class AnalyticsManager : MonoBehaviour
+{
+    public static AnalyticsManager Instance { get; private set; }
+
+    private float _sessionStartTime;
+    private int _pagesViewedThisSession;
+    private float _childSessionStart;
+    private string _currentChildMode;
+    private bool _childSessionActive = false;
+    private float _activitySessionStart;
+    private string _currentActivityId;
+    private string _currentActivityThemeId;
+    private string _currentActivityBookId;
+    private bool _activitySessionActive = false;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // SESSION GLOBALE
+    // ══════════════════════════════════════════════════════════
+
+    public void LogSessionStarted()
+    {
+        _sessionStartTime = Time.realtimeSinceStartup;
+        _pagesViewedThisSession = 0;
+        Debug.Log("[Analytics] session_started");
+    }
+
+    public void LogSessionEnded()
+    {
+        if (_childSessionActive) LogChildSessionEnded();
+        if (_activitySessionActive) LogActivityExited();
+
+        float duration = Time.realtimeSinceStartup - _sessionStartTime;
+        LocalEventBuffer.Instance?.AddSession(duration);
+
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogSessionTime(userId, duration);
+
+        Debug.Log($"[Analytics] session_ended — {duration:F0}s");
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // SESSION ENFANT
+    // ══════════════════════════════════════════════════════════
+
+    public void LogChildSessionStarted(string mode)
+    {
+        if (_childSessionActive) LogChildSessionEnded();
+        _currentChildMode = mode;
+        _childSessionStart = Time.realtimeSinceStartup;
+        _childSessionActive = true;
+        Debug.Log($"[Analytics] child_session_started — mode={mode}");
+    }
+
+    public void LogChildSessionEnded()
+    {
+        if (!_childSessionActive) return;
+        float duration = Time.realtimeSinceStartup - _childSessionStart;
+        _childSessionActive = false;
+
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogChildSession(userId, _currentChildMode, duration);
+        else
+            LocalEventBuffer.Instance?.AddChildSession(_currentChildMode, duration);
+
+        Debug.Log($"[Analytics] child_session_ended — {_currentChildMode} {duration:F0}s");
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // AR — PAGE & ITEM
+    // ══════════════════════════════════════════════════════════
+
+    public void LogPageViewed(string bookId, string themeId, string pageId)
+    {
+        _pagesViewedThisSession++;
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogPageViewed(userId, bookId, themeId, pageId);
+        else
+            LocalEventBuffer.Instance?.AddPageView(bookId, themeId, pageId);
+        Debug.Log($"[Analytics] page_viewed — {bookId}/{themeId}/{pageId}");
+    }
+
+    public void LogItemDiscovered(string bookId, string themeId, string pageId, string itemName)
+    {
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogItemDiscovered(userId, bookId, themeId, pageId, itemName);
+        else
+            LocalEventBuffer.Instance?.AddItemDiscovered(bookId, themeId, pageId, itemName);
+        Debug.Log($"[Analytics] item_discovered — {itemName}");
+    }
+
+    public void LogBookDetected(string bookId, float timeToDetect) =>
+        Debug.Log($"[Analytics] book_detected — {bookId} ({timeToDetect:F1}s)");
+
+    public void LogBookLost(string bookId, float duration) =>
+        Debug.Log($"[Analytics] book_lost — {bookId} ({duration:F1}s)");
+
+    // ══════════════════════════════════════════════════════════
+    // ACTIVITÉS
+    // ══════════════════════════════════════════════════════════
+
+    public void LogActivityEntered(string bookId, string themeId, string activityId)
+    {
+        if (_activitySessionActive) LogActivityExited();
+        _currentActivityBookId  = bookId;
+        _currentActivityThemeId = themeId;
+        _currentActivityId      = activityId;
+        _activitySessionStart   = Time.realtimeSinceStartup;
+        _activitySessionActive  = true;
+        Debug.Log($"[Analytics] activity_entered — {bookId}/{themeId}/{activityId}");
+    }
+
+    public void LogActivityExited()
+    {
+        if (!_activitySessionActive) return;
+        float duration = Time.realtimeSinceStartup - _activitySessionStart;
+        _activitySessionActive = false;
+
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogActivitySession(userId, _currentActivityBookId, _currentActivityThemeId, _currentActivityId, duration);
+        else
+            LocalEventBuffer.Instance?.AddActivitySession(_currentActivityBookId, _currentActivityThemeId, _currentActivityId, duration);
+
+        Debug.Log($"[Analytics] activity_exited — {_currentActivityBookId}/{_currentActivityThemeId}/{_currentActivityId} duration={duration:F0}s");
+    }
+
+    public void LogQuizScore(string bookId, string themeId, int score, int totalQuestions)
+    {
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogQuizScore(userId, bookId, themeId, score, totalQuestions);
+        else
+            LocalEventBuffer.Instance?.AddQuizScore(bookId, themeId, score, totalQuestions);
+        Debug.Log($"[Analytics] quiz_score — {bookId}/{themeId} score={score}/{totalQuestions}");
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // CHECK — pour LevelMapBuilder et ActivityMapManager
+    // ══════════════════════════════════════════════════════════
+
+    public void CheckItemDiscovered(string itemName, System.Action<bool> callback)
+    {
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.IsItemDiscovered(userId, itemName, callback);
+        else
+            callback?.Invoke(LocalEventBuffer.Instance?.IsItemDiscovered(itemName) ?? false);
+    }
+
+    public void CheckActivityCompleted(string bookId, string themeId, string activityId,
+                                       System.Action<bool> callback)
+    {
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.IsActivityCompleted(userId, bookId, themeId, activityId, callback);
+        else
+            callback?.Invoke(LocalEventBuffer.Instance?.IsActivityCompleted(bookId, themeId, activityId) ?? false);
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // AUTH
+    // ══════════════════════════════════════════════════════════
+
+    public void LogUserLoggedIn(string method) =>
+        Debug.Log($"[Analytics] user_logged_in — {method}");
+
+    public void LogUserSignedUp(string method) =>
+        Debug.Log($"[Analytics] user_signed_up — {method}");
+
+    // ══════════════════════════════════════════════════════════
+    // HELPER
+    // ══════════════════════════════════════════════════════════
+
+    private string GetUserId()
+    {
+        var user = Firebase.Auth.FirebaseAuth.DefaultInstance.CurrentUser;
+        if (user != null && !user.IsAnonymous) return user.UserId;
+        return "anonymous";
+    }
+}
+/*using UnityEngine;
+
+public class AnalyticsManager : MonoBehaviour
+{
+    public static AnalyticsManager Instance { get; private set; }
+
+    // ── Session globale app ───────────────────────────────────
+    private float _sessionStartTime;
+    private int _pagesViewedThisSession;
+
+    // ── Session enfant (par mode) ─────────────────────────────
+    private float _childSessionStart;
+    private string _currentChildMode; // "AR" | "3D" | "Activity"
+    private bool _childSessionActive = false;
+
+    // ── Activité session ──────────────────────────────────────
+    private float _activitySessionStart;
+    private string _currentActivityId;
+    private string _currentActivityThemeId;
+    private string _currentActivityBookId;
+    private bool _activitySessionActive = false;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+    }
+
+    // ════════════════════════════════════════════════════════
+    // SESSION GLOBALE (app ouvre / ferme)
+    // ════════════════════════════════════════════════════════
+
+    public void LogSessionStarted()
+    {
+        _sessionStartTime = Time.realtimeSinceStartup;
+        _pagesViewedThisSession = 0;
+        Debug.Log("[Analytics] session_started");
+    }
+
+    public void LogSessionEnded()
+    {
+        if (_childSessionActive)
+            LogChildSessionEnded();
+        if (_activitySessionActive)
+            LogActivityExited();
+
+        float duration = Time.realtimeSinceStartup - _sessionStartTime;
+        LocalEventBuffer.Instance?.AddSession(duration);
+
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogSessionTime(userId, duration);
+
+        Debug.Log($"[Analytics] session_ended — {duration:F0}s");
+    }
+
+    // ════════════════════════════════════════════════════════
+    // SESSION ENFANT (par mode : AR / 3D / Activity)
+    // ════════════════════════════════════════════════════════
+
+    public void LogChildSessionStarted(string mode)
+    {
+        if (_childSessionActive)
+            LogChildSessionEnded();
+
+        _currentChildMode = mode;
+        _childSessionStart = Time.realtimeSinceStartup;
+        _childSessionActive = true;
+        Debug.Log($"[Analytics] child_session_started — mode={mode}");
+    }
+
+    public void LogChildSessionEnded()
+    {
+        if (!_childSessionActive) return;
+
+        float duration = Time.realtimeSinceStartup - _childSessionStart;
+        _childSessionActive = false;
+
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogChildSession(userId, _currentChildMode, duration);
+        else
+            LocalEventBuffer.Instance?.AddChildSession(_currentChildMode, duration);
+
+        Debug.Log($"[Analytics] child_session_ended — {_currentChildMode} {duration:F0}s");
+    }
+
+    // ════════════════════════════════════════════════════════
+    // AR — PAGE & ITEM
+    // ════════════════════════════════════════════════════════
+
+    public void LogPageViewed(string bookId, string themeId, string pageId)
+    {
+        _pagesViewedThisSession++;
+        string userId = GetUserId();
+
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogPageViewed(userId, bookId, themeId, pageId);
+        else
+            LocalEventBuffer.Instance?.AddPageView(bookId, themeId, pageId);
+
+        Debug.Log($"[Analytics] page_viewed — {bookId}/{themeId}/{pageId}");
+    }
+
+    public void LogItemDiscovered(string bookId, string themeId, string pageId, string itemName)
+    {
+
+        string userId = GetUserId();
+        Debug.Log($"[Analytics] userId={userId}");
+        Debug.Log($"[Analytics] FirestoreManager={FirestoreManager.Instance}");
+        Debug.Log($"[Analytics] LocalBuffer={LocalEventBuffer.Instance}");
+
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogItemDiscovered(userId, bookId, themeId, pageId, itemName);
+        else
+            LocalEventBuffer.Instance?.AddItemDiscovered(bookId, themeId, pageId, itemName);
+
+        Debug.Log($"[Analytics] item_discovered — {itemName}");
+    }
+    
+
+    public void LogBookDetected(string bookId, float timeToDetect) =>
+        Debug.Log($"[Analytics] book_detected — {bookId} ({timeToDetect:F1}s)");
+
+    public void LogBookLost(string bookId, float duration) =>
+        Debug.Log($"[Analytics] book_lost — {bookId} ({duration:F1}s)");
+
+    // ════════════════════════════════════════════════════════
+    // ACTIVITÉS
+    // ════════════════════════════════════════════════════════
+
+    public void LogActivityEntered(string bookId, string themeId, string activityId)
+    {
+        if (_activitySessionActive)
+            LogActivityExited();
+
+        _currentActivityBookId = bookId;
+        _currentActivityThemeId = themeId;
+        _currentActivityId = activityId;
+        _activitySessionStart = Time.realtimeSinceStartup;
+        _activitySessionActive = true;
+
+        Debug.Log($"[Analytics] activity_entered — {bookId}/{themeId}/{activityId}");
+    }
+
+    public void LogActivityExited()
+    {
+        if (!_activitySessionActive) return;
+
+        float duration = Time.realtimeSinceStartup - _activitySessionStart;
+        _activitySessionActive = false;
+
+        string userId = GetUserId();
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogActivitySession(userId, _currentActivityBookId, _currentActivityThemeId, _currentActivityId, duration);
+        else
+            LocalEventBuffer.Instance?.AddActivitySession(_currentActivityBookId, _currentActivityThemeId, _currentActivityId, duration);
+
+        Debug.Log($"[Analytics] activity_exited — {_currentActivityBookId}/{_currentActivityThemeId}/{_currentActivityId} duration={duration:F0}s");
+    }
+    public void LogQuizScore(string bookId, string themeId, int score, int totalQuestions)
+    {
+        string userId = GetUserId();
+
+        if (userId != "anonymous")
+            FirestoreManager.Instance?.LogQuizScore(userId, bookId, themeId, score, totalQuestions);
+        else
+            LocalEventBuffer.Instance?.AddQuizScore(bookId, themeId, score, totalQuestions);
+
+        Debug.Log($"[Analytics] quiz_score — {bookId}/{themeId} score={score}/{totalQuestions}");
+    }
+
+    // ════════════════════════════════════════════════════════
+    // AUTH
+    // ════════════════════════════════════════════════════════
+
+    public void LogUserLoggedIn(string method) =>
+        Debug.Log($"[Analytics] user_logged_in — {method}");
+
+    public void LogUserSignedUp(string method) =>
+        Debug.Log($"[Analytics] user_signed_up — {method}");
+
+    // ════════════════════════════════════════════════════════
+    // HELPER
+    // ════════════════════════════════════════════════════════
+
+    private string GetUserId()
+    {
+        var user = Firebase.Auth.FirebaseAuth.DefaultInstance.CurrentUser;
+        if (user != null && !user.IsAnonymous)
+            return user.UserId;
+        return "anonymous";
+    }
+}
+/*using UnityEngine;
 
 public class AnalyticsManager : MonoBehaviour
 {
@@ -169,96 +554,6 @@ public class AnalyticsManager : MonoBehaviour
             return user.UserId;
         return "anonymous";
     }
-}
-
-
-
-
-
-///////////////////////////////
-///code marche avec le dashboard 
-/////////////////////////////////
-/*using UnityEngine;
-
-public class AnalyticsManager : MonoBehaviour
-{
-    public static AnalyticsManager Instance { get; private set; }
-
-    private float _sessionStartTime;
-    private int _pagesViewedThisSession;
-
-    void Awake()
-    {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
-        Instance = this;
-        //DontDestroyOnLoad(gameObject);
-    }
-
-    // ── Session ──────────────────────────────────────────────────
-    public void LogSessionStarted()
-    {
-        _sessionStartTime = Time.realtimeSinceStartup;
-        _pagesViewedThisSession = 0;
-        Debug.Log("[Analytics] session_started");
-    }
-
-    public void LogSessionEnded()
-    {
-        float duration = Time.realtimeSinceStartup - _sessionStartTime;
-        LocalEventBuffer.Instance?.AddSession(duration);
-
-        // Si user connecté → push direct
-        string userId = GetUserId();
-        if (userId != "anonymous")
-            FirestoreManager.Instance?.LogSessionTime(userId, duration);
-
-        Debug.Log($"[Analytics] session_ended — {duration:F0}s");
-    }
-
-    // ── Auth ─────────────────────────────────────────────────────
-    public void LogUserLoggedIn(string method) =>
-        Debug.Log($"[Analytics] user_logged_in — {method}");
-
-    public void LogUserSignedUp(string method) =>
-        Debug.Log($"[Analytics] user_signed_up — {method}");
-
-    // ── AR / Contenu ─────────────────────────────────────────────
-    public void LogBookDetected(string bookId, float timeToDetect) =>
-        Debug.Log($"[Analytics] book_detected — {bookId} ({timeToDetect:F1}s)");
-
-    public void LogBookLost(string bookId, float duration) =>
-        Debug.Log($"[Analytics] book_lost — {bookId} ({duration:F1}s)");
-
-    public void LogPageViewed(string bookId, string pageId)
-    {
-        _pagesViewedThisSession++;
-
-        string userId = GetUserId();
-        string animalName = pageId; // ou un mapping si tu as les noms
-
-        if (userId != "anonymous")
-        {
-            // User connecté → Firestore direct
-            FirestoreManager.Instance?.LogPageViewed(userId, bookId, pageId, animalName);
-        }
-        else
-        {
-            // Pas connecté → buffer local
-            LocalEventBuffer.Instance?.AddPageView(bookId, pageId, animalName);
-        }
-
-        Debug.Log($"[Analytics] page_viewed — {bookId}/{pageId}");
-    }
-
-    // ── Helpers ──────────────────────────────────────────────────
-    private string GetUserId()
-    {
-        var user = Firebase.Auth.FirebaseAuth.DefaultInstance.CurrentUser;
-
-        // On accepte uniquement les users authentifiés avec email (pas anonymous)
-        if (user != null && !user.IsAnonymous)
-            return user.UserId;
-
-        return "anonymous";
-    }
 }*/
+
+

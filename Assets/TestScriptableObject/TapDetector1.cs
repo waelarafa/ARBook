@@ -20,6 +20,7 @@ public class TapDetector1 : BaseTapDetector
         BeginPress(screenPosition);
         Debug.Log("👇 Appui : " + gameObject.name
                 + (isSpawnedPrefab ? " [prefab]" : " [image AR]"));
+
     }
 
     // ─────────────────────────────────────────
@@ -78,6 +79,12 @@ public class TapDetector1 : BaseTapDetector
         tap.isValidated     = true;
 
         _currentSpawned = spawned;
+        AnalyticsManager.Instance?.LogItemDiscovered(
+            DataManager.Instance.LastLoadedBookId,
+            data.themeId,    // themeId
+            data.pageName,     // pageId
+            data.imageName   // itemName
+        );
 
         ARImageCubeOverlay overlay = Object.FindFirstObjectByType<ARImageCubeOverlay>();
         if (overlay != null)

@@ -1,3 +1,4 @@
+// PageData.cs
 using System.Collections.Generic;
 
 namespace ARBook.Models
@@ -7,6 +8,7 @@ namespace ARBook.Models
     {
         public string id;
         public string nom;
+        public string themeId;
         public string feuille;
         public List<ItemData> items;
     }

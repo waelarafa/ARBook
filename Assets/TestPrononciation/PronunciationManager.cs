@@ -6,13 +6,13 @@ public class PronunciationManager : MonoBehaviour
 {
     public static PronunciationManager Instance { get; private set; }
 
-    private const string BOOK_ID = "book_001";
+    private string _bookId = "";
 
-    private List<ARBook.Models.PageData> allPages = new List<ARBook.Models.PageData>(); // ✅ sauvegarde
-    private List<ARBook.Models.PageData> pages = new List<ARBook.Models.PageData>();    // ✅ pages affichées
-    private int currentPageIndex = 0;
-    private string currentWord = "";
-    private bool dataReady = false;
+    private List<ARBook.Models.PageData> allPages = new List<ARBook.Models.PageData>();
+    private List<ARBook.Models.PageData> pages    = new List<ARBook.Models.PageData>();
+    private int    currentPageIndex = 0;
+    private string currentWord      = "";
+    private bool   dataReady        = false;
 
     void Awake()
     {
@@ -28,63 +28,84 @@ public class PronunciationManager : MonoBehaviour
     IEnumerator WaitAndLoad()
     {
         yield return new WaitUntil(() => DataManager.Instance != null);
-        yield return new WaitUntil(() => DataManager.Instance.GetBookEntry(BOOK_ID) != null);
-        yield return StartCoroutine(DataManager.Instance.LoadBookFromUrl(BOOK_ID));
 
-        BuildPages();
+        _bookId = DataManager.Instance.LastLoadedBookId;
+
+        if (string.IsNullOrEmpty(_bookId))
+        {
+            Debug.LogError("[PronunciationManager] ❌ LastLoadedBookId vide.");
+            yield break;
+        }
+
+        if (!DataManager.Instance.IsBookLoaded(_bookId))
+        {
+            Debug.LogError($"[PronunciationManager] ❌ '{_bookId}' absent du cache.");
+            yield break;
+        }
+
+        BuildPages(_bookId);
     }
 
-    void BuildPages()
+    void BuildPages(string bookId)
     {
-        ARBook.Models.BookData bookData = DataManager.Instance.GetBookData(BOOK_ID);
+        ARBook.Models.BookData bookData = DataManager.Instance.GetBookData(bookId);
         if (bookData == null)
         {
-            Debug.LogError("[PronunciationManager] BookData introuvable !");
+            Debug.LogError("[PronunciationManager] ❌ BookData introuvable.");
             return;
         }
 
         pages.Clear();
-        allPages.Clear(); // ✅
+        allPages.Clear();
         foreach (var page in bookData.pages)
         {
             pages.Add(page);
-            allPages.Add(page); // ✅ copie sauvegarde
+            allPages.Add(page);
         }
 
         dataReady = true;
-        Debug.Log($"[PronunciationManager] ✅ {pages.Count} pages chargées");
-
-        foreach (var page in pages)
-        {
-            Debug.Log($"📄 Page : {page.nom}");
-            foreach (var item in page.items)
-                Debug.Log($"   → {item.nom}");
-        }
+        Debug.Log($"[PronunciationManager] ✅ {allPages.Count} pages chargées.");
     }
 
-    // ✅ appelé par chaque bouton avec ses pages
-    public void OpenWithPages(string[] pageNames)
+    public void OpenWithTheme(string bookId, string themeId)
     {
-        List<ARBook.Models.PageData> filtered = new List<ARBook.Models.PageData>();
-
-        foreach (var name in pageNames)
+        // Toujours recharger depuis DataManager avec le bookId donné
+        ARBook.Models.BookData bookData = DataManager.Instance.GetBookData(bookId);
+        if (bookData == null)
         {
-            var page = allPages.Find(p => p.nom == name); // ✅ cherche dans allPages
-            if (page != null)
-                filtered.Add(page);
-            else
-                Debug.LogWarning($"[PronunciationManager] Page introuvable : {name}");
+            Debug.LogError($"[PronunciationManager] ❌ BookData introuvable pour '{bookId}'");
+            return;
         }
+
+        allPages.Clear();
+        foreach (var page in bookData.pages)
+            allPages.Add(page);
+
+        dataReady = true; // ← forcer dataReady pour que WaitAndDisplay ne bloque pas
+
+        Debug.Log($"[PronunciationManager] 📚 {allPages.Count} pages pour '{bookId}'");
+        foreach (var p in allPages)
+            Debug.Log($"   → nom='{p.nom}' themeId='{p.themeId}'");
+
+        List<ARBook.Models.PageData> filtered = allPages.FindAll(p => p.themeId == themeId);
 
         if (filtered.Count == 0)
         {
-            Debug.LogError("[PronunciationManager] Aucune page trouvée !");
+            Debug.LogError($"[PronunciationManager] ❌ Aucune page pour themeId='{themeId}'");
             return;
         }
 
         pages = filtered;
         currentPageIndex = 0;
+
+        Debug.Log($"[PronunciationManager] ✅ {pages.Count} page(s) pour '{themeId}'");
         UIManager.Instance.OpenGame();
+    }
+
+    public void CloseGame()
+    {
+        AnalyticsManager.Instance?.LogActivityExited();
+        UIManager.Instance.CloseGame();
     }
 
     public ARBook.Models.PageData GetCurrentPage()
@@ -99,10 +120,10 @@ public class PronunciationManager : MonoBehaviour
         Debug.Log($"[PronunciationManager] Mot sélectionné : {currentWord}");
     }
 
-    public string GetCurrentWord() => currentWord;
-    public int GetCurrentPageIndex() => currentPageIndex;
-    public int GetTotalPages() => pages.Count;
-    public bool IsDataReady() => dataReady;
+    public string GetCurrentWord()      => currentWord;
+    public int    GetCurrentPageIndex() => currentPageIndex;
+    public int    GetTotalPages()       => pages.Count;
+    public bool   IsDataReady()         => dataReady;
 
     public void GoToPage(int index)
     {

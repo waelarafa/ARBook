@@ -1,4 +1,442 @@
-﻿using Newtonsoft.Json;
+﻿/*claude solution*/
+using Newtonsoft.Json;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.Networking;
+using UnityEngine.ResourceManagement.AsyncOperations;
+
+public class DataManager : MonoBehaviour
+{
+    // ───── Singleton ─────
+    public static DataManager Instance { get; private set; }
+
+    // ───── URL GitHub Pages ─────
+    private const string BASE_URL = "https://sirine-mechmech.github.io/unity-addressables-test/ARbook/";
+
+    // ───── Clés EasySave ─────
+    // Une clé par livre : "bookdata_book_001", "bookdata_book_002", etc.
+    private const string ES3_BOOKDATA_PREFIX = "bookdata_";
+
+    // ───── Données en mémoire ─────
+    private ARBook.Models.GeneralCatalog _catalog;
+    private Dictionary<string, ARBook.Models.BookEntry> _bookEntries;
+    private Dictionary<string, ARBook.Models.BookData>  _loadedBooks;
+    private Dictionary<string, GameObject>              _prefabCache = new Dictionary<string, GameObject>();
+    private Dictionary<string, Texture2D>               _imageCache  = new Dictionary<string, Texture2D>();
+
+    // ───── Transmission inter-scènes ─────
+    /// <summary>
+    /// ID du livre actif — mis à jour par QRScanner ou MenuManager.
+    /// Survit entre scènes grâce à DontDestroyOnLoad.
+    /// Lu par Book1Detector pour savoir quel livre afficher.
+    /// </summary>
+    public string LastLoadedBookId { get; private set; } = "";
+
+    /// <summary>
+    /// Permet à MenuManager de définir LastLoadedBookId
+    /// quand le livre est déjà en mémoire (pas besoin de LoadBookFromUrl).
+    /// </summary>
+    public void SetLastLoadedBookId(string bookId)
+    {
+        LastLoadedBookId = bookId;
+        Debug.Log($"[DataManager] 🔖 LastLoadedBookId = {bookId}");
+    }
+
+    // ───── Chargement asset unique ─────
+    private CancellationTokenSource _cts;
+
+    // ───── Préchargement prédictif ─────
+    private List<string>            _orderedPageIds = new List<string>();
+    private string                  _activeBookId   = null;
+    private string                  _currentPageId  = null;
+    private CancellationTokenSource _neighborCts;
+
+    // ─────────────────────────────────────────────
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        _bookEntries = new Dictionary<string, ARBook.Models.BookEntry>();
+        _loadedBooks = new Dictionary<string, ARBook.Models.BookData>();
+
+        // ✅ Recharger depuis EasySave tous les livres déjà téléchargés
+        // Ceci remplace le téléchargement réseau pour les sessions suivantes
+        LoadAllBooksFromES3();
+    }
+
+    void Start()
+    {
+        StartCoroutine(LoadCatalogFromUrl());
+    }
+
+    // ─────────────────────────────────────────────
+    // EASYSAVE — PERSISTANCE BOOKDATA
+    // ─────────────────────────────────────────────
+
+    /// <summary>
+    /// Au démarrage, recharge en mémoire tous les BookData sauvegardés sur disque.
+    /// Le parent n'a scanné qu'une fois — l'enfant retrouve les données à chaque lancement.
+    /// </summary>
+    private void LoadAllBooksFromES3()
+    {
+        // ES3.GetKeys() retourne toutes les clés sauvegardées
+        // APRÈS
+        if (!ES3.FileExists())
+        {
+            Debug.Log("[DataManager] Aucun fichier ES3 — premier lancement");
+            return;
+        }
+        string[] allKeys = ES3.GetKeys();
+        
+        int count = 0;
+
+        foreach (string key in allKeys)
+        {
+            if (!key.StartsWith(ES3_BOOKDATA_PREFIX)) continue;
+
+            string bookId = key.Substring(ES3_BOOKDATA_PREFIX.Length);
+            string json   = ES3.Load<string>(key);
+
+            ARBook.Models.BookData bookData =
+                JsonConvert.DeserializeObject<ARBook.Models.BookData>(json);
+
+            if (bookData != null)
+            {
+                _loadedBooks[bookId] = bookData;
+                count++;
+                Debug.Log($"[DataManager] 📂 Livre restauré depuis ES3 : {bookId}");
+            }
+        }
+
+        if (count > 0)
+            Debug.Log($"[DataManager] ✅ {count} livre(s) restauré(s) depuis EasySave.");
+        else
+            Debug.Log($"[DataManager] ℹ️ Aucun livre en cache ES3 — premier lancement ou reset.");
+    }
+
+    /// <summary>
+    /// Sauvegarde un BookData sur disque via EasySave.
+    /// Appelé une seule fois après le téléchargement réussi.
+    /// </summary>
+    private void SaveBookToES3(string bookId, ARBook.Models.BookData bookData)
+    {
+        string key  = ES3_BOOKDATA_PREFIX + bookId;
+        string json = JsonConvert.SerializeObject(bookData);
+        ES3.Save(key, json);
+        Debug.Log($"[DataManager] 💾 Livre sauvegardé sur disque : {bookId}");
+    }
+
+    // ─────────────────────────────────────────────
+    // CATALOGUE + LIVRE
+    // ─────────────────────────────────────────────
+
+    private IEnumerator LoadCatalogFromUrl()
+    {
+        string url = BASE_URL + "general_catalog.json";
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        yield return request.SendWebRequest();
+
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError("Erreur chargement catalogue : " + request.error);
+            yield break;
+        }
+
+        _catalog = JsonConvert.DeserializeObject<ARBook.Models.GeneralCatalog>(request.downloadHandler.text);
+        foreach (ARBook.Models.BookEntry entry in _catalog.books)
+            _bookEntries[entry.id] = entry;
+
+        Debug.Log($"Catalogue chargé : {_catalog.books.Count} livre(s)");
+    }
+
+    public IEnumerator LoadBookFromUrl(string bookId)
+    {
+        // ✅ Déjà en mémoire (chargé depuis ES3 au Awake ou déjà téléchargé)
+        if (_loadedBooks.ContainsKey(bookId))
+        {
+            LastLoadedBookId = bookId;
+            Debug.Log($"[DataManager] 📦 {bookId} déjà en mémoire — skip téléchargement.");
+            yield break;
+        }
+
+        ARBook.Models.BookEntry entry = GetBookEntry(bookId);
+        if (entry == null) yield break;
+
+        string url = BASE_URL + entry.jsonFile;
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        yield return request.SendWebRequest();
+
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError($"Erreur chargement livre {bookId} : " + request.error);
+            yield break;
+        }
+
+        ARBook.Models.BookData book =
+            JsonConvert.DeserializeObject<ARBook.Models.BookData>(request.downloadHandler.text);
+
+        _loadedBooks[bookId] = book;
+        LastLoadedBookId     = bookId;
+
+        // ✅ Sauvegarder sur disque → disponible à tous les prochains lancements
+        SaveBookToES3(bookId, book);
+
+        StartCoroutine(DownloadBookAssets(entry.addressable_group));
+        Debug.Log($"Livre chargé : {book.title} avec {book.pages.Count} page(s)");
+    }
+
+    /// <summary>
+    /// Retourne true si le livre est en mémoire RAM (prêt pour Book1Detector).
+    /// </summary>
+    public bool IsBookLoaded(string bookId) => _loadedBooks.ContainsKey(bookId);
+
+    public IEnumerator DownloadBookAssets(string group)
+    {
+        Debug.Log($"📦 Téléchargement assets : {group}");
+        AsyncOperationHandle handle = Addressables.DownloadDependenciesAsync(group);
+        while (!handle.IsDone)
+        {
+            Debug.Log($"⏳ {handle.PercentComplete * 100:F0}%");
+            yield return null;
+        }
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+            Debug.Log("✅ Assets téléchargés !");
+        else
+            Debug.LogError("❌ Erreur téléchargement assets");
+        Addressables.Release(handle);
+    }
+
+    // ─────────────────────────────────────────────
+    // PRÉCHARGEMENT PRÉDICTIF
+    // ─────────────────────────────────────────────
+
+    public void OnPageDetected(string bookId, string pageId)
+    {
+        ARBook.Models.PageData page = GetPageById(bookId, pageId);
+        string themeId = page?.themeId ?? "";
+
+        if (AnalyticsManager.Instance != null)
+            AnalyticsManager.Instance.LogPageViewed(bookId, themeId, pageId);
+
+        StartCoroutine(PrepareAndLaunch(bookId, pageId));
+    }
+
+    private IEnumerator PrepareAndLaunch(string bookId, string pageId)
+    {
+        if (pageId == _currentPageId) yield break;
+
+        float elapsed = 0f;
+        while (GetBookEntry(bookId) == null && elapsed < 15f)
+        {
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        if (GetBookEntry(bookId) == null)
+        {
+            Debug.LogError($"[DataManager] Catalogue non prêt pour : {bookId}");
+            yield break;
+        }
+
+        if (!_loadedBooks.ContainsKey(bookId))
+            yield return StartCoroutine(LoadBookFromUrl(bookId));
+
+        if (_activeBookId != bookId)
+        {
+            _orderedPageIds.Clear();
+            ARBook.Models.BookData book = GetBookData(bookId);
+            if (book == null) yield break;
+            foreach (ARBook.Models.PageData page in book.pages)
+                _orderedPageIds.Add(page.id);
+            _activeBookId = bookId;
+            Debug.Log($"[DataManager] {_orderedPageIds.Count} pages indexées.");
+        }
+
+        _currentPageId = pageId;
+        _ = RunPredictiveLoad(bookId, pageId);
+    }
+
+    private async Task RunPredictiveLoad(string bookId, string pageId)
+    {
+        _neighborCts?.Cancel();
+        _neighborCts?.Dispose();
+        _neighborCts = new CancellationTokenSource();
+        CancellationToken neighborToken = _neighborCts.Token;
+
+        Debug.Log($"[DataManager] 📖 Page courante : {pageId} — chargement prioritaire");
+
+        await LoadPageItemsAsync(bookId, pageId, CancellationToken.None);
+        Debug.Log($"[DataManager] ✅ Page courante prête : {pageId}");
+
+        int index = _orderedPageIds.IndexOf(pageId);
+
+        if (index > 0)
+        {
+            string prevId = _orderedPageIds[index - 1];
+            _ = LoadPageItemsAsync(bookId, prevId, neighborToken);
+            Debug.Log($"[DataManager] 🔄 Background lancé : {prevId}");
+        }
+
+        if (index < _orderedPageIds.Count - 1)
+        {
+            string nextId = _orderedPageIds[index + 1];
+            _ = LoadPageItemsAsync(bookId, nextId, neighborToken);
+            Debug.Log($"[DataManager] 🔄 Background lancé : {nextId}");
+        }
+    }
+
+    private async Task LoadPageItemsAsync(string bookId, string pageId, CancellationToken token)
+    {
+        ARBook.Models.PageData page = GetPageById(bookId, pageId);
+        if (page == null) return;
+
+        foreach (ARBook.Models.ItemData item in page.items)
+        {
+            if (token.IsCancellationRequested)
+            {
+                Debug.Log($"[DataManager] ⏹ Background annulé : {pageId}");
+                return;
+            }
+
+            if (IsAssetReady(item.nom))
+            {
+                Debug.Log($"[DataManager] Cache hit : {item.nom}");
+                continue;
+            }
+
+            try { await LoadPrefabAsync(item.nom, token); } catch { }
+            try { await LoadImageAsync(item.nom, token); } catch { }
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    // CHARGEMENT ASSET UNIQUE
+    // ─────────────────────────────────────────────
+
+    public async void LoadAssetsForImage(string imageId)
+    {
+        _cts?.Cancel();
+        _cts = new CancellationTokenSource();
+        CancellationToken token = _cts.Token;
+        try
+        {
+            await LoadPrefabAsync(imageId, token);
+            if (token.IsCancellationRequested) return;
+            await LoadImageAsync(imageId, token);
+            if (token.IsCancellationRequested) return;
+            Debug.Log($"[DataManager] ✅ Assets prêts pour : {imageId}");
+        }
+        catch (OperationCanceledException)
+        {
+            Debug.Log($"[DataManager] ⏹ Chargement interrompu : {imageId}");
+        }
+    }
+
+    private async Task LoadPrefabAsync(string assetName, CancellationToken token)
+    {
+        if (_prefabCache.ContainsKey(assetName)) return;
+
+        var handle = Addressables.LoadAssetAsync<GameObject>(assetName);
+        while (!handle.IsDone)
+        {
+            if (token.IsCancellationRequested)
+            {
+                Addressables.Release(handle);
+                throw new OperationCanceledException();
+            }
+            await Task.Yield();
+        }
+
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+            _prefabCache[assetName] = handle.Result;
+        else
+            Debug.LogWarning($"[DataManager] Prefab introuvable : {assetName}");
+    }
+
+    private async Task LoadImageAsync(string assetName, CancellationToken token)
+    {
+        if (_imageCache.ContainsKey(assetName)) return;
+
+        var handle = Addressables.LoadAssetAsync<Texture2D>(assetName + "_img");
+        while (!handle.IsDone)
+        {
+            if (token.IsCancellationRequested)
+            {
+                Addressables.Release(handle);
+                throw new OperationCanceledException();
+            }
+            await Task.Yield();
+        }
+
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+            _imageCache[assetName] = handle.Result;
+        else
+            Debug.LogWarning($"[DataManager] Image introuvable : {assetName}");
+    }
+
+    // ─────────────────────────────────────────────
+    // GETTERS
+    // ─────────────────────────────────────────────
+
+    public ARBook.Models.BookEntry GetBookEntry(string bookId)
+    {
+        if (_bookEntries.TryGetValue(bookId, out ARBook.Models.BookEntry entry)) return entry;
+        Debug.LogWarning($"BookEntry introuvable : {bookId}");
+        return null;
+    }
+
+    public ARBook.Models.BookData GetBookData(string bookId)
+    {
+        if (_loadedBooks.TryGetValue(bookId, out ARBook.Models.BookData book)) return book;
+        Debug.LogWarning($"Livre non chargé : {bookId}");
+        return null;
+    }
+
+    public ARBook.Models.PageData GetPageById(string bookId, string pageId)
+    {
+        ARBook.Models.BookData book = GetBookData(bookId);
+        if (book == null) return null;
+        foreach (ARBook.Models.PageData page in book.pages)
+            if (page.id == pageId) return page;
+        Debug.LogWarning($"Page introuvable : {pageId} dans {bookId}");
+        return null;
+    }
+
+    public GameObject GetPrefab(string animalName)
+    {
+        if (_prefabCache.TryGetValue(animalName, out GameObject prefab)) return prefab;
+        Debug.LogWarning($"[DataManager] Prefab non chargé : {animalName}");
+        return null;
+    }
+
+    public Texture2D GetImage(string animalName)
+    {
+        if (_imageCache.TryGetValue(animalName, out Texture2D texture)) return texture;
+        Debug.LogWarning($"[DataManager] Image non chargée : {animalName}");
+        return null;
+    }
+
+    public ARBook.Models.ItemData GetItemData(string bookId, string animalName)
+    {
+        ARBook.Models.BookData book = GetBookData(bookId);
+        if (book == null) return null;
+        foreach (ARBook.Models.PageData page in book.pages)
+            foreach (ARBook.Models.ItemData item in page.items)
+                if (item.nom == animalName) return item;
+        Debug.LogWarning($"[DataManager] Animal introuvable : {animalName}");
+        return null;
+    }
+
+    public bool IsAssetReady(string animalName)
+        => _prefabCache.ContainsKey(animalName) && _imageCache.ContainsKey(animalName);
+}
+/*using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
