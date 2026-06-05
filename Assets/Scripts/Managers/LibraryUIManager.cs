@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class LibraryUIManager : MonoBehaviour
 {
@@ -27,20 +28,29 @@ public class LibraryUIManager : MonoBehaviour
 
     void Start()
     {
-        // ✅ Start() = tous les Awake() sont déjà passés
-        // BookLibraryManager.Instance est garanti non-null ici
         if (BookLibraryManager.Instance != null)
         {
-            BookLibraryManager.Instance.OnLibraryChanged -= RefreshAll; // sécurité anti-doublon
+            BookLibraryManager.Instance.OnLibraryChanged -= RefreshAll;
             BookLibraryManager.Instance.OnLibraryChanged += RefreshAll;
             Debug.Log("[LibraryUIManager] ✅ Abonné à OnLibraryChanged");
         }
         else
         {
-            Debug.LogError("[LibraryUIManager] ❌ BookLibraryManager.Instance est null dans Start() !");
+            Debug.LogError("[LibraryUIManager] ❌ BookLibraryManager.Instance est null !");
         }
 
-        RefreshAll(); // affichage initial
+        RefreshAll();
+        StartCoroutine(StartSessionNextFrame()); // ← attendre une frame
+    }
+
+    IEnumerator StartSessionNextFrame()
+    {
+        yield return null;
+        Debug.Log($"[DIAGNOSTIC] SessionTimerManager.Instance null? " +
+                  $"{SessionTimerManager.Instance == null}");
+        Debug.Log($"[DIAGNOSTIC] ParentalSettingsManager.Instance null? " +
+                  $"{ParentalSettingsManager.Instance == null}");
+        SessionTimerManager.Instance?.StartChildSession();
     }
 
     void OnDestroy()

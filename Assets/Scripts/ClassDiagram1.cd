@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AudioInteractable" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AudioManager\AudioInteractable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManager" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAQAwAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\AudioManager\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundConfig" Collapsed="true">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACCAAAAAgAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\AudioManager\SoundConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArrowUIController" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQQEIAAAIAEESAAAIAIAIACRAAAAAAYAAAQgACACEA=</HashCode>
+      <FileName>Assets\Scripts\Book Position\ArrowUIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookPositionMemory" Collapsed="true">
+    <Position X="1" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAYAAIEAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Book Position\BookPositionMemory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DirectionCalculator" Collapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Book Position\DirectionCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FollowBook" Collapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EYwYAAgYEEAAGYAEAAAIAkQIAQMAAAAcAIIEQAAACUA=</HashCode>
+      <FileName>Assets\Scripts\Book Position\FollowBook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FrameIndicatorController" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQQEAAAAAAECCAAAAAJAIAABAAAAAA4AgAAgACADEA=</HashCode>
+      <FileName>Assets\Scripts\Book Position\FrameIndicatorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ForceSceneVisible" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ForceSceneVisible.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnalyticsManager" Collapsed="true">
+    <Position X="15.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIIABAAIAQAAQAAAAAAAAAABICAwAIIQAAEQAAAEEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\AnalyticsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppManager" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARAAACAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\AppManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARSupportChecker" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACBACAAAAIAIBBBAACAAUgIAAIAAEABAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Managers\ARSupportChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthManager" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAgIAACCQiAgIABAAACIoISBAFAAASkAAQAiAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Managers\AuthManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthManagerV2" Collapsed="true">
+    <Position X="1" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>A2KgQIEsSjQiAgIBBIigCNpASBAFAQFC0BAQCSAHAAQ=</HashCode>
+      <FileName>Assets\Scripts\Managers\AuthManagerv2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookCardUI" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAECAAAAAggAAAFAEAAAAEAAgQAAgAQAAAAgBA=</HashCode>
+      <FileName>Assets\Scripts\Managers\Bookcardui.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookItemActivate" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIIACIAAAAgAAAAAAAAAAQEAAEAAAAIAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\BookItemActivate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookItemExplore" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAACgAgAAAAAAAAAAAEAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\BookItemExplore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookLibraryManager" Collapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgMAABAAAAABAAIIAAAAAAAQAAAAAQAAkACAAgEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\Booklibrarymanager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookTrackingObserver" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAACAAAAAAIAAAAgAAAQABIAAACAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\BookTrackingObserver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChildProgressManager" Collapsed="true">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgLASQAAAAAAAABsQAAAAsAAggCBIQAAAAAAAAEE=</HashCode>
+      <FileName>Assets\Scripts\Managers\ChildProgressManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataManager" Collapsed="true">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgBwACAgAAAICAgAAAISIAIAhACo0AIACAwAAHA=</HashCode>
+      <FileName>Assets\Scripts\Managers\DataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataManagerTester" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\DataManagerTester.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirestoreManager" Collapsed="true">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQgAAAIAAIAQAAAAQAAAAAAAABgAAIQACAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\FirestoreManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirestoreTest" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\FirestoreTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryUIManager" Collapsed="true">
+    <Position X="1" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAABAAAAACMAAAAAAAAAAgAAEAACAAAASAgDAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\LibraryUIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocalEvent" Collapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQgoAAACAAAAIACAAAgABAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\LocalEventBuffer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocalEventList" Collapsed="true">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\LocalEventBuffer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocalEventBuffer" Collapsed="true">
+    <Position X="2.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAgAAAAAAAAAAIBIAAIAACAgAAAQgAAEABAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\LocalEventBuffer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NewMonoBehaviourScript" Collapsed="true">
+    <Position X="8" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\NewMonoBehaviourScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParentalChallengeManager" Collapsed="true">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAACEAQCgAAAAAAAgCAAACAAkkAAAAQAAAwkACQEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\ParentalChallengeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParentalSettingsManager" Collapsed="true">
+    <Position X="1" Y="5.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="ParentalSettingsManager.ParentalConfig" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Managers\ParentalSettingsManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ParentalSettingsManager.SessionData" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Managers\ParentalSettingsManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAAIgAMAEAAAAAAAAgoAgAACAQAAAAAgYAAAAAAABMA=</HashCode>
+      <FileName>Assets\Scripts\Managers\ParentalSettingsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QRScanner" Collapsed="true">
+    <Position X="2.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEBDBAAECAAAIBAAAAIQACAQIAAAAgKAAQBhAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\QRScanner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SessionTimerManager">
+    <Position X="3" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAABMAAAAIIAAAAQAAAwAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\SessionTimerManager..cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SettingsParentalUI" Collapsed="true">
+    <Position X="8" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIABAAQQCAAAAAAAAACAAAiAgIABAAAAAAAAAIAgAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\SettingsParentalUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimerBlockScreen" Collapsed="true">
+    <Position X="11.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAEAIAAAAAAQAEAAABAQAAAAAJQEI=</HashCode>
+      <FileName>Assets\Scripts\Managers\TimerBlockScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityMainThreadDispatcher" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAREAAAAAAAAAAAAEAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\UnityMainThreadDispatcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChildProgress" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgBAAAQAAAAABEAAAAAADAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\ChildProgress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneDebug" Collapsed="true">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SceneDebug.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimerTestHelper" Collapsed="true">
+    <Position X="1" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TimerTestHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARBook.Models.GeneralCatalog" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\BookCatalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARBook.Models.BookEntry" Collapsed="true">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAQAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAgI=</HashCode>
+      <FileName>Assets\Scripts\Models\BookCatalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARBook.Models.BookData" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Models\BookData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARBook.Models.ItemData" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\ItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARBook.Models.PageData" Collapsed="true">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Models\PageData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARImageCubeOverlay">
+    <Position X="18" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMAAwAAADAEAAAAAAAoIBAAIIAAAEAaAAAAAQIACEA=</HashCode>
+      <FileName>Assets\Tesnime's scripts\ARImageCubeOverlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Book1Detector">
+    <Position X="19.75" Y="6.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="Book1Detector.Page" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Tesnime's scripts\Book1Detector.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAQAhIACAAAIBCABAMAImAAACAAABJgAAgAEgACEA=</HashCode>
+      <FileName>Assets\Tesnime's scripts\Book1Detector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorButton" Collapsed="true">
+    <Position X="14.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAACAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\testColoriage\ColorButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColoringButton">
+    <Position X="16" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\testColoriage\ColoringButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColoringManager" Collapsed="true">
+    <Position X="14.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAACAAAAAAAIAAAAAAAQRAAAAADAAEA=</HashCode>
+      <FileName>Assets\testColoriage\ColoringManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FloodFill" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAFAAAAAAAAAAAEAAACgAAAEAAAAAAAMA=</HashCode>
+      <FileName>Assets\testColoriage\FloodFill.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PronunciationAudioManager" Collapsed="true">
+    <Position X="4.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQBEAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\TestPrononciation\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PronunciationButton" Collapsed="true">
+    <Position X="6.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TestPrononciation\PrononciationButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PronunciationManager" Collapsed="true">
+    <Position X="8.5" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAGCAAADAAAAACgAEAAACAAQAAAAAwQIACCAAAAEE=</HashCode>
+      <FileName>Assets\TestPrononciation\PronunciationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="STT_HF_OpenAi" Collapsed="true">
+    <Position X="4.75" Y="9.25" Width="1.75" />
+    <NestedTypes>
+      <Class Name="STT_HF_OpenAi.SpeechToTextResponse" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TestPrononciation\STT_HF_OpenAi.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAECAIAAAAFEIAAIgAAAAAAAAAQAQAAAAAsEA=</HashCode>
+      <FileName>Assets\TestPrononciation\STT_HF_OpenAi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIManager" Collapsed="true">
+    <Position X="6.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABAgQAAACCIAAACBACAUBBCAAFBEAEUQAAAABAAgEA=</HashCode>
+      <FileName>Assets\TestPrononciation\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizButton">
+    <Position X="23.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TestQuiz\QuizButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestionData">
+    <Position X="21.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TestQuiz\QuizData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizData">
+    <Position X="21.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TestQuiz\QuizData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizManager">
+    <Position X="23.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAgCAAAAwAAEBAAAIAAAARAAAAAQgAKBAAAAEA=</HashCode>
+      <FileName>Assets\TestQuiz\QuizManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AROverlayUI" Collapsed="true">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAlCARAAAAAQIAIEAjgIAAAAAEAAEwAJAAAAQQEA=</HashCode>
+      <FileName>Assets\TestScriptableObject\AROverlayUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageCubeDataLibrary" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.75" />
+    <NestedTypes>
+      <Class Name="ImageCubeDataLibrary.ImageDataEntry" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TestScriptableObject\CubeActionData.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\TestScriptableObject\CubeActionData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScreenshotManager" Collapsed="true">
+    <Position X="12.25" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAABAEA=</HashCode>
+      <FileName>Assets\TestScriptableObject\ScreenShotManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TapDetector1">
+    <Position X="12.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBBAAAAAAAAAAAAAAAAAAAACACIAgAAACAAAABAAAA=</HashCode>
+      <FileName>Assets\TestScriptableObject\TapDetector1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
