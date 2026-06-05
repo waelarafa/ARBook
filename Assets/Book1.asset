@@ -18,26 +18,6 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 4717862731541196974
-      m_GuidHigh: 5633004349035616167
-    m_SerializedTextureGuid:
-      m_GuidLow: 9116606241193327193
-      m_GuidHigh: 6378626940690169976
-    m_Size: {x: 0.105, y: 0.070011824}
-    m_SpecifySize: 1
-    m_Name: squirrel
-    m_Texture: {fileID: 2800000, guid: 136ffa59b1137e847800933a686f8558, type: 3}
-  - m_SerializedGuid:
-      m_GuidLow: 5312042762538215372
-      m_GuidHigh: 12465793976358318729
-    m_SerializedTextureGuid:
-      m_GuidLow: 14781961248565619413
-      m_GuidHigh: 488056495829078811
-    m_Size: {x: 0.105, y: 0.07267968}
-    m_SpecifySize: 1
-    m_Name: hedgehog
-    m_Texture: {fileID: 2800000, guid: f857ead5136fcd241bd33610ccecc506, type: 3}
-  - m_SerializedGuid:
       m_GuidLow: 5468884216192210811
       m_GuidHigh: 4017780229512528807
     m_SerializedTextureGuid:
@@ -51,12 +31,12 @@ MonoBehaviour:
       m_GuidLow: 5684552162583544389
       m_GuidHigh: 1258055428305320337
     m_SerializedTextureGuid:
-      m_GuidLow: 13219402742564235704
-      m_GuidHigh: 4124372571404424201
-    m_Size: {x: 0.105, y: 0.07}
+      m_GuidLow: 15448578800327308855
+      m_GuidHigh: 7543038503899041370
+    m_Size: {x: 0.06, y: 0.07257485}
     m_SpecifySize: 1
     m_Name: whitebear
-    m_Texture: {fileID: 2800000, guid: 455da9b8c0c1b77409d4ec7700b73c39, type: 3}
+    m_Texture: {fileID: 2800000, guid: 9e23b6376091d6645a0efff78d41ae68, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5713079724835901923
       m_GuidHigh: 10386743550193408698
@@ -71,29 +51,49 @@ MonoBehaviour:
       m_GuidLow: 5388570603448147614
       m_GuidHigh: 5495497508242615727
     m_SerializedTextureGuid:
-      m_GuidLow: 9697557408331509782
-      m_GuidHigh: 5770371024090392665
+      m_GuidLow: 1374757659542955745
+      m_GuidHigh: 425717475147600906
     m_Size: {x: 0.21, y: 0.2970297}
     m_SpecifySize: 1
-    m_Name: F1
-    m_Texture: {fileID: 2800000, guid: 408eb016a515869459681da9df791450, type: 3}
+    m_Name: F2
+    m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5314935779098975386
       m_GuidHigh: 848637679317413508
     m_SerializedTextureGuid:
-      m_GuidLow: 15372132912981324210
-      m_GuidHigh: 10309334560712800185
+      m_GuidLow: 12124848150398983942
+      m_GuidHigh: 13525882954365151098
     m_Size: {x: 0.21, y: 0.2970297}
     m_SpecifySize: 1
-    m_Name: F2
-    m_Texture: {fileID: 2800000, guid: 7657b1b2c970d554b9b7f169291d128f, type: 3}
+    m_Name: F1
+    m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5366974857836839392
       m_GuidHigh: 10719707462850300043
     m_SerializedTextureGuid:
-      m_GuidLow: 4640081058289161477
-      m_GuidHigh: 10997065623398471338
-    m_Size: {x: 0.105, y: 0.07}
+      m_GuidLow: 9611944821555802723
+      m_GuidHigh: 15758307826330204730
+    m_Size: {x: 0.07, y: 0.07203884}
     m_SpecifySize: 1
     m_Name: fox
-    m_Texture: {fileID: 2800000, guid: 68581505e1234064aa565366eb6c9d98, type: 3}
+    m_Texture: {fileID: 2800000, guid: 917d32637ce385643a7aab197ac1b0da, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5453069620653019187
+      m_GuidHigh: 12134828083080156059
+    m_SerializedTextureGuid:
+      m_GuidLow: 18110324827074546644
+      m_GuidHigh: 13121221987765729466
+    m_Size: {x: 0.7, y: 0.7067961}
+    m_SpecifySize: 1
+    m_Name: hedgehog
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4996417138006403578
+      m_GuidHigh: 15544317540908683427
+    m_SerializedTextureGuid:
+      m_GuidLow: 10688202798277033846
+      m_GuidHigh: 4714719130870266696
+    m_Size: {x: 0.7, y: 0.7067961}
+    m_SpecifySize: 1
+    m_Name: squirrel
+    m_Texture: {fileID: 0}

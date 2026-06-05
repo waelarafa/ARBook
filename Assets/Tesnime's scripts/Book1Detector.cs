@@ -1,6 +1,482 @@
-
 /*claude solution*/
-/*version finale verifiee - fix GraphicRaycaster + bookId dynamique depuis DataManager*/
+/*version finale : feuille figée + validation stable N frames + distance 2D (ignore Y)*/
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
+
+/// <summary>
+/// Book1Detector — Scène AR.
+///
+/// CE SCRIPT NE TÉLÉCHARGE RIEN.
+/// Il lit DataManager.LastLoadedBookId pour savoir quel livre afficher.
+/// Ce champ est rempli par QRScanner après le scan — il survit entre scènes
+/// car DataManager est DontDestroyOnLoad.
+///
+/// Améliorations :
+/// - Feuille figée au premier tracking → positions attendues stables
+/// - Validation stabilisée : framesRequises frames consécutives correctes
+/// - Distance 2D (XZ seulement) → ignore la hauteur caméra/feuille
+/// - UI rafraîchie toutes les uiRefreshInterval secondes (pas chaque frame)
+/// - Affichage position réelle vs attendue avec distance et stabilité
+/// </summary>
+[RequireComponent(typeof(ARTrackedImageManager))]
+public class Book1Detector : MonoBehaviour
+{
+    [System.Serializable]
+    public struct Page
+    {
+        public string feuilleName;
+        public string pageId;
+        public List<string> imageNames;
+        public List<Vector3> positionsCorrectes;
+    }
+
+    [Header("AR")]
+    public ARTrackedImageManager trackedImageManager;
+
+    [Header("Validation")]
+    public float distanceMax       = 0.05f;  // 5cm
+    public int   framesRequises    = 10;     // frames consécutives pour valider
+    public float uiRefreshInterval = 0.2f;  // rafraîchissement UI toutes les 200ms
+
+    [Header("Liaison ARImageCubeOverlay")]
+    public ARImageCubeOverlay cubeOverlay;
+
+    // ── bookId résolu dynamiquement depuis DataManager.LastLoadedBookId ──
+    private string _bookId = "";
+
+    private List<Page> pages     = new List<Page>();
+    private bool pagesLoaded     = false;
+    private string currentPageId = "";
+    private bool switching       = false;
+
+    private Dictionary<string, TrackingState>  detectedImages    = new Dictionary<string, TrackingState>();
+    public  Dictionary<string, Vector3>        positionsGlobales = new Dictionary<string, Vector3>();
+    public  Dictionary<string, ARTrackedImage> trackedImages     = new Dictionary<string, ARTrackedImage>();
+    private ARTrackedImage feuilleDetectee = null;
+    public  HashSet<string> imagesValidees = new HashSet<string>();
+
+    // ── Feuille figée ──────────────────────────────────────────────────────
+    private Vector3    feuillePositionFigee = Vector3.zero;
+    private Quaternion feuilleRotationFigee = Quaternion.identity;
+    private bool       feuilleFigee         = false;
+
+    // ── Stabilisation : compteur de frames correctes par item ─────────────
+    private Dictionary<string, int> framesCorrectes = new Dictionary<string, int>();
+
+    // ── Position réelle trackée par item (pour affichage UI) ──────────────
+    private Dictionary<string, Vector3> positionsReelles = new Dictionary<string, Vector3>();
+    private Dictionary<string, float>   distancesReelles = new Dictionary<string, float>();
+
+    // ── UI ─────────────────────────────────────────────────────────────────
+    private Text  uiText;
+    private float uiTimer = 0f;
+
+    // ─────────────────────────────────────────────
+    void Awake()
+    {
+        if (trackedImageManager == null)
+            trackedImageManager = GetComponent<ARTrackedImageManager>();
+        CreerUI();
+    }
+
+    void Start()
+    {
+        StartCoroutine(WaitForCacheAndBuild());
+    }
+
+    void OnEnable()  => trackedImageManager.trackedImagesChanged += OnImagesChanged;
+    void OnDisable() => trackedImageManager.trackedImagesChanged -= OnImagesChanged;
+
+    void Update()
+    {
+        // Validation logique chaque frame ───────────────────────────────────
+        ValiderPositionsFrame();
+
+        // UI rafraîchie toutes les uiRefreshInterval secondes ───────────────
+        uiTimer += Time.deltaTime;
+        if (uiTimer >= uiRefreshInterval)
+        {
+            uiTimer = 0f;
+            MettreAJourUI();
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    IEnumerator WaitForCacheAndBuild()
+    {
+        yield return new WaitUntil(() => DataManager.Instance != null);
+
+        _bookId = DataManager.Instance.LastLoadedBookId;
+
+        if (string.IsNullOrEmpty(_bookId))
+        {
+            Debug.LogError("[Book1Detector] ❌ Aucun livre scanné (LastLoadedBookId vide).");
+            yield break;
+        }
+
+        if (!DataManager.Instance.IsBookLoaded(_bookId))
+        {
+            Debug.LogError($"[Book1Detector] ❌ Livre '{_bookId}' absent du cache.");
+            yield break;
+        }
+
+        Debug.Log($"[Book1Detector] 📖 Livre reçu depuis le cache : {_bookId}");
+        BuildPagesFromData();
+    }
+
+    // ─────────────────────────────────────────────
+    void BuildPagesFromData()
+    {
+        ARBook.Models.BookData bookData = DataManager.Instance.GetBookData(_bookId);
+        if (bookData == null)
+        {
+            Debug.LogError($"[Book1Detector] ❌ BookData introuvable pour '{_bookId}'.");
+            return;
+        }
+
+        pages.Clear();
+        foreach (ARBook.Models.PageData pageData in bookData.pages)
+        {
+            Page page = new Page
+            {
+                feuilleName        = pageData.feuille,
+                pageId             = pageData.id,
+                imageNames         = new List<string>(),
+                positionsCorrectes = new List<Vector3>()
+            };
+            foreach (ARBook.Models.ItemData item in pageData.items)
+            {
+                page.imageNames.Add(item.nom);
+                page.positionsCorrectes.Add(new Vector3(item.x, item.y, item.z));
+            }
+            pages.Add(page);
+            Debug.Log($"[Book1Detector] Page : {page.pageId} | {page.imageNames.Count} image(s)");
+        }
+
+        pagesLoaded = true;
+        Debug.Log($"[Book1Detector] ✅ {pages.Count} page(s) prêtes pour '{_bookId}'.");
+    }
+
+    // ─────────────────────────────────────────────
+    void OnImagesChanged(ARTrackedImagesChangedEventArgs args)
+    {
+        if (!pagesLoaded) return;
+
+        foreach (var img in args.added)
+        {
+            detectedImages[img.referenceImage.name] = img.trackingState;
+            trackedImages[img.referenceImage.name]  = img;
+            TraiterFeuille(img);
+        }
+        foreach (var img in args.updated)
+        {
+            detectedImages[img.referenceImage.name] = img.trackingState;
+            trackedImages[img.referenceImage.name]  = img;
+            if (img.trackingState == TrackingState.Tracking)
+                TraiterFeuille(img);
+        }
+        foreach (var img in args.removed)
+        {
+            detectedImages.Remove(img.referenceImage.name);
+            trackedImages.Remove(img.referenceImage.name);
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    void TraiterFeuille(ARTrackedImage img)
+    {
+        if (switching) return;
+        foreach (var page in pages)
+        {
+            if (img.referenceImage.name == page.feuilleName)
+            {
+                if (currentPageId != page.pageId)
+                {
+                    DataManager.Instance.OnPageDetected(_bookId, page.pageId);
+                    StartCoroutine(SwitchPage(page, img));
+                }
+                else
+                {
+                    feuilleDetectee = img;
+
+                    // ── Figer la feuille UNE SEULE FOIS par page ──────────
+                    if (!feuilleFigee)
+                    {
+                        feuillePositionFigee = img.transform.position;
+                        feuilleRotationFigee = img.transform.rotation;
+                        feuilleFigee         = true;
+                        Debug.Log($"📌 Feuille figée : pos={feuillePositionFigee} rot={feuilleRotationFigee.eulerAngles}");
+                        CalculerPositions(page);
+                    }
+                    // Si déjà figée → on ne recalcule pas
+                }
+                return;
+            }
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    IEnumerator SwitchPage(Page page, ARTrackedImage feuille)
+    {
+        switching     = true;
+        currentPageId = page.pageId;
+
+        detectedImages.Clear();
+        positionsGlobales.Clear();
+        trackedImages.Clear();
+        imagesValidees.Clear();
+        framesCorrectes.Clear();
+        positionsReelles.Clear();
+        distancesReelles.Clear();
+        feuilleFigee = false;          // ← reset pour la nouvelle page
+
+        if (cubeOverlay != null) cubeOverlay.ClearAllCubes();
+
+        feuilleDetectee = feuille;
+
+        // Figer immédiatement la feuille dès le switch
+        feuillePositionFigee = feuille.transform.position;
+        feuilleRotationFigee = feuille.transform.rotation;
+        feuilleFigee         = true;
+        Debug.Log($"📌 Feuille figée au switch : pos={feuillePositionFigee}");
+
+        yield return null;
+        yield return null;
+        yield return null;
+
+        CalculerPositions(page);
+        StartCoroutine(RespawnAvecRetry(5, 0.1f));
+
+        Debug.Log($"📘 Page active : {page.pageId}");
+        switching = false;
+        MettreAJourUI();
+    }
+
+    // ─────────────────────────────────────────────
+    IEnumerator RespawnAvecRetry(int tentatives, float intervalle)
+    {
+        for (int i = 0; i < tentatives; i++)
+        {
+            if (cubeOverlay != null) cubeOverlay.RespawnCubesForActiveTrackables();
+            yield return new WaitForSeconds(intervalle);
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    void CalculerPositions(Page page)
+    {
+        if (!feuilleFigee) return;
+
+        positionsGlobales.Clear();
+
+        // ── Matrice basée sur la position FIGÉE ───────────────────────────
+        Matrix4x4 feuilleMatrix = Matrix4x4.TRS(
+            feuillePositionFigee,
+            feuilleRotationFigee,
+            Vector3.one
+        );
+
+        for (int i = 0; i < page.imageNames.Count; i++)
+        {
+            if (i >= page.positionsCorrectes.Count) continue;
+
+            // MultiplyPoint3x4 : convertit position locale → monde via la matrice figée
+            Vector3 globalPos = feuilleMatrix.MultiplyPoint3x4(page.positionsCorrectes[i]);
+            positionsGlobales[page.imageNames[i]] = globalPos;
+
+            Debug.Log($"📍 {page.imageNames[i]} => pos attendue figée : {globalPos}");
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    /// <summary>
+    /// Appelée chaque frame dans Update().
+    /// Compare les positions sur le plan XZ uniquement (ignore Y = hauteur caméra).
+    /// Valide un item seulement après framesRequises frames consécutives correctes.
+    /// </summary>
+    void ValiderPositionsFrame()
+    {
+        if (!pagesLoaded || string.IsNullOrEmpty(currentPageId)) return;
+
+        foreach (var tracked in trackedImageManager.trackables)
+        {
+            string imgName = tracked.referenceImage.name;
+
+            // On ignore la feuille elle-même
+            bool estFeuille = false;
+            foreach (var p in pages)
+                if (p.feuilleName == imgName) { estFeuille = true; break; }
+            if (estFeuille) continue;
+
+            // Déjà validé → on ne touche plus au compteur
+            if (imagesValidees.Contains(imgName)) continue;
+
+            if (!positionsGlobales.ContainsKey(imgName)) continue;
+            if (tracked.trackingState != TrackingState.Tracking) continue;
+
+            Vector3 posReelle   = tracked.transform.position;
+            Vector3 posAttendue = positionsGlobales[imgName];
+
+            // ── Distance 2D : ignore Y (hauteur caméra/feuille) ──────────
+            float dist = Vector2.Distance(
+                new Vector2(posReelle.x,   posReelle.z),
+                new Vector2(posAttendue.x, posAttendue.z)
+            );
+
+            // Sauvegarde pour l'UI
+            positionsReelles[imgName] = posReelle;
+            distancesReelles[imgName] = dist;
+
+            if (dist <= distanceMax)
+            {
+                if (!framesCorrectes.ContainsKey(imgName))
+                    framesCorrectes[imgName] = 0;
+                framesCorrectes[imgName]++;
+
+                if (framesCorrectes[imgName] >= framesRequises)
+                {
+                    imagesValidees.Add(imgName);
+                    Debug.Log($"✅ VALIDÉ STABLE ({framesRequises} frames) : {imgName} | dist2D={dist*100f:F1}cm");
+                }
+            }
+            else
+            {
+                // Reset si une frame est incorrecte
+                framesCorrectes[imgName] = 0;
+            }
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    public GameObject  GetPrefabForItem(string itemName) => DataManager.Instance.GetPrefab(itemName);
+    public Texture2D   GetImageForItem(string itemName)  => DataManager.Instance.GetImage(itemName);
+    public bool        IsItemReady(string itemName)      => DataManager.Instance.IsAssetReady(itemName);
+    public ARBook.Models.ItemData GetItemData(string itemName) => DataManager.Instance.GetItemData(_bookId, itemName);
+
+    // ─────────────────────────────────────────────
+    void MettreAJourUI()
+    {
+        if (uiText == null) return;
+
+        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+        sb.AppendLine("═══ AR LIBRARY TESTER ═══");
+        sb.AppendLine($"📖 Livre : {(string.IsNullOrEmpty(_bookId) ? "—" : _bookId)}");
+        sb.AppendLine(string.IsNullOrEmpty(currentPageId)
+            ? "📚 Page active : aucune"
+            : $"📚 Page active : {currentPageId}");
+        sb.AppendLine($"🔍 Images trackées : {detectedImages.Count}");
+        sb.AppendLine($"📌 Feuille figée : {(feuilleFigee ? "OUI ✅" : "NON ⏳")}");
+
+        if (!pagesLoaded) { sb.AppendLine("⏳ En attente du cache..."); uiText.text = sb.ToString(); return; }
+
+        sb.AppendLine("----------------------------");
+        foreach (var page in pages)
+        {
+            bool isActive = page.pageId == currentPageId;
+            string prefix = isActive ? "▶ " : "  ";
+            sb.AppendLine($"{prefix}[{page.pageId}] feuille: {page.feuilleName}");
+
+            for (int i = 0; i < page.imageNames.Count; i++)
+            {
+                string imgName = page.imageNames[i];
+
+                bool detected       = detectedImages.ContainsKey(imgName);
+                TrackingState state = detected ? detectedImages[imgName] : TrackingState.None;
+                string icon         = !detected ? "○" : state == TrackingState.Tracking ? "✓" : "~";
+                bool assetReady     = DataManager.Instance.IsAssetReady(imgName);
+                string cacheIcon    = assetReady ? "💾" : "⏳";
+                bool validated      = imagesValidees.Contains(imgName);
+
+                string color = validated                        ? "green"
+                             : !detected                       ? "white"
+                             : state == TrackingState.Tracking ? "yellow" : "red";
+
+                sb.AppendLine($"    <color={color}>{icon} {imgName} [{state}] {cacheIcon}</color>");
+
+                // ── Affichage détaillé position ──────────────────────────
+                if (isActive && positionsGlobales.ContainsKey(imgName))
+                {
+                    Vector3 attendue = positionsGlobales[imgName];
+
+                    if (validated)
+                    {
+                        sb.AppendLine($"      <color=green>✅ Position correcte ! Cube spawné.</color>");
+                    }
+                    else if (positionsReelles.ContainsKey(imgName))
+                    {
+                        Vector3 reelle = positionsReelles[imgName];
+                        float   dist   = distancesReelles.ContainsKey(imgName) ? distancesReelles[imgName] : -1f;
+                        int     frames = framesCorrectes.ContainsKey(imgName)  ? framesCorrectes[imgName]  : 0;
+                        bool    proche = dist >= 0f && dist <= distanceMax;
+
+                        // Affichage XZ seulement (plan plat, Y ignoré)
+                        sb.AppendLine($"      pos réelle   XZ : ({reelle.x:F3}, {reelle.z:F3})");
+                        sb.AppendLine($"      pos attendue XZ : ({attendue.x:F3}, {attendue.z:F3})");
+
+                        if (dist >= 0f)
+                        {
+                            string comparaison = proche
+                                ? $"<color=yellow>≈ correct ({dist*100f:F1}cm ≤ {distanceMax*100f:F0}cm)</color>"
+                                : $"<color=red>✗ incorrect ({dist*100f:F1}cm > {distanceMax*100f:F0}cm)</color>";
+                            sb.AppendLine($"      distance 2D  : {comparaison}");
+
+                            if (proche)
+                                sb.AppendLine($"      stabilité    : <color=yellow>{frames}/{framesRequises} frames</color>");
+                        }
+                    }
+                    else if (detected)
+                    {
+                        sb.AppendLine($"      pos attendue XZ : ({attendue.x:F3}, {attendue.z:F3})");
+                        sb.AppendLine($"      <color=grey>⏳ calcul position en cours...</color>");
+                    }
+                }
+                // ── Fin affichage détaillé ───────────────────────────────
+            }
+            sb.AppendLine();
+        }
+
+        sb.AppendLine("----------------------------");
+        sb.AppendLine("○=non détecté ✓=tracké ~=perdu");
+        sb.AppendLine("JAUNE=proche  VERT=validé ✅");
+        sb.AppendLine("(distance calculée sur plan XZ)");
+        uiText.text = sb.ToString();
+    }
+
+    // ─────────────────────────────────────────────
+    void CreerUI()
+    {
+        GameObject canvasObj = new GameObject("CanvasTest");
+        Canvas canvas        = canvasObj.AddComponent<Canvas>();
+        canvas.renderMode    = RenderMode.ScreenSpaceOverlay;
+        canvas.sortingOrder  = 0;
+
+        canvasObj.AddComponent<CanvasScaler>();
+        // ⚠️ GraphicRaycaster supprimé intentionnellement
+
+        GameObject textObj = new GameObject("UIText");
+        textObj.transform.SetParent(canvasObj.transform, false);
+
+        uiText                 = textObj.AddComponent<Text>();
+        uiText.font            = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        uiText.fontSize        = 24;
+        uiText.color           = Color.white;
+        uiText.alignment       = TextAnchor.UpperLeft;
+        uiText.supportRichText = true;
+        uiText.raycastTarget   = false;
+
+        RectTransform rt = textObj.GetComponent<RectTransform>();
+        rt.anchorMin     = new Vector2(0, 0);
+        rt.anchorMax     = new Vector2(1, 1);
+        rt.offsetMin     = new Vector2(20, 20);
+        rt.offsetMax     = new Vector2(-20, -20);
+    }
+}
+/*claude solution
+version finale verifiee - fix GraphicRaycaster + bookId dynamique depuis DataManager
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
