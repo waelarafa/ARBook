@@ -923,7 +923,22 @@ public class AuthManagerV2 : MonoBehaviour
     }
 
     /// Btn_ParentSpace → espace parental
-    public void GoToParentPanel() => ShowRootPanel(panel_Parent);
+    // public void GoToParentPanel() => ShowRootPanel(panel_Parent);
+    public void GoToParentPanel()
+    {
+        ParentalChallengeManager.Instance.RequestAccess(() =>
+        {
+            SessionTimerManager.Instance?.PauseTimer();
+            ShowRootPanel(panel_Parent);
+        });
+    }
+
+    // ── Appelé depuis TimerBlockScreen (challenge déjà réussi) ─
+    public void GoToParentPanelDirect()
+    {
+        SessionTimerManager.Instance?.PauseTimer();
+        ShowRootPanel(panel_Parent);
+    }
 
     // ── Panel_Parent ───────────────────────────────────────────
 
@@ -1207,6 +1222,8 @@ public class AuthManagerV2 : MonoBehaviour
 
         ShowRootPanel(panel_Library);
         libraryUIManager?.RefreshLibrary();
+
+        SessionTimerManager.Instance?.StartChildSession();
     }
 
     /// Btn_Settings → Panel_Settings
@@ -1238,6 +1255,7 @@ public class AuthManagerV2 : MonoBehaviour
 
     /// Btn_Back depuis Panel_Settings → Panel_Parent
     public void BackFromSettings() => ShowRootPanel(panel_Parent);
+
 
 
 
