@@ -1,4 +1,4 @@
-﻿/*using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -107,4 +107,4 @@ public class SettingsParentalUI : MonoBehaviour
         h == 1 ? "1h" :
         h == 24 ? "24h (par jour)" :
                   $"{h}h";
-}*/
+}
