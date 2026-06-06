@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="AuthManagerV2" Collapsed="true">
-    <Position X="8.75" Y="2.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>A2KgQIEsSjQiAgIBBIigCNpASBAFAQFC0BAQCSAHAAQ=</HashCode>
-      <FileName>Assets\Scripts\Managers\AuthManagerv2.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SessionTimerManager" Collapsed="true">
     <Position X="11.25" Y="2.25" Width="2" />
     <TypeIdentifier>
@@ -52,7 +45,7 @@
   <Class Name="ARBook.Models.PageData" HideInheritanceLine="true">
     <Position X="15" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAIAAAAAAAAQgAIAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Assets\Scripts\Models\PageData.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -70,7 +63,7 @@
   <Class Name="AnalyticsManager" Collapsed="true">
     <Position X="12.25" Y="4" Width="2" />
     <TypeIdentifier>
-      <HashCode>IAIIABAAIAQAAQAAAAAAAAAABICAwAIIQAAEQAAAEEA=</HashCode>
+      <HashCode>IALKEBAAAAwAAAAAAAAEAAAQBICAwAIgQAAEQCAAEMQ=</HashCode>
       <FileName>Assets\Scripts\Managers\AnalyticsManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -84,14 +77,14 @@
   <Class Name="DataManager" Collapsed="true">
     <Position X="6" Y="2.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAgBwACAgAAAICAgAAAISIAIAhACo0AIACAwAAHA=</HashCode>
+      <HashCode>AAAAAgBwACAgABAICAgAEAISIAIBhACp0AJAiAwAAHA=</HashCode>
       <FileName>Assets\Scripts\Managers\DataManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FirestoreManager" Collapsed="true">
     <Position X="2.75" Y="2.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAQgAAAIAAIAQAAAAQAAAAAAAABgAAIQACAAAAAAEA=</HashCode>
+      <HashCode>AAAQoCAAAggIAAgAAAUAAgACAAABgAAgQACAAAIAAEA=</HashCode>
       <FileName>Assets\Scripts\Managers\FirestoreManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -105,7 +98,7 @@
   <Class Name="LocalEvent">
     <Position X="8.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQgoAAACAAAAIACAAAgABAAAgAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAARhgAAACAAQAIACAAAgABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Managers\LocalEventBuffer.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -119,7 +112,7 @@
   <Class Name="LocalEventBuffer" Collapsed="true">
     <Position X="10" Y="4" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAgIAgAAAAAAAAAAIBIAAIAACAgAAAQgAAEABAAEA=</HashCode>
+      <HashCode>AAAAgIhgAAAAAAAAAAMAAAAIgACAAAAAQgAAEAJAgEA=</HashCode>
       <FileName>Assets\Scripts\Managers\LocalEventBuffer.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -155,7 +148,7 @@
   <Class Name="QRScanner" Collapsed="true">
     <Position X="17" Y="3.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAEBDBAAECAAAIBAAAAIQACAQIAAAAgKAAQBhAIAAAA=</HashCode>
+      <HashCode>AAEBDBBAECAAAIBAAAAIQACAQIAAAAgKEAQBhAIAIAA=</HashCode>
       <FileName>Assets\Scripts\Managers\QRScanner.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -206,6 +199,13 @@
     <TypeIdentifier>
       <HashCode>AAAAgMAABAAAAABAAIIAAAAAAAQAAAAAQAAkACAAgEA=</HashCode>
       <FileName>Assets\Scripts\Managers\Booklibrarymanager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthManagerV2" Collapsed="true">
+    <Position X="8.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>A2KgQIEsSjQiAgIBBIigCNpASBAFAQFC0AAQCSAHAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\AuthManagerv2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
