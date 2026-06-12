@@ -7,7 +7,7 @@ public class ColoringButton : MonoBehaviour
 
     public void OnClick()
     {
-        AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "coloriage");
+        //AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "coloriage");
         ColoringManager.Instance.OpenGame();
     }
 }

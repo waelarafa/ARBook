@@ -112,7 +112,7 @@ public class AnalyticsManager : MonoBehaviour
 
     public void LogActivityEntered(string bookId, string themeId, string activityId)
     {
-        if (_activitySessionActive) LogActivityExited();
+        //if (_activitySessionActive) LogActivityExited();
         _currentActivityBookId  = bookId;
         _currentActivityThemeId = themeId;
         _currentActivityId      = activityId;

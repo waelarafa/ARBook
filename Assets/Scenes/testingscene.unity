@@ -619,6 +619,8 @@ MonoBehaviour:
   victoryVolume: 1
   victoryMessage: "Bravo ! Tu as tout trouv\xE9 !"
   victoryText: {fileID: 462223108}
+  bookId: book_001
+  themeId: Les Animaux
 --- !u!4 &527085550
 Transform:
   m_ObjectHideFlags: 0

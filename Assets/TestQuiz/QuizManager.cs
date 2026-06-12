@@ -48,7 +48,7 @@ public class QuizManager : MonoBehaviour
 
     public void CloseQuiz()
     {
-        AnalyticsManager.Instance?.LogActivityExited();
+        //AnalyticsManager.Instance?.LogActivityExited();
         quizCanvas.SetActive(false);
     }
 

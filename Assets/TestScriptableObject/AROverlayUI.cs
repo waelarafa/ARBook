@@ -6,6 +6,145 @@ public class AROverlayUI : MonoBehaviour
 {
     public static AROverlayUI Instance { get; private set; }
 
+    [Header("Canvas principal")]
+    [SerializeField] private Canvas _overlayCanvas;
+
+    [Header("Boutons")]
+    [SerializeField] private GameObject _buttonFermer;
+    [SerializeField] private GameObject _btnArabe;
+    [SerializeField] private GameObject _btnFrancais;
+    [SerializeField] private GameObject _btnAnglais;
+    [SerializeField] private GameObject _btnPhoto;
+
+    // RectTransforms — remplis automatiquement depuis les GameObjects assignés
+    private RectTransform _buttonRect;
+    private RectTransform _btnArabeRect;
+    private RectTransform _btnFrancaisRect;
+    private RectTransform _btnAnglaisRect;
+    private RectTransform _btnPhotoRect;
+
+    private List<Canvas> _hiddenCanvases   = new List<Canvas>();
+    private System.Action _onFermerCallback = null;
+
+    // ─────────────────────────────────────────
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+
+        // Récupérer les RectTransforms automatiquement
+        if (_buttonFermer != null) _buttonRect      = _buttonFermer.GetComponent<RectTransform>();
+        if (_btnArabe     != null) _btnArabeRect    = _btnArabe.GetComponent<RectTransform>();
+        if (_btnFrancais  != null) _btnFrancaisRect = _btnFrancais.GetComponent<RectTransform>();
+        if (_btnAnglais   != null) _btnAnglaisRect  = _btnAnglais.GetComponent<RectTransform>();
+        if (_btnPhoto     != null) _btnPhotoRect    = _btnPhoto.GetComponent<RectTransform>();
+
+        ShowCloseButton(false);
+        Debug.Log("✅ AROverlayUI initialisée (mode Inspector)");
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this) Instance = null;
+    }
+
+    // ─────────────────────────────────────────
+    public void SetFermerCallback(System.Action callback)
+    {
+        _onFermerCallback = callback;
+    }
+
+    // ─────────────────────────────────────────
+    public void EnterPrefabMode(bool showPhoto = false)
+    {
+        _hiddenCanvases.Clear();
+        foreach (Canvas c in FindObjectsOfType<Canvas>())
+        {
+            if (_overlayCanvas != null && c == _overlayCanvas) continue;
+            if (c.gameObject.scene.name == "MapScene")         continue;
+            if (c.enabled)
+            {
+                c.enabled = false;
+                _hiddenCanvases.Add(c);
+            }
+        }
+
+        ShowCloseButton(true, showPhoto);
+        Debug.Log($"🔴 PrefabMode ON — {_hiddenCanvases.Count} canvas masqués | photo={showPhoto}");
+    }
+
+    public void ExitPrefabMode()
+    {
+        foreach (Canvas c in _hiddenCanvases)
+            if (c != null) c.enabled = true;
+
+        _hiddenCanvases.Clear();
+        ShowCloseButton(false);
+        Debug.Log("✅ PrefabMode OFF");
+    }
+
+    public void ShowCloseButton(bool visible, bool showPhoto = false)
+    {
+        if (_buttonFermer != null) _buttonFermer.SetActive(visible);
+        if (_btnArabe     != null) _btnArabe.SetActive(visible);
+        if (_btnFrancais  != null) _btnFrancais.SetActive(visible);
+        if (_btnAnglais   != null) _btnAnglais.SetActive(visible);
+        if (_btnPhoto     != null) _btnPhoto.SetActive(visible && showPhoto);
+    }
+
+    // ─────────────────────────────────────────
+    //  DETECTION — retourne true/false
+    // ─────────────────────────────────────────
+    public bool IsTapOnCloseButton(Vector2 pos)
+    {
+        if (_buttonFermer == null || !_buttonFermer.activeSelf) return false;
+        return RectTransformUtility.RectangleContainsScreenPoint(_buttonRect, pos, null);
+    }
+
+    public bool IsTapOnPhotoButton(Vector2 pos)
+    {
+        if (_btnPhoto == null || !_btnPhoto.activeSelf) return false;
+        return RectTransformUtility.RectangleContainsScreenPoint(_btnPhotoRect, pos, null);
+    }
+
+    public bool IsTapOnArabeButton(Vector2 pos)
+    {
+        if (_btnArabe == null || !_btnArabe.activeSelf) return false;
+        return RectTransformUtility.RectangleContainsScreenPoint(_btnArabeRect, pos, null);
+    }
+
+    public bool IsTapOnFrancaisButton(Vector2 pos)
+    {
+        if (_btnFrancais == null || !_btnFrancais.activeSelf) return false;
+        return RectTransformUtility.RectangleContainsScreenPoint(_btnFrancaisRect, pos, null);
+    }
+
+    public bool IsTapOnAnglaisButton(Vector2 pos)
+    {
+        if (_btnAnglais == null || !_btnAnglais.activeSelf) return false;
+        return RectTransformUtility.RectangleContainsScreenPoint(_btnAnglaisRect, pos, null);
+    }
+
+    // ─────────────────────────────────────────
+    public void OnFermerPressed()
+    {
+        Debug.Log("🔴 Fermer appuyé");
+        ExitPrefabMode();
+
+        if (_onFermerCallback != null)
+            _onFermerCallback.Invoke();
+        else
+            TapDetector1.DestroyCurrentPrefab(0f);
+    }
+}
+/*using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
+
+public class AROverlayUI : MonoBehaviour
+{
+    public static AROverlayUI Instance { get; private set; }
+
     private GameObject    _canvasGO;
     private GameObject    _buttonGO;
     private RectTransform _buttonRect;

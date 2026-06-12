@@ -27,7 +27,7 @@ MonoBehaviour:
   - environmentPrefab: {fileID: 4750086999414109597, guid: cc0957d48bd49ca49b836b8e5ac325cf, type: 3}
     themeId: Les Animaux
     pageName: "Les Animaux de la For\xEAt"
-    imageName: hedgehog
+    imageName: tiger
     doSpawn: 1
     prefabToSpawn: {fileID: 4341162579754259275, guid: a55f5bf56a2fdb74e9c56bf211d45edb, type: 3}
     soundConfig: {fileID: 0}
@@ -38,7 +38,7 @@ MonoBehaviour:
   - environmentPrefab: {fileID: 8456976543571198260, guid: 23b4aa33d2d105d4aaa7c6c0b5d80095, type: 3}
     themeId: Les Animaux
     pageName: "Les Animaux de la For\xEAt"
-    imageName: squirrel
+    imageName: lion
     doSpawn: 1
     prefabToSpawn: {fileID: 600298885858246675, guid: bb867e2b3ddf3224aae142d742779cd1, type: 3}
     soundConfig: {fileID: 0}
