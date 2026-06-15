@@ -3,15 +3,11 @@ using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
-/// UI Settings parental : Age + Quota (min) + Période (heures).
+/// UI Settings parental : Quota (min) + Période (heures).
 /// Le parent ajuste le réservoir et la période ici.
 /// </summary>
 public class SettingsParentalUI : MonoBehaviour
 {
-    [Header("── Age ──")]
-    public Slider sliderAge;
-    public TextMeshProUGUI txtAgeValue;
-
     [Header("── Quota de jeu ──")]
     public Slider sliderQuota;
     public TextMeshProUGUI txtQuotaValue;   // ex: "30 min"
@@ -27,11 +23,6 @@ public class SettingsParentalUI : MonoBehaviour
     // ══════════════════════════════════════════════════════════
     void Start()
     {
-        // ── Age ───────────────────────────────────────────────
-        sliderAge.minValue = 5;
-        sliderAge.maxValue = 12;
-        sliderAge.wholeNumbers = true;
-
         // ── Quota : 5 → 120 minutes ───────────────────────────
         sliderQuota.minValue = 5;
         sliderQuota.maxValue = 120;
@@ -46,15 +37,11 @@ public class SettingsParentalUI : MonoBehaviour
         var mgr = ParentalSettingsManager.Instance;
         if (mgr != null)
         {
-            sliderAge.value = mgr.ChildAge;
             sliderQuota.value = mgr.QuotaMinutes;
             sliderPeriod.value = mgr.PeriodHours;
         }
 
         // ── Listeners ─────────────────────────────────────────
-        sliderAge.onValueChanged.AddListener(v =>
-            txtAgeValue.text = $"{(int)v} ans");
-
         sliderQuota.onValueChanged.AddListener(v =>
             txtQuotaValue.text = FormatMinutes((int)v));
 
@@ -64,7 +51,6 @@ public class SettingsParentalUI : MonoBehaviour
         btnSave.onClick.AddListener(OnSaveClicked);
 
         // ── Labels initiaux ───────────────────────────────────
-        if (txtAgeValue != null) txtAgeValue.text = $"{(int)sliderAge.value} ans";
         if (txtQuotaValue != null) txtQuotaValue.text = FormatMinutes((int)sliderQuota.value);
         if (txtPeriodValue != null) txtPeriodValue.text = FormatHours((int)sliderPeriod.value);
     }
@@ -76,7 +62,6 @@ public class SettingsParentalUI : MonoBehaviour
     void OnSaveClicked()
     {
         ParentalSettingsManager.Instance?.SaveConfig(
-            (int)sliderAge.value,
             (int)sliderQuota.value,
             (int)sliderPeriod.value
         );

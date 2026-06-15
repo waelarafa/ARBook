@@ -166,8 +166,8 @@ public class AuthManagerV2 : MonoBehaviour
 
     void ShowAuthSubPanel(GameObject subPanel)
     {
-        ShowRootPanel(panel_Auth);
-
+        //ShowRootPanel(panel_Auth);
+        panel_Auth.SetActive(true);
         panel_SignIn.SetActive(false);
         panel_SignUp.SetActive(false);
         panel_ForgotPassword.SetActive(false);

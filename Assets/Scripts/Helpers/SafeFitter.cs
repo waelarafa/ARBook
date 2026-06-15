@@ -1,5 +1,9 @@
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 [ExecuteAlways]
 [RequireComponent(typeof(RectTransform))]
 public class SafeFitter : MonoBehaviour
@@ -12,29 +16,63 @@ public class SafeFitter : MonoBehaviour
     private RectTransform rect;
     private Rect lastSafeArea;
     private Vector2Int lastScreenSize;
+    private bool isApplying;
 
     private void OnEnable()
     {
         rect = GetComponent<RectTransform>();
+
+#if UNITY_EDITOR
+        if (!Application.isPlaying)
+        {
+            RequestEditorApply();
+            return;
+        }
+#endif
+
         Apply();
     }
 
     private void Update()
     {
         if (Screen.safeArea != lastSafeArea || lastScreenSize.x != Screen.width || lastScreenSize.y != Screen.height)
-        {
             Apply();
-        }
     }
 
+#if UNITY_EDITOR
     private void OnValidate()
     {
+        rect = GetComponent<RectTransform>();
+        RequestEditorApply();
+    }
+
+    private void RequestEditorApply()
+    {
+        EditorApplication.delayCall -= DelayedEditorApply;
+        EditorApplication.delayCall += DelayedEditorApply;
+    }
+
+    private void DelayedEditorApply()
+    {
+        if (this == null || !isActiveAndEnabled)
+            return;
+
         Apply();
     }
+#endif
 
     public void Apply()
     {
-        if (rect == null) rect = GetComponent<RectTransform>();
+        if (isApplying)
+            return;
+
+        if (rect == null)
+            rect = GetComponent<RectTransform>();
+
+        if (rect == null || Screen.width <= 0 || Screen.height <= 0)
+            return;
+
+        isApplying = true;
 
         Rect safeArea = Screen.safeArea;
 
@@ -58,5 +96,7 @@ public class SafeFitter : MonoBehaviour
         rect.anchorMax = anchorMax;
         rect.offsetMin = Vector2.zero;
         rect.offsetMax = Vector2.zero;
+
+        isApplying = false;
     }
 }
