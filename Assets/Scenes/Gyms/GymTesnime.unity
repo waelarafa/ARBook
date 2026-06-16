@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Book1Detector
   trackedImageManager: {fileID: 34717755}
-  distanceMax: 0.15
+  distanceMax: 0.03
   framesRequises: 10
   uiRefreshInterval: 0.2
   cubeOverlay: {fileID: 34717764}

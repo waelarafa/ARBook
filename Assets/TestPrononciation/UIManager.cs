@@ -2,6 +2,248 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
+public class UIManager : MonoBehaviour
+{
+    public static UIManager Instance { get; private set; }
+
+    [Header("── Canvas ──")]
+    public GameObject mainCanvasObject;
+
+    [Header("── Header ──")]
+    public TextMeshProUGUI headerText;
+
+    [Header("── Mot 1 ──")]
+    public TextMeshProUGUI wordText1;
+    public Button btnListen1;
+    public Button btnRepeat1;
+
+    [Header("── Mot 2 ──")]
+    public TextMeshProUGUI wordText2;
+    public Button btnListen2;
+    public Button btnRepeat2;
+
+    [Header("── Mot 3 ──")]
+    public TextMeshProUGUI wordText3;
+    public Button btnListen3;
+    public Button btnRepeat3;
+
+    [Header("── Navigation ──")]
+    public Button btnPrev;
+    public Button btnNext;
+
+    [Header("── Close ──")]
+    public Button btnClose;
+
+    // Feedback généré par code
+    private GameObject feedbackPanel;
+    private TextMeshProUGUI feedbackText;
+    private Image feedbackImage;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void Start()
+    {
+        BuildFeedbackPanel();
+
+        btnPrev.onClick.AddListener(() =>
+        {
+            PronunciationManager.Instance.GoToPage(
+                PronunciationManager.Instance.GetCurrentPageIndex() - 1);
+            RefreshPage();
+        });
+
+        btnNext.onClick.AddListener(() =>
+        {
+            PronunciationManager.Instance.GoToPage(
+                PronunciationManager.Instance.GetCurrentPageIndex() + 1);
+            RefreshPage();
+        });
+
+        btnClose.onClick.AddListener(() =>
+            PronunciationManager.Instance.CloseGame());
+
+        if (mainCanvasObject != null)
+            mainCanvasObject.SetActive(false);
+    }
+
+    // ─────────────────────────────────────────────
+    // FEEDBACK PANEL (généré par code)
+    // ─────────────────────────────────────────────
+
+    void BuildFeedbackPanel()
+    {
+        feedbackPanel = new GameObject("FeedbackPanel");
+        feedbackPanel.transform.SetParent(mainCanvasObject.transform, false);
+
+        feedbackImage = feedbackPanel.AddComponent<Image>();
+        feedbackImage.color = new Color(0f, 0.8f, 0f, 0.85f);
+
+        RectTransform panelRT = feedbackPanel.GetComponent<RectTransform>();
+        panelRT.anchorMin = new Vector2(0.1f, 0.35f);
+        panelRT.anchorMax = new Vector2(0.9f, 0.65f);
+        panelRT.offsetMin = Vector2.zero;
+        panelRT.offsetMax = Vector2.zero;
+
+        Shadow s = feedbackPanel.AddComponent<Shadow>();
+        s.effectColor = new Color(0, 0, 0, 0.4f);
+        s.effectDistance = new Vector2(4, -4);
+
+        GameObject textObj = new GameObject("FeedbackText");
+        textObj.transform.SetParent(feedbackPanel.transform, false);
+
+        feedbackText = textObj.AddComponent<TextMeshProUGUI>();
+        feedbackText.fontSize = 52;
+        feedbackText.fontStyle = FontStyles.Bold;
+        feedbackText.color = Color.white;
+        feedbackText.alignment = TextAlignmentOptions.Center;
+
+        RectTransform trt = textObj.GetComponent<RectTransform>();
+        trt.anchorMin = Vector2.zero;
+        trt.anchorMax = Vector2.one;
+        trt.offsetMin = Vector2.zero;
+        trt.offsetMax = Vector2.zero;
+
+        feedbackPanel.SetActive(false);
+    }
+
+    // ─────────────────────────────────────────────
+    // OPEN / CLOSE
+    // ─────────────────────────────────────────────
+
+    public void OpenGame()
+    {
+        if (mainCanvasObject != null)
+            mainCanvasObject.SetActive(true);
+
+        StartCoroutine(WaitAndDisplay());
+    }
+
+    public void CloseGame()
+    {
+        if (mainCanvasObject != null)
+            mainCanvasObject.SetActive(false);
+    }
+
+    IEnumerator WaitAndDisplay()
+    {
+        yield return new WaitUntil(() => PronunciationManager.Instance != null);
+        yield return new WaitUntil(() => PronunciationManager.Instance.IsDataReady());
+
+        var page = PronunciationManager.Instance.GetCurrentPage();
+        UpdateHeader(page.nom);
+        BindWords(page);
+        UpdateNavButtons(
+            PronunciationManager.Instance.GetCurrentPageIndex(),
+            PronunciationManager.Instance.GetTotalPages()
+        );
+    }
+
+    // ─────────────────────────────────────────────
+    // BIND DES MOTS AUX SLOTS FIXES
+    // ─────────────────────────────────────────────
+
+    void BindWords(ARBook.Models.PageData page)
+    {
+        // Regroupe les slots pour itérer proprement
+        var wordTexts = new[] { wordText1, wordText2, wordText3 };
+        var listens   = new[] { btnListen1, btnListen2, btnListen3 };
+        var repeats   = new[] { btnRepeat1, btnRepeat2, btnRepeat3 };
+
+        for (int i = 0; i < wordTexts.Length; i++)
+        {
+            bool hasWord = i < page.items.Count;
+
+            // Active ou désactive le slot selon si un mot existe
+            wordTexts[i].transform.parent.gameObject.SetActive(hasWord);
+
+            if (!hasWord) continue;
+
+            string mot = page.items[i].nom;
+
+            wordTexts[i].text = mot;
+
+            // Nettoie les anciens listeners avant d'en ajouter
+            listens[i].onClick.RemoveAllListeners();
+            repeats[i].onClick.RemoveAllListeners();
+
+            string captured = mot;
+
+            listens[i].onClick.AddListener(() =>
+            {
+                PronunciationManager.Instance.SelectWord(captured);
+                PronunciationAudioManager.Instance.PlayWord(captured);
+            });
+
+            repeats[i].onClick.AddListener(() =>
+            {
+                PronunciationManager.Instance.SelectWord(captured);
+                Debug.Log($"[UIManager] 🎤 Répéter : {captured}");
+                STT_HF_OpenAi.Instance.ToggleRecording();
+            });
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    // MÉTHODES PUBLIQUES
+    // ─────────────────────────────────────────────
+
+    public void UpdateHeader(string nom)
+    {
+        if (headerText != null)
+            headerText.text = nom;
+    }
+
+    public void UpdateNavButtons(int index, int total)
+    {
+        if (btnPrev != null) btnPrev.interactable = index > 0;
+        if (btnNext != null) btnNext.interactable = index < total - 1;
+    }
+
+    void RefreshPage()
+    {
+        var page = PronunciationManager.Instance.GetCurrentPage();
+        UpdateHeader(page.nom);
+        BindWords(page);
+        UpdateNavButtons(
+            PronunciationManager.Instance.GetCurrentPageIndex(),
+            PronunciationManager.Instance.GetTotalPages()
+        );
+    }
+
+    public void ShowSuccess()
+    {
+        feedbackImage.color = new Color(0f, 0.8f, 0f, 0.85f);
+        feedbackText.text = "⭐ Bravo !";
+        feedbackPanel.SetActive(true);
+        StartCoroutine(HideAfter(2f));
+    }
+
+    public void ShowFailure(string mot)
+    {
+        feedbackImage.color = new Color(1f, 0.3f, 0.3f, 0.85f);
+        feedbackText.text = "Essaie encore ! 💪";
+        feedbackPanel.SetActive(true);
+        PronunciationAudioManager.Instance.PlayWord(mot);
+        StartCoroutine(HideAfter(2.5f));
+    }
+
+    IEnumerator HideAfter(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        feedbackPanel.SetActive(false);
+    }
+}
+/*using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -480,4 +722,4 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         feedbackPanel.SetActive(false);
     }
-}
+}*/
