@@ -29,7 +29,7 @@ MonoBehaviour:
     pageName: "Les Animaux de la For\xEAt"
     imageName: tiger
     doSpawn: 1
-    prefabToSpawn: {fileID: 4341162579754259275, guid: a55f5bf56a2fdb74e9c56bf211d45edb, type: 3}
+    prefabToSpawn: {fileID: 1390276149824892, guid: c5e7161780bfc06459e1d0fd1cefd777, type: 3}
     soundConfig: {fileID: 0}
     soundConfigArabe: {fileID: 0}
     soundConfigFrancais: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
     pageName: "Les Animaux de la For\xEAt"
     imageName: lion
     doSpawn: 1
-    prefabToSpawn: {fileID: 600298885858246675, guid: bb867e2b3ddf3224aae142d742779cd1, type: 3}
+    prefabToSpawn: {fileID: 1390276149824892, guid: 01653bbcfb6a45a4fb274560c93f7f96, type: 3}
     soundConfig: {fileID: 0}
     soundConfigArabe: {fileID: 0}
     soundConfigFrancais: {fileID: 0}
