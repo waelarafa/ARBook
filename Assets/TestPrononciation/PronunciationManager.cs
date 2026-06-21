@@ -6,6 +6,217 @@ public class PronunciationManager : MonoBehaviour
 {
     public static PronunciationManager Instance { get; private set; }
 
+    private string bookId  => SessionManager.Instance.CurrentBookId;
+    private string themeId => SessionManager.Instance.CurrentThemeId;
+
+    private List<ARBook.Models.PageData> allPages = new List<ARBook.Models.PageData>();
+    private List<ARBook.Models.PageData> pages    = new List<ARBook.Models.PageData>();
+    private int    currentPageIndex = 0;
+    private string currentWord      = "";
+    private bool   dataReady        = false;
+
+    private int _correctCount  = 0;
+    private int _totalAttempts = 0;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+    }
+
+    void Start()
+    {
+        StartCoroutine(WaitAndLoad());
+    }
+
+    IEnumerator WaitAndLoad()
+    {
+        yield return new WaitUntil(() => DataManager.Instance != null);
+        yield return new WaitUntil(() => SessionManager.Instance != null);
+
+        string currentBookId = SessionManager.Instance.CurrentBookId;
+
+        if (string.IsNullOrEmpty(currentBookId))
+        {
+            Debug.LogError("[PronunciationManager] ❌ CurrentBookId vide.");
+            yield break;
+        }
+
+        if (!DataManager.Instance.IsBookLoaded(currentBookId))
+        {
+            Debug.LogError($"[PronunciationManager] ❌ '{currentBookId}' absent du cache.");
+            yield break;
+        }
+
+        BuildPages(currentBookId);
+    }
+
+    void BuildPages(string bId)
+    {
+        ARBook.Models.BookData bookData = DataManager.Instance.GetBookData(bId);
+        if (bookData == null)
+        {
+            Debug.LogError("[PronunciationManager] ❌ BookData introuvable.");
+            return;
+        }
+
+        pages.Clear();
+        allPages.Clear();
+        foreach (var page in bookData.pages)
+        {
+            pages.Add(page);
+            allPages.Add(page);
+        }
+
+        dataReady = true;
+        Debug.Log($"[PronunciationManager] ✅ {allPages.Count} pages chargées.");
+    }
+
+    public void OpenWithTheme()
+    {
+        _correctCount  = 0;
+        _totalAttempts = 0;
+
+        string bId = bookId;
+        string tId = themeId;
+
+        ARBook.Models.BookData bookData = DataManager.Instance.GetBookData(bId);
+        if (bookData == null)
+        {
+            Debug.LogError($"[PronunciationManager] ❌ BookData introuvable pour '{bId}'");
+            return;
+        }
+
+        allPages.Clear();
+        foreach (var page in bookData.pages)
+            allPages.Add(page);
+
+        dataReady = true;
+
+        List<ARBook.Models.PageData> filtered = allPages.FindAll(p => p.themeId == tId);
+
+        if (filtered.Count == 0)
+        {
+            Debug.LogError($"[PronunciationManager] ❌ Aucune page pour themeId='{tId}'");
+            return;
+        }
+
+        pages = filtered;
+        currentPageIndex = 0;
+
+        Debug.Log($"[PronunciationManager] ✅ {pages.Count} page(s) pour '{tId}'");
+        UIManager.Instance.OpenGame();
+        AnalyticsManager.Instance?.LogActivityEntered(bId, tId, "pronunciation");
+    }
+
+    public void CloseGame()
+    {
+        UIManager.Instance.CloseGame();
+    }
+
+    public ARBook.Models.PageData GetCurrentPage()
+    {
+        if (pages.Count == 0) return null;
+        return pages[currentPageIndex];
+    }
+
+    public void SelectWord(string mot)
+    {
+        currentWord = mot;
+        Debug.Log($"[PronunciationManager] Mot sélectionné : {currentWord}");
+    }
+
+    public string GetCurrentWord()      => currentWord;
+    public int    GetCurrentPageIndex() => currentPageIndex;
+    public int    GetTotalPages()       => pages.Count;
+    public bool   IsDataReady()         => dataReady;
+
+    public void GoToPage(int index)
+    {
+        if (index < 0 || index >= pages.Count) return;
+        currentPageIndex = index;
+        Debug.Log($"[PronunciationManager] Page : {pages[currentPageIndex].nom}");
+    }
+
+    public void OnTranscriptionReceived(string texte)
+    {
+        if (string.IsNullOrEmpty(currentWord))
+        {
+            Debug.LogWarning("[PronunciationManager] Aucun mot sélectionné !");
+            return;
+        }
+
+        string texteNormalise = texte.Replace(".", "")
+            .Replace(",", "")
+            .Replace("!", "")
+            .Replace("?", "")
+            .Replace(" ", "")
+            .Trim()
+            .ToLower();
+
+        string motAttendu = currentWord.Trim().ToLower();
+
+        bool correct = texteNormalise == motAttendu || texteNormalise.Contains(motAttendu);
+
+        _totalAttempts++;
+        if (correct) _correctCount++;
+
+        Debug.Log($"[PronunciationManager] Score : {_correctCount}/{_totalAttempts}");
+
+        if (correct)
+            UIManager.Instance.ShowSuccess();
+        else
+            UIManager.Instance.ShowFailure(currentWord);
+
+        CheckCompletion();
+    }
+
+    private void CheckCompletion()
+{
+    if (_correctCount >= 1)
+        EndPronunciation();
+}
+
+    private void EndPronunciation()
+    {
+        string bId = bookId;
+        string tId = themeId;
+
+        AnalyticsManager.Instance?.LogQuizScore(bId, tId, _correctCount, _totalAttempts);
+        AnalyticsManager.Instance?.LogActivityExited();
+        StartCoroutine(NotifyNextFrame());
+    }
+
+    private IEnumerator NotifyNextFrame()
+{
+    yield return null;
+
+    string tId = themeId;
+    Debug.Log($"[Pronunciation] Cherche ActivityMapManager avec themeId='{tId}'");
+    
+    ActivityMapManager[] managers = FindObjectsByType<ActivityMapManager>(FindObjectsSortMode.None);
+    Debug.Log($"[Pronunciation] {managers.Length} ActivityMapManager(s) trouvé(s)");
+    
+    foreach (var manager in managers)
+    {
+        Debug.Log($"[Pronunciation] Manager trouvé : themeId='{manager.themeId}'");
+        if (manager.themeId == tId)
+        {
+            manager.OnActivityCompleted("pronunciation");
+            Debug.Log($"[Pronunciation] ✅ OnActivityCompleted appelé !");
+            break;
+        }
+    }
+}
+}
+/*using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PronunciationManager : MonoBehaviour
+{
+    public static PronunciationManager Instance { get; private set; }
+
     [Header("Analytics")]
     public string bookId  = "";
     public string themeId = "";

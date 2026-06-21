@@ -11,6 +11,7 @@ public class PairableObject : MonoBehaviour
     [Header("Identité")]
     [Tooltip("ID partagé entre l'animal et sa nourriture. Doit être IDENTIQUE sur les deux.")]
     public string pairID = "animal_1";
+    public string animalName = ""; // ex: "fox", "tiger", "lion"
 
     [Header("Scale")]
     [Tooltip("Taille agrandie quand sélectionné")]
@@ -18,6 +19,9 @@ public class PairableObject : MonoBehaviour
 
     [Tooltip("Durée de l'animation de scale (secondes)")]
     public float scaleDuration = 0.2f;
+
+   
+
 
     // État
     private Vector3 _normalScale;

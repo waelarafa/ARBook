@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PairableObject
   pairID: animal_2
+  animalName: 
   selectedScale: {x: 1.3, y: 1.3, z: 1.3}
   scaleDuration: 0.2
 --- !u!65 &110128902
@@ -619,11 +620,19 @@ MonoBehaviour:
   victoryVolume: 1
   victoryMessage: "Bravo ! Tu as tout trouv\xE9 !"
   victoryText: {fileID: 462223108}
-  bookId: book_001
-  themeId: wild world
-  allowedAnimalPrefabs:
-  - {fileID: 1625674153}
-  - {fileID: 2144032501}
+  themeConfigs:
+  - themeId: wild world
+    allowedAnimalPrefabs:
+    - {fileID: 1625674153}
+    - {fileID: 2144032501}
+  - themeId: around us
+    allowedAnimalPrefabs:
+    - {fileID: 549296071}
+    - {fileID: 1246742218}
+  - themeId: blue planet
+    allowedAnimalPrefabs:
+    - {fileID: 1162388426}
+    - {fileID: 801093672}
 --- !u!4 &527085550
 Transform:
   m_ObjectHideFlags: 0
@@ -740,6 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PairableObject
   pairID: animal_1
+  animalName: Fish
   selectedScale: {x: 1.3, y: 1.3, z: 1.3}
   scaleDuration: 0.2
 --- !u!65 &549296078
@@ -856,7 +866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 748904517973823337, guid: c7594b11390c45b438de8395d3f3a02d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 748904517973857097, guid: c7594b11390c45b438de8395d3f3a02d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -924,6 +934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PairableObject
   pairID: animal_3
+  animalName: Chick
   selectedScale: {x: 1.3, y: 1.3, z: 1.3}
   scaleDuration: 0.2
 --- !u!1 &1090217575
@@ -1103,7 +1114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1390276149824892, guid: 4541f5dbcded3a14bb360e50267b8921, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4635908456063474, guid: 4541f5dbcded3a14bb360e50267b8921, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1178,6 +1189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PairableObject
   pairID: animal_3
+  animalName: Chick
   selectedScale: {x: 1.3, y: 1.3, z: 1.3}
   scaleDuration: 0.2
 --- !u!65 &1162388428
@@ -1318,6 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PairableObject
   pairID: animal_1
+  animalName: Fish
   selectedScale: {x: 1.3, y: 1.3, z: 1.3}
   scaleDuration: 0.2
 --- !u!65 &1246742223
@@ -1359,6 +1372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PairableObject
   pairID: animal_1
+  animalName: 
   selectedScale: {x: 1.3, y: 1.3, z: 1.3}
   scaleDuration: 0.2
 --- !u!1001 &1625674152
@@ -1439,6 +1453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PairableObject
   pairID: animal_5
+  animalName: Fox
   selectedScale: {x: 1.3, y: 1.3, z: 1.3}
   scaleDuration: 0.2
 --- !u!1 &1824566780
@@ -1772,64 +1787,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1 &1904770470
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1904770472}
-  - component: {fileID: 1904770471}
-  m_Layer: 0
-  m_Name: GameManager2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1904770471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904770470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f979ed026c09a424c865d6a503c6c073, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  ambianceClip: {fileID: 0}
-  ambianceVolume: 0.277
-  matchRewardPrefab: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
-  matchRewardPosition: {x: 0, y: 0.5, z: 0}
-  victoryPrefab: {fileID: 7305185502956871417, guid: 85b062a5517cf8345bb6784ffbed4877, type: 3}
-  victoryClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  victoryVolume: 1
-  victoryMessage: "Bravo ! Tu as tout trouv\xE9 !"
-  victoryText: {fileID: 462223108}
-  bookId: book_001
-  themeId: around us
-  allowedAnimalPrefabs:
-  - {fileID: 549296071}
-  - {fileID: 1246742218}
---- !u!4 &1904770472
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904770470}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1992171173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,6 +2323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PairableObject
   pairID: animal_5
+  animalName: Fox
   selectedScale: {x: 1.3, y: 1.3, z: 1.3}
   scaleDuration: 0.2
 --- !u!1660057539 &9223372036854775807
@@ -2389,4 +2347,3 @@ SceneRoots:
   - {fileID: 665707064}
   - {fileID: 1625674152}
   - {fileID: 2144032500}
-  - {fileID: 1904770472}

@@ -12,13 +12,12 @@ public class QuizManager : MonoBehaviour
     public TMP_Text questionText;
     public Button[] answerButtons;
 
-    [Header("Analytics")]
-    public string bookId  = "";
-    public string themeId = "";
-
     [Header("Animation")]
-    public float scaleUp = 1.15f;  // taille agrandie
-    public float scaleSpeed = 8f;  // vitesse animation
+    public float scaleUp = 1.15f;
+    public float scaleSpeed = 8f;
+
+    private string bookId  => SessionManager.Instance.CurrentBookId;
+    private string themeId => SessionManager.Instance.CurrentThemeId;
 
     private QuestionData[] questions;
     private int _currentIndex = 0;
@@ -37,7 +36,6 @@ public class QuizManager : MonoBehaviour
         _currentIndex = 0;
         _score = 0;
 
-        // Sauvegarder les tailles originales des boutons
         _originalScales = new Vector3[answerButtons.Length];
         for (int i = 0; i < answerButtons.Length; i++)
             _originalScales[i] = answerButtons[i].transform.localScale;
@@ -48,13 +46,11 @@ public class QuizManager : MonoBehaviour
 
     public void CloseQuiz()
     {
-        //AnalyticsManager.Instance?.LogActivityExited();
         quizCanvas.SetActive(false);
     }
 
     void ShowQuestion()
     {
-        // Réinitialiser tous les boutons
         for (int i = 0; i < answerButtons.Length; i++)
         {
             answerButtons[i].gameObject.SetActive(false);
@@ -97,15 +93,12 @@ public class QuizManager : MonoBehaviour
 
         if (correct)
         {
-            // Agrandir + entourer en vert
             StartCoroutine(ScaleTo(answerButtons[chosen], _originalScales[chosen] * scaleUp));
             SetOutline(answerButtons[chosen], Color.green);
         }
         else
         {
-            // Agrandir brièvement puis reprendre taille normale
             StartCoroutine(ScaleBounceBack(answerButtons[chosen], _originalScales[chosen]));
-            // Entourer la bonne réponse en vert
             SetOutline(answerButtons[correctIndex], Color.green);
         }
 
@@ -129,7 +122,6 @@ public class QuizManager : MonoBehaviour
 
     IEnumerator ScaleBounceBack(Button btn, Vector3 originalScale)
     {
-        // Agrandir
         Vector3 bigScale = originalScale * scaleUp;
         float elapsed = 0f;
         while (elapsed < 1f)
@@ -139,7 +131,6 @@ public class QuizManager : MonoBehaviour
             yield return null;
         }
 
-        // Reprendre taille normale
         elapsed = 0f;
         while (elapsed < 1f)
         {
@@ -165,8 +156,7 @@ public class QuizManager : MonoBehaviour
     {
         AnalyticsManager.Instance?.LogQuizScore(bookId, themeId, _score, questions.Length);
         AnalyticsManager.Instance?.LogActivityExited();
-        //ActivityMapManager.Instance?.OnActivityCompleted("quiz"); // ← ajouter
-        // Dans QuizManager.EndQuiz() par exemple
+
         ActivityMapManager[] managers = FindObjectsByType<ActivityMapManager>(FindObjectsSortMode.None);
         foreach (var manager in managers)
         {
@@ -182,6 +172,7 @@ public class QuizManager : MonoBehaviour
             btn.gameObject.SetActive(false);
     }
 }
+/*
 /*using UnityEngine;
 using UnityEngine.UI;
 using TMPro;

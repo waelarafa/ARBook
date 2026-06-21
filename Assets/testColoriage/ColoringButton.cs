@@ -2,6 +2,17 @@ using UnityEngine;
 
 public class ColoringButton : MonoBehaviour
 {
+    public ActivityMapManager activityMapManager;
+
+    public void OnClick()
+    {
+        activityMapManager.OpenActivity("coloring");
+    }
+}
+/*using UnityEngine;
+
+public class ColoringButton : MonoBehaviour
+{
     public string themeId = "";
     public string bookId  = "";
 
@@ -10,4 +21,4 @@ public class ColoringButton : MonoBehaviour
         //AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "coloriage");
         ColoringManager.Instance.OpenGame();
     }
-}
+}*/

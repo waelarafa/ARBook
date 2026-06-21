@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class PronunciationButton : MonoBehaviour
 {
@@ -10,5 +10,16 @@ public class PronunciationButton : MonoBehaviour
     {
         AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "prononciation");
         PronunciationManager.Instance.OpenWithTheme(bookId, themeId);
+    }
+}*/
+using UnityEngine;
+
+public class PronunciationButton : MonoBehaviour
+{
+    public ActivityMapManager activityMapManager;
+
+    public void OnClick()
+    {
+        activityMapManager.OpenActivity("pronunciation");
     }
 }

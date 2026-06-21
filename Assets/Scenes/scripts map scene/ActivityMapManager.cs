@@ -31,7 +31,32 @@ public class ActivityMapManager : MonoBehaviour
 
     void Start()
     {
+        SessionManager.Instance?.SetContext(bookId, themeId);
         StartCoroutine(BuildAfterReady());
+    }
+
+    public void OpenActivity(string activityId, QuizData quiz = null)
+    {
+        SessionManager.Instance?.SetContext(bookId, themeId);
+
+        switch (activityId)
+        {
+            case "pronunciation":
+                PronunciationManager.Instance.OpenWithTheme();
+                break;
+            case "coloring":
+                ColoringManager.Instance.OpenGame();
+                break;
+            case "safari":
+                AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "safari");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("testingscene",
+                    UnityEngine.SceneManagement.LoadSceneMode.Single);
+                break;
+            case "quiz":
+                AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "quiz");
+                QuizManager.Instance.StartQuiz(quiz);
+                break;
+        }
     }
 
     IEnumerator BuildAfterReady()
@@ -66,7 +91,6 @@ public class ActivityMapManager : MonoBehaviour
                 {
                     completed = result;
                     doneCmp   = true;
-                    Debug.Log($"[ActivityMap] CheckCompleted — bookId={bookId} themeId={themeId} activityId={entry.activityId} → {result}");
                 });
 
             yield return new WaitUntil(() => doneCmp);
@@ -93,7 +117,6 @@ public class ActivityMapManager : MonoBehaviour
         _isRefreshing = false;
     }
 
-    // ─────────────────────────────────────────
     void SetButtonSprite(Button btn, Sprite sprite)
     {
         if (sprite == null) return;
@@ -114,13 +137,11 @@ public class ActivityMapManager : MonoBehaviour
 
         btn.transition = Selectable.Transition.SpriteSwap;
 
-        // ✅ Empêcher la réduction d'opacité quand disabled
         ColorBlock cb    = btn.colors;
         cb.disabledColor = Color.white;
         btn.colors       = cb;
     }
 
-    // ─────────────────────────────────────────
     IEnumerator CheckUnlocked(int index, System.Action<bool> callback)
     {
         if (index == 0)
