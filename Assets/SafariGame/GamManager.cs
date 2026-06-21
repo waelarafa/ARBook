@@ -29,6 +29,180 @@ public class GameManager : MonoBehaviour
     public string bookId  = "";
     public string themeId = "";
 
+    [Header("Animaux autorisés pour ce thème")]
+    public List<GameObject> allowedAnimalPrefabs = new List<GameObject>();
+
+    private PairableObject _firstSelected = null;
+    private int _remainingPairs = 0;
+    private AudioSource _audioSource;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        _audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        CountPairs();
+        PlayAmbiance();
+
+        if (victoryText != null)
+            victoryText.gameObject.SetActive(false);
+    }
+
+    private void PlayAmbiance()
+    {
+        if (ambianceClip == null) return;
+        _audioSource.clip   = ambianceClip;
+        _audioSource.volume = ambianceVolume;
+        _audioSource.loop   = true;
+        _audioSource.Play();
+    }
+
+    private void CountPairs()
+    {
+        // construire la liste des noms autorisés depuis les prefabs
+        var allowedNames = new HashSet<string>();
+        foreach (var prefab in allowedAnimalPrefabs)
+            if (prefab != null)
+                allowedNames.Add(prefab.name.ToLower().Trim());
+
+        var allObjects = FindObjectsByType<PairableObject>(FindObjectsSortMode.None);
+        var pairIDs = new HashSet<string>();
+
+        foreach (var obj in allObjects)
+        {
+            string id = obj.pairID.ToLower().Trim();
+
+            if (allowedNames.Count == 0 || allowedNames.Contains(id))
+            {
+                pairIDs.Add(id);
+            }
+            else
+            {
+                obj.gameObject.SetActive(false);
+                Debug.Log($"[GameManager] '{id}' masqué (non autorisé pour ce thème).");
+            }
+        }
+
+        _remainingPairs = pairIDs.Count;
+        Debug.Log($"[GameManager] {_remainingPairs} paire(s) à trouver.");
+    }
+
+    public void OnObjectTapped(PairableObject tapped)
+    {
+        if (_firstSelected == null)
+        {
+            _firstSelected = tapped;
+            _firstSelected.Select();
+            return;
+        }
+
+        if (_firstSelected == tapped)
+        {
+            _firstSelected.Deselect();
+            _firstSelected = null;
+            return;
+        }
+
+        if (_firstSelected.pairID == tapped.pairID)
+        {
+            _firstSelected.OnMatchSuccess();
+            tapped.OnMatchSuccess();
+            _firstSelected = null;
+
+            SpawnMatchReward();
+
+            _remainingPairs--;
+            if (_remainingPairs <= 0)
+                TriggerVictory();
+        }
+        else
+        {
+            _firstSelected.Deselect();
+            tapped.Deselect();
+            _firstSelected = null;
+        }
+    }
+
+    private void SpawnMatchReward()
+    {
+        if (matchRewardPrefab == null) return;
+        Instantiate(matchRewardPrefab, matchRewardPosition, Quaternion.identity);
+        Debug.Log("[GameManager] Récompense match spawné.");
+    }
+
+    private void TriggerVictory()
+    {
+        Debug.Log($"[GameManager] 🎉 {victoryMessage}");
+
+        _audioSource.Stop();
+
+        if (victoryClip != null)
+            _audioSource.PlayOneShot(victoryClip, victoryVolume);
+
+        if (victoryPrefab != null)
+            Instantiate(victoryPrefab);
+
+        if (victoryText != null)
+        {
+            victoryText.gameObject.SetActive(true);
+            victoryText.text = victoryMessage;
+            StartCoroutine(HideVictoryText());
+        }
+
+        AnalyticsManager.Instance?.LogActivityExited();
+
+        ActivityMapManager[] managers = FindObjectsByType<ActivityMapManager>(FindObjectsSortMode.None);
+        foreach (var manager in managers)
+        {
+            if (manager.themeId == themeId)
+            {
+                manager.OnActivityCompleted("safari");
+                break;
+            }
+        }
+    }
+
+    private IEnumerator HideVictoryText()
+    {
+        yield return new WaitForSeconds(1f);
+        victoryText.gameObject.SetActive(false);
+    }
+}
+/*using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance { get; private set; }
+
+    [Header("Son ambiance (joue dès le début)")]
+    public AudioClip ambianceClip;
+    [Range(0f, 1f)]
+    public float ambianceVolume = 0.5f;
+
+    [Header("Match réussi")]
+    public GameObject matchRewardPrefab;
+    public Vector3 matchRewardPosition = new Vector3(0f, 0.5f, 0f);
+
+    [Header("Victoire (tous les couples trouvés)")]
+    public GameObject victoryPrefab;
+    public AudioClip victoryClip;
+    [Range(0f, 1f)]
+    public float victoryVolume = 1f;
+    public string victoryMessage = "Bravo ! Tu as tout trouvé !";
+    public TMP_Text victoryText;
+
+    [Header("Analytics")]
+    public string bookId  = "";
+    public string themeId = "";
+
     private PairableObject _firstSelected = null;
     private int _remainingPairs = 0;
     private AudioSource _audioSource;

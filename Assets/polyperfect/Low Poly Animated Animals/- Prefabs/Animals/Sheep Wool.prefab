@@ -1138,6 +1138,7 @@ GameObject:
   - component: {fileID: 7331525965857499509}
   - component: {fileID: 7331525965857499511}
   - component: {fileID: 7331525965857499510}
+  - component: {fileID: 3662243641397611992}
   m_Layer: 0
   m_Name: Sheep Wool
   m_TagString: Untagged
@@ -1153,15 +1154,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7331525966834497488}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalRotation: {x: 0, y: 0.9848078, z: 0, w: 0.17364825}
+  m_LocalPosition: {x: -0.0998, y: 0.75, z: -9.28}
+  m_LocalScale: {x: 0.238, y: 0.238, z: 0.238}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7331525966834920336}
   - {fileID: 7331525966834920418}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 160, z: 0}
 --- !u!95 &7331525966825096256
 Animator:
   serializedVersion: 7
@@ -1293,6 +1294,27 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &3662243641397611992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7331525966834497488}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &7331525966834497490
 GameObject:
   m_ObjectHideFlags: 0
