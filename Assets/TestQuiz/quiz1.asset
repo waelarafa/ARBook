@@ -14,20 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuizData
   quizName: quiz1
   questions:
-  - questionText: what's your favorite animal
+  - questionText: Which animal is the largest wild cat in the world?
     choices:
-    - dog
-    - rubbit
-    - cat
-    correctIndex: 0
-  - questionText: what's the perfect food for dogs
-    choices:
-    - fruits
-    - eggs
-    correctIndex: 1
-  - questionText: where lives the blackbear
-    choices:
-    - desert
-    - forest
-    - garden
+    - renard
+    - lion
+    - tigre
+    - gorille
     correctIndex: 2
+  - questionText: Which animal uses its trunk to drink and pick up objects?
+    choices:
+    - "z\xE8bre"
+    - "\xE9l\xE9phant"
+    - girafe
+    - lion
+    correctIndex: 3
+  - questionText: Which animal has black and white stripes like a fingerprint?
+    choices:
+    - tigre
+    - lion
+    - "z\xE8bre"
+    - gorille
+    correctIndex: 2
+  - questionText: Which animal hunts mice and rabbits at night?
+    choices:
+    - renard
+    - "\xE9l\xE9phant"
+    - "z\xE8bre"
+    - gorille
+    correctIndex: 0
+  - questionText: Which gentle animal eats plants and fruits in the forests of Africa?
+    choices:
+    - lion
+    - tigre
+    - renard
+    - gorille
+    correctIndex: 3

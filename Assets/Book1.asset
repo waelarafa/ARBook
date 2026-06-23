@@ -51,49 +51,139 @@ MonoBehaviour:
       m_GuidLow: 5388570603448147614
       m_GuidHigh: 5495497508242615727
     m_SerializedTextureGuid:
-      m_GuidLow: 1374757659542955745
-      m_GuidHigh: 425717475147600906
-    m_Size: {x: 0.21, y: 0.2970297}
+      m_GuidLow: 3856378882855611534
+      m_GuidHigh: 7571682166432321561
+    m_Size: {x: 0.21, y: 0.29708222}
     m_SpecifySize: 1
     m_Name: F2
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 77ed2c8e9c29358419d05b5ad0041469, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5314935779098975386
       m_GuidHigh: 848637679317413508
     m_SerializedTextureGuid:
-      m_GuidLow: 12124848150398983942
-      m_GuidHigh: 13525882954365151098
-    m_Size: {x: 0.21, y: 0.2970297}
+      m_GuidLow: 1572961559188111099
+      m_GuidHigh: 9134524958777894633
+    m_Size: {x: 0.21, y: 0.29708222}
     m_SpecifySize: 1
     m_Name: F1
-    m_Texture: {fileID: 2800000, guid: 10155f061d27a8447a277240e296b5bb, type: 3}
+    m_Texture: {fileID: 2800000, guid: 44c07efb483415d4e966e59f0d5ac47e, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5366974857836839392
       m_GuidHigh: 10719707462850300043
     m_SerializedTextureGuid:
-      m_GuidLow: 9611944821555802723
-      m_GuidHigh: 15758307826330204730
-    m_Size: {x: 0.07, y: 0.07203884}
+      m_GuidLow: 4315850160851908083
+      m_GuidHigh: 1998951583406474265
+    m_Size: {x: 0.07, y: 0.07}
     m_SpecifySize: 1
-    m_Name: fox
-    m_Texture: {fileID: 2800000, guid: 917d32637ce385643a7aab197ac1b0da, type: 3}
+    m_Name: renard
+    m_Texture: {fileID: 2800000, guid: dd63f5f3fada3be419c425ccdfb3bd1b, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5453069620653019187
       m_GuidHigh: 12134828083080156059
     m_SerializedTextureGuid:
-      m_GuidLow: 18110324827074546644
-      m_GuidHigh: 13121221987765729466
-    m_Size: {x: 0.7, y: 0.7067961}
+      m_GuidLow: 9557813695255111010
+      m_GuidHigh: 13682772872808166808
+    m_Size: {x: 0.07, y: 0.07169082}
     m_SpecifySize: 1
-    m_Name: tiger
-    m_Texture: {fileID: 2800000, guid: 44b74bd4cc7afb54ba38d2efe0f117b6, type: 3}
+    m_Name: tigre
+    m_Texture: {fileID: 2800000, guid: 970b65622cea84a498f514f26ef9e2bd, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4996417138006403578
       m_GuidHigh: 15544317540908683427
     m_SerializedTextureGuid:
-      m_GuidLow: 10688202798277033846
-      m_GuidHigh: 4714719130870266696
-    m_Size: {x: 0.7, y: 0.7067961}
+      m_GuidLow: 1564020818687144112
+      m_GuidHigh: 7632070265778362984
+    m_Size: {x: 0.07, y: 0.07}
     m_SpecifySize: 1
     m_Name: lion
+    m_Texture: {fileID: 2800000, guid: e729b0b084a515b4685a8a64788fea69, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5161739244041496909
+      m_GuidHigh: 15893646188184329634
+    m_SerializedTextureGuid:
+      m_GuidLow: 12485252758115449376
+      m_GuidHigh: 1469483745991740155
+    m_Size: {x: 0.21, y: 0.29708222}
+    m_SpecifySize: 1
+    m_Name: F3
+    m_Texture: {fileID: 2800000, guid: da6ffa20873bad44fb4a0c6baea76414, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5511950003546168347
+      m_GuidHigh: 14127596563792633506
+    m_SerializedTextureGuid:
+      m_GuidLow: 6563083775049682587
+      m_GuidHigh: 15501927547839376459
+    m_Size: {x: 0.07, y: 0.06966825}
+    m_SpecifySize: 1
+    m_Name: girafe
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5302802548783273367
+      m_GuidHigh: 1133552558741482635
+    m_SerializedTextureGuid:
+      m_GuidLow: 1627203807851211938
+      m_GuidHigh: 2986363886281241176
+    m_Size: {x: 0.07, y: 0.07169082}
+    m_SpecifySize: 1
+    m_Name: gorille
+    m_Texture: {fileID: 2800000, guid: f0226ca2fd3d16945832d9d321b27129, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5681695428975989032
+      m_GuidHigh: 13536623968883763087
+    m_SerializedTextureGuid:
+      m_GuidLow: 6400898410567454163
+      m_GuidHigh: 766434724315851929
+    m_Size: {x: 0.07, y: 0.06966183}
+    m_SpecifySize: 1
+    m_Name: "z\xE8bre"
+    m_Texture: {fileID: 2800000, guid: e53c4dd38f3058d499ec5e2e52eca20a, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4965309715306278419
+      m_GuidHigh: 4145672874685813439
+    m_SerializedTextureGuid:
+      m_GuidLow: 10584667234146658019
+      m_GuidHigh: 9145125165455215272
+    m_Size: {x: 0.07, y: 0.07173267}
+    m_SpecifySize: 1
+    m_Name: "\xE9l\xE9phant"
+    m_Texture: {fileID: 2800000, guid: fd0726e34ac492e4a88a7191e202ea7e, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5027150556190064482
+      m_GuidHigh: 13404592272234853008
+    m_SerializedTextureGuid:
+      m_GuidLow: 9697557408331509782
+      m_GuidHigh: 5770371024090392665
+    m_Size: {x: 0.21, y: 0.2970297}
+    m_SpecifySize: 1
+    m_Name: F1
+    m_Texture: {fileID: 2800000, guid: 408eb016a515869459681da9df791450, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5577349672583421059
+      m_GuidHigh: 3049483917998865582
+    m_SerializedTextureGuid:
+      m_GuidLow: 4640081058289161477
+      m_GuidHigh: 10997065623398471338
+    m_Size: {x: 0.08, y: 0.05333333}
+    m_SpecifySize: 1
+    m_Name: fox
+    m_Texture: {fileID: 2800000, guid: 68581505e1234064aa565366eb6c9d98, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4848415972440156418
+      m_GuidHigh: 12863173427374203059
+    m_SerializedTextureGuid:
+      m_GuidLow: 14781961248565619413
+      m_GuidHigh: 488056495829078811
+    m_Size: {x: 0.08, y: 0.055375}
+    m_SpecifySize: 1
+    m_Name: hedgehog
+    m_Texture: {fileID: 2800000, guid: f857ead5136fcd241bd33610ccecc506, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5329939000229595700
+      m_GuidHigh: 4625706520793203372
+    m_SerializedTextureGuid:
+      m_GuidLow: 9116606241193327193
+      m_GuidHigh: 6378626940690169976
+    m_Size: {x: 0.08, y: 0.053342342}
+    m_SpecifySize: 1
+    m_Name: squirrel
+    m_Texture: {fileID: 2800000, guid: 136ffa59b1137e847800933a686f8558, type: 3}

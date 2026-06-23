@@ -167,7 +167,7 @@ public class QuizManager : MonoBehaviour
             }
         }
 
-        questionText.text = "Bravo ! Tu as terminé ! 🎉";
+        questionText.text = "Well done, You've finished ! ";
         foreach (var btn in answerButtons)
             btn.gameObject.SetActive(false);
     }

@@ -14,9 +14,8 @@ public class LevelMapBuilder : MonoBehaviour
     [Header("Déblocage")]
     public bool unlockAll = false;
 
-    [Header("Sprites bouton")]
+    [Header("Sprite bouton non visité")]
     public Sprite spriteUnvisited;
-    public Sprite spriteVisited;
 
     [System.Serializable]
     public class LevelButtonEntry
@@ -27,6 +26,19 @@ public class LevelMapBuilder : MonoBehaviour
 
     [Header("Boutons des niveaux")]
     public List<LevelButtonEntry> levelButtons = new List<LevelButtonEntry>();
+
+    [System.Serializable]
+    public class ThemeEndPanel
+    {
+        public string themeId;
+        public GameObject panel;
+    }
+
+    [Header("Panels fin de thème")]
+    public List<ThemeEndPanel> themeEndPanels = new List<ThemeEndPanel>();
+
+    private Dictionary<Button, Sprite> originalSprites = new Dictionary<Button, Sprite>();
+    private HashSet<string> visitedItems = new HashSet<string>();
 
     void Awake()
     {
@@ -89,19 +101,38 @@ public class LevelMapBuilder : MonoBehaviour
             CanvasGroup cg = btn.GetComponent<CanvasGroup>();
             if (cg != null) { cg.alpha = 1f; cg.interactable = true; cg.blocksRaycasts = true; }
 
-            int capturedIndex  = i;
+            // Sauvegarde du sprite original assigné dans l'Inspector
+            Image btnImg = btn.GetComponent<Image>();
+            if (btnImg != null && !originalSprites.ContainsKey(btn))
+                originalSprites[btn] = btnImg.sprite;
+
             var capturedEntry  = entry;
             Button capturedBtn = btn;
 
             bool done = false;
-            AnalyticsManager.Instance.CheckItemDiscovered(entry.imageName, visited =>
+
+            // Vérifie d'abord le cache local, sinon Firestore
+            if (visitedItems.Contains(entry.imageName))
             {
-                UnityMainThreadDispatcher.Instance().Enqueue(() =>
+                SetButtonVisited(capturedBtn);
+                done = true;
+            }
+            else
+            {
+                AnalyticsManager.Instance.CheckItemDiscovered(entry.imageName, visited =>
                 {
-                    SetButtonSprite(capturedBtn, visited ? spriteVisited : spriteUnvisited);
-                    done = true;
+                    UnityMainThreadDispatcher.Instance().Enqueue(() =>
+                    {
+                        if (visited)
+                        {
+                            visitedItems.Add(capturedEntry.imageName);
+                            SetButtonVisited(capturedBtn);
+                        }
+                        else SetButtonUnvisited(capturedBtn);
+                        done = true;
+                    });
                 });
-            });
+            }
 
             yield return new WaitUntil(() => done);
 
@@ -123,34 +154,71 @@ public class LevelMapBuilder : MonoBehaviour
             entry.imageName
         );
 
-        SetButtonSprite(btn, spriteVisited);
-        Debug.Log($"[LevelMap] ✅ {entry.imageName} — sprite changé");
+        visitedItems.Add(entry.imageName);
+        SetButtonVisited(btn);
+        Debug.Log($"[LevelMap] ✅ {entry.imageName} — bouton visité");
+
+        CheckThemeComplete(entry.themeId);
+    }
+
+    void CheckThemeComplete(string themeId)
+    {
+        foreach (var levelEntry in levelButtons)
+        {
+            var libEntry = library.entries.Find(e => e.imageName == levelEntry.levelName && e.themeId == themeId);
+            if (libEntry == null) continue;
+
+            if (levelEntry.button != null && levelEntry.button.transition != Selectable.Transition.ColorTint)
+                return;
+        }
+
+        var config = themeEndPanels.Find(t => t.themeId == themeId);
+        if (config != null && config.panel != null)
+            config.panel.SetActive(true);
     }
 
     // ─────────────────────────────────────────
-    void SetButtonSprite(Button btn, Sprite sprite)
+    void SetButtonVisited(Button btn)
     {
-        if (sprite == null) return;
+        if (originalSprites.TryGetValue(btn, out Sprite original))
+        {
+            Image btnImage = btn.GetComponent<Image>();
+            if (btnImage != null) btnImage.sprite = original;
+        }
 
-        // Changer le sprite du bouton lui-même
-        Image btnImage = btn.GetComponent<Image>();
-        if (btnImage != null) btnImage.sprite = sprite;
+        btn.transition = Selectable.Transition.ColorTint;
+    }
 
-        // Mettre à jour le SpriteState pour les états hover/press
-        SpriteState ss        = btn.spriteState;
-        ss.highlightedSprite  = sprite;
-        ss.pressedSprite      = sprite;
-        ss.selectedSprite     = sprite;
-        ss.disabledSprite     = sprite;
-        btn.spriteState       = ss;
-
-        // Passer en mode Sprite Swap
+    void SetButtonUnvisited(Button btn)
+    {
         btn.transition = Selectable.Transition.SpriteSwap;
+
+        Image btnImage = btn.GetComponent<Image>();
+        if (btnImage != null) btnImage.sprite = spriteUnvisited;
+
+        SpriteState ss       = btn.spriteState;
+        ss.highlightedSprite = spriteUnvisited;
+        ss.pressedSprite     = spriteUnvisited;
+        ss.selectedSprite    = spriteUnvisited;
+        ss.disabledSprite    = spriteUnvisited;
+        btn.spriteState      = ss;
+    }
+
+    // ─── Appelées depuis les boutons du panel dans l'Inspector ───
+    public void CloseThemePanel(GameObject panel)
+    {
+        if (panel != null) panel.SetActive(false);
+    }
+
+    public void GoToScene(string sceneName)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
     [ContextMenu("Rebuild Map")]
     public void RebuildMap() => StartCoroutine(BuildMapAsync());
 }
+/*
 /*using UnityEngine;
 using UnityEngine.UI;
 using TMPro;

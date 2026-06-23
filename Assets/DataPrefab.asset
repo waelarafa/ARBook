@@ -15,41 +15,41 @@ MonoBehaviour:
   entries:
   - environmentPrefab: {fileID: 6847471209779651646, guid: deaa7ad79eff6f84ab0644520d3af018, type: 3}
     themeId: wild world
-    pageName: fierce hunters
-    imageName: fox
+    pageName: "chasseurs f\xE9roces"
+    imageName: renard
     doSpawn: 1
     prefabToSpawn: {fileID: 7359655724910758988, guid: a838ec8ea7d24c544b5e48e5aba36cdc, type: 3}
-    soundConfig: {fileID: 11400000, guid: 62509f16b6b60754e8eea66114b3d8b5, type: 2}
+    soundConfig: {fileID: 11400000, guid: c9c53a458d341ad4fa16df866008c246, type: 2}
     soundConfigArabe: {fileID: 11400000, guid: fc4f71730077a1a4baf3329c999abe2e, type: 2}
     soundConfigFrancais: {fileID: 11400000, guid: b47090741d477f34d876143a49858269, type: 2}
     soundConfigAnglais: {fileID: 11400000, guid: 96858e2b83a10154888f8272c1ca44a8, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 6847471209779651646, guid: deaa7ad79eff6f84ab0644520d3af018, type: 3}
     themeId: wild world
-    pageName: fierce hunters
-    imageName: tiger
+    pageName: "chasseurs f\xE9roces"
+    imageName: tigre
     doSpawn: 1
     prefabToSpawn: {fileID: 1390276149824892, guid: c5e7161780bfc06459e1d0fd1cefd777, type: 3}
-    soundConfig: {fileID: 0}
+    soundConfig: {fileID: 11400000, guid: 3eca4cc82f4886a4083504119107a529, type: 2}
     soundConfigArabe: {fileID: 0}
     soundConfigFrancais: {fileID: 0}
     soundConfigAnglais: {fileID: 0}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 6847471209779651646, guid: deaa7ad79eff6f84ab0644520d3af018, type: 3}
     themeId: wild world
-    pageName: fierce hunters
+    pageName: "chasseurs f\xE9roces"
     imageName: lion
     doSpawn: 1
     prefabToSpawn: {fileID: 1390276149824892, guid: 01653bbcfb6a45a4fb274560c93f7f96, type: 3}
-    soundConfig: {fileID: 0}
+    soundConfig: {fileID: 11400000, guid: 13d8ff7c4d3832d4a9ed1742b7b8b154, type: 2}
     soundConfigArabe: {fileID: 0}
     soundConfigFrancais: {fileID: 0}
     soundConfigAnglais: {fileID: 0}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 2999787810891789673, guid: 5425dfbf41dc88f4e864da69d52f5e97, type: 3}
     themeId: 'wild world '
-    pageName: big and strong
-    imageName: elephant
+    pageName: grands et forts
+    imageName: "\xE9l\xE9phant"
     doSpawn: 1
     prefabToSpawn: {fileID: 1294271778169428, guid: d19dd43872ee43b4896d75d23e9db9e6, type: 3}
     soundConfig: {fileID: 0}
@@ -59,8 +59,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 5425532330544876931, guid: 837a71a1e9ad0e549a3ff7a02419812a, type: 3}
     themeId: wild world
-    pageName: big and strong
-    imageName: gorilla
+    pageName: grands et forts
+    imageName: gorille
     doSpawn: 1
     prefabToSpawn: {fileID: 1791417161093438, guid: 343956e15ca614042b6c7eae1aceb95f, type: 3}
     soundConfig: {fileID: 0}
@@ -70,8 +70,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 2149185753834594235, guid: 5e41f0abb13eda6489097c924eb8ef3e, type: 3}
     themeId: wild world
-    pageName: exotic and colorful
-    imageName: 'giraffe '
+    pageName: "exotiques et color\xE9s"
+    imageName: girafe
     doSpawn: 1
     prefabToSpawn: {fileID: 1830278637828938, guid: 0d9eb53229fd4e4428e17f457310aada, type: 3}
     soundConfig: {fileID: 0}
@@ -81,8 +81,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 7329834674565285308, guid: bc56b9173fb0fb5418c82514f876a42a, type: 3}
     themeId: wild world
-    pageName: exotic and colorful
-    imageName: zebra
+    pageName: "exotiques et color\xE9s"
+    imageName: "z\xE8bre"
     doSpawn: 1
     prefabToSpawn: {fileID: 3426031541605578631, guid: 0d139b779d87f49fa81f3b8254c105ca, type: 3}
     soundConfig: {fileID: 0}
@@ -92,8 +92,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 6724867492521420774, guid: e06f0528e5e99b24182e91ee550886ba, type: 3}
     themeId: around us
-    pageName: my pets
-    imageName: cat
+    pageName: mes animaux de compagnie
+    imageName: chat
     doSpawn: 1
     prefabToSpawn: {fileID: 1904107386653458, guid: 9aa610f370cd8454a90934998b7440ed, type: 3}
     soundConfig: {fileID: 0}
@@ -103,8 +103,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 439294617866885371, guid: 27693c2e52b497f46869cd1614ad234d, type: 3}
     themeId: around us
-    pageName: my pets
-    imageName: dog
+    pageName: mes animaux de compagnie
+    imageName: chien
     doSpawn: 1
     prefabToSpawn: {fileID: 1206288095452438, guid: 16e5f48d612f744039dbecb3e834b94f, type: 3}
     soundConfig: {fileID: 0}
@@ -114,8 +114,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4750086999414109597, guid: cc0957d48bd49ca49b836b8e5ac325cf, type: 3}
     themeId: around us
-    pageName: fluffy friends
-    imageName: sheep
+    pageName: amis tout doux
+    imageName: mouton
     doSpawn: 1
     prefabToSpawn: {fileID: 7331525966834497488, guid: 1c58fd9a6b9949e4cbbde7aa0909a14a, type: 3}
     soundConfig: {fileID: 0}
@@ -125,8 +125,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4750086999414109597, guid: cc0957d48bd49ca49b836b8e5ac325cf, type: 3}
     themeId: around us
-    pageName: fluffy friends
-    imageName: goat
+    pageName: amis tout doux
+    imageName: "ch\xE8vre"
     doSpawn: 1
     prefabToSpawn: {fileID: 391536099558741291, guid: 762b5bfe811b776459417e9e29cbab94, type: 3}
     soundConfig: {fileID: 0}
@@ -136,8 +136,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4750086999414109597, guid: cc0957d48bd49ca49b836b8e5ac325cf, type: 3}
     themeId: around us
-    pageName: farm life
-    imageName: cow
+    pageName: "vie \xE0 la ferme"
+    imageName: vache
     doSpawn: 1
     prefabToSpawn: {fileID: 4341162579754259275, guid: a55f5bf56a2fdb74e9c56bf211d45edb, type: 3}
     soundConfig: {fileID: 0}
@@ -147,8 +147,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 7329834674565285308, guid: bc56b9173fb0fb5418c82514f876a42a, type: 3}
     themeId: around us
-    pageName: farm life
-    imageName: horse
+    pageName: "vie \xE0 la ferme"
+    imageName: cheval
     doSpawn: 1
     prefabToSpawn: {fileID: 6481239469565288174, guid: ea1de200ad74a4cf1b54c8d73aafeab1, type: 3}
     soundConfig: {fileID: 0}
@@ -158,8 +158,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 5075439634421729870, guid: 29a061dbc3976a24bbfc71c1224ef795, type: 3}
     themeId: blue planet
-    pageName: deep ocean
-    imageName: dolphin
+    pageName: "fond de l'oc\xE9an"
+    imageName: dauphin
     doSpawn: 1
     prefabToSpawn: {fileID: 109858836673019220, guid: e115772e3ca203146bca6f4a374b1ea4, type: 3}
     soundConfig: {fileID: 0}
@@ -169,8 +169,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 5075439634421729870, guid: 29a061dbc3976a24bbfc71c1224ef795, type: 3}
     themeId: blue planet
-    pageName: deep ocean
-    imageName: shark
+    pageName: "fond de l'oc\xE9an"
+    imageName: requin
     doSpawn: 1
     prefabToSpawn: {fileID: 1269824962513062, guid: 60f0387c246cf014aad3931e71e20959, type: 3}
     soundConfig: {fileID: 0}
@@ -180,8 +180,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4391587478659334713, guid: 3abb652a0714a714c992c50b3a9136f7, type: 3}
     themeId: blue planet
-    pageName: cold and icy
-    imageName: seal
+    pageName: "froid et glac\xE9"
+    imageName: foque
     doSpawn: 1
     prefabToSpawn: {fileID: 6289437964641813842, guid: be05097336edc0041853585fa70d5644, type: 3}
     soundConfig: {fileID: 0}
@@ -191,8 +191,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4391587478659334713, guid: 3abb652a0714a714c992c50b3a9136f7, type: 3}
     themeId: blue planet
-    pageName: cold and icy
-    imageName: penguin
+    pageName: "froid et glac\xE9"
+    imageName: manchot
     doSpawn: 1
     prefabToSpawn: {fileID: 1884597401360746, guid: 6817fd3c5809228498530e5ebe58f46a, type: 3}
     soundConfig: {fileID: 0}
@@ -202,8 +202,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 8456976543571198260, guid: 23b4aa33d2d105d4aaa7c6c0b5d80095, type: 3}
     themeId: blue planet
-    pageName: sky and shore
-    imageName: eagle
+    pageName: ciel et rivage
+    imageName: aigle
     doSpawn: 1
     prefabToSpawn: {fileID: 4593347469909280825, guid: c731d11969cd60b419af78b04aa24e9a, type: 3}
     soundConfig: {fileID: 0}
@@ -213,8 +213,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 8456976543571198260, guid: 23b4aa33d2d105d4aaa7c6c0b5d80095, type: 3}
     themeId: blue planet
-    pageName: sky and shore
-    imageName: flamingo
+    pageName: ciel et rivage
+    imageName: flamant
     doSpawn: 1
     prefabToSpawn: {fileID: 3350780174942202089, guid: 5754e70a507e64811abe2405bb30f3ad, type: 3}
     soundConfig: {fileID: 0}
@@ -224,8 +224,8 @@ MonoBehaviour:
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 8456976543571198260, guid: 23b4aa33d2d105d4aaa7c6c0b5d80095, type: 3}
     themeId: blue planet
-    pageName: sky and shore
-    imageName: parrot
+    pageName: ciel et rivage
+    imageName: perroquet
     doSpawn: 1
     prefabToSpawn: {fileID: 1977361067276591308, guid: b5ffc1ea7ddf4994f9618a4311246f44, type: 3}
     soundConfig: {fileID: 0}

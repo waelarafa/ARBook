@@ -15,6 +15,246 @@ public class ActivityMapManager : MonoBehaviour
     [Header("Sprites")]
     public Sprite spriteLocked;
     public Sprite spriteUnlocked;
+
+    [System.Serializable]
+    public class ActivityEntry
+    {
+        public string activityId;
+        public Button button;
+    }
+
+    [Header("Boutons dans l'ordre")]
+    public List<ActivityEntry> activities = new List<ActivityEntry>();
+
+    private bool _isRefreshing = false;
+    private Dictionary<Button, Sprite> originalSprites = new Dictionary<Button, Sprite>();
+
+    void Start()
+    {
+        SessionManager.Instance?.SetContext(bookId, themeId);
+        StartCoroutine(BuildAfterReady());
+    }
+
+    public void OpenActivity(string activityId, QuizData quiz = null)
+    {
+        SessionManager.Instance?.SetContext(bookId, themeId);
+
+        switch (activityId)
+        {
+            case "pronunciation":
+                PronunciationManager.Instance.OpenWithTheme();
+                break;
+            case "coloring":
+                ColoringManager.Instance.OpenGame();
+                break;
+            case "safari":
+                AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "safari");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("testingscene",
+                    UnityEngine.SceneManagement.LoadSceneMode.Single);
+                break;
+            case "quiz":
+                AnalyticsManager.Instance?.LogActivityEntered(bookId, themeId, "quiz");
+                QuizManager.Instance.StartQuiz(quiz);
+                break;
+        }
+    }
+
+    IEnumerator BuildAfterReady()
+    {
+        yield return new WaitUntil(() => AnalyticsManager.Instance != null);
+        yield return new WaitForEndOfFrame();
+
+        // Sauvegarde les sprites originaux assignés dans l'Inspector
+        foreach (var entry in activities)
+        {
+            if (entry.button == null) continue;
+            Image img = entry.button.GetComponent<Image>();
+            if (img != null && !originalSprites.ContainsKey(entry.button))
+                originalSprites[entry.button] = img.sprite;
+        }
+
+        yield return RefreshAllAsync();
+    }
+
+    public void RefreshAll() => StartCoroutine(RefreshAllAsync());
+
+    IEnumerator RefreshAllAsync()
+    {
+        if (_isRefreshing) yield break;
+        _isRefreshing = true;
+
+        for (int i = 0; i < activities.Count; i++)
+        {
+            var entry  = activities[i];
+            Button btn = entry.button;
+            if (btn == null) continue;
+
+            bool completed = false;
+            bool unlocked  = false;
+            bool doneCmp   = false;
+            bool doneUnl   = false;
+
+            Debug.Log($"[ActivityMap] Vérification index={i} activityId={entry.activityId}");
+
+            AnalyticsManager.Instance.CheckActivityCompleted(
+                bookId, themeId, entry.activityId, result =>
+                {
+                    completed = result;
+                    doneCmp   = true;
+                });
+
+            yield return new WaitUntil(() => doneCmp);
+
+            yield return StartCoroutine(CheckUnlocked(i, result =>
+            {
+                unlocked = result;
+                doneUnl  = true;
+            }));
+
+            yield return new WaitUntil(() => doneUnl);
+
+            btn.interactable = unlocked;
+
+            if (completed)
+                SetButtonCompleted(btn);
+            else
+                SetButtonSprite(btn, unlocked ? spriteUnlocked : spriteLocked);
+
+            Debug.Log($"[ActivityMap] {entry.activityId} — unlocked={unlocked} completed={completed}");
+        }
+
+        _isRefreshing = false;
+    }
+
+    void SetButtonCompleted(Button btn)
+    {
+        // Restaure le sprite naturel du bouton assigné dans l'Inspector
+        if (originalSprites.TryGetValue(btn, out Sprite original))
+        {
+            Image btnImage = btn.GetComponent<Image>();
+            if (btnImage != null)
+            {
+                btnImage.sprite = original;
+                btnImage.color  = Color.white;
+            }
+        }
+
+        btn.transition = Selectable.Transition.ColorTint;
+
+        ColorBlock cb    = btn.colors;
+        cb.disabledColor = Color.white;
+        btn.colors       = cb;
+    }
+
+    void SetButtonSprite(Button btn, Sprite sprite)
+    {
+        if (sprite == null) return;
+
+        Image btnImage = btn.GetComponent<Image>();
+        if (btnImage != null)
+        {
+            btnImage.sprite = sprite;
+            btnImage.color  = Color.white;
+        }
+
+        SpriteState ss       = btn.spriteState;
+        ss.highlightedSprite = sprite;
+        ss.pressedSprite     = sprite;
+        ss.selectedSprite    = sprite;
+        ss.disabledSprite    = spriteLocked;
+        btn.spriteState      = ss;
+
+        btn.transition = Selectable.Transition.SpriteSwap;
+
+        ColorBlock cb    = btn.colors;
+        cb.disabledColor = Color.white;
+        btn.colors       = cb;
+    }
+
+    IEnumerator CheckUnlocked(int index, System.Action<bool> callback)
+    {
+        if (index == 0)
+        {
+            yield return StartCoroutine(AreAllThemeNodesExplored(callback));
+        }
+        else
+        {
+            bool done = false;
+            AnalyticsManager.Instance.CheckActivityCompleted(
+                bookId, themeId, activities[index - 1].activityId, result =>
+                {
+                    callback?.Invoke(result);
+                    done = true;
+                });
+            yield return new WaitUntil(() => done);
+        }
+    }
+
+    IEnumerator AreAllThemeNodesExplored(System.Action<bool> callback)
+    {
+        if (library == null)
+        {
+            Debug.LogWarning("[ActivityMap] library non assignée !");
+            callback?.Invoke(false);
+            yield break;
+        }
+
+        List<string> themeItems = new List<string>();
+        foreach (var entry in library.entries)
+            if (entry.themeId == themeId)
+                themeItems.Add(entry.imageName);
+
+        if (themeItems.Count == 0) { callback?.Invoke(false); yield break; }
+
+        int checkedCount  = 0;
+        int exploredCount = 0;
+
+        foreach (string itemName in themeItems)
+        {
+            string captured = itemName;
+            AnalyticsManager.Instance.CheckItemDiscovered(captured, result =>
+            {
+                if (result) exploredCount++;
+                checkedCount++;
+            });
+        }
+
+        yield return new WaitUntil(() => checkedCount == themeItems.Count);
+
+        bool allExplored = exploredCount == themeItems.Count;
+        Debug.Log($"[ActivityMap] {exploredCount}/{themeItems.Count} nœuds explorés pour '{themeId}'");
+        callback?.Invoke(allExplored);
+    }
+
+    public void OnActivityCompleted(string activityId)
+    {
+        Debug.Log($"[ActivityMap] ✅ Activité complétée : {activityId}");
+        StartCoroutine(WaitAndRefresh());
+    }
+
+    private IEnumerator WaitAndRefresh()
+    {
+        yield return new WaitUntil(() => !_isRefreshing);
+        RefreshAll();
+    }
+}
+/*using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
+public class ActivityMapManager : MonoBehaviour
+{
+    [Header("Paramètres")]
+    public string bookId  = "";
+    public string themeId = "";
+
+    [Header("Library")]
+    public ImageCubeDataLibrary library;
+
+    [Header("Sprites")]
+    public Sprite spriteLocked;
+    public Sprite spriteUnlocked;
     public Sprite spriteCompleted;
 
     [System.Serializable]
