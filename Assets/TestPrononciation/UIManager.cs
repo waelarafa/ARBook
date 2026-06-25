@@ -220,7 +220,7 @@ public class UIManager : MonoBehaviour
     public void ShowSuccess()
     {
         feedbackImage.color = new Color(0f, 0.8f, 0f, 0.85f);
-        feedbackText.text = "⭐ Bravo !";
+        feedbackText.text = " Bravo !";
         feedbackPanel.SetActive(true);
         StartCoroutine(HideAfter(2f));
     }
@@ -228,7 +228,7 @@ public class UIManager : MonoBehaviour
     public void ShowFailure(string mot)
     {
         feedbackImage.color = new Color(1f, 0.3f, 0.3f, 0.85f);
-        feedbackText.text = "Essaie encore ! 💪";
+        feedbackText.text = "Essaie encore !";
         feedbackPanel.SetActive(true);
         PronunciationAudioManager.Instance.PlayWord(mot);
         StartCoroutine(HideAfter(2.5f));

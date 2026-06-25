@@ -31,9 +31,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1390276149824892, guid: c5e7161780bfc06459e1d0fd1cefd777, type: 3}
     soundConfig: {fileID: 11400000, guid: 3eca4cc82f4886a4083504119107a529, type: 2}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: bc58271585118344ebe38cf9fa736e97, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: c9f27cb191286374db469051b5864c54, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 1150afa04e80d5145aa8a6c385acd46c, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 6847471209779651646, guid: deaa7ad79eff6f84ab0644520d3af018, type: 3}
     themeId: wild world
@@ -42,9 +42,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1390276149824892, guid: 01653bbcfb6a45a4fb274560c93f7f96, type: 3}
     soundConfig: {fileID: 11400000, guid: 13d8ff7c4d3832d4a9ed1742b7b8b154, type: 2}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 541635199211a0542b0179647ef05e11, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: dc7d7d484243ea642b5e2ccc5938422c, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 5d6a9a510d93db34a923a4da67987990, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 2999787810891789673, guid: 5425dfbf41dc88f4e864da69d52f5e97, type: 3}
     themeId: 'wild world '
@@ -53,9 +53,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1294271778169428, guid: d19dd43872ee43b4896d75d23e9db9e6, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: b8605e71304ea924e8391c98091507d0, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: e2b95dfa491e6e44f9dc276f20b4f883, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 86afa84f2ff5b2546bdf6fdeb33912a9, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 5425532330544876931, guid: 837a71a1e9ad0e549a3ff7a02419812a, type: 3}
     themeId: wild world
@@ -64,9 +64,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1791417161093438, guid: 343956e15ca614042b6c7eae1aceb95f, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: d1c555a1d58c28244b516d39e52d4b53, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: b91ff5b4788e8d844a3b270f6b984d29, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 8432b7f67a53add49927a5c2c5cee9f4, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 2149185753834594235, guid: 5e41f0abb13eda6489097c924eb8ef3e, type: 3}
     themeId: wild world
@@ -75,9 +75,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1830278637828938, guid: 0d9eb53229fd4e4428e17f457310aada, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: f7495493ee857c8458711603cd37994d, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 85881fb86aea3e14786e7a4240708c4e, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: d49e10c647f97094ebc1a05547ab4a30, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 7329834674565285308, guid: bc56b9173fb0fb5418c82514f876a42a, type: 3}
     themeId: wild world
@@ -86,9 +86,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 3426031541605578631, guid: 0d139b779d87f49fa81f3b8254c105ca, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 71a7a4ae4f5dabc498d9f68b18d879db, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: e3604a06f2c177f439b79ba74b27d414, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 341371209427e664fab922d4b212495c, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 6724867492521420774, guid: e06f0528e5e99b24182e91ee550886ba, type: 3}
     themeId: around us
@@ -97,9 +97,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1904107386653458, guid: 9aa610f370cd8454a90934998b7440ed, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: bff49f9c253d9d247aa5fbe4c2bbcebb, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: f073ab56c965cb44cbef05f4fa9b9d07, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 33eb01b1adc29b7458e7492b456a97aa, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 439294617866885371, guid: 27693c2e52b497f46869cd1614ad234d, type: 3}
     themeId: around us
@@ -108,9 +108,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1206288095452438, guid: 16e5f48d612f744039dbecb3e834b94f, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 39670bdd3090e97408ac32c93e8cd023, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 495d1b4ac5cd86942b7777785e24c2a4, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 765fa1d6449c2854591d04ae8be37aa3, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4750086999414109597, guid: cc0957d48bd49ca49b836b8e5ac325cf, type: 3}
     themeId: around us
@@ -119,9 +119,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 7331525966834497488, guid: 1c58fd9a6b9949e4cbbde7aa0909a14a, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 768a1e079a6aee549bcd59805ecc1305, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 5dc2a1429d112424489de3a06e45492a, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: ce29e8badbc55bf4e8ac594062dd3e2b, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4750086999414109597, guid: cc0957d48bd49ca49b836b8e5ac325cf, type: 3}
     themeId: around us
@@ -130,9 +130,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 391536099558741291, guid: 762b5bfe811b776459417e9e29cbab94, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 446df98d248a4c649ad62a36037f1433, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 2f3ad9dcd66a1704ea838b1fa63e8e11, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 87ad7da5f9cda5b41a3482b29dc51bce, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4750086999414109597, guid: cc0957d48bd49ca49b836b8e5ac325cf, type: 3}
     themeId: around us
@@ -141,9 +141,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 4341162579754259275, guid: a55f5bf56a2fdb74e9c56bf211d45edb, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 86e3176512f0f884a9fb6e8871c2a92f, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 255959ee392a2814cbaae45de6ffc024, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: bf9411d44801433479d5369b6d7291b6, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 7329834674565285308, guid: bc56b9173fb0fb5418c82514f876a42a, type: 3}
     themeId: around us
@@ -152,9 +152,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 6481239469565288174, guid: ea1de200ad74a4cf1b54c8d73aafeab1, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: c71dbd1d2a495eb4ebf56f891f402035, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: ba297fece2a627c42a5641e051c32f42, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 55f9a187aa63e1a41b8c11878739e20f, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 5075439634421729870, guid: 29a061dbc3976a24bbfc71c1224ef795, type: 3}
     themeId: blue planet
@@ -163,9 +163,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 109858836673019220, guid: e115772e3ca203146bca6f4a374b1ea4, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: f255e7d0626982349979a1f4d77e5e1b, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 12cb0d5696261534e83e3c782c312620, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: c3eff5573483d9a4183a58691cc88d2d, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 5075439634421729870, guid: 29a061dbc3976a24bbfc71c1224ef795, type: 3}
     themeId: blue planet
@@ -174,9 +174,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1269824962513062, guid: 60f0387c246cf014aad3931e71e20959, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 5d29f434223c0774eb4aceb90830cb7d, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 49dfe5e447afd4c4e95df32e731815aa, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: f5a7c52d82742d942a63aff2519c4388, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4391587478659334713, guid: 3abb652a0714a714c992c50b3a9136f7, type: 3}
     themeId: blue planet
@@ -185,9 +185,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 6289437964641813842, guid: be05097336edc0041853585fa70d5644, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 97bccc67a0520ed45961910221d5a75e, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 4759c7e3b35d0c24486c5ce1945263f0, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 45546c54f6d9cf7468ee0d2719cb42f3, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 4391587478659334713, guid: 3abb652a0714a714c992c50b3a9136f7, type: 3}
     themeId: blue planet
@@ -196,9 +196,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1884597401360746, guid: 6817fd3c5809228498530e5ebe58f46a, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 8895de4360f90dc4e8ae78f62706764b, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 5a132e43b4722584086cb0b4e3d189bd, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: dfae179c84bce7148946cea4b61f1fe5, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 8456976543571198260, guid: 23b4aa33d2d105d4aaa7c6c0b5d80095, type: 3}
     themeId: blue planet
@@ -207,9 +207,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 4593347469909280825, guid: c731d11969cd60b419af78b04aa24e9a, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: b904688b97bbabe46b5dbee9b8fbe5af, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 962511170f6380b489589abb40edb3c1, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 71d447b77692c3d45ade73e6d4b1aeea, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 8456976543571198260, guid: 23b4aa33d2d105d4aaa7c6c0b5d80095, type: 3}
     themeId: blue planet
@@ -218,9 +218,9 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 3350780174942202089, guid: 5754e70a507e64811abe2405bb30f3ad, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 802835cae9dddc348afe0aa4c35e31d7, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: ccc67f9bde9814349882ae009e82772d, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: 046742b70ff9f6946bd2cf214942ead0, type: 2}
     rotationSensitivity: 0.3
   - environmentPrefab: {fileID: 8456976543571198260, guid: 23b4aa33d2d105d4aaa7c6c0b5d80095, type: 3}
     themeId: blue planet
@@ -229,7 +229,7 @@ MonoBehaviour:
     doSpawn: 1
     prefabToSpawn: {fileID: 1977361067276591308, guid: b5ffc1ea7ddf4994f9618a4311246f44, type: 3}
     soundConfig: {fileID: 0}
-    soundConfigArabe: {fileID: 0}
-    soundConfigFrancais: {fileID: 0}
-    soundConfigAnglais: {fileID: 0}
+    soundConfigArabe: {fileID: 11400000, guid: 30a4f74540555c04080c97b95a3cbefc, type: 2}
+    soundConfigFrancais: {fileID: 11400000, guid: 74e4f3fe71882b34a826b79f2448a11d, type: 2}
+    soundConfigAnglais: {fileID: 11400000, guid: d978e173403fdf8449d09cc6b6902b0a, type: 2}
     rotationSensitivity: 0.3

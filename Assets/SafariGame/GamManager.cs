@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public float victoryVolume = 1f;
     public string victoryMessage = "Bravo ! Tu as tout trouvé !";
     public TMP_Text victoryText;
+    public GameObject completionPanel;
 
     [System.Serializable]
     public class ThemeAnimalConfig
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
         _audioSource = gameObject.AddComponent<AudioSource>();
+        if (completionPanel != null) completionPanel.SetActive(false);
     }
 
     private void Start()
@@ -72,7 +74,6 @@ public class GameManager : MonoBehaviour
 
         ThemeAnimalConfig config = themeConfigs.Find(c => c.themeId == tId);
 
-        // Construire la liste des animalName autorisés depuis les prefabs
         var allowedNames = new HashSet<string>();
         if (config != null)
             foreach (var prefab in config.allowedAnimalPrefabs)
@@ -86,7 +87,6 @@ public class GameManager : MonoBehaviour
 
         foreach (var obj in allObjects)
         {
-            // Filtrer par animalName, pas par pairID
             string name = obj.animalName.ToLower().Trim();
 
             if (allowedNames.Count == 0 || allowedNames.Contains(name))
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnObjectTapped(PairableObject tapped)
-    {
+    {   tapped.PlayTapSound();
         if (_firstSelected == null)
         {
             _firstSelected = tapped;
@@ -177,6 +177,9 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+
+        if (completionPanel != null)
+            completionPanel.SetActive(true);
     }
 
     private IEnumerator HideVictoryText()
@@ -184,7 +187,14 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         victoryText.gameObject.SetActive(false);
     }
+
+    public void CloseCompletionPanel()
+    {
+        if (completionPanel != null)
+            completionPanel.SetActive(false);
+    }
 }
+/*
 /*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -263,7 +263,7 @@ public abstract class BaseTapDetector : MonoBehaviour
                 Vector2 delta = screenPosition - _lastRotPos;
                 bool isAR = cam != null &&
                             cam.GetComponent<UnityEngine.XR.ARFoundation.ARCameraBackground>() != null;
-                float sign = isAR ? -1f : 1f;
+                float sign = isAR ? 1f : -1f;
 
                 float rotX =  delta.y * sensitivity * sign;
                 float rotY = -delta.x * sensitivity * sign;
