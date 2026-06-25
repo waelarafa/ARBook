@@ -1,8 +1,18 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class AnalyticsManager : MonoBehaviour
 {
     public static AnalyticsManager Instance { get; private set; }
+
+    // Cache local des activités terminées pendant CETTE session (clé = book|theme|activity).
+    // Renseigné par LogActivityExited() AVANT l'écriture Firestore (asynchrone) ; permet à
+    // CheckActivityCompleted() de répondre "true" instantanément, sans attendre la confirmation
+    // serveur. Firestore reste la source de vérité persistante entre les sessions.
+    private readonly HashSet<string> _completedActivities = new HashSet<string>();
+
+    private static string ActivityKey(string bookId, string themeId, string activityId)
+        => $"{bookId}|{themeId}|{activityId}";
 
     private float _sessionStartTime;
     private int _pagesViewedThisSession;
@@ -127,6 +137,11 @@ public class AnalyticsManager : MonoBehaviour
         float duration = Time.realtimeSinceStartup - _activitySessionStart;
         _activitySessionActive = false;
 
+        // Marque la complétion en cache AVANT de lancer l'écriture Firestore
+        // (fire-and-forget). Le refresh de la map déclenché juste après verra donc
+        // cette activité comme complétée sans attendre la confirmation réseau.
+        _completedActivities.Add(ActivityKey(_currentActivityBookId, _currentActivityThemeId, _currentActivityId));
+
         string userId = GetUserId();
         if (userId != "anonymous")
             FirestoreManager.Instance?.LogActivitySession(userId, _currentActivityBookId, _currentActivityThemeId, _currentActivityId, duration);
@@ -162,6 +177,16 @@ public class AnalyticsManager : MonoBehaviour
     public void CheckActivityCompleted(string bookId, string themeId, string activityId,
                                        System.Action<bool> callback)
     {
+        // 1) Cache local d'abord : une activité terminée pendant cette session est
+        //    visible immédiatement, avant même que l'écriture Firestore soit confirmée.
+        //    C'est ce qui supprime la race avec le refresh de la map.
+        if (_completedActivities.Contains(ActivityKey(bookId, themeId, activityId)))
+        {
+            callback?.Invoke(true);
+            return;
+        }
+
+        // 2) Sinon, source de vérité persistante (Firestore en ligne, sinon buffer local).
         string userId = GetUserId();
         if (userId != "anonymous")
             FirestoreManager.Instance?.IsActivityCompleted(userId, bookId, themeId, activityId, callback);
