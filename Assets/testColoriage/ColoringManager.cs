@@ -61,8 +61,9 @@ public class ColoringManager : MonoBehaviour
 
     public void CloseGame()
     {
+        
         AnalyticsManager.Instance?.LogActivityExited();
-
+        coloringCanvas.SetActive(false);
         ActivityMapManager[] managers = FindObjectsByType<ActivityMapManager>(FindObjectsSortMode.None);
         foreach (var manager in managers)
         {
@@ -73,7 +74,7 @@ public class ColoringManager : MonoBehaviour
             }
         }
 
-        coloringCanvas.SetActive(false);
+        
 
         if (completionPanel != null)
             completionPanel.SetActive(true); // ← affiche le panel

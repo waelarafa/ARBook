@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee2048a9b63dd4b4e9c73177260ad8e4, type: 3}
-  m_Name: flamant_Config
+  m_Name: lion_Config
   m_EditorClassIdentifier: Assembly-CSharp::SoundConfig
-  clip: {fileID: 8300000, guid: 0f51212a4f754204c8c550dcc6dc4511, type: 3}
+  clip: {fileID: 8300000, guid: aea951ff5dd87424587e0f446d3c08f0, type: 3}
   allowOverlap: 0
   cooldown: 2
   volume: 0.38
