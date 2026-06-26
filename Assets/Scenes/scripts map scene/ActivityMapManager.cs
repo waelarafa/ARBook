@@ -72,6 +72,7 @@ public class ActivityMapManager : MonoBehaviour
     {
         if (_isRefreshing) yield break;
         _isRefreshing = true;
+        EventSystem.current?.SetSelectedGameObject(null);
 
         for (int i = 0; i < activities.Count; i++)
         {
@@ -113,6 +114,7 @@ public class ActivityMapManager : MonoBehaviour
                           :             spriteLocked;
 
             SetButtonSprite(btn, sprite);
+            SetButtonInteraction(btn, completed || unlocked);
 
             Debug.Log($"[ActivityMap] {entry.activityId} — unlocked={unlocked} completed={completed}");
         }
@@ -124,6 +126,29 @@ public class ActivityMapManager : MonoBehaviour
     {
         if (sprite == null) return;
 
+        Image btnImage = btn.targetGraphic as Image;
+        if (btnImage == null)
+            btnImage = btn.GetComponent<Image>();
+
+        SetImageSprite(btnImage, sprite);
+
+        Image rootImage = btn.GetComponent<Image>();
+        if (rootImage != btnImage)
+            SetImageSprite(rootImage, sprite);
+    }
+
+    void SetImageSprite(Image image, Sprite sprite)
+    {
+        if (image == null) return;
+        image.overrideSprite = null;
+        image.sprite = sprite;
+        image.color = Color.white;
+        image.canvasRenderer.SetColor(Color.white);
+        image.SetAllDirty();
+    }
+
+    void SetButtonSpriteOldUnused(Button btn, Sprite sprite)
+    {
         Image btnImage = btn.GetComponent<Image>();
         if (btnImage != null)
         {
@@ -137,6 +162,14 @@ public class ActivityMapManager : MonoBehaviour
         cb.normalColor   = Color.white;
         cb.disabledColor = Color.white;
         btn.colors       = cb;
+    }
+
+    void SetImageSprite(Image image, Sprite sprite)
+    {
+        if (image == null) return;
+        image.overrideSprite = null;
+        image.sprite = sprite;
+        image.color = Color.white;
     }
 
     IEnumerator CheckUnlocked(int index, System.Action<bool> callback)
@@ -214,6 +247,7 @@ public class ActivityMapManager : MonoBehaviour
 
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -286,6 +320,7 @@ public class ActivityMapManager : MonoBehaviour
     {
         if (_isRefreshing) yield break;
         _isRefreshing = true;
+        EventSystem.current?.SetSelectedGameObject(null);
 
         for (int i = 0; i < activities.Count; i++)
         {
@@ -317,13 +352,12 @@ public class ActivityMapManager : MonoBehaviour
 
             yield return new WaitUntil(() => doneUnl);
 
-            btn.interactable = completed || unlocked;
-
             Sprite sprite = completed ? spriteCompleted
                           : unlocked  ? spriteUnlocked
                           :             spriteLocked;
 
             SetButtonSprite(btn, sprite);
+            SetButtonInteraction(btn, completed || unlocked);
 
             Debug.Log($"[ActivityMap] {entry.activityId} — unlocked={unlocked} completed={completed}");
         }
@@ -335,25 +369,28 @@ public class ActivityMapManager : MonoBehaviour
     {
         if (sprite == null) return;
 
-        Image btnImage = btn.GetComponent<Image>();
-        if (btnImage != null)
-        {
-            btnImage.sprite = sprite;
-            btnImage.color  = Color.white;
-        }
+        Image btnImage = btn.targetGraphic as Image;
+        if (btnImage == null)
+            btnImage = btn.GetComponent<Image>();
 
-        SpriteState ss       = btn.spriteState;
-        ss.highlightedSprite = sprite;
-        ss.pressedSprite     = sprite;
-        ss.selectedSprite    = sprite;
-        ss.disabledSprite    = spriteLocked;
-        btn.spriteState      = ss;
+        btn.transition = Selectable.Transition.None;
 
-        btn.transition = Selectable.Transition.SpriteSwap;
+        ColorBlock cb       = btn.colors;
+        cb.normalColor      = Color.white;
+        cb.highlightedColor = Color.white;
+        cb.pressedColor     = Color.white;
+        cb.selectedColor    = Color.white;
+        cb.disabledColor    = Color.white;
+        btn.colors          = cb;
 
-        ColorBlock cb    = btn.colors;
-        cb.disabledColor = Color.white;
-        btn.colors       = cb;
+        SetImageSprite(btnImage, sprite);
+
+        Image rootImage = btn.GetComponent<Image>();
+        if (rootImage != btnImage)
+            SetImageSprite(rootImage, sprite);
+
+        // Le bouton qu'on vient de taper reste en état Selected/Highlighted : Unity y fige
+        // qu'on vient d'assigner. On le remet à null pour forcer l'affichage immédiat.
     }
 
     IEnumerator CheckUnlocked(int index, System.Action<bool> callback)
@@ -424,6 +461,28 @@ public class ActivityMapManager : MonoBehaviour
         // immédiatement le bon sprite. WaitAndRefresh attend qu'un éventuel refresh
         // déjà en cours se termine — pas de StopAllCoroutines (trop large), pas de délai.
         StartCoroutine(WaitAndRefresh());
+    }
+
+    void SetImageSprite(Image image, Sprite sprite)
+    {
+        if (image == null) return;
+        image.overrideSprite = null;
+        image.sprite = sprite;
+        image.color = Color.white;
+        image.canvasRenderer.SetColor(Color.white);
+        image.SetAllDirty();
+    }
+
+    void SetButtonInteraction(Button btn, bool available)
+    {
+        btn.interactable = available;
+
+        CanvasGroup cg = btn.GetComponent<CanvasGroup>();
+        if (cg == null) return;
+
+        cg.alpha = 1f;
+        cg.interactable = available;
+        cg.blocksRaycasts = available;
     }
 
     private IEnumerator WaitAndRefresh()
